@@ -20,18 +20,21 @@ export const Footer = () => {
             <li className='flex flex-col'>
               <span>
                 Contact us:
+                {' '}
                 <Link href='./'>
                   +222-2222-2222
                 </Link>
               </span>
               <span>
                 Email:
+                {' '}
                 <Link href='./'>
                   info@ukrclubmoncton.ca
                 </Link>
               </span>
               <span>
                 Address:
+                {' '}
                 <Link href='./'>
                   123 ABC Street, Moncton. NB, E1D2D3
                 </Link>
