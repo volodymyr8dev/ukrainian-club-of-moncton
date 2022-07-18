@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="32" cy="32" r="31" fill="white" stroke="#002049" stroke-width="2"/>
+<mask id="path-2-inside-1_541_3412" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M29.4241 42.3093L40.043 31.6904L29.4241 21.7759"/>
+</mask>
+<path d="M40.043 31.6904L42.6977 34.3451L45.445 31.5978L42.6051 28.9463L40.043 31.6904ZM32.0788 44.964L42.6977 34.3451L37.3883 29.0357L26.7694 39.6546L32.0788 44.964ZM42.6051 28.9463L31.9863 19.0317L26.862 24.5201L37.4808 34.4346L42.6051 28.9463Z" fill="#002049" mask="url(#path-2-inside-1_541_3412)"/>
+</svg>
