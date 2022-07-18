@@ -7,7 +7,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'Montserrat, sans-serif',
+        proximaNova100: ["ProximaNova100", "sans"],
+        proximaNova200: ["ProximaNova200", "sans"],
+        proximaNova300: ["ProximaNova300", "sans"],
+        proximaNova400: ["ProximaNova400", "sans"],
+        proximaNova500: ["ProximaNova500", "sans"],
+        proximaNova600: ["ProximaNova600", "sans"],
+        proximaNova700: ["ProximaNova700", "sans"],
       },
       colors: {
         blue: {

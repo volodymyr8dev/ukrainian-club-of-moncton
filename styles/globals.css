@@ -5,10 +5,11 @@
 html,
 body {
   @apply bg-gray-100 text-gray-900;
-  font-family: Montserrat, Roboto, sans-serif;
+  font-family: ProximaNova300;
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  font-weight: 500;
 }
 
 * {
@@ -22,4 +23,39 @@ a {
 
 button {
   cursor: pointer;
+}
+
+@font-face {
+  font-family: 'ProximaNova100';
+  src: url('./../assets/fonts/Proxima Nova Thin.ttf');
+}
+
+@font-face {
+  font-family: 'ProximaNova200';
+  src: url('./../assets/fonts/Proxima Nova Light.ttf');
+}
+
+@font-face {
+  font-family: 'ProximaNova300';
+  src: url('./../assets/fonts/Proxima Nova Regular.ttf');
+}
+
+@font-face {
+  font-family: 'ProximaNova400';
+  src: url('./../assets/fonts/Proxima Nova Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'ProximaNova500';
+  src: url('./../assets/fonts/Proxima Nova Bold.ttf');
+}
+
+@font-face {
+  font-family: 'ProximaNova600';
+  src: url('./../assets/fonts/Proxima Nova Extrabold.ttf');
+}
+
+@font-face {
+  font-family: 'ProximaNova700';
+  src: url('./../assets/fonts/Proxima Nova Black.ttf');
 }
