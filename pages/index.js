@@ -13,7 +13,7 @@ export default function Home() {
       />
     </Head>
 
-    <div>
+    <div className='h-60 flex justify-center items-center'>
       Ukrainian Club of Moncton
     </div>
     </>
