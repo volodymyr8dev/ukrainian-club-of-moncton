@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { FilledButton } from '../components/utils/FilledButton'
 
 export default function Home() {
   return (
@@ -14,7 +15,11 @@ export default function Home() {
     </Head>
 
     <div className='h-60 flex justify-center items-center'>
-      Ukrainian Club of Moncton
+      <FilledButton
+        text='Що далі?'
+        bgColor='blue-500'
+        textColor='gray-100'
+      />
     </div>
     </>
   )
