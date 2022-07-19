@@ -45,7 +45,7 @@ export const Footer = () => {
         <div>
           <ul>
             <li>
-              <span>By <Link href='./'>BinaryFuture.io</Link></span>
+              <span>By <Link href='https://binaryfuture.io'>BinaryFuture.io</Link></span>
             </li>
           </ul>
         </div>
