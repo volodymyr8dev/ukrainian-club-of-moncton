@@ -5,9 +5,9 @@ import Image from 'next/image'
 export const HeadingToggler = (props) => {
   return (
     <>
-      <div className='flex justify-between items-center'>
+      <div className='flex justify-between items-center pb-16'>
         <div>
-          <h2 className='font-proximaNova400 text-[40px]'>
+          <h2 className='font-proximaNova400 text-[40px] uppercase'>
             { props.heading }
           </h2>
         </div>

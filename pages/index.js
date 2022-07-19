@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { ClubQuestions } from '../components/sections/home/ClubQuestions'
 import { HomeFront } from '../components/sections/home/HomeFront'
-import { HeadingToggler } from '../components/utils/HeadingToggler'
+import { UpcomingEvents } from '../components/sections/home/UpcomingEvents'
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
     <main>
       <HomeFront />
       <ClubQuestions />
-      <HeadingToggler heading='UPCOMING EVENTS' />
+      <UpcomingEvents />
     </main>
     </>
   )
