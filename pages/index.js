@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { FilledButton } from '../components/utils/FilledButton'
+import { HomeFront } from './../components/sections/HomeFront'
 
 export default function Home() {
   return (
@@ -13,14 +13,10 @@ export default function Home() {
         href="/favicon.ico"
       />
     </Head>
-
-    <div className='h-60 flex justify-center items-center'>
-      <FilledButton
-        text='Що далі?'
-        bgColor='blue-500'
-        textColor='gray-100'
-      />
-    </div>
+    
+    <main>
+      <HomeFront />
+    </main>
     </>
   )
 }
