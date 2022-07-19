@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-import { FilledButton } from './../utils/FilledButton'
-import birdImage from './../../assets/images/bird.svg'
+import { FilledButton } from '../../utils/FilledButton'
+import birdImage from './../../../assets/images/bird.svg'
 
 export const HomeFront = () => {
   return (
     <>
     <section
-      className='aaaa min-h-[calc(100vh-5rem)] flex justify-center items-center'
+      className='aaaa min-h-[calc(110vh-5rem)] flex justify-center items-center mb-28'
     >
       <div className='flex justify-between gap-6'>
         <div className='max-w-[470px] w-full flex flex-col gap-8 -mt-8'>

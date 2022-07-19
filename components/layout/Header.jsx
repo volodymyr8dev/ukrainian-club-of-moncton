@@ -10,7 +10,7 @@ export const Header = () => {
       className='flex justify-center h-20 shadow-[0px_4px_4px_rgba(0,0,0,0.06)]'
     >
       <nav
-        className='flex justify-between items-center max-w-[924px] w-full'
+        className='flex justify-between items-center max-w-[1216px] w-full'
       >
         <div>
           <ul className='flex align-center gap-16'>

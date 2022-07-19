@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { HomeFront } from './../components/sections/HomeFront'
+import { ClubQuestions } from '../components/sections/home/ClubQuestions'
+import { HomeFront } from '../components/sections/home/HomeFront'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
     
     <main>
       <HomeFront />
+      <ClubQuestions />
     </main>
     </>
   )
