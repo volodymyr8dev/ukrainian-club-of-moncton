@@ -22,7 +22,6 @@ export const Gallery = () => {
         pagination={{
           clickable: true,
         }}
-        onAutoplay={ 5000 }
         modules={[ Pagination, Autoplay ]}
         className='home-gallery-swiper'
       >
