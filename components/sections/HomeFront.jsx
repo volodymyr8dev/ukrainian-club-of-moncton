@@ -1,15 +1,13 @@
 import Image from 'next/image'
 
 import { FilledButton } from './../utils/FilledButton'
-import backgroundBlurImage from './../../public/home-blur.png'
 import birdImage from './../../assets/images/bird.svg'
 
 export const HomeFront = () => {
   return (
     <>
     <section
-      className='aaaa min-h-[calc(100vh-5rem)] flex justify-center items-center
-      bg-cover bg-no-repeat'
+      className='aaaa min-h-[calc(100vh-5rem)] flex justify-center items-center'
     >
       <div className='flex justify-between gap-6'>
         <div className='max-w-[470px] w-full flex flex-col gap-8 -mt-8'>
