@@ -33,6 +33,12 @@ module.exports = {
         900: '#002049',
       },
     },
+    extend: {
+      screens: {
+        'lg': '1100px',
+        'tablets': '900px'
+      }
+    }
   },
   plugins: [],
   mode: 'jit',
