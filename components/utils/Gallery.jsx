@@ -1,13 +1,12 @@
 import Image from 'next/image'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Autoplay } from 'swiper'
-
-import galleryImage1 from './../../assets/images/sample-photo-1.svg'
-import galleryImage2 from './../../assets/images/sample-photo-2.svg'
-
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/autoplay'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay } from 'swiper'
+import galleryImage1 from './../../assets/images/sample-photo-1.svg'
+import galleryImage2 from './../../assets/images/sample-photo-2.svg'
 
 export const Gallery = () => {
   return (

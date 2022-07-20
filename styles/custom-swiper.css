@@ -1,0 +1,7 @@
+.home-gallery-swiper {
+  padding-bottom: 2rem;
+}
+
+.home-gallery-swiper .swiper-pagination {
+  transform: translateY(15px);
+}
