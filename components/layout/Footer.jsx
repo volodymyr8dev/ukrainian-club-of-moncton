@@ -11,33 +11,33 @@ export const Footer = () => {
         <div>
           <ul className='flex items-center gap-4'>
             <li>
-              <a href='/'>
+              <Link href='/'>
                 <Image
                   src={ UCMLogo }
                 />
-              </a>
+              </Link>
             </li>
             <li className='flex flex-col'>
               <span>
                 Contact us:
                 {' '}
-                <a href='/'>
+                <Link href='/'>
                   +222-2222-2222
-                </a>
+                </Link>
               </span>
               <span>
                 Email:
                 {' '}
-                <a href='/'>
+                <Link href='/'>
                   info@ukrclubmoncton.ca
-                </a>
+                </Link>
               </span>
               <span>
                 Address:
                 {' '}
-                <a href='/'>
+                <Link href='/'>
                   123 ABC Street, Moncton. NB, E1D2D3
-                </a>
+                </Link>
               </span>
             </li>
           </ul>
@@ -45,7 +45,7 @@ export const Footer = () => {
         <div>
           <ul>
             <li>
-              <span>By <a href='https://binaryfuture.io'>BinaryFuture.io</a></span>
+              <span>By <Link href='https://binaryfuture.io'>BinaryFuture.io</Link></span>
             </li>
           </ul>
         </div>
