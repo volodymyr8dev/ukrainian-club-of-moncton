@@ -6,8 +6,8 @@ export const Quote = () => {
   return (
     <section className='flex justify-center mb-12 mt-36 px-6 xl:px-0'>
     <div className='flex justify-center flex-col max-w-[1216px] w-full'>
-      <div className='flex flex-col justify-center shadow-[0px_2px_32px_rgba(0,32,73,0.13)]
-      rounded-3xl px-9 overflow-visible'>
+      <div className='flex flex-col justify-center rounded-3xl overflow-visible
+      shadow-[0px_2px_32px_rgba(0,32,73,0.13)] px-9'>
         <div className='flex justify-center -translate-y-12 z-50'>
           <Image
             src={ quoteImage }

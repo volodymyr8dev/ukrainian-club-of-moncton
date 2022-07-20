@@ -18,7 +18,8 @@ export const Header = () => {
       className='flex justify-center h-20 shadow-[0px_4px_4px_rgba(0,0,0,0.06)]'
     >
       <nav
-        className='flex justify-between items-center max-w-[1216px] w-full px-6 xl:px-0'
+        className='flex justify-between items-center max-w-[1216px] w-full px-6
+        xl:px-0'
       >
         <div className={`md:flex ${ isActive ? 'flex bg-gray-100 absolute w-full h-full top-0 -mx-7 justify-center z-10' : 'hidden' }`}>
           <ul className={`flex align-center gap-16 flex-col md:flex-row translate-y-[200px] md:translate-y-0`}>
