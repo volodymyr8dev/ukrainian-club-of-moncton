@@ -15,16 +15,16 @@ export const Header = () => {
         <div>
           <ul className='flex align-center gap-16'>
             <li className='font-proximaNova500 text-xl text-blue-500'>
-              <Link href='./'>Home</Link>
+              <Link href='/'>Home</Link>
             </li>
             <li className='font-proximaNova500 text-xl'>
-              <Link href='./'>Info</Link>
+              <Link href='/'>Info</Link>
             </li>
             <li className='font-proximaNova500 text-xl'>
-              <Link href='./'>Events</Link>
+              <Link href='/'>Events</Link>
             </li>
             <li className='font-proximaNova500 text-xl'>
-              <Link href='./'>About</Link>
+              <Link href='/'>About</Link>
             </li>
           </ul>
         </div>

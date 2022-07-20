@@ -50,7 +50,7 @@ export const EventCard = () => {
                 April 24, 2022
               </span>
 
-              <Link href='./'>
+              <Link href='/placeholder'>
                 <span className='bg-yellow-500 text-gray-100 py-3 px-10
                 rounded-[64px] font-proximaNova400 text-lg'>
                   Read more
