@@ -12,6 +12,10 @@ body {
   font-weight: 500;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
