@@ -7,8 +7,9 @@ import locationImage from './../../assets/images/card-location.svg'
 export const EventCard = () => {
   return (
     <>
-      <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] max-w-[376px] w-full
-      max-h-[644px] h-full overflow-hidden rounded-3xl'>
+      <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] max-w-full
+      xl:max-w-[376px] w-full max-h-full xl:max-h-[644px] h-full overflow-hidden
+      rounded-3xl'>
         <div>
           <Image
             src={ sampleImage }
@@ -16,8 +17,9 @@ export const EventCard = () => {
             height={ 256 }
           />
         </div>
-        <div className='px-6 pt-6'>
-          <span className='font-proximaNova200 bg-yellow-100 text-yellow-900 px-6 py-2 rounded-[20px]'>
+        <div className='px-4 lg:px-6 pt-6'>
+          <span className='font-proximaNova200 bg-yellow-100 text-yellow-900
+          px-6 py-2 rounded-[20px]'>
             Holidays
           </span>
 
@@ -44,14 +46,15 @@ export const EventCard = () => {
               </span>
             </div>
 
-            <div className='flex justify-between items-center pt-10 pb-6'>
+            <div className='w-[30%] md:w-auto flex justify-between items-center 
+            pt-10 pb-6'>
               <span className='font-proximaNova200 text-gray-500 text-lg
               leading-[18px]'>
                 April 24, 2022
               </span>
 
               <Link href='/placeholder'>
-                <span className='bg-yellow-500 text-gray-100 py-3 px-10
+                <span className='bg-yellow-500 text-gray-100 py-3 px-5 lg:px-10
                 rounded-[64px] font-proximaNova400 text-lg'>
                   Read more
                 </span>
