@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { BottomCTA } from '../components/sections/home/BottomCTA'
 import { ClubAbout } from '../components/sections/home/ClubAbout'
 import { ClubQuestions } from '../components/sections/home/ClubQuestions'
 import { HomeFront } from '../components/sections/home/HomeFront'
@@ -24,6 +25,7 @@ export default function Home() {
       <UpcomingEvents />
       <ClubAbout />
       <Quote />
+      <BottomCTA />
     </main>
     </>
   )
