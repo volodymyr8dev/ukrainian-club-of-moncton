@@ -27,7 +27,7 @@ export const EventCard = () => {
             </h6>
             <p className='font-proximaNova200 text-lg pt-2 leading-[18px]'>
               The traditional Ukrainian Easter Potluck Dinner was held on April 8,
-              2018. The food was scrumptious (isn't it always?), we had some fun 
+              2018. The food was scrumptious (isn&apos;t it always?), we had some fun 
               with door prizes and just enjoyed the time catching up after winter.
             </p>
 
