@@ -6,7 +6,7 @@ export const UpcomingEvents = () => {
     <>
       <section className='flex justify-center mb-28'>
         <div className='flex justify-center flex-col max-w-[1216px] w-full'>
-          <HeadingToggler heading='Upcoming & latest events' />
+          <HeadingToggler heading='Upcoming	&amp; latest events' />
           <div className='flex justify-between'>
             <EventCard />
             <EventCard />
