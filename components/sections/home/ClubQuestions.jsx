@@ -6,15 +6,15 @@ import ladderImage from './../../../assets/images/ladder.svg'
 export const ClubQuestions = () => {
   return (
     <>
-    <section className='flex justify-center mb-28'>
+    <section className='flex justify-center mb-28 px-7 xl:px-0'>
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
-        <h2 className='font-proximaNova500 text-[56px] uppercase text-center 
-        leading-10 tracking-wider pb-36'
+        <h2 className='font-proximaNova500 text-[56px] uppercase w-full 
+        leading-[54px] xl:leading-10 tracking-wider pb-11 xl:pb-36 text-left xl:text-center'
         >
           Ukrainian Club of Moncton
         </h2>
 
-        <div className='flex items-center justify-start gap-[70px]'>
+        <div className='flex items-center justify-between xl:justify-start gap-0 xl:gap-[70px]'>
           <div>
             <strong className='font-proximaNova400 text-4xl uppercase'>
               Are you <span className='text-blue-500'>going to</span> Canada?
@@ -43,7 +43,7 @@ export const ClubQuestions = () => {
           </div>
         </div>
 
-        <div className='flex items-center justify-end gap-28 pt-20'>
+        <div className='flex items-center justify-between xl:justify-end gap-0 xl:gap-28 pt-20'>
           <div>
             <Image
               src={ ladderImage }
