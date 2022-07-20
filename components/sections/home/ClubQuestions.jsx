@@ -6,7 +6,7 @@ import ladderImage from './../../../assets/images/ladder.svg'
 export const ClubQuestions = () => {
   return (
     <>
-    <section className='flex justify-center mb-28 px-7 xl:px-0'>
+    <section className='flex justify-center mb-28 px-6 xl:px-0'>
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
         <h2 className='font-proximaNova500 text-[56px] uppercase w-full 
         leading-[54px] xl:leading-10 tracking-wider pb-11 xl:pb-36 text-left xl:text-center'

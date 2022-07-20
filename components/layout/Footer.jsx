@@ -5,7 +5,7 @@ import UCMLogo from './../../assets/images/ucm-logo.svg'
 export const Footer = () => {
   return (
     <footer                                      
-      className='flex justify-center h-[120px] px-7 xl:px-0
+      className='flex justify-center h-[120px] px-6 xl:px-0
       shadow-[0px_-6px_8px_-4px_rgba(0,0,0,0.06)]'
     >
       <div className='flex justify-between items-center max-w-[1216px] w-full'>
