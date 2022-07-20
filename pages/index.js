@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { ClubAbout } from '../components/sections/home/ClubAbout'
 import { ClubQuestions } from '../components/sections/home/ClubQuestions'
 import { HomeFront } from '../components/sections/home/HomeFront'
+import { Quote } from '../components/sections/home/Quote'
 import { UpcomingEvents } from '../components/sections/home/UpcomingEvents'
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <ClubQuestions />
       <UpcomingEvents />
       <ClubAbout />
+      <Quote />
     </main>
     </>
   )
