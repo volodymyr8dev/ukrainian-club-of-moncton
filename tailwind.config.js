@@ -36,7 +36,9 @@ module.exports = {
     extend: {
       screens: {
         'lg': '1100px',
-        'tablets': '900px'
+        'tablets': '900px',
+        'small-phones': '400px',
+        'smaller-phones': '350px',
       }
     }
   },
