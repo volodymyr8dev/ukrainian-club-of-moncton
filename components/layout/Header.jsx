@@ -15,7 +15,7 @@ export const Header = () => {
 
   return (
     <header
-      className='flex justify-center h-20 shadow-[0px_4px_4px_rgba(0,0,0,0.06)]'
+      className='flex justify-center h-[96px] shadow-[0px_4px_4px_rgba(0,0,0,0.06)]'
     >
       <nav
         className='flex justify-between items-center max-w-[1216px] w-full px-6
@@ -40,7 +40,7 @@ export const Header = () => {
 
         <div className='flex md:hidden z-20'>
           <button
-            className=''
+            className='flex items-center'
             onClick={ toggleMenu }
             aria-label='toggle menu'
           >
