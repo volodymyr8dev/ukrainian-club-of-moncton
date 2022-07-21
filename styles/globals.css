@@ -63,3 +63,9 @@ button {
   font-family: 'ProximaNova700';
   src: url('./../assets/fonts/Proxima Nova Black.ttf');
 }
+
+.home-front-section {
+  background-image: url('/home-blur.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

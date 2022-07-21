@@ -7,7 +7,7 @@ export const HomeFront = () => {
   return (
     <>
     <section
-      className='min-h-[calc(110vh-5rem)] flex justify-center items-center mb-[153px]
+      className='home-front-section min-h-[calc(110vh-5rem)] flex justify-center items-center mb-[153px]
       2xl:px-8 px-8 pb-8 tablets:pb-0'
     >
       <div className='flex justify-between gap-6 flex-col tablets:flex-row
