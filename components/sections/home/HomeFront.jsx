@@ -13,7 +13,7 @@ export const HomeFront = () => {
       <div className='flex justify-between gap-6 flex-col tablets:flex-row
       w-full tablets:w-auto'>
         <div className='lg:max-w-[340px] max-w-full 2xl:max-w-[540px] flex
-        flex-col gap-6 md:gap-8 lg:-mt-8 mt-12 tablets:mt-16'>
+        flex-col gap-6 md:gap-8 lg:-mt-8 mt-12 tablets:-mt-[1.9rem]'>
           <h2 className='font-proximaNova300 text-[34px] md:text-[50px]
           leading-[40px] md:leading-[65px] first-letter:tracking-wide'>
             ДОБРОГО ВЕЧОРА
