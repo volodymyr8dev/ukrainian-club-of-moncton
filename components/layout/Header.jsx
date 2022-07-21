@@ -55,7 +55,7 @@ export const Header = () => {
         <div>
           <ul className='flex align-center gap-4 small-phones:gap-8'>
             <li className='flex align-center'>
-              <span className='font-proximaNova500 text-xl pr-2 flex items-center'>
+              <span className='font-proximaNova500 text-base md:text-xl pr-2 flex items-center'>
                 ENG
               </span>
               <Image
