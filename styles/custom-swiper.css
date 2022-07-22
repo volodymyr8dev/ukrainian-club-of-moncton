@@ -27,3 +27,8 @@
     margin: 8px 8px 0 0 !important;
   }
 }
+
+.event-prev.swiper-button-disabled,
+.event-next.swiper-button-disabled {
+  opacity: 0.5;
+}
