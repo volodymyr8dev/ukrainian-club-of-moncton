@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import Image from 'next/image'
 
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
-import languageSwitchIcon from './../../assets/images/language-switch.svg'
 
 export const LanguageSwitch = () => {
   const [language, setLanguage] = useState('')
@@ -16,9 +14,9 @@ export const LanguageSwitch = () => {
   return (
     <li className='flex align-center'>
       <div>
-        <FormControl sx={{ border: 0, m: 1, minWidth: 120 }}>
+        <FormControl sx={{ border: 0, m: 0, minWidth: 40 }}>
           <Select
-            sx={{ borderColor: 'white', border: 0 }}
+            sx={{ borderColor: 'white', border: 0, }}
             value={ language }
             onChange={handleChange}
             displayEmpty
