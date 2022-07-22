@@ -14,11 +14,13 @@ export const HeadingToggler = (props) => {
         </div>
         <div className='hidden md:flex gap-8'>
           <Image
+            className={`${ props.togglerPrevClass } cursor-pointer`}
             src={ prevArrow }
             width={ 64 }
             height={ 64 }
           />
           <Image
+            className={`${ props.togglerNextClass } cursor-pointer`}
             src={ nextArrow }
             width={ 64 }
             height={ 64 }
