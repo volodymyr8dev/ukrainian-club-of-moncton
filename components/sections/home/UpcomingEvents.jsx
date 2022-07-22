@@ -34,6 +34,9 @@ export const UpcomingEvents = () => {
                   centeredSlides: false,
                 },
               }}
+              pagination={{
+                clickable: true,
+              }}
               navigation={{
                 prevEl: '.event-prev',
                 nextEl:'.event-next'
