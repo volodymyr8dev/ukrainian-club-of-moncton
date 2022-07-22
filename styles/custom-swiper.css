@@ -29,6 +29,9 @@
 }
 
 .event-prev.swiper-button-disabled,
-.event-next.swiper-button-disabled {
+.event-next.swiper-button-disabled,
+
+.gallery-prev.swiper-button-disabled,
+.gallery-next.swiper-button-disabled {
   opacity: 0.5;
 }
