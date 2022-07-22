@@ -13,7 +13,7 @@ import { EventCard } from '../../utils/EventCard'
 export const UpcomingEvents = () => {
   return (
     <>
-      <section className='flex justify-center mb-28 px-6 xl:px-0'>
+      <section className='flex justify-center mb-28 pl-6 md:px-6 xl:px-0'>
         <div className='flex justify-center flex-col max-w-[1216px] w-full'>
 
         <HeadingToggler
@@ -22,25 +22,34 @@ export const UpcomingEvents = () => {
           togglerNextClass='event-next'
         />
 
-          <div className='flex justify-between gap-2 xl:gap-0'>
-            <Swiper className='home-events-swiper'
-              modules={[ Navigation, Pagination ]}
-              slidesPerView={ 3 }
+          <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0'>
+            <Swiper className='home-events-swiper h-full'
+              breakpoints={{
+                100: {
+                  slidesPerView: 1.1,
+                  centeredSlides: true,
+                },
+                900: {
+                  slidesPerView: 3,
+                  centeredSlides: false,
+                },
+              }}
               navigation={{
                 prevEl: '.event-prev',
                 nextEl:'.event-next'
               }}
+              modules={[ Navigation, Pagination ]}
             >
-              <SwiperSlide>
+              <SwiperSlide className='pt-6 pb-8 px-2'>
                 <EventCard />
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className='py-6 px-2'>
                 <EventCard />
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className='py-6 px-2'>
                 <EventCard />
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className='py-6 px-2'>
                 <EventCard />
               </SwiperSlide>
             </Swiper>
