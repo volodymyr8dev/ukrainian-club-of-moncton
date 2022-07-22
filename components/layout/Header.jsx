@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import languageSwitch from './../../assets/images/language-switch.svg'
 import menuIcon from './../../assets/images/menu-icon.svg'
 import { DonateButton } from '../utils/DonateButton'
+import { LanguageSwitch } from '../utils/LanguageSwitch'
 
 export const Header = () => {
   const [isActive, setIsActive] = useState(false)
@@ -54,16 +54,7 @@ export const Header = () => {
 
         <div>
           <ul className='flex align-center gap-4 small-phones:gap-8'>
-            <li className='flex align-center'>
-              <span className='font-proximaNova500 text-base md:text-xl pr-2 flex items-center'>
-                ENG
-              </span>
-              <Image
-                src={ languageSwitch }
-                width={ 12 }
-                height={ 7 }
-              />
-            </li>
+            <LanguageSwitch />
             
             <DonateButton />
           </ul>
