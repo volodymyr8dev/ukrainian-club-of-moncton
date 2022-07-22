@@ -3,7 +3,7 @@ import { HeadingToggler } from './../../utils/HeadingToggler'
 
 export const ClubAbout = () => {
   return (
-    <section className='flex justify-center mb-28 px-6 xl:px-0'>
+    <section className='flex justify-center mb-24 md:mb-28 pl-6 xl:px-0'>
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
         <HeadingToggler
           heading='About Ukrainian Club in Moncton'

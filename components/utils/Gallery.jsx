@@ -2,11 +2,10 @@ import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import 'swiper/css/grid'
 import 'swiper/css/autoplay'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation, Grid, Autoplay } from 'swiper'
+import { Pagination, Navigation, Autoplay } from 'swiper'
 import galleryImage1 from './../../assets/images/sample-photo-1.svg'
 import galleryImage2 from './../../assets/images/sample-photo-2.svg'
 
@@ -16,13 +15,8 @@ export const Gallery = () => {
       <Swiper
         breakpoints={{
           100: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            slidesPerColumn: 2,
-            slidesPerRow: 2,
-            grid: {
-              rows: 2,
-            }
+            slidesPerView: 1.2,
+            spaceBetween: 8
           },
           768: {
             slidesPerView: 3,
@@ -40,7 +34,7 @@ export const Gallery = () => {
           prevEl: '.gallery-prev',
           nextEl:'.gallery-next'
         }}
-        modules={[ Pagination, Navigation, Grid, Autoplay ]}
+        modules={[ Pagination, Navigation, Autoplay ]}
         className='home-gallery-swiper'
       >
         <SwiperSlide>

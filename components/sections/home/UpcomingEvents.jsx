@@ -13,7 +13,7 @@ import { EventCard } from '../../utils/EventCard'
 export const UpcomingEvents = () => {
   return (
     <>
-      <section className='flex justify-center mb-28 pl-6 md:px-6 xl:px-0'>
+      <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6 xl:px-0'>
         <div className='flex justify-center flex-col max-w-[1216px] w-full'>
 
         <HeadingToggler
