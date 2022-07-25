@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'next/link'
+import NextLink from 'next/link'
+import { Link as MUILink } from '@mui/material'
 
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
@@ -20,6 +21,7 @@ export const LanguageSwitch = () => {
           <Select
             sx={{ borderColor: 'white', border: 0, }}
             value={ language }
+            onChange= { handleChange }
             displayEmpty
             disableInjectingGlobalStyles
             inputProps={{ 'aria-label': 'Without label' }}
@@ -29,21 +31,21 @@ export const LanguageSwitch = () => {
               md:text-xl pr-2 flex items-center' >ENG</span>
             </MenuItem>
               <MenuItem value='ENG'>
-                <a href='/'>
-                  <span className='font-proximaNova500 text-base md:text-xl pr-2 flex
+                <NextLink href='/en-us'>
+                  <a className='font-proximaNova500 text-base md:text-xl pr-2 flex
                   items-center'>
                     ENG
-                  </span>
-                </a>
+                  </a>
+                </NextLink>
               </MenuItem>
-            
+
               <MenuItem value='UKR'>
-                <Link href='/uk'>
-                  <span className='font-proximaNova500 text-base md:text-xl pr-2 flex
+                <NextLink href='/uk'>
+                  <a className='font-proximaNova500 text-base md:text-xl pr-2 flex
                   items-center'>
                     UKR
-                  </span>
-                </Link>
+                  </a>
+                </NextLink>
               </MenuItem>
           </Select>
         </FormControl>
