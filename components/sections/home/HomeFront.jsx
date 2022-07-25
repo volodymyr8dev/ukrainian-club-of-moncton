@@ -1,9 +1,12 @@
 import Image from 'next/image'
+import useTranslation from 'next-translate/useTranslation'
 
 import { FilledButton } from '../../utils/FilledButton'
 import birdImage from './../../../assets/images/bird.svg'
 
 export const HomeFront = () => {
+  let { t } = useTranslation()
+
   return (
     <>
     <section
@@ -77,7 +80,7 @@ export const HomeFront = () => {
           <h2 className='font-proximaNova300 uppercase text-[41px] leading-[65px]
           tracking-wide'
           >
-            There is war in Ukraine
+            { t('common:test') }
             <br />
             <span className='font-proximaNova500 text-blue-500 text-[62.81px]'>
               HOW
