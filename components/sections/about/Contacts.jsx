@@ -18,7 +18,7 @@ export const Contacts = () => {
           Our contacts
         </h2>
         <div className='flex gap-10 justify-between pt-11 mb-10'>
-          <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-white
+          <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
           rounded-3xl flex items-center justify-center w-full gap-9 py-[25px]
           cursor-pointer'>
             <Image
@@ -42,7 +42,7 @@ export const Contacts = () => {
             </span>
           </div>
 
-          <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-white
+          <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
           rounded-3xl flex items-center justify-center w-full gap-9 py-[25px]
           cursor-pointer'>
             <Image

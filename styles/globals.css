@@ -82,7 +82,9 @@ input:-webkit-autofill:active {
 }
 
 .about-section {
-
+  background-image: url('/about-blur.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {

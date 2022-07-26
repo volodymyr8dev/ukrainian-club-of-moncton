@@ -18,8 +18,10 @@ export default function About() {
     
     <main>
       <AboutFront />
-      <Informative />
-      <Contacts />
+      <div className='about-section'>
+        <Informative />
+        <Contacts />
+      </div>
     </main>
     </>
   )

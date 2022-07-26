@@ -11,7 +11,7 @@ export const AboutFront = () => {
   return (
     <>
     <section
-      className='about-section flex justify-center items-center mb-[60px]'
+      className='flex justify-center items-center mb-[60px]'
     >
       <div className='flex justify-between gap-6 flex-col'>
         <div className='flex justify-between gap-[18px]'>
