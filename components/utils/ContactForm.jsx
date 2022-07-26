@@ -29,13 +29,13 @@ export const ContactForm = () => {
                 Name
               </label>
               <div className='bg-gray-200 px-4 flex items-center gap-8
-              rounded-2xl w-full'>
+              rounded-2xl'>
                 <Image
                   src={ ProfileIcon }
                 />
                 <input
                   className='text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 py-[19px]'
+                  bg-gray-200 py-[19px] w-full'
                   name='name'
                   id='name'
                   type='name'
@@ -52,13 +52,13 @@ export const ContactForm = () => {
                 Email
               </label>
               <div className='bg-gray-200 px-4 flex items-center gap-8
-              rounded-2xl w-full'>
+              rounded-2xl'>
                 <Image
                   src={ EmailIcon }
                 />
                 <input
                   className='text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 py-[19px]'
+                  bg-gray-200 w-full py-[19px]'
                   name='email'
                   id='email'
                   type='email'
@@ -75,13 +75,13 @@ export const ContactForm = () => {
                 Phone
               </label>
               <div className='bg-gray-200 px-4 flex items-center gap-10
-              rounded-2xl w-full'>
+              rounded-2xl'>
                 <Image
                   src={ PhoneIcon }
                 />
                 <input
                   className='text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 py-[19px]'
+                  bg-gray-200 w-full py-[19px]'
                   name='phone'
                   id='phone'
                   type='phone'
