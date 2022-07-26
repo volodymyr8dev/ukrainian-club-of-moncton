@@ -14,7 +14,7 @@ export const UpcomingEvents = () => {
   return (
     <>
       <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6 xl:px-0'>
-        <div className='flex justify-center flex-col max-w-[1216px] w-full'>
+        <div className='flex justify-center flex-col max-w-[1260px] w-full'>
 
         <HeadingToggler
           heading='Upcoming	&amp; latest events'
@@ -29,9 +29,13 @@ export const UpcomingEvents = () => {
                   slidesPerView: 1.1,
                   centeredSlides: true,
                 },
+                700: {
+                  spaceBetween: 8
+                },
                 900: {
                   slidesPerView: 3,
                   centeredSlides: false,
+                  spaceBetween: 40
                 },
               }}
               pagination={{
@@ -43,16 +47,16 @@ export const UpcomingEvents = () => {
               }}
               modules={[ Navigation, Pagination ]}
             >
-              <SwiperSlide className='pt-6 pb-8 px-2'>
+              <SwiperSlide className='pt-6 pb-8'>
                 <EventCard />
               </SwiperSlide>
-              <SwiperSlide className='py-6 px-2'>
+              <SwiperSlide className='py-6'>
                 <EventCard />
               </SwiperSlide>
-              <SwiperSlide className='py-6 px-2'>
+              <SwiperSlide className='py-6'>
                 <EventCard />
               </SwiperSlide>
-              <SwiperSlide className='py-6 px-2'>
+              <SwiperSlide className='py-6'>
                 <EventCard />
               </SwiperSlide>
             </Swiper>
