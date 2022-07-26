@@ -28,13 +28,13 @@ export const Header = () => {
               <Link href='/'>Home</Link>
             </li>
             <li className='font-proximaNova500 text-xl text-center'>
-              <Link href='/'>Info</Link>
+              <Link href='/info'>Info</Link>
             </li>
             <li className='font-proximaNova500 text-xl text-center'>
-              <Link href='/'>Events</Link>
+              <Link href='/events'>Events</Link>
             </li>
             <li className='font-proximaNova500 text-xl text-center'>
-              <Link href='/'>About</Link>
+              <Link href='/about'>About</Link>
             </li>
           </ul>
         </div>
