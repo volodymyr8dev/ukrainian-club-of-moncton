@@ -8,7 +8,7 @@ export const EventCard = () => {
   return (
     <>
       <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] max-w-full
-      xl:max-w-[376px] w-full max-h-full xl:max-h-[644px] h-full overflow-hidden
+      xl:max-w-[376px] w-full max-h-full h-full overflow-hidden
       rounded-3xl'>
         <div className='w-full'>
           <Image
@@ -49,8 +49,8 @@ export const EventCard = () => {
 
             <div className='w-full md:w-auto flex justify-between items-center 
             pt-10 pb-6'>
-              <span className='font-proximaNova200 text-gray-500 text-base md:text-lg
-              leading-[18px]'>
+              <span className='font-proximaNova200 text-gray-500 text-base
+              md:text-lg leading-[18px]'>
                 April 24, 2022
               </span>
 
