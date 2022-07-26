@@ -40,7 +40,7 @@ export const LanguageSwitch = () => {
               </MenuItem>
 
               <MenuItem value='UKR'>
-                <a href='/uk'>
+                <a href='/ua'>
                   <a className='font-proximaNova500 text-base md:text-xl pr-2 flex
                   items-center'>
                     UKR
