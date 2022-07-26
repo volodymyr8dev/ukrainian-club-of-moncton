@@ -31,21 +31,21 @@ export const LanguageSwitch = () => {
               md:text-xl pr-2 flex items-center' >ENG</span>
             </MenuItem>
               <MenuItem value='ENG'>
-                <NextLink href='/en-us'>
+                <a href='/en-us'>
                   <a className='font-proximaNova500 text-base md:text-xl pr-2 flex
                   items-center'>
                     ENG
                   </a>
-                </NextLink>
+                </a>
               </MenuItem>
 
               <MenuItem value='UKR'>
-                <NextLink href='/uk'>
+                <a href='/uk'>
                   <a className='font-proximaNova500 text-base md:text-xl pr-2 flex
                   items-center'>
                     UKR
                   </a>
-                </NextLink>
+                </a>
               </MenuItem>
           </Select>
         </FormControl>
