@@ -15,7 +15,8 @@ export const Header = () => {
 
   return (
     <header
-      className='flex justify-center h-[96px] shadow-[0px_4px_4px_rgba(0,0,0,0.06)]'
+      className='relative flex justify-center h-[96px]
+      shadow-[0px_4px_4px_rgba(0,0,0,0.06)]'
     >
       <nav
         className='flex justify-between items-center max-w-[1216px] w-full px-6
