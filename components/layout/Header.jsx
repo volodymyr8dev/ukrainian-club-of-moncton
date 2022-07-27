@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import menuIcon from './../../assets/images/menu-icon.svg'
 import { DonateButton } from '../utils/DonateButton'
 import { LanguageSwitch } from '../utils/LanguageSwitch'
+import { ThankYouModal } from '../utils/ThankYouModal'
 
 export const Header = () => {
   const router = useRouter()
@@ -72,8 +73,9 @@ export const Header = () => {
 
         <div>
           <ul className='flex items-center gap-4 small-phones:gap-8'>
-            <LanguageSwitch />
+            <ThankYouModal />
             
+            <LanguageSwitch />
             <DonateButton />
           </ul>
         </div>
