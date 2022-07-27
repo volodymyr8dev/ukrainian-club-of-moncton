@@ -106,6 +106,23 @@ input:-webkit-autofill:active {
   .about-section:before {
     opacity: 0;
   }
+
+  .about-front-farm div span {
+    width: 170% !important;
+    max-width: none !important;
+  }
+
+  .about-front-farm div:nth-child(1) span {
+    margin-left: -70% !important;
+  }
+
+  .about-front-farm div:nth-child(2) span {
+    margin-left: -20% !important;
+  }
+
+  .about-front-farm div:nth-child(3) span {
+    margin-left: 0% !important;
+  }
 }
 
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
