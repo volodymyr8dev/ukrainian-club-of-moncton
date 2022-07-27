@@ -37,15 +37,21 @@ export const Header = () => {
             </li>
             <li className={`py-6 font-proximaNova500 text-xl text-center border-b-2
             ${ router.pathname == '/info' ? 'text-blue-500 border-blue-500' : '' }`}>
-              <Link href='/info'>Info</Link>
+              <Link href='/info'>
+                <a>Info</a>
+              </Link>
             </li>
             <li className={`py-6 font-proximaNova500 text-xl text-center border-b-2
             ${ router.pathname == '/events' ? 'text-blue-500 border-blue-500' : '' }`}>
-              <Link href='/events'>Events</Link>
+              <Link href='/events'>
+                <a>Events</a>
+              </Link>
             </li>
             <li className={`py-6 font-proximaNova500 text-xl text-center border-b-2
             ${ router.pathname == '/about' ? 'text-blue-500 border-blue-500' : '' }`}>
-              <Link href='/about'>About</Link>
+              <Link href='/about'>
+                <a>About</a>
+              </Link>
             </li>
           </ul>
         </div>
