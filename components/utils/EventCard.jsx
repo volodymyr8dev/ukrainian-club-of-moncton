@@ -8,7 +8,7 @@ export const EventCard = () => {
   return (
     <>
       <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] max-w-full
-      xl:max-w-[376px] w-full max-h-full h-full overflow-hidden
+       w-full max-h-full h-full overflow-hidden
       rounded-3xl'>
         <div className='w-full'>
           <Image

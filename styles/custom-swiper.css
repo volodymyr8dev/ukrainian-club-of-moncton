@@ -6,8 +6,17 @@
   transform: translateY(15px);
 }
 
+.home-events-swiper.swiper {
+  margin: 0 -20px;
+  padding: 0 25px;
+}
+
 .home-events-swiper .swiper-pagination {
   transform: translateY(15px);
+}
+
+.swiper-backface-hidden .swiper-slide {
+  max-width: 376px;
 }
 
 .event-prev.swiper-button-disabled,
