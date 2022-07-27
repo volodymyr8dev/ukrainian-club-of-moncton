@@ -49,6 +49,7 @@ export const ContactForm = () => {
                   id='name'
                   type='name'
                   placeholder='John Doe'
+                  required
                 />
               </div>
             </div>
@@ -72,6 +73,7 @@ export const ContactForm = () => {
                   id='email'
                   type='email'
                   placeholder='JohnDoe@gmail.com'
+                  required
                 />
               </div>
             </div>
@@ -113,7 +115,9 @@ export const ContactForm = () => {
                 md:text-lg'
                 name='message'
                 id='message'
-                placeholder='Feed animals and enjoy life.'            
+                placeholder='Feed animals and enjoy life.'
+                minLength={ 20 }
+                required       
               >
               </textarea>
           </div>
