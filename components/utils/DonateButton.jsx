@@ -10,6 +10,7 @@ export const DonateButton = () => {
     <a
       href={`https://www.sandbox.paypal.com/donate/?hosted_button_id=${hostedButtonId}`}
       target='_blank'
+      rel='noreferrer'
     >
       <div
         className='cursor-pointer font-proximaNova400 text-base md:text-xl
