@@ -28,6 +28,7 @@ export const UpcomingEvents = () => {
                 100: {
                   slidesPerView: 1.1,
                   centeredSlides: true,
+                  spaceBetween: 8
                 },
                 700: {
                   spaceBetween: 8
@@ -47,7 +48,7 @@ export const UpcomingEvents = () => {
               }}
               modules={[ Navigation, Pagination ]}
             >
-              <SwiperSlide className='pt-6 pb-8'>
+              <SwiperSlide className='py-6'>
                 <EventCard />
               </SwiperSlide>
               <SwiperSlide className='py-6'>
