@@ -14,20 +14,23 @@ export const AboutFront = () => {
       className='flex justify-center items-center mb-[60px]'
     >
       <div className='flex justify-between gap-6 flex-col'>
-        <div className='flex justify-between gap-1 tablets:gap-[18px]'>
-          <div>
+        <div className='w-screen flex justify-between gap-1 tablets:gap-[18px]'>
+          <div className='w-full'>
             <Image
               src={ Farm1 }
+              layout='responsive'
             />
           </div>
-          <div>
+          <div className='w-full'>
             <Image
               src={ Farm2 }
+              layout='responsive'
             />
           </div>
-          <div>
+          <div className='w-full'>
             <Image
               src={ Farm3 }
+              layout='responsive'
             />
           </div>
         </div>
