@@ -16,21 +16,21 @@ export const ContactForm = () => {
 
   return (
     <>
-    <div className='flex md:hidden pb-8 justify-center'>
+    <div className='flex tablets:hidden pb-8 justify-center'>
       <h2 className='font-proximaNova400 uppercase text-[32px]
       text-center tracking-wider'>
         Let&apos;s talk
       </h2>
     </div>
 
-    <div className='shadow-none md:shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
-    w-full h-full rounded-3xl px-0 md:p-16'>
+    <div className='shadow-none tablets:shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
+    w-full h-full rounded-3xl px-0 tablets:p-16'>
 
       <form onSubmit={ sendEmail }>
-        <div className='flex justify-between gap-0 md:gap-16 pb-10 w-full flex-col
-        md:flex-row'>
-          <div className='w-full md:w-[41.45%] h-full'>
-            <div className='flex flex-col pb-6 md:pb-8'>
+        <div className='flex justify-between gap-0 tablets:gap-16 pb-10 w-full flex-col
+        tablets:flex-row'>
+          <div className='w-full tablets:w-[41.45%] h-full'>
+            <div className='flex flex-col pb-6 tablets:pb-8'>
               <label
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='name'
@@ -43,8 +43,8 @@ export const ContactForm = () => {
                   src={ ProfileIcon }
                 />
                 <input
-                  className='text-base md:text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 py-3 md:py-[19px] w-full'
+                  className='text-base tablets:text-lg font-proximaNova300 text-gray-500
+                  bg-gray-200 py-3 tablets:py-[19px] w-full'
                   name='name'
                   id='name'
                   type='name'
@@ -54,7 +54,7 @@ export const ContactForm = () => {
               </div>
             </div>
 
-            <div className='flex flex-col pb-6 md:pb-8'>
+            <div className='flex flex-col pb-6 tablets:pb-8'>
               <label
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='email'
@@ -67,8 +67,8 @@ export const ContactForm = () => {
                   src={ EmailIcon }
                 />
                 <input
-                  className='text-base md:text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 w-full py-3 md:py-[19px]'
+                  className='text-base tablets:text-lg font-proximaNova300 text-gray-500
+                  bg-gray-200 w-full py-3 tablets:py-[19px]'
                   name='email'
                   id='email'
                   type='email'
@@ -91,8 +91,8 @@ export const ContactForm = () => {
                   src={ PhoneIcon }
                 />
                 <input
-                  className='text-base md:text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 w-full py-3 md:py-[19px]'
+                  className='text-base tablets:text-lg font-proximaNova300 text-gray-500
+                  bg-gray-200 w-full py-3 tablets:py-[19px]'
                   name='phone'
                   id='phone'
                   type='phone'
@@ -102,7 +102,7 @@ export const ContactForm = () => {
             </div>
           </div>
 
-          <div className='w-full md:w-[58.55%] pt-6 md:pt-0'>
+          <div className='w-full tablets:w-[58.55%] pt-6 tablets:pt-0'>
             <label
               className='font-proximaNova400 text-sm'
               htmlFor='message'
@@ -110,9 +110,9 @@ export const ContactForm = () => {
               Message
             </label>
               <textarea
-                className='bg-gray-200 px-6 py-3 md:py-6 flex items-center gap-10
-                rounded-2xl resize-none w-full h-32 md:h-[90%] mt-[15px] text-base
-                md:text-lg'
+                className='bg-gray-200 px-6 py-3 tablets:py-6 flex items-center gap-10
+                rounded-2xl resize-none w-full h-32 tablets:h-[90%] mt-[15px] text-base
+                tablets:text-lg'
                 name='message'
                 id='message'
                 placeholder='Feed animals and enjoy life.'

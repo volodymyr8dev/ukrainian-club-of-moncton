@@ -102,7 +102,7 @@ input:-webkit-autofill:active {
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .about-section:before {
     opacity: 0;
   }
