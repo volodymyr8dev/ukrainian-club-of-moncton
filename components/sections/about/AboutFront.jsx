@@ -14,7 +14,7 @@ export const AboutFront = () => {
       className='flex justify-center items-center mb-[60px]'
     >
       <div className='flex justify-between gap-6 flex-col'>
-        <div className='flex justify-between gap-[18px]'>
+        <div className='flex justify-between gap-1 tablets:gap-[18px]'>
           <div>
             <Image
               src={ Farm1 }
