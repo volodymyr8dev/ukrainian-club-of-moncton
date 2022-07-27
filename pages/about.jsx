@@ -22,8 +22,10 @@ export default function About() {
     <main>
       <AboutFront />
       <div className='about-section'>
-        <Informative />
-        <Contacts />
+        <div className="about-section-bg">
+          <Informative />
+          <Contacts />
+        </div>
       </div>
     </main>
     </>

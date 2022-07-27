@@ -15,13 +15,22 @@ export const ContactForm = () => {
   let { t } = useTranslation()
 
   return (
-    <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
-    w-full h-full rounded-3xl p-16'>
+    <>
+    <div className='flex md:hidden pb-8 justify-center'>
+      <h2 className='font-proximaNova400 uppercase text-[32px]
+      text-center tracking-wider'>
+        Let&apos;s talk
+      </h2>
+    </div>
+
+    <div className='shadow-none md:shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
+    w-full h-full rounded-3xl px-0 md:p-16'>
 
       <form onSubmit={ sendEmail }>
-        <div className='flex justify-between gap-16 pb-10'>
-          <div className='w-[41.45%] h-full'>
-            <div className='flex flex-col pb-8'>
+        <div className='flex justify-between gap-0 md:gap-16 pb-10 w-full flex-col
+        md:flex-row'>
+          <div className='w-full md:w-[41.45%] h-full'>
+            <div className='flex flex-col pb-6 md:pb-8'>
               <label
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='name'
@@ -34,8 +43,8 @@ export const ContactForm = () => {
                   src={ ProfileIcon }
                 />
                 <input
-                  className='text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 py-[19px] w-full'
+                  className='text-base md:text-lg font-proximaNova300 text-gray-500
+                  bg-gray-200 py-3 md:py-[19px] w-full'
                   name='name'
                   id='name'
                   type='name'
@@ -44,7 +53,7 @@ export const ContactForm = () => {
               </div>
             </div>
 
-            <div className='flex flex-col pb-8'>
+            <div className='flex flex-col pb-6 md:pb-8'>
               <label
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='email'
@@ -57,8 +66,8 @@ export const ContactForm = () => {
                   src={ EmailIcon }
                 />
                 <input
-                  className='text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 w-full py-[19px]'
+                  className='text-base md:text-lg font-proximaNova300 text-gray-500
+                  bg-gray-200 w-full py-3 md:py-[19px]'
                   name='email'
                   id='email'
                   type='email'
@@ -80,8 +89,8 @@ export const ContactForm = () => {
                   src={ PhoneIcon }
                 />
                 <input
-                  className='text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 w-full py-[19px]'
+                  className='text-base md:text-lg font-proximaNova300 text-gray-500
+                  bg-gray-200 w-full py-3 md:py-[19px]'
                   name='phone'
                   id='phone'
                   type='phone'
@@ -91,7 +100,7 @@ export const ContactForm = () => {
             </div>
           </div>
 
-          <div className='w-[58.55%]'>
+          <div className='w-full md:w-[58.55%] pt-6 md:pt-0'>
             <label
               className='font-proximaNova400 text-sm'
               htmlFor='message'
@@ -99,8 +108,9 @@ export const ContactForm = () => {
               Message
             </label>
               <textarea
-                className='bg-gray-200 px-6 py-6 flex items-center gap-10
-                rounded-2xl resize-none w-full h-[90%] mt-[15px] text-lg'
+                className='bg-gray-200 px-6 py-3 md:py-6 flex items-center gap-10
+                rounded-2xl resize-none w-full h-32 md:h-[90%] mt-[15px] text-base
+                md:text-lg'
                 name='message'
                 id='message'
                 placeholder='Feed animals and enjoy life.'            
@@ -122,5 +132,6 @@ export const ContactForm = () => {
         </div>
       </form>
     </div>
+    </>
   )
 }
