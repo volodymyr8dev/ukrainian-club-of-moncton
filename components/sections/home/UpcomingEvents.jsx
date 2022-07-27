@@ -35,7 +35,7 @@ export const UpcomingEvents = () => {
                 900: {
                   slidesPerView: 3,
                   centeredSlides: false,
-                  spaceBetween: 40
+                  spaceBetween: 60
                 },
               }}
               pagination={{
