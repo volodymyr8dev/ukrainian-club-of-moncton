@@ -35,6 +35,12 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        'white-opacity': 'rgba(20, 20, 20, 0.6)',
+      },
+      brightness: {
+        40: '.4',
+      },
       screens: {
         'lg': '1100px',
         'tablets': '900px',
