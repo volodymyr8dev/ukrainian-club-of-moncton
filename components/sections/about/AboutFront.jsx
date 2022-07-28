@@ -1,9 +1,13 @@
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 
-import Farm1 from './../../../assets/images/farm/farm-01.svg'
-import Farm2 from './../../../assets/images/farm/farm-02.svg'
-import Farm3 from './../../../assets/images/farm/farm-03.svg'
+import Farm1Desktop from './../../../assets/images/farm/farm-d-01.svg'
+import Farm2Desktop from './../../../assets/images/farm/farm-d-02.svg'
+import Farm3Desktop from './../../../assets/images/farm/farm-d-03.svg'
+
+import Farm1Mobile from './../../../assets/images/farm/farm-m-01.svg'
+import Farm2Mobile from './../../../assets/images/farm/farm-m-02.svg'
+import Farm3Mobile from './../../../assets/images/farm/farm-m-03.svg'
 
 export const AboutFront = () => {
   let { t } = useTranslation()
@@ -14,23 +18,46 @@ export const AboutFront = () => {
       className='flex justify-center items-center mb-[60px]'
     >
       <div className='flex justify-between gap-6 flex-col'>
-        <div className='about-front-farm w-screen flex justify-between gap-1
-        tablets:gap-[18px]'>
+        {/* Desktop version */}
+        <div className='hidden tablets:flex justify-between gap-1 tablets:gap-[18px]
+        w-screen about-front-farm'>
           <div className='w-full overflow-hidden'>
             <Image
-              src={ Farm1 }
+              src={ Farm1Desktop }
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
-              src={ Farm2 }
+              src={ Farm2Desktop }
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
-              src={ Farm3 }
+              src={ Farm3Desktop }
+              layout='responsive'
+            />
+          </div>
+        </div>
+
+        {/* Mobile version */}
+        <div className='flex tablets:hidden justify-between gap-[5px] w-screen'>
+          <div className='w-full overflow-hidden'>
+            <Image
+              src={ Farm1Mobile }
+              layout='responsive'
+            />
+          </div>
+          <div className='w-full overflow-hidden'>
+            <Image
+              src={ Farm2Mobile }
+              layout='responsive'
+            />
+          </div>
+          <div className='w-full overflow-hidden'>
+            <Image
+              src={ Farm3Mobile }
               layout='responsive'
             />
           </div>
