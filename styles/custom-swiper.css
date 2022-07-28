@@ -28,12 +28,8 @@
 }
 
 @media screen and (max-width: 767px) {
-  .home-gallery-swiper .swiper-wrapper {
-
-  }
-
-  .home-gallery-swiper .swiper-slide {
-
+  .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 20px !important;
   }
 }
 
