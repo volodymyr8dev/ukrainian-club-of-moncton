@@ -13,10 +13,13 @@ export const GreenDonationGrid = () => {
 
   return (
     <>
-    <div className='flex gap-10 justify-between pt-16'>
+    <div className='flex w-full gap-8 md:gap-5 tablets:gap-10 justify-between
+    flex-col tablets:flex-row pt-16'>
       <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
       pt-8 rounded-3xl flex justify-start items-center flex-col px-8
-      gap-8 min-w-[376px] max-w-[376px] min-h-[260px] max-h-[260px] h-full'>
+      gap-8 xl:min-w-[376px] pb-8 tablets:pb-0 max-w-full tablets:max-w-[376px]
+      min-h-0 tablets:min-h-[260px] max-h-full tablets:max-h-[296px] h-full w-full
+      flex-1 shrink-0'>
         <Image
           src={ GreenVolunteerIcon }
           width={ 128 }
@@ -29,7 +32,9 @@ export const GreenDonationGrid = () => {
 
       <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
       pt-8 rounded-3xl flex justify-start items-center flex-col px-8
-      gap-8 min-w-[376px] max-w-[376px] min-h-[260px] max-h-[260px] h-full'>
+      gap-8 xl:min-w-[376px] pb-8 tablets:pb-0 max-w-full tablets:max-w-[376px]
+      min-h-0 tablets:min-h-[260px] max-h-full tablets:max-h-[296px] h-full w-full
+      flex-1 shrink-0'>
         <Image
           src={ GreenFollowIcon }
         />
@@ -40,7 +45,9 @@ export const GreenDonationGrid = () => {
 
       <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
       pt-8 rounded-3xl flex justify-start items-center flex-col px-8
-      gap-8 min-w-[376px] max-w-[376px] min-h-[260px] max-h-[260px] h-full'>
+      gap-8 xl:min-w-[376px] pb-8 tablets:pb-0 max-w-full tablets:max-w-[376px]
+      min-h-0 tablets:min-h-[260px] max-h-full tablets:max-h-[296px] h-full w-full
+      flex-1 shrink-0'>
         <Image
           src={ GreenFundraiseIcon }
           width={ 128 }
@@ -55,10 +62,13 @@ export const GreenDonationGrid = () => {
       </div>
     </div>
 
-    <div className='flex gap-10 justify-between pt-10'>
+    <div className='flex w-full gap-8 md:gap-5 tablets:gap-10 justify-between
+    flex-col tablets:flex-row pt-8 tablets:pt-16'>
       <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
       pt-8 rounded-3xl flex justify-start items-center flex-col px-8
-      gap-8 min-w-[584px] max-w-[584px] min-h-[296px] max-h-[296px] h-full'>
+      gap-8 xl:min-w-[584px] pb-8 tablets:pb-0 max-w-full tablets:max-w-[584px]
+      min-h-0 tablets:min-h-[296px] max-h-full tablets:max-h-[296px] h-full w-full
+      flex-1 shrink-0'>
         <Image
           src={ GreenJobsIcon }
           width={ 128 }
@@ -80,7 +90,9 @@ export const GreenDonationGrid = () => {
 
       <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
       pt-8 rounded-3xl flex justify-start items-center flex-col px-8
-      gap-8 min-w-[584px] max-w-[584px] min-h-[296px] max-h-[296px] h-full'>
+      gap-8 xl:min-w-[584px] pb-8 tablets:pb-0 max-w-full tablets:max-w-[584px]
+      min-h-0 tablets:min-h-[296px] max-h-full tablets:max-h-[296px] h-full w-full
+      flex-1 shrink-0'>
         <Image
           src={ GreenPeaceIcon }
         />
