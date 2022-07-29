@@ -30,17 +30,20 @@ export const MobileMenu = ({ setIsActive }) => {
     <div className='opacity-60 bg-white-opacity h-screen w-full fixed top-0
     bottom-0 m-auto z-10'>
       <header
-        className='separate-mobile-menu relative flex justify-center h-[72px] md:h-full
-        shadow-[0px_4px_4px_rgba(0,0,0,0.06)] -mt-[72px] bg-gray-100 z-40'
+        className='separate-mobile-menu relative flex justify-center h-[72px]
+        md:h-full shadow-[0px_4px_4px_rgba(0,0,0,0.06)] -mt-[72px] bg-gray-100
+        z-40'
       >
         <nav
           className={`flex justify-between items-center max-w-[1216px] w-full px-6
           xl:px-0 bg-white-opacity`}
         >
-          <div className={`mobile-menu-bg bg-gray-100 md:flex flex fixed max-w-[236px] w-full h-full top-0 -mx-7 justify-center z-10`}>
+          <div className={`mobile-menu-bg bg-gray-100 md:flex flex fixed
+          max-w-[236px] w-full h-full top-0 -mx-7 justify-center z-10`}>
             <ul className='flex items-center gap-4 md:gap-16 flex-col md:flex-row
-            translate-y-[200px] md:translate-y-0 bg-none md:bg-gray-100 h-screen md:h-full
-            w-screen md:w-full pt-8 md:pt-0 -mt-[130px] md:mt-0 px-2 md:px-0'>
+            translate-y-[200px] md:translate-y-0 bg-none md:bg-gray-100 h-screen
+            md:h-full w-screen md:w-full pt-8 md:pt-0 -mt-[130px] md:mt-0 px-2
+            md:px-0'>
               <li className='block md:hidden pb-11 md:pb-0'>
                 <div
                   className='cursor-pointer font-proximaNova300 border-solid
@@ -52,7 +55,8 @@ export const MobileMenu = ({ setIsActive }) => {
                 </div>
               </li>
               <li className={`py-6 font-proximaNova300 md:font-proximaNova500
-              text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7 md:px-0
+              text-base md:text-xl text-center md:border-b-2 w-full md:w-auto
+              px-7 md:px-0
               ${ router.pathname == '/' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
                 <Link href='/'>
                   <div className='flex md:block items-center justify-start gap-4
@@ -72,7 +76,8 @@ export const MobileMenu = ({ setIsActive }) => {
               </li>
 
               <li className={`py-6 font-proximaNova300 md:font-proximaNova500
-              text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7 md:px-0
+              text-base md:text-xl text-center md:border-b-2 w-full md:w-auto
+              px-7 md:px-0
               ${ router.pathname == '/info' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
                 <Link href='/info'>
                   <div className='flex md:block items-center justify-start gap-4
@@ -92,7 +97,8 @@ export const MobileMenu = ({ setIsActive }) => {
               </li>
 
               <li className={`py-6 font-proximaNova300 md:font-proximaNova500
-              text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7 md:px-0
+              text-base md:text-xl text-center md:border-b-2 w-full md:w-auto
+              px-7 md:px-0
               ${ router.pathname == '/events' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
                 <Link href='/events'>
                   <div className='flex md:block items-center justify-start gap-4
@@ -112,7 +118,8 @@ export const MobileMenu = ({ setIsActive }) => {
               </li>
 
               <li className={`py-6 font-proximaNova300 md:font-proximaNova500
-              text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7 md:px-0
+              text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7
+              md:px-0
               ${ router.pathname == '/about' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
                 <Link href='/about'>
                   <div className='flex md:block items-center justify-start gap-4
@@ -158,10 +165,8 @@ export const MobileMenu = ({ setIsActive }) => {
             </ul>
           </div>
         </nav>
-
-      
       </header>
-      </div>
+    </div>
     </>
   )
 }
