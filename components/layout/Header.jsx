@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { DonateButton } from '../utils/DonateButton'
 import { LanguageSwitch } from '../utils/LanguageSwitch'
 import { ThankYouModal } from '../utils/ThankYouModal'
+import { MobileMenu } from '../utils/MobileMenu'
 
 import OpenIcon from './../../assets/images/mobile-menu/open.svg'
 import CloseIcon from './../../assets/images/mobile-menu/close.svg'
@@ -30,14 +31,15 @@ export const Header = () => {
     document.body.classList.toggle('lock-scroll')
     document.documentElement.classList.toggle('lock-scroll')
     document.getElementById('main').classList.toggle('dark-bg')
-    document.querySelector('footer').style.backgroundColor='rgba(20, 20, 20, 0.6)'
+    //document.querySelector('footer').style.backgroundColor='rgba(20, 20, 20, 0.6)'
 
     if (router.pathname == ('/about')) {
-      document.querySelector('.about-section').classList.toggle('dark-bg-about')
+      //document.querySelector('.about-section').classList.toggle('dark-bg-about')
     } 
   }
 
   return (
+    <>
     <header
       className='relative flex justify-center h-[72px] md:h-full
       shadow-[0px_4px_4px_rgba(0,0,0,0.06)]'
@@ -168,5 +170,13 @@ export const Header = () => {
         </div>
       </nav>
     </header>
+
+    {
+    isActive && 
+      <MobileMenu
+        setIsActive={setIsActive}
+      />
+    }
+    </>
   )
 }

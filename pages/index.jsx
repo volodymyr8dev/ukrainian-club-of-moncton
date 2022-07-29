@@ -22,7 +22,7 @@ export default function Home() {
       />
     </Head>
     
-    <main id='main'>
+    <main id='main' className='relativee'>
       <HomeFront />
       <ClubQuestions />
       <UpcomingEvents />

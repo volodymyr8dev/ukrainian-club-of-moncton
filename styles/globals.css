@@ -116,12 +116,12 @@ input:-webkit-autofill:active {
   }
 
   .dark-bg {
-    filter: brightness(0.4);
+    /*filter: brightness(0.4);*/
   }
 
   .dark-bg-about {
-    background-color: rgba(20, 20, 20, 0.6);
-    filter: brightness(0.4);
+    /*background-color: rgba(20, 20, 20, 0.6);*/
+    /*filter: brightness(0.4);*/
   }
 }
 
