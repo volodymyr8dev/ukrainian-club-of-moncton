@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -7,7 +6,6 @@ import { DonateButton } from '../utils/DonateButton'
 import { LanguageSwitch } from '../utils/LanguageSwitch'
 import { ThankYouModal } from '../utils/ThankYouModal'
 
-import OpenIcon from './../../assets/images/mobile-menu/open.svg'
 import CloseIcon from './../../assets/images/mobile-menu/close.svg'
 
 import HomeBlackIcon from './../../assets/images/mobile-menu/home-black.svg'
@@ -29,14 +27,15 @@ export const MobileMenu = ({ setIsActive }) => {
 
   return (
     <>
-    <div className='opacity-60 bg-white-opacity h-screen w-full fixed top-0 bottom-0 m-auto'>
+    <div className='opacity-60 bg-white-opacity h-screen w-full fixed top-0
+    bottom-0 m-auto z-10'>
       <header
         className='separate-mobile-menu relative flex justify-center h-[72px] md:h-full
-        shadow-[0px_4px_4px_rgba(0,0,0,0.06)] -mt-[72px] bg-gray-100'
+        shadow-[0px_4px_4px_rgba(0,0,0,0.06)] -mt-[72px] bg-gray-100 z-40'
       >
         <nav
           className={`flex justify-between items-center max-w-[1216px] w-full px-6
-          xl:px-0  isActive ? 'bg-white-opacity`}
+          xl:px-0 bg-white-opacity`}
         >
           <div className={`mobile-menu-bg bg-gray-100 md:flex flex fixed max-w-[236px] w-full h-full top-0 -mx-7 justify-center z-10`}>
             <ul className='flex items-center gap-4 md:gap-16 flex-col md:flex-row

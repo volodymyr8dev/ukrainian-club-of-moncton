@@ -30,12 +30,6 @@ export const Header = () => {
     setIsActive(!isActive)
     document.body.classList.toggle('lock-scroll')
     document.documentElement.classList.toggle('lock-scroll')
-    document.getElementById('main').classList.toggle('dark-bg')
-    //document.querySelector('footer').style.backgroundColor='rgba(20, 20, 20, 0.6)'
-
-    if (router.pathname == ('/about')) {
-      //document.querySelector('.about-section').classList.toggle('dark-bg-about')
-    } 
   }
 
   return (
@@ -46,7 +40,7 @@ export const Header = () => {
     >
       <nav
         className={`flex justify-between items-center max-w-[1216px] w-full px-6
-        xl:px-0 ${ isActive ? 'bg-white-opacity' : '' }`}
+        xl:px-0`}
       >
         <div className={`mobile-menu-bg bg-gray-100 md:flex ${ isActive ? 'flex fixed max-w-[236px] w-full h-full top-0 -mx-7 justify-center z-10' : 'hidden' }`}>
           <ul className='flex items-center gap-4 md:gap-16 flex-col md:flex-row
@@ -158,7 +152,7 @@ export const Header = () => {
           </button>
         </div>
 
-        <div className={`${ isActive ? 'brightness-40' : '' }`}>
+        <div>
           <ul className='flex items-center gap-0 small-phones:gap-8'>
             <div className='hidden'>
               <ThankYouModal />
