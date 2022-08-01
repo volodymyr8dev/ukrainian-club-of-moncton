@@ -32,9 +32,10 @@ export const PostsDisplay = () => {
     xl:px-0'>
       <div className='flex justify-center flex-col max-w-[1216px] w-full pb-3
       md:pb-0'>
-        <div className='flex justify-between w-full bg-gray-100'>
+        <div className='flex justify-between w-full bg-gray-100 rounded-3xl
+        shadow-[0px_2px_22px_rgba(0,32,73,0.13)] overflow-hidden'>
           <div className={`border border-blue-500 w-full py-7
-          flex justify-center rounded-l-3xl
+          flex justify-center rounded-l-3xl overflow-hidden
           ${ activeTab ? 'bg-blue-500' : '' }`}>
             <button
               className={`${ activeTab ? 'text-gray-100' : 'text-blue-500' }

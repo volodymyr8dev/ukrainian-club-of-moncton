@@ -7,7 +7,7 @@ export const InfoEventCard = () => {
   return (
     <>
       <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)] max-w-full
-       w-full max-h-full h-full overflow-hidden
+       w-full max-h-full h-full overflow-hidden bg-gray-100
       rounded-3xl'>
         <div className='w-full'>
           <Image
