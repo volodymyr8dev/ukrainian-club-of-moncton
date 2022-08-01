@@ -5,6 +5,7 @@ import { ClubAbout } from '../components/sections/home/ClubAbout'
 import { ClubQuestions } from '../components/sections/home/ClubQuestions'
 import { Quote } from '../components/sections/home/Quote'
 import { UpcomingEvents } from '../components/sections/home/UpcomingEvents'
+import { ThankYouModal } from '../components/utils/ThankYouModal'
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <Quote />
       <BottomCTA />
     </main>
+    <ThankYouModal />
     </>
   )
 }

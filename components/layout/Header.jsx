@@ -165,13 +165,6 @@ export const Header = () => {
         </div>
       </nav>
     </header>
-
-    {
-    isActive && 
-      <MobileMenu
-        setIsActive={setIsActive}
-      />
-    }
     </>
   )
 }
