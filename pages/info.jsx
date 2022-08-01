@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import { DonationSupport } from '../components/sections/how/DonationSupport'
-import { HowFront } from '../components/sections/how/HowFront'
-import { Informative } from '../components/sections/how/Informative'
+import { InfoFront } from '../components/sections/info/InfoFront'
+import { Informative } from '../components/sections/info/Informative'
+import { PostsDisplay } from '../components/sections/info/PostsDisplay'
 
 export default function Info() {
   return (
@@ -24,7 +24,7 @@ export default function Info() {
       <div className='info-section'>
         <div className='info-section-bg'>
           <Informative />
-          <DonationSupport />
+          <PostsDisplay />
         </div>
       </div>
     </main>
