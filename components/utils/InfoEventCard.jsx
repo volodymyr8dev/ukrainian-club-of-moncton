@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import sampleImage from './../../assets/images/info-sample.svg'
-import locationImage from './../../assets/images/card-location.svg'
 
 export const InfoEventCard = () => {
   return (
