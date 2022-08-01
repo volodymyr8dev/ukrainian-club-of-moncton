@@ -79,7 +79,7 @@ export const YellowDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          If you're an artist or artisan donate items for sale (on your conditions)
+          If you&apos;re an artist or artisan donate items for sale (on your conditions)
           for our fundraisers
         </span>
       </div>
