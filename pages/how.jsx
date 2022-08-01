@@ -3,11 +3,11 @@ import { DonationSupport } from '../components/sections/how/DonationSupport'
 import { HowFront } from '../components/sections/how/HowFront'
 import { Informative } from '../components/sections/how/Informative'
 
-export default function Info() {
+export default function How() {
   return (
     <>
     <Head>
-      <title>Info - Ukrainian Club of Moncton</title>
+      <title>How can I help? - Ukrainian Club of Moncton</title>
       <meta
         name="description"
         content="To be written"
@@ -20,9 +20,9 @@ export default function Info() {
     </Head>
     
     <main id='main'>
-      <InfoFront />
-      <div className='info-section'>
-        <div className='info-section-bg'>
+      <HowFront />
+      <div className='how-section'>
+        <div className='how-section-bg'>
           <Informative />
           <DonationSupport />
         </div>

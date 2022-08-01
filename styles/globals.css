@@ -99,8 +99,33 @@ input:-webkit-autofill:active {
   opacity: 1;
 }
 
+.how-section {
+  position: relative;
+  z-index: 1;
+}
+
+.how-section:before {
+  background-image: url('/how-blur.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  
+  z-index: -1;
+  opacity: 1;
+}
+
 @media screen and (max-width: 900px) {
   .about-section:before {
+    opacity: 0;
+  }
+
+  .how-section:before {
     opacity: 0;
   }
 

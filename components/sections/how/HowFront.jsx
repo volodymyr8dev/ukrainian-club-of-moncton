@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 
-import InfoBg from '../../../assets/images/info-bg.svg'
-import InfoBgMobile from '../../../assets/images/info-bg-mobile.svg'
+import HowBg from '../../../assets/images/how-bg.svg'
+import HowBgMobile from '../../../assets/images/how-bg-mobile.svg'
 
-export const InfoFront = () => {
+export const HowFront = () => {
   let { t } = useTranslation()
 
   return (
@@ -16,14 +16,14 @@ export const InfoFront = () => {
         <div className='flex justify-between w-screen info-front-farm'>
           <div className='hidden tablets:block w-full overflow-hidden'>
             <Image
-              src={ InfoBg }
+              src={ HowBg }
               layout='responsive'
             />
           </div>
 
           <div className='block tablets:hidden w-full overflow-hidden'>
             <Image
-              src={ InfoBgMobile }
+              src={ HowBgMobile }
               layout='responsive'
             />
           </div>
