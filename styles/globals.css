@@ -173,6 +173,6 @@ input:-webkit-autofill:active {
   background-position: bottom;
 }
 
-.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+fieldset {
   border: 0 !important;
 }
