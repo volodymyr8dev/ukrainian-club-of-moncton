@@ -1,9 +1,10 @@
 const nextTranslate = require('next-translate')
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-  swcMinify: true,
+  images: {
+    domains: ['media.graphassets.com'],
+  },
+  ...nextTranslate()
 }
-
-module.exports = { nextConfig, ...nextTranslate() }

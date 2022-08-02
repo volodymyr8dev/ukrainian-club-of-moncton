@@ -1,37 +1,71 @@
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { gql, useQuery } from '@apollo/client'
+import { getMostRecentPosts } from '../../services'
 
 import sampleImage from './../../assets/images/sample-photo-3.svg'
 import locationImage from './../../assets/images/card-location.svg'
 
+const GET_MOST_RECENT_POSTS_QUERY = gql`
+  query getRecentPosts {
+    posts(
+      orderBy: createdAt_ASC,
+      last: 6
+    ) {
+    title
+      tags {
+        name
+        slug
+      }
+      excerpt
+      featuredImage {
+        url
+      }
+      slug
+      createdAt
+    }
+  }
+`
+
 export const EventCard = () => {
+  const { loading, error, data } = useQuery(GET_MOST_RECENT_POSTS_QUERY)
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
   return (
     <>
-      <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] max-w-full
-       w-full max-h-full h-full overflow-hidden
-      rounded-3xl'>
+    { data.posts.map(post => (
+      <div
+        key={ post.title }
+        className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] max-w-full
+        w-full max-h-full h-full overflow-hidden
+        rounded-3xl'
+      >
         <div className='w-full'>
           <Image
             className='w-full max-h-52'
             src={ sampleImage }
+            alt={ post.title }
+            title={ post.title }
             layout='responsive'
           />
         </div>
         <div className='px-4 lg:px-6 pt-6'>
           <span className='font-proximaNova200 bg-yellow-100 text-yellow-900
           px-6 py-2 rounded-[20px]'>
-            Holidays
+            { post.tags.name }
           </span>
 
           <div className='pt-8'>
             <h6 className='font-proximaNova500 uppercase text-xl md:text-2xl'>
-              Ukrainian Easter
+              { post.title }
             </h6>
             <p className='pr-4 md:pr-0 font-proximaNova200 text-base md:text-lg
             pt-2 leading-[18px]'>
-              The traditional Ukrainian Easter Potluck Dinner was held on April 8,
-              2018. The food was scrumptious (isn&apos;t it always?), we had some fun 
-              with door prizes and just enjoyed the time catching up after winter.
+              { post.excerpt }
             </p>
 
             <div className='flex gap-[18px] items-center pt-6'>
@@ -43,7 +77,7 @@ export const EventCard = () => {
 
               <span className='font-proximaNova200 text-gray-500 text-base
               md:text-lg leading-[18px]'>
-                11 ABC Street, Moncton, NB, E1G1B2
+                { post.address }
               </span>
             </div>
 
@@ -65,6 +99,7 @@ export const EventCard = () => {
           </div>
         </div>
       </div>
+    ))}
     </>
   )
 }
