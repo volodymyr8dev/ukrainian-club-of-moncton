@@ -82,9 +82,11 @@ export const UpcomingEvents = () => {
               modules={[ Navigation, Pagination ]}
             >
             { data.posts.map(post => ( 
-              <SwiperSlide className='py-6'>
+              <SwiperSlide
+                className='py-6'
+                key={ post.title }
+              >
                 <div
-                  key={ post.title }
                   className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] max-w-full
                   w-full max-h-full h-full overflow-hidden
                   rounded-3xl'
