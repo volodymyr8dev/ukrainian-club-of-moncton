@@ -10,7 +10,7 @@ export const getPosts = async () => {
           node {
             title
             slug
-            categories {
+            category {
               name
               slug
             }
@@ -25,7 +25,9 @@ export const getPosts = async () => {
               url
             }
             createdAt
-            content
+            content {
+              raw
+            }
           }
         }
       }
@@ -37,148 +39,33 @@ export const getPosts = async () => {
   return result.postsConnection.edges
 }
 
-//Post page
 export const getPostDetails = async (slug) => {
   const query = gql`
     query getPostDetails($slug: String!) {
       post(where: { slug: $slug }) {
-        title
+        createdAt
         slug
-        categories {
-          name
-          slug
-        }
+        title
+        excerpt
         tags {
           name
           slug
         }
-        excerpt
-        minutesRead
-        address
         featuredImage {
           url
         }
-        createdAt
+        category {
+          name
+          slug
+        }
         content {
           raw
         }
+        minutesRead
       }
     }
   `
   const result = await request(graphqlAPI, query, { slug })
 
   return result.post
-}
-
-export const getMostRecentPosts = gql`
-  query {
-    posts (
-      orderBy: createdAt_ASC
-      last: 6
-    ) {
-    title
-      tags {
-        name
-        slug
-      }
-      excerpt
-      featuredImage {
-        url
-      }
-      slug
-      createdAt
-    }
-  }
-`
-/*
-export const getMostRecentPosts = async () => {
-  const query = gql`
-    query GetPostDetails() {
-      posts(
-        orderBy: createdAt_ASC
-        last: 6
-      ) {
-        title
-        tags {
-          name
-          slug
-        }
-        excerpt
-        featuredImage {
-          url
-        }
-        slug
-        createdAt
-      }
-    }
-  `
-
-  const result = await request(graphqlAPI, query)
-
-  return result.posts
-}
-*/
-
-export const getSimilarPosts = async (categories, slug) => {
-  const query = gql`
-    query GetPostDetails($slug: String!, $categories: [String!]) {
-      posts(
-        where: { slug_not: $slug, AND: { categories_some: { slug_in: $categories }} }
-        last: 6
-      ) {
-        title
-        tags {
-          name
-          slug
-        }
-        excerpt
-        createdAt
-        slug
-        featuredImage {
-          url
-        }
-      }
-    }
-    `
-
-  const result = await request(graphqlAPI, query, { categories, slug })
-
-  return result.posts
-}
-
-export const getCategoryPost = async (slug) => {
-  const query = gql`
-    query GetCategoryPost($slug: String!) {
-      postsConnection(
-        where: {categories_some: {slug: $slug}},
-        orderBy: createdAt_DESC) {
-        edges {
-          cursor
-          node {
-            title
-            slug
-            excerpt
-            createdAt
-            featuredImage {
-              url
-            }
-            categories {
-              name
-              slug
-            }
-            tags {
-              name
-              slug
-            }
-            minutesRead
-            address
-          }
-        }
-      }
-    }
-  `
-
-  const result = await request(graphqlAPI, query, { slug })
-
-  return result.postsConnection.edges
 }
