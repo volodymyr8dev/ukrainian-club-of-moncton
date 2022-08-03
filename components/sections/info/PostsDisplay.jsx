@@ -15,11 +15,16 @@ import 'swiper/css/autoplay'
 const GET_MOST_RECENT_POSTS_QUERY = gql`
   query getRecentPosts {
     posts(
+      where: {category: {slug: "event"}}
       orderBy: createdAt_DESC,
       last: 6
     ) {
     title
       tags {
+        name
+        slug
+      }
+      category {
         name
         slug
       }
@@ -36,7 +41,7 @@ const GET_MOST_RECENT_POSTS_QUERY = gql`
 
 export const PostsDisplay = () => {
   let { t } = useTranslation()
-  
+
   const [activeTab, setActiveTab] = useState(true)
 
   const handleTabSwitch = () => {

@@ -19,6 +19,7 @@ import { HeadingToggler } from '../../utils/HeadingToggler'
 const GET_MOST_RECENT_POSTS_QUERY = gql`
   query getRecentPosts {
     posts(
+      where: {category: {slug: "event"}}
       orderBy: createdAt_DESC,
       last: 6
     ) {
