@@ -19,7 +19,7 @@ import { HeadingToggler } from '../../utils/HeadingToggler'
 const GET_MOST_RECENT_POSTS_QUERY = gql`
   query getRecentPosts {
     posts(
-      where: {category: {slug: "event"}}
+            where: {category: {slug: "event"}}
       orderBy: createdAt_DESC,
       last: 6
     ) {
@@ -85,12 +85,12 @@ export const UpcomingEvents = () => {
             { data.posts.map(post => ( 
               <SwiperSlide
                 className='py-6'
-                key={ post.title }
               >
                 <div
                   className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] max-w-full
                   w-full max-h-full h-full overflow-hidden
                   rounded-3xl'
+                  key={ post.title }
                 >
                   <div className='w-full'>
                     <img
