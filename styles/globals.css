@@ -176,3 +176,37 @@ input:-webkit-autofill:active {
 fieldset {
   border: 0 !important;
 }
+
+/* Post page styles */
+.custom-post-page-styles
+h1, h2, h3, h4, h5, h6 {
+  color: #002049;
+  font-family: ProximaNova400, sans-serif;
+  font-size: 2.5rem;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  padding: 4rem 0 2.5rem;
+}
+
+.custom-post-page-styles p {
+  color: #002049;
+  font-family: ProximaNova300, sans-serif;
+  font-size: 1.5rem;
+  line-height: 36px;
+  padding: 0 0 4rem;
+}
+
+.custom-post-page-styles p em {
+  display: inline-block;
+  font-family: ProximaNova200, sans-serif;
+  font-style: italic;
+  font-size: 1.9rem;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  border-left: 4px solid #5271F2;
+  padding-left: 2.5rem;
+}
+
+.custom-post-page-styles img {
+  width: 100%;
+}

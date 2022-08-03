@@ -60,6 +60,9 @@ export const getPostDetails = async (slug) => {
         }
         content {
           raw
+          html
+          markdown
+          text
         }
         minutesRead
       }
