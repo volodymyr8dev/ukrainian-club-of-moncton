@@ -41,8 +41,8 @@ const GET_MOST_RECENT_POSTS_QUERY = gql`
 export const UpcomingEvents = () => {
   const { loading, error, data } = useQuery(GET_MOST_RECENT_POSTS_QUERY)
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error</p>
 
   return (
     <>
