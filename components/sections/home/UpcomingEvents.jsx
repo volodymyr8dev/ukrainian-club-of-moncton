@@ -93,7 +93,8 @@ export const UpcomingEvents = () => {
                 >
                   <div className='w-full'>
                     <img
-                      className='w-full min-h-[200px] md:min-h-[256px] object-cover'
+                      className='w-full min-h-[200px] md:min-h-[256px]
+                      object-cover'
                       src={ post.featuredImage.url }
                       alt={ post.title }
                       title={ post.title }
@@ -101,16 +102,18 @@ export const UpcomingEvents = () => {
                     />
                   </div>
                   <div className='px-4 lg:px-6 pt-6'>
-                    <span className='font-proximaNova200 bg-yellow-100 text-yellow-900
-                    px-6 py-2 rounded-[20px]'>
+                    <span className='font-proximaNova200 bg-yellow-100
+                    text-yellow-900 px-6 py-2 rounded-[20px]'>
                       { post.tags[0].name }
                     </span>
 
                     <div className='pt-8'>
-                      <h6 className='font-proximaNova500 uppercase text-xl md:text-2xl'>
+                      <h6 className='font-proximaNova500 uppercase text-xl
+                      md:text-2xl'>
                         { post.title }
                       </h6>
-                      <p className='pr-4 md:pr-0 font-proximaNova200 text-base md:text-lg
+                      <p className='pr-4 md:pr-0 font-proximaNova200 text-base
+                      md:text-lg
                       pt-2 leading-[18px]'>
                         { post.excerpt }
                       </p>
@@ -122,23 +125,23 @@ export const UpcomingEvents = () => {
                           height={ 24 }
                         />
 
-                        <span className='font-proximaNova200 text-gray-500 text-base
-                        md:text-lg leading-[18px]'>
+                        <span className='font-proximaNova200 text-gray-500
+                        text-base first-letter:md:text-lg leading-[18px]'>
                           { post.address }
                         </span>
                       </div>
 
-                      <div className='w-full md:w-auto flex justify-between items-center 
-                      pt-10 pb-6'>
-                        <span className='font-proximaNova200 text-gray-500 text-base
-                        md:text-lg leading-[18px]'>
+                      <div className='w-full md:w-auto flex justify-between
+                      items-center pt-10 pb-6'>
+                        <span className='font-proximaNova200 text-gray-500
+                        text-base md:text-lg leading-[18px]'>
                           { moment(post.createdAt).format('MMM DD, YYYY') }
                         </span>
 
                         <Link href='/placeholder'>
-                          <span className='bg-yellow-500 text-gray-100 py-3 px-8 lg:px-10
-                          rounded-[64px] font-proximaNova400 text-base md:text-lg text-center
-                          cursor-pointer'>
+                          <span className='bg-yellow-500 text-gray-100 py-3
+                          px-8 lg:px-10 rounded-[64px] font-proximaNova400
+                          text-base md:text-lg text-center cursor-pointer'>
                             Read more
                           </span>
                         </Link>
