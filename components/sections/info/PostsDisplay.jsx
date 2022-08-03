@@ -164,7 +164,10 @@ export const PostsDisplay = () => {
               {
                 activeTab
                 ? dataIn.posts.map(post => (
-                  <SwiperSlide className='py-6'>
+                  <SwiperSlide
+                    className='py-6'
+                    key={ post.title }
+                  >
                     <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
                     max-w-full w-full max-h-full h-full overflow-hidden
                     bg-gray-100 rounded-3xl'>
@@ -215,7 +218,10 @@ export const PostsDisplay = () => {
                   </SwiperSlide>
                 ))
                 : dataTo.posts.map(post => (
-                  <SwiperSlide className='py-6'>
+                  <SwiperSlide
+                    className='py-6'
+                    key={ post.name }
+                  >
                     <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
                     max-w-full w-full max-h-full h-full overflow-hidden
                     bg-gray-100 rounded-3xl'>

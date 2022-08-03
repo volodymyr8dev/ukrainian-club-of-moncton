@@ -9,47 +9,6 @@ import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
 
 export const PostDetail = ({ post }) => {
-  const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text
-
-    if (obj) {
-      if (obj.bold) {
-        modifiedText = (<b key={ index }>{ text }</b>)
-      }
-
-      if (obj.italic) {
-        modifiedText = (<em key={ index }>{ text }</em>)
-      }
-
-      if (obj.underline) {
-        modifiedText = (<u key={ index }>{ text }</u>)
-      }
-    }
-
-    switch (type) {
-      case 'heading-three':
-        return <h3 key={ index } className='text-xl font-semibold mb-4'>{modifiedText.map((item, i) => <React.Fragment key={i}>{ item }</React.Fragment>)}</h3>
-      case 'paragraph':
-        return <p key={ index } className='mb-8'>{modifiedText.map((item, i) => <React.Fragment key={i}>{ item }</React.Fragment>)}</p>
-      case 'heading-four':
-        return <h4 key={ index } className='text-md font-semibold mb-4'>{modifiedText.map((item, i) => <React.Fragment key={i}>{ item }</React.Fragment>)}</h4>
-      case 'image':
-        return (
-          <div className=''>
-            <img
-              key={ index }
-              alt={ obj.title }
-              height={ obj.height }
-              width={ obj.width }
-              src={ obj.src }
-            />
-          </div>
-        )
-      default:
-        return modifiedText
-    }
-  }
-
   return (
     <>
     <section className='flex justify-center mb-[72px] md:mb-24 px-6 md:px-6
@@ -121,13 +80,18 @@ export const PostDetail = ({ post }) => {
                 post.tags.length < 1
                 ?
                 post.tags.map(tag => (
-                  <span className='uppercase text-blue-500'>
+                  <span
+                  key={ tag.name }
+                  className='uppercase text-blue-500'>
                     { tag.name }
                   </span>
                 ))
                 :
                 post.tags.map(tag => (
-                  <span className='uppercase text-blue-500'>
+                  <span
+                    key={ tag.name }
+                    className='uppercase text-blue-500'
+                  >
                     { tag.name }
                     {', '}
                   </span>
