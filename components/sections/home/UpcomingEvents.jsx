@@ -81,7 +81,7 @@ export const UpcomingEvents = () => {
               }}
               modules={[ Navigation, Pagination ]}
             >
-            { data.posts.map(post => (
+            { data.posts.map(post => ( 
               <SwiperSlide className='py-6'>
                 <div
                   key={ post.title }
