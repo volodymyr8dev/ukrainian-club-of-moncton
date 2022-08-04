@@ -160,12 +160,6 @@ input:-webkit-autofill:active {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .lock-scroll {
-    overflow-y: hidden;
-  }
-}
-
 .mobile-menu-bg {
   background-image: url('/menu-mobile-bg.png');
   background-repeat: no-repeat;
@@ -213,4 +207,31 @@ fieldset {
 
 .custom-post-page-styles img {
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .lock-scroll {
+    overflow-y: hidden;
+  }
+
+  .custom-post-page-styles h1,
+  .custom-post-page-styles h2,
+  .custom-post-page-styles h3,
+  .custom-post-page-styles h4,
+  .custom-post-page-styles h5,
+  .custom-post-page-styles h6 {
+    font-size: 1.625rem;
+    padding: 3rem 0 2rem;
+  }
+
+  .custom-post-page-styles p {
+    padding: 0 0 4.5rem;
+    font-size: 1.25rem;
+    line-height: 30px;
+  }
+
+  .custom-post-page-styles p em {
+    font-size: 1.5rem;
+    line-height: 35px;
+  }
 }

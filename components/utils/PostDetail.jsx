@@ -14,9 +14,9 @@ export const PostDetail = ({ post }) => {
   return (
     <>
     <section className='flex justify-center mb-[72px] md:mb-24 px-6 md:px-6
-    xl:px-0 pt-16'>
+    xl:px-0 pt-3 md:pt-16'>
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
-        <div className='flex justify-center w-full'>
+        <div className='hidden md:flex justify-center w-full'>
           <Image
             src={ UCMLogo }
             width={ 89 }
@@ -24,19 +24,24 @@ export const PostDetail = ({ post }) => {
           />
         </div>
         <div className='pt-8'>
-          <h1 className='font-proximaNova500 text-[56px] tracking-wider
-          text-center uppercase'>
+          <h1 className='font-proximaNova400 md:font-proximaNova500 text-[32px]
+          md:text-[56px] tracking-wider uppercase text-left md:text-center'>
             { post.title }
           </h1>
-          <div className='flex justify-center w-full'>
+          <div className='flex flex-col items-center justify-center w-full pt-6
+          md:pt-0'>
             <span className='font-proximaNova200 text-gray-500 uppercase
-            text-lg leading-[18px] text-center'>
+            text-base md:text-lg leading-[18px] text-left md:text-center w-full'>
               { post.tags[0].name }
               {' | '}
               { `${ post.minutesRead } min read` }
             </span>
+            <span className='inline-block md:hidden font-proximaNova200 text-gray-500 uppercase
+            text-base md:text-lg leading-[18px] text-left md:text-center w-full'>
+              { moment(post.createdAt).format('MMMM DD, YYYY') }
+            </span>
           </div>
-          <div className='pt-16'>
+          <div className='pt-8 md:pt-16'>
             <img
               className='min-w-full'
               src={ post.featuredImage.url }
@@ -44,7 +49,7 @@ export const PostDetail = ({ post }) => {
             />
           </div>
 
-          <div className='absolute flex flex-col justify-start'>
+          <div className='absolute hidden small-notebooks:flex flex-col justify-start'>
             <span className='mt-16 pt-4 font-proximaNova400 text-4xl leading-8
             text-center tracking-wider px-2 border-blue-500 border-t-4'>
               { moment(post.createdAt).format('DD') }
@@ -53,7 +58,7 @@ export const PostDetail = ({ post }) => {
               { moment(post.createdAt).format('MMM, YY') }
             </span>
             
-            <div className='flex flex-col gap-4 pt-8'>
+            <div className='hidden small-notebooks:flex flex-col gap-4 pt-8'>
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
                 <Link
