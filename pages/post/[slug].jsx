@@ -7,12 +7,8 @@ import { getPosts, getPostDetails } from '../../services'
 
 import { PostDetail } from '../../components/utils/PostDetail'
 
-
-
 export default function PostDetails({ post }) {
   const router = useRouter()
-
-
 
   return (
     <>
@@ -29,10 +25,8 @@ export default function PostDetails({ post }) {
       />
     </Head>
 
-    <div className=''>
-      <div className=''>
-        <PostDetail post={ post } />
-      </div>
+    <div>
+      <PostDetail post={ post } />
     </div>
     </>
   )

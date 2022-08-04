@@ -7,6 +7,7 @@ import UCMLogo from './../../assets/images/ucm-logo.svg'
 import FacebookIcon from './../../assets/images/post/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
+import { RelatedPosts } from './RelatedPosts'
 
 export const PostDetail = ({ post }) => {
   return (
@@ -73,7 +74,8 @@ export const PostDetail = ({ post }) => {
 
           </div>
           <div className='min-w-full max-w-[960px] flex justify-center'>
-            <span className='font-proximaNova300 text-2xl leading-[36px]'>
+            <span className='font-proximaNova300 text-2xl leading-[36px]
+            w-full max-w-[960px] text-left'>
               TAGS:
               {' '}
               {
@@ -98,6 +100,13 @@ export const PostDetail = ({ post }) => {
                 ))
               }
             </span>
+          </div>
+          <div>
+            <RelatedPosts
+              slug={ post.slug }
+              category={ post.category.id }
+              tags={ post.tags.map((tag) => tag.slug) }
+            />
           </div>
         </div>
       </div>
