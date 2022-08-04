@@ -178,8 +178,12 @@ fieldset {
 }
 
 /* Post page styles */
-.custom-post-page-styles
-h1, h2, h3, h4, h5, h6 {
+.custom-post-page-styles h1,
+.custom-post-page-styles h2,
+.custom-post-page-styles h3,
+.custom-post-page-styles h4,
+.custom-post-page-styles h5,
+.custom-post-page-styles h6 {
   color: #002049;
   font-family: ProximaNova400, sans-serif;
   font-size: 2.5rem;

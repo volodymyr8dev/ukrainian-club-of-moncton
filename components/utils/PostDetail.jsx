@@ -3,11 +3,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import moment from 'moment'
 
+import { RelatedPosts } from './RelatedPosts'
+
 import UCMLogo from './../../assets/images/ucm-logo.svg'
 import FacebookIcon from './../../assets/images/post/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
-import { RelatedPosts } from './RelatedPosts'
 
 export const PostDetail = ({ post }) => {
   return (
@@ -44,24 +45,53 @@ export const PostDetail = ({ post }) => {
           </div>
 
           <div className='absolute flex flex-col justify-start'>
-            <span className='mt-16 pt-4 font-proximaNova400 text-4xl leading-8 text-center
-            tracking-wider px-2 border-blue-500 border-t-4'>
+            <span className='mt-16 pt-4 font-proximaNova400 text-4xl leading-8
+            text-center tracking-wider px-2 border-blue-500 border-t-4'>
               { moment(post.createdAt).format('DD') }
             </span>
             <span className='font-proximaNova300 text-sm text-center'>
               { moment(post.createdAt).format('MMM, YY') }
             </span>
+            
+            <div className='flex flex-col gap-4 pt-8'>
+              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
+              rounded-full cursor-pointer'>
+                <Link
+                  href='https://facebook.com'
+                >
+                  <Image
+                    src={ FacebookIcon }
+                    width={ 64 }
+                    height={ 64 }
+                  />
+                </Link>
+              </div>
 
-            <div className='hidden'>
-              <Link
-                href='https://facebook.com'
-              >
-                <Image
-                  src={ FacebookIcon }
-                  width={ 64 }
-                  height={ 64 }
-                />
-              </Link>
+              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
+              rounded-full cursor-pointer'>
+                <Link
+                  href='https://twitter.com'
+                >
+                  <Image
+                    src={ TwitterIcon }
+                    width={ 64 }
+                    height={ 64 }
+                  />
+                </Link>
+              </div>
+
+              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
+              rounded-full cursor-pointer'>
+                <Link
+                  href='https://twitter.com'
+                >
+                  <Image
+                    src={ ShareIcon }
+                    width={ 64 }
+                    height={ 64 }
+                  />
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -73,7 +103,8 @@ export const PostDetail = ({ post }) => {
             </div>
 
           </div>
-          <div className='min-w-full max-w-[960px] flex justify-center'>
+          <div className='min-w-full max-w-[960px] flex flex-col justify-center
+          items-center'>
             <span className='font-proximaNova300 text-2xl leading-[36px]
             w-full max-w-[960px] text-left'>
               TAGS:
@@ -86,6 +117,7 @@ export const PostDetail = ({ post }) => {
                   key={ tag.name }
                   className='uppercase text-blue-500'>
                     { tag.name }
+                    {', '}
                   </span>
                 ))
                 :
@@ -95,16 +127,56 @@ export const PostDetail = ({ post }) => {
                     className='uppercase text-blue-500'
                   >
                     { tag.name }
-                    {', '}
                   </span>
                 ))
               }
             </span>
+
+            <div className='flex gap-4 pt-8 w-full max-w-[960px]'>
+              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
+              rounded-full cursor-pointer'>
+                <Link
+                  href='https://facebook.com'
+                >
+                  <Image
+                    src={ FacebookIcon }
+                    width={ 64 }
+                    height={ 64 }
+                  />
+                </Link>
+              </div>
+
+              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
+              rounded-full cursor-pointer'>
+                <Link
+                  href='https://twitter.com'
+                >
+                  <Image
+                    src={ TwitterIcon }
+                    width={ 64 }
+                    height={ 64 }
+                  />
+                </Link>
+              </div>
+
+              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
+              rounded-full cursor-pointer'>
+                <Link
+                  href='https://twitter.com'
+                >
+                  <Image
+                    src={ ShareIcon }
+                    width={ 64 }
+                    height={ 64 }
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
           <div>
             <RelatedPosts
               slug={ post.slug }
-              category={ post.category.id }
+              category={ post.category.name }
               tags={ post.tags.map((tag) => tag.slug) }
             />
           </div>

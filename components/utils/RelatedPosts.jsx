@@ -29,17 +29,17 @@ export const RelatedPosts = ({ category, tags, slug }) => {
 
   return (
     <>
-      <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6 xl:px-0'>
+      <section className='hidden md:flex justify-center pl-6 md:px-6 xl:px-0
+      pt-28'>
         <div className='flex justify-center flex-col max-w-[1260px] w-full'>
 
         <HeadingToggler
-          heading='Related posts'
+          heading='Related articles'
           togglerPrevClass='event-prev'
           togglerNextClass='event-next'
         />
 
-          <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0
-          -mt-16'>
+          <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0'>
             <Swiper className='home-events-swiper h-full'
               breakpoints={{
                 100: {
@@ -122,7 +122,7 @@ export const RelatedPosts = ({ category, tags, slug }) => {
                           { moment(post.createdAt).format('MMM DD, YYYY') }
                         </span>
 
-                        <Link href='/placeholder'>
+                        <Link href={`/post/${ post.slug }`}>
                           <span className='bg-yellow-500 text-gray-100 py-3
                           px-8 lg:px-10 rounded-[64px] font-proximaNova400
                           text-base md:text-lg text-center cursor-pointer'>

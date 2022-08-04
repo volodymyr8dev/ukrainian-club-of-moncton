@@ -74,16 +74,25 @@ export const getPostDetails = async (slug) => {
 export const getRelatedPosts = async (category, tags, slug) => {
   const query = gql`
     query GetPostDetails($slug: String!, $category: String!, $tags: [String!]) {
-      posts(
-        where: { category: $category, AND: { slug_not: $slug , tags_some: { slug_in: $tags }} }
-        last: 6
+      posts (
+        where: {
+          category: { name: $category },
+          AND: { slug_not: $slug,
+          tags_some: { slug_in: $tags }}
+        }
+        last: 9
       ) {
         title
+        createdAt
+        slug
+        excerpt
+        address
         featuredImage {
           url
         }
-        createdAt
-        slug
+        tags {
+          name
+        }
       }
     }
     `

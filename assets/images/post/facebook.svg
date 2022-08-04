@@ -1,18 +1,4 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_706_4043)">
-<rect x="32" y="30" width="64" height="64" rx="32" fill="white" shape-rendering="crispEdges"/>
-<path d="M74.46 56C73.69 56.35 72.86 56.58 72 56.69C72.88 56.16 73.56 55.32 73.88 54.31C73.05 54.81 72.13 55.16 71.16 55.36C70.37 54.5 69.26 54 68 54C65.65 54 63.73 55.92 63.73 58.29C63.73 58.63 63.77 58.96 63.84 59.27C60.28 59.09 57.11 57.38 55 54.79C54.63 55.42 54.42 56.16 54.42 56.94C54.42 58.43 55.17 59.75 56.33 60.5C55.62 60.5 54.96 60.3 54.38 60V60.03C54.38 62.11 55.86 63.85 57.82 64.24C57.1908 64.4122 56.5301 64.4362 55.89 64.31C56.1616 65.1625 56.6936 65.9084 57.4111 66.4429C58.1285 66.9775 58.9955 67.2737 59.89 67.29C58.3737 68.4904 56.494 69.1393 54.56 69.13C54.22 69.13 53.88 69.11 53.54 69.07C55.44 70.29 57.7 71 60.12 71C68 71 72.33 64.46 72.33 58.79C72.33 58.6 72.33 58.42 72.32 58.23C73.16 57.63 73.88 56.87 74.46 56Z" fill="#002049"/>
-</g>
-<defs>
-<filter id="filter0_d_706_4043" x="0" y="0" width="128" height="128" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="2"/>
-<feGaussianBlur stdDeviation="16"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.12549 0 0 0 0 0.286275 0 0 0 0.13 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_706_4043"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_706_4043" result="shape"/>
-</filter>
-</defs>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="64" height="64" rx="32" fill="white"/>
+<path d="M33.397 40.9972V32.8012H36.162L36.573 29.5922H33.397V27.5482C33.397 26.6222 33.655 25.9882 34.984 25.9882H36.668V23.1272C35.8487 23.0394 35.0251 22.997 34.201 23.0002C31.757 23.0002 30.079 24.4922 30.079 27.2312V29.5862H27.332V32.7952H30.085V40.9972H33.397Z" fill="#002049"/>
 </svg>

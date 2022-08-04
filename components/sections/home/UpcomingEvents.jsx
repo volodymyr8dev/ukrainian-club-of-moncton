@@ -19,7 +19,7 @@ import { HeadingToggler } from '../../utils/HeadingToggler'
 const GET_MOST_RECENT_POSTS_QUERY = gql`
   query getRecentPosts {
     posts(
-            where: {category: {slug: "event"}}
+      where: {category: {slug: "event"}}
       orderBy: createdAt_DESC,
       last: 6
     ) {
@@ -139,7 +139,7 @@ export const UpcomingEvents = () => {
                           { moment(post.createdAt).format('MMM DD, YYYY') }
                         </span>
 
-                        <Link href='/placeholder'>
+                        <Link href={`/post/${ post.slug }`}>
                           <span className='bg-yellow-500 text-gray-100 py-3
                           px-8 lg:px-10 rounded-[64px] font-proximaNova400
                           text-base md:text-lg text-center cursor-pointer'>
