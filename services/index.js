@@ -47,6 +47,7 @@ export const getPostDetails = async (slug) => {
         slug
         title
         excerpt
+        minutesRead
         tags {
           name
           slug
@@ -59,10 +60,54 @@ export const getPostDetails = async (slug) => {
           slug
         }
         content {
-          raw
           html
         }
+        localizations(locales: uk_UA) {
+          title
+          excerpt
+          minutesRead
+          tags {
+            name
+          }
+          content {
+            html
+          }
+        }
+      }
+    }
+  `
+  const result = await request(graphqlAPI, query, { slug })
+
+  return result.post
+}
+
+export const getPostDetailsUA = async (slug) => {
+  const query = gql`
+    query getPostDetailsUA($slug: String!) {
+      post(where: { slug: $slug }) {
+        title
+        excerpt
+        createdAt
+        slug
         minutesRead
+        featuredImage {
+          url
+        }
+        category {
+          name
+          slug
+        }
+        localizations(locales: uk_UA) {
+          title
+          excerpt
+          minutesRead
+          tags {
+            name
+          }
+          content {
+            html
+          }
+        }
       }
     }
   `

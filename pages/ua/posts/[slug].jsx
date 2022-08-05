@@ -1,15 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { gql, useQuery } from '@apollo/client'
 
-import { getPosts, getPostDetails } from '../../services'
+import { getPosts, getPostDetailsUA } from '../../../services/index'
 
-import { PostDetail } from '../../components/utils/PostDetail'
+import { PostDetailUA } from '../../../components/utils/PostDetailUA'
 
-export default function PostDetails({ post }) {
-  const router = useRouter()
-
+export default function PostDetailsUA({ post }) {
   return (
     <>
     <Head>
@@ -26,14 +22,14 @@ export default function PostDetails({ post }) {
     </Head>
 
     <div>
-      <PostDetail post={ post } />
+      <PostDetailUA post={ post } />
     </div>
     </>
   )
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostDetails(params.slug)
+  const postData = await getPostDetailsUA(params.slug)
 
   return {
     props: { post: postData }
