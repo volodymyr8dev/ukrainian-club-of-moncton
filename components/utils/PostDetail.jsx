@@ -9,8 +9,11 @@ import UCMLogo from './../../assets/images/ucm-logo.svg'
 import FacebookIcon from './../../assets/images/post/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
+import { useRouter } from 'next/router'
 
 export const PostDetail = ({ post }) => {
+  const router = useRouter()
+
   return (
     <>
     <section className='flex justify-center mb-[72px] md:mb-24 px-6 md:px-6
@@ -26,13 +29,16 @@ export const PostDetail = ({ post }) => {
         <div className='pt-8'>
           <h1 className='font-proximaNova400 md:font-proximaNova500 text-[32px]
           md:text-[56px] tracking-wider uppercase text-left md:text-center'>
-            { post.title }
+            { router.locale == 'ua' ? post.localizations[0].title : post.title }
           </h1>
           <div className='flex flex-col items-center justify-center w-full pt-6
           md:pt-0'>
             <span className='font-proximaNova200 text-gray-500 uppercase
             text-base md:text-lg leading-[18px] text-left md:text-center w-full'>
-              { post.tags[0].name }
+              { router.locale == 'ua'
+                ? post.localizations[0].tags[0].name
+                : post.tags[0].name
+              }
               {' | '}
               { `${ post.minutesRead } min read` }
             </span>
