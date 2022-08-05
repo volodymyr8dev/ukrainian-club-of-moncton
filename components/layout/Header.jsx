@@ -22,7 +22,7 @@ import InfoWhiteIcon from './../../assets/images/mobile-menu/info-white.svg'
 import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.svg'
 
 export const Header = () => {
-  const router = useRouter()
+  const { locale, pathname } = useRouter();
 
   const [isActive, setIsActive] = useState(false)
 
@@ -59,18 +59,18 @@ export const Header = () => {
             </li>
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500
             text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7 md:px-0
-            ${ router.pathname == '/' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
-              <Link href='/'>
+            ${ pathname === '/' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+              <Link href='/' locale={locale}>
                 <div className='flex md:block items-center justify-start gap-4
                 md-gap-0'>
                   <div className='flex md:hidden items-center'>
                     <Image
-                      src={ router.pathname == '/' ? HomeWhiteIcon : HomeBlackIcon }
+                      src={ pathname === '/' ? HomeWhiteIcon : HomeBlackIcon }
                       width={ 18.2 }
                       height={ 20 }
                     />
                   </div>
-                  <a className={`${ router.pathname == '/' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                  <a className={`${ pathname === '/' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                     Home
                   </a>
                 </div>
@@ -79,18 +79,18 @@ export const Header = () => {
 
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500
             text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7 md:px-0
-            ${ router.pathname == '/info' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
-              <Link href='/info'>
+            ${ pathname === '/info' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+              <Link href='/info' locale={locale}>
                 <div className='flex md:block items-center justify-start gap-4
                 md-gap-0'>
                   <div className='flex md:hidden items-center'>
                     <Image
-                      src={ router.pathname == '/info' ? InfoWhiteIcon : InfoBlackIcon }
+                      src={ pathname === '/info' ? InfoWhiteIcon : InfoBlackIcon }
                       width={ 20 }
                       height={ 20 }
                     />
                   </div>
-                  <a className={`${ router.pathname == '/info' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                  <a className={`${ pathname === '/info' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                     Info
                   </a>
                 </div>
@@ -99,18 +99,18 @@ export const Header = () => {
 
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500
             text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7 md:px-0
-            ${ router.pathname == '/events' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
-              <Link href='/events'>
+            ${ pathname === '/events' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+              <Link href='/events' locale={locale}>
                 <div className='flex md:block items-center justify-start gap-4
                 md-gap-0'>
                   <div className='flex md:hidden items-center'>
                     <Image
-                      src={ router.pathname == '/events' ? EventsWhiteIcon : EventsBlackIcon }
+                      src={ pathname === '/events' ? EventsWhiteIcon : EventsBlackIcon }
                       width={ 20 }
                       height={ 20 }
                     />
                   </div>
-                  <a className={`${ router.pathname == '/events' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                  <a className={`${ pathname == '/events' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                     Events
                   </a>
                 </div>
@@ -119,18 +119,18 @@ export const Header = () => {
 
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500
             text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7 md:px-0
-            ${ router.pathname == '/about' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
-              <Link href='/about'>
+            ${ pathname === '/about' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+              <Link href='/about' locale={locale}>
                 <div className='flex md:block items-center justify-start gap-4
                 md-gap-0'>
                   <div className='flex md:hidden items-center'>
                     <Image
-                      src={ router.pathname == '/about' ? AboutWhiteIcon : AboutBlackIcon }
+                      src={ pathname === '/about' ? AboutWhiteIcon : AboutBlackIcon }
                       width={ 20 }
                       height={ 20 }
                     />
                   </div>
-                  <a className={`${ router.pathname == '/about' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                  <a className={`${ pathname === '/about' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                     About
                   </a>
                 </div>

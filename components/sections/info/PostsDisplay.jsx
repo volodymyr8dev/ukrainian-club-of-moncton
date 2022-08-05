@@ -11,6 +11,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/grid'
 import 'swiper/css/autoplay'
+import {useRouter} from "next/router";
 
 const GET_MOST_RECENT_IN_CANADA_POSTS_QUERY = gql`
   query getRecentInCanadaPosts {
@@ -67,6 +68,7 @@ const GET_MOST_RECENT_GOING_TO_CANADA_POSTS_QUERY = gql`
 `
 
 export const PostsDisplay = () => {
+  const { locale, asPath } = useRouter();
   let { t } = useTranslation()
 
   const [activeTab, setActiveTab] = useState(true)
@@ -258,7 +260,7 @@ export const PostsDisplay = () => {
                               { moment(post.createdAt).format('MMM DD, YYYY') }
                             </span>
   
-                            <Link href={`/posts/${ post.slug }`}>
+                            <Link href={asPath + `/posts/${ post.slug }`} locale={locale}>
                               <span className='bg-yellow-500 text-gray-100
                               py-3 px-8 lg:px-10 rounded-[64px] font-proximaNova400
                               text-base md:text-lg text-center cursor-pointer'>

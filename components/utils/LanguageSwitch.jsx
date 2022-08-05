@@ -5,14 +5,16 @@ import { Link as MUILink } from '@mui/material'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
+import {useRouter} from "next/router";
 
 export const LanguageSwitch = () => {
+  const { locale, locales, asPath } = useRouter();
 
-  const [language, setLanguage] = useState('')
-
-  const handleChange = (event) => {
-    setLanguage(event.target.value)
-  }
+  // const [language, setLanguage] = useState('')
+  //
+  // const handleChange = (event) => {
+  //   setLanguage(event.target.value)
+  // }
 
   return (
     <li className='flex align-center'>
@@ -20,33 +22,46 @@ export const LanguageSwitch = () => {
         <FormControl sx={{ border: 0, m: 0, minWidth: 40 }}>
           <Select
             sx={{ borderColor: 'white', border: 0, }}
-            value={ language }
-            onChange= { handleChange }
+            value={ locale }
+            // onChange= { handleChange }
             displayEmpty
             disableInjectingGlobalStyles
             inputProps={{ 'aria-label': 'Without label' }}
           >
-            <MenuItem value=''>
-              <span className='opacity-40 font-proximaNova500 text-base
-              md:text-xl pr-2 flex items-center' >ENG</span>
-            </MenuItem>
-              <MenuItem value='ENG'>
-                <a href='/en-us'>
-                  <a className='font-proximaNova500 text-base md:text-xl pr-2 flex
+            {locales.map((l, i) => {
+              return (
+                <MenuItem key={i} lassName={l === locale ? 'styles.selected' : ''} value={l}>
+                  <NextLink href={asPath} locale={l}>
+                    <a className='font-proximaNova500 text-base md:text-xl pr-2 flex
                   items-center'>
-                    ENG
-                  </a>
-                </a>
-              </MenuItem>
+                      {l}
+                    </a>
+                  </NextLink>
+                </MenuItem>
+              )
+            })}
 
-              <MenuItem value='UKR'>
-                <a href='/ua'>
-                  <a className='font-proximaNova500 text-base md:text-xl pr-2 flex
-                  items-center'>
-                    UKR
-                  </a>
-                </a>
-              </MenuItem>
+            {/*// /!*<MenuItem value=''>*!/*/}
+            {/*// /!*  <span className='opacity-40 font-proximaNova500 text-base*!/*/}
+            {/*// /!*  md:text-xl pr-2 flex items-center' >ENG</span>*!/*/}
+            {/*// /*</MenuItem>*/}
+            {/*// <MenuItem value=''>*/}
+            {/*//   <NextLink href={asPath} locale={locale}>*/}
+            {/*//     <a className='font-proximaNova500 text-base md:text-xl pr-2 flex*/}
+            {/*  //     items-center'>*/}
+            {/*//       ENG*/}
+            {/*//     </a>*/}
+            {/*//   </NextLink>*/}
+            {/*// </MenuItem>*/}
+            {/*//*/}
+            {/*// <MenuItem value='UKR'>*/}
+            {/*//   <a href={asPath} locale={locale}>*/}
+            {/*//     <a className='font-proximaNova500 text-base md:text-xl pr-2 flex*/}
+            {/*  //     items-center'>*/}
+            {/*//       UKR*/}
+            {/*//     </a>*/}
+            {/*//   </a>*/}
+            {/*// </MenuItem>*/}
           </Select>
         </FormControl>
       </div>
