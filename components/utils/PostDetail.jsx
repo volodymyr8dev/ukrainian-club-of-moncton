@@ -40,7 +40,9 @@ export const PostDetail = ({ post }) => {
                 : post.tags[0].name
               }
               {' | '}
-              { `${ post.minutesRead } min read` }
+              { `${ post.minutesRead } ${ router.locale == 'ua'
+              ? 'хвилин читання'
+              : 'min read' }` }
             </span>
             <span className='inline-block md:hidden font-proximaNova200 text-gray-500 uppercase
             text-base md:text-lg leading-[18px] text-left md:text-center w-full'>
@@ -51,7 +53,8 @@ export const PostDetail = ({ post }) => {
             <img
               className='min-w-full'
               src={ post.featuredImage.url }
-              alt={ post.title }
+              alt={ router.locale == 'ua' ? post.localizations[0].title : post.title
+            }
             />
           </div>
 
@@ -109,7 +112,11 @@ export const PostDetail = ({ post }) => {
           <div className='w-full min-w-full max-w-[960px] flex justify-center'>
             <div
               className='w-full max-w-[960px] custom-post-page-styles'
-              dangerouslySetInnerHTML={ {__html: post.content.html} }
+              dangerouslySetInnerHTML={
+                {__html: router.locale == 'ua'
+                ? post.localizations[0].content.html
+                : post.content.html}
+              }
             >
             </div>
 
