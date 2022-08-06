@@ -1,9 +1,12 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import doubtIdeaImage from './../../../assets/images/doubt-idea.svg'
 import ladderImage from './../../../assets/images/ladder.svg'
 
 export const ClubQuestions = () => {
+  const router = useRouter()
+
   return (
     <>
     <section className='flex justify-center mb-[72px] md:mb-28 px-6 xl:px-0'>
@@ -12,7 +15,11 @@ export const ClubQuestions = () => {
         leading-[54px] xl:leading-10 tracking-wider pb-0 md:pb-11 xl:pb-36 text-left
         xl:text-center'
         >
-          Ukrainian Club of Moncton
+          {
+            router.locale == 'ua'
+            ? 'Український клуб Монктон'
+            : 'Ukrainian Club of Moncton'
+          }
         </h2>
 
         <div className='flex flex-col-reverse md:flex-row items-center

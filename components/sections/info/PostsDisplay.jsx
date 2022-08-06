@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import moment from 'moment'
+import { useRouter } from 'next/router'
 import { gql, useQuery } from '@apollo/client'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
@@ -11,7 +12,6 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/grid'
 import 'swiper/css/autoplay'
-import {useRouter} from "next/router";
 
 const GET_MOST_RECENT_IN_CANADA_POSTS_QUERY = gql`
   query getRecentInCanadaPosts {
@@ -36,6 +36,17 @@ const GET_MOST_RECENT_IN_CANADA_POSTS_QUERY = gql`
       address
       slug
       createdAt
+      localizations(locales: uk_UA) {
+        title
+        excerpt
+        minutesRead
+        tags {
+          name
+        }
+        content {
+          html
+        }
+      }
     }
   }
 `
@@ -63,12 +74,24 @@ const GET_MOST_RECENT_GOING_TO_CANADA_POSTS_QUERY = gql`
       address
       slug
       createdAt
+      localizations(locales: uk_UA) {
+          title
+          excerpt
+          minutesRead
+          tags {
+            name
+          }
+          content {
+            html
+          }
+        }
     }
   }
 `
 
 export const PostsDisplay = () => {
-  const { locale, asPath } = useRouter();
+  const { locale, asPath } = useRouter()
+  const router = useRouter()
   let { t } = useTranslation()
 
   const [activeTab, setActiveTab] = useState(true)
@@ -120,7 +143,11 @@ export const PostsDisplay = () => {
               onClick={ handleTabSwitch }
               type='button'
             >
-              Для тих, хто вже в Канаді
+              {
+                router.locale == 'ua'
+                ? 'Для тих, хто вже в Канаді'
+                : 'For those already in Canada'
+              }
             </button>
           </div>
 
@@ -134,7 +161,11 @@ export const PostsDisplay = () => {
               onClick={ handleTabSwitch }
               type='button'
             >
-              Для тих, хто збирається
+              {
+                router.locale == 'ua'
+                ? 'Для тих, хто збирається'
+                : 'For those who are going'
+              }
             </button>
           </div>
         </div>
@@ -178,25 +209,45 @@ export const PostsDisplay = () => {
                           className='w-full min-h-[200px] md:min-h-[256px]
                           object-cover'
                           src={ post.featuredImage.url }
-                          alt={ post.title }
-                          title={ post.title }
+                          alt={
+                            router.locale == 'ua'
+                            ? post.localizations[0].title
+                            : post.title
+                          }
+                          title={
+                            router.locale == 'ua'
+                            ? post.localizations[0].title
+                            : post.title
+                          }
                           loading='lazy'
                         />
                       </div>
                       <div className='px-4 lg:px-6 pt-6'>
                         <span className='font-proximaNova200 bg-yellow-100
                         text-yellow-900 px-6 py-2 rounded-[20px]'>
-                          { post.tags[0].name }
+                          {
+                            router.locale == 'ua'
+                            ? post.localizations[0].tags[0].name
+                            : post.tags[0].name
+                          }
                         </span>
   
                         <div className='pt-8'>
                           <h6 className='font-proximaNova500 uppercase text-xl
                           md:text-2xl'>
-                            { post.title }
+                            {
+                              router.locale == 'ua'
+                              ? post.localizations[0].title
+                              : post.title
+                            }
                           </h6>
                           <p className='pr-4 md:pr-0 font-proximaNova200
                           text-base md:text-lg pt-2 leading-[18px]'>
-                            { post.excerpt }
+                            {
+                              router.locale == 'ua'
+                              ? post.localizations[0].excerpt
+                              : post.excerpt
+                            }
                           </p>
   
                           <div className='w-full md:w-auto flex justify-between
@@ -210,7 +261,11 @@ export const PostsDisplay = () => {
                               <span className='bg-yellow-500 text-gray-100
                               py-3 px-8 lg:px-10 rounded-[64px] font-proximaNova400
                               text-base md:text-lg text-center cursor-pointer'>
-                                Read more
+                                {
+                                  router.locale == 'ua'
+                                  ? 'Читати далі'
+                                  : 'Read more'
+                                }
                               </span>
                             </Link>
                           </div>
