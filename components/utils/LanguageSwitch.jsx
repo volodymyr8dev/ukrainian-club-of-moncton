@@ -26,8 +26,8 @@ export const LanguageSwitch = () => {
               return (
                 <MenuItem key={i} lassName={l === locale ? 'styles.selected' : ''} value={l}>
                   <NextLink href={asPath} locale={l}>
-                    <a className='font-proximaNova500 text-base md:text-xl flex
-                    items-center'>
+                    <a className='font-proximaNova500 text-base md:text-xl pr-2
+                    md:pr-0 flex items-center uppercase'>
                       {l}
                     </a>
                   </NextLink>
