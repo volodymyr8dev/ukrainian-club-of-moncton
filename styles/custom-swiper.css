@@ -37,7 +37,28 @@
   .home-events-swiper .swiper-pagination {
     display: none;
   }
+
+  .info-swiper .swiper-pagination {
+    display: block;
+  }
+
+  .info-swiper .swiper-pagination {
+    padding-top: 1rem;
+  }
+
+  .info-swiper .swiper-pagination-bullet-active {
+    text-decoration: underline;
+  }
+  
+  .info-swiper .swiper-pagination span {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #000000 !important;
+    font-size: 20px;
+    background-color: transparent;
+  }
 }
+
 
 .swiper-pagination-bullet {
   width: 20px;

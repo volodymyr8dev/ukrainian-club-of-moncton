@@ -175,9 +175,10 @@ export const PostsDisplay = () => {
     <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6'>
         <div className='flex justify-center flex-col max-w-[1215px] w-full'>
           <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0'>
-            <Swiper className='home-events-swiper h-full'
+            <Swiper className='home-events-swiper info-swiper h-full'
               breakpoints={{
                 100: {
+                  slidesPerGroup: 1,
                   slidesPerView: 1.1,
                   centeredSlides: true,
                   spaceBetween: 8
@@ -187,6 +188,7 @@ export const PostsDisplay = () => {
                 },
                 900: {
                   slidesPerView: 3,
+                  slidesPerGroup: 3,
                   centeredSlides: false,
                   spaceBetween: 40
                 },
