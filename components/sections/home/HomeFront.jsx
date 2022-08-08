@@ -9,6 +9,8 @@ import birdImage from './../../../assets/images/bird.svg'
 export const HomeFront = () => {
   const router = useRouter()
 
+  const { t } = useTranslation('common')
+
   return (
     <>
     <section
@@ -21,11 +23,7 @@ export const HomeFront = () => {
         flex-col gap-6 md:gap-8 lg:-mt-8 mt-12 tablets:-mt-[1.9rem]'>
           <h2 className='font-proximaNova300 text-[34px] md:text-[50px]
           leading-[40px] md:leading-[65px] first-letter:tracking-wide'>
-            {
-              router.locale == 'ua'
-              ? 'ДОБРОГО ВЕЧОРА'
-              : 'GOOD EVENING'
-            }
+            { t('example-text') }
             <br />
             <span className='font-proximaNova500 text-blue-500 text-[43px] 
             md:text-[62.81px]'>

@@ -1,4 +1,8 @@
 {
-  "locales": ["en-US", "ua"],
-  "defaultLocale": "en-US"
+  "locales": ["en", "ua"],
+  "defaultLocale": "en",
+  "pages": {
+    "*": ["common"],
+    "/about": ["about"]
+  }
 }
