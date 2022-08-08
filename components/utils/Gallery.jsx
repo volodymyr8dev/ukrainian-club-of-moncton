@@ -1,15 +1,31 @@
-import Image from 'next/image'
+import { gql, useQuery } from '@apollo/client'
+import { Pagination, Navigation, Autoplay } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation, Autoplay } from 'swiper'
-import galleryImage1 from './../../assets/images/sample-photo-1.svg'
-import galleryImage2 from './../../assets/images/sample-photo-2.svg'
+const GET_GALLERY_IMAGES_QUERY = gql`
+  query getGalleryImages {
+    galleries (
+      orderBy: createdAt_DESC,
+      last: 16
+    ) {
+    picture {
+      url
+    }
+    }
+  }
+`
 
 export const Gallery = () => {
+  const { loading, error, data } = useQuery(GET_GALLERY_IMAGES_QUERY)
+
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error</p>
+
   return (
     <>
       <Swiper
@@ -38,47 +54,18 @@ export const Gallery = () => {
         modules={[ Pagination, Navigation, Autoplay ]}
         className='home-gallery-swiper'
       >
-        <SwiperSlide>
-          <Image
-            src={ galleryImage1 }
-            className='rounded-[16px]'
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src={ galleryImage2 }
-            className='rounded-[16px]'
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src={ galleryImage1 }
-            className='rounded-[16px]'
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src={ galleryImage2 }
-            className='rounded-[16px]'
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src={ galleryImage1 }
-            className='rounded-[16px]'
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src={ galleryImage2 }
-            className='rounded-[16px]'
-          />
-        </SwiperSlide>
+        {
+          data.galleries.map(item => (
+            <SwiperSlide>
+            <img
+              src={ item.picture.url }
+              className='rounded-[16px] w-full max-w-[376px] h-full max-h-[244px]
+              object-cover'
+              loading='lazy'
+            />
+          </SwiperSlide>
+          ))
+        }
       </Swiper>
     </>
   )
