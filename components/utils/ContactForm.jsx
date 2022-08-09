@@ -1,4 +1,6 @@
+import React, { useRef } from 'react'
 import Image from 'next/image'
+import emailjs from '@emailjs/browser'
 import useTranslation from 'next-translate/useTranslation'
 
 import ProfileIcon from './../../assets/images/form/profile.svg'
@@ -7,8 +9,31 @@ import PhoneIcon from './../../assets/images/form/phone.svg'
 import SendIcon from './../../assets/images/form/send.svg'
 
 export const ContactForm = () => {
+  const form = useRef()
+
+  const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+  const templateID = process.env.NEXT_PUBLIC_EMAILJS_EMAIL_TEMPLATE_ID
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
   function sendEmail(e) {
     e.preventDefault()
+
+    emailjs
+    .sendForm(
+      serviceID,
+      templateID,
+      form.current,
+      publicKey
+    )
+    .then(
+      (result) => {
+        console.log(result.text)
+      },
+      (error) => {
+        console.log(error.text)
+      }
+    )
+
     e.target.reset() 
   }
 
@@ -26,7 +51,10 @@ export const ContactForm = () => {
     <div className='shadow-none tablets:shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
     w-full h-full rounded-3xl px-0 tablets:p-16'>
 
-      <form onSubmit={ sendEmail }>
+      <form
+        ref={ form }
+        onSubmit={ sendEmail }
+      >
         <div className='flex justify-between gap-0 tablets:gap-16 pb-10 w-full flex-col
         tablets:flex-row'>
           <div className='w-full tablets:w-[41.45%] h-full'>
