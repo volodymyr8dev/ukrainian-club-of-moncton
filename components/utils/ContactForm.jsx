@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 import emailjs from '@emailjs/browser'
 import useTranslation from 'next-translate/useTranslation'
@@ -10,6 +10,8 @@ import SendIcon from './../../assets/images/form/send.svg'
 
 export const ContactForm = () => {
   const form = useRef()
+
+  const [showThankYou, setShowThankYou] = useState(false)
 
   const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
   const templateID = process.env.NEXT_PUBLIC_EMAILJS_EMAIL_TEMPLATE_ID
@@ -28,6 +30,7 @@ export const ContactForm = () => {
     .then(
       (result) => {
         console.log(result.text)
+        setShowThankYou(true)
       },
       (error) => {
         console.log(error.text)
@@ -49,7 +52,7 @@ export const ContactForm = () => {
     </div>
 
     <div className='shadow-none tablets:shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
-    w-full h-full rounded-3xl px-0 tablets:p-16'>
+    w-full h-full rounded-3xl px-0 tablets:p-16 tablets:pb-10'>
 
       <form
         ref={ form }
@@ -163,6 +166,14 @@ export const ContactForm = () => {
           </button>
         </div>
       </form>
+      <div className='pt-6 flex justify-center w-full'>
+        <span className={`${ showThankYou
+          ? 'visible text-blue-500'
+          : 'invisible' }`}
+        >
+          Thank you for your message!
+        </span>
+      </div>
     </div>
     </>
   )
