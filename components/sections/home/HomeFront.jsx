@@ -141,15 +141,15 @@ export const HomeFront = () => {
         <div className='max-w-full flex md:hidden flex-col gap-6 mt-2
         tablets:mt-20'>
           <h2 className='font-proximaNova300 text-[23px] uppercase
-          leading-[26px] tracking-wider'>
+          leading-[24px] tracking-wider'>
             {
               router.locale == 'ua'
               ? 'В Україні війна'
               : 'There is war in Ukraine'
             }
             <br />
-            <span className='font-proximaNova500 text-blue-500 text-[62.81px]
-            uppercase'>
+            <span className='font-proximaNova500 text-blue-500 text-[35px]
+            md:text-[62.81px] uppercase'>
               {
                 router.locale == 'ua'
                 ? 'Чимк'
@@ -157,8 +157,8 @@ export const HomeFront = () => {
               }
             </span>
             {' '}
-            <span className='font-proximaNova500 text-gray-900 text-[62.81px]
-            uppercase'>
+            <span className='font-proximaNova500 text-blue-900 text-[35px]
+            md:text-[62.81px] uppercase'>
               {
                 router.locale == 'ua'
                 ? 'я можу'
@@ -166,8 +166,8 @@ export const HomeFront = () => {
               }
             </span>
             {' '}
-            <span className='font-proximaNova500 text-yellow-300 text-[62.81px]
-            uppercase'>
+            <span className='font-proximaNova500 text-yellow-300 text-[35px]
+            md:text-[62.81px] uppercase'>
               {
                 router.locale == 'ua'
                 ? 'допомогти'
