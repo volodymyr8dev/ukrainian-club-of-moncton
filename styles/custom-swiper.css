@@ -39,7 +39,10 @@
   }
 
   .info-swiper .swiper-pagination {
-    display: block;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    padding-bottom: 5px;
   }
 
   .info-swiper .swiper-pagination {
@@ -65,7 +68,9 @@
 
 .info-swiper .swiper-pagination {
   transform: translateY(15px);
-  z-index: 100 !important;
+  z-index: 50 !important;
+  width: 90% !important;
+  transform: translateX(5.5%) !important;
 }
 
 .swiper-pagination-bullet {

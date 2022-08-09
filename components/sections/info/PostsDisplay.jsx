@@ -342,17 +342,17 @@ export const PostsDisplay = () => {
             </Swiper>
           </div>
           
-          <div className='flex justify-between w-full -translate-y-[18px] z-10'>
-            <div className='z-10'>
+          <div className='flex justify-between w-full -translate-y-[18px] z-50'>
+            <div className=''>
               <Image
                 src={ beforeArrow }
-                className='info-pagination-before cursor-pointer select-none z-50'
+                className='info-pagination-before cursor-pointer select-none'
               />
             </div>
-            <div className='z-10'>
+            <div className=''>
               <Image
                 src={ nextArrow }
-                className='info-pagination-next cursor-pointer select-none z-50'
+                className='info-pagination-next cursor-pointer select-none'
               />
             </div>
           </div>
