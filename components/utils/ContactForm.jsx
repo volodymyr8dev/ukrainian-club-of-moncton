@@ -12,6 +12,7 @@ export const ContactForm = () => {
   const form = useRef()
 
   const [showThankYou, setShowThankYou] = useState(false)
+  const [showError, setShowError] = useState(false)
 
   const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
   const templateID = process.env.NEXT_PUBLIC_EMAILJS_EMAIL_TEMPLATE_ID
@@ -34,6 +35,7 @@ export const ContactForm = () => {
       },
       (error) => {
         console.log(error.text)
+        setShowError(true)
       }
     )
 
@@ -172,6 +174,12 @@ export const ContactForm = () => {
           : 'invisible' }`}
         >
           Thank you for your message!
+        </span>
+        <span className={`${ showError
+          ? 'inline-block visible text-yellow-500'
+          : 'invisible hidden' }`}
+        >
+          Your message could not be sent, service unavailable.
         </span>
       </div>
     </div>
