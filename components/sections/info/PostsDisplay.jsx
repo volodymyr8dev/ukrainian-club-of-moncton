@@ -1,12 +1,16 @@
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import moment from 'moment'
 import { useRouter } from 'next/router'
 import { gql, useQuery } from '@apollo/client'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper'
+import { Pagination, Navigation } from 'swiper'
 
 import useTranslation from 'next-translate/useTranslation'
+
+import beforeArrow from './../../../assets/images/before-arrow-pagination.svg'
+import nextArrow from './../../../assets/images/next-arrow-pagination.svg'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -96,9 +100,7 @@ export const PostsDisplay = () => {
 
   const [activeTab, setActiveTab] = useState(true)
 
-  const handleTabSwitch = () => {
-    setActiveTab(!activeTab)
-  }
+  const handleTabSwitch = () => setActiveTab(!activeTab)
 
   const {
     loading: loadingIn,
@@ -117,6 +119,8 @@ export const PostsDisplay = () => {
 
   if (loadingTo) return <p>Loading...</p>
   if (errorTo) return <p>Error</p>
+
+  const page = 'Page: '
 
   const pagination = {
     clickable: true,
@@ -194,7 +198,11 @@ export const PostsDisplay = () => {
                 },
               }}
               pagination={ pagination }
-              modules={[ Pagination ]}
+              navigation={{
+                prevEl: '.info-pagination-before',
+                nextEl:'.info-pagination-next'
+              }}
+              modules={[ Pagination, Navigation ]}
             >
               {
                 activeTab
@@ -332,6 +340,21 @@ export const PostsDisplay = () => {
                 ))
               }
             </Swiper>
+          </div>
+          
+          <div className='flex justify-between w-full -translate-y-[18px] z-10'>
+            <div className='z-10'>
+              <Image
+                src={ beforeArrow }
+                className='info-pagination-before cursor-pointer select-none z-50'
+              />
+            </div>
+            <div className='z-10'>
+              <Image
+                src={ nextArrow }
+                className='info-pagination-next cursor-pointer select-none z-50'
+              />
+            </div>
           </div>
         </div>
     </section>

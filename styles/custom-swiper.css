@@ -59,6 +59,14 @@
   }
 }
 
+.info-swiper {
+  padding-bottom: 25px !important;
+}
+
+.info-swiper .swiper-pagination {
+  transform: translateY(15px);
+  z-index: 100 !important;
+}
 
 .swiper-pagination-bullet {
   width: 20px;
