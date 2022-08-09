@@ -84,6 +84,7 @@ export const UpcomingEvents = () => {
             >
             { data.posts.map(post => ( 
               <SwiperSlide
+                key={ post.title }
                 className='py-6'
               >
                 <div

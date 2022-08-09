@@ -56,7 +56,9 @@ export const Gallery = () => {
       >
         {
           data.galleries.map(item => (
-            <SwiperSlide>
+            <SwiperSlide
+              key={ item.picture.url }
+            >
             <img
               src={ item.picture.url }
               className='rounded-[16px] w-full max-w-[376px] h-full max-h-[244px]

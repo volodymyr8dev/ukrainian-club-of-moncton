@@ -67,6 +67,7 @@ export const RelatedPosts = ({ category, tags, slug }) => {
             >
             { relatedPosts.map(post => ( 
               <SwiperSlide
+                key={ post.title }
                 className='py-6'
               >
                 <div
