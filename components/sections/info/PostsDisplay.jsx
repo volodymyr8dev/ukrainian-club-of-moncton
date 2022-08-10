@@ -20,7 +20,7 @@ import 'swiper/css/autoplay'
 const GET_MOST_RECENT_IN_CANADA_POSTS_QUERY = gql`
   query getRecentInCanadaPosts {
     posts (
-      where: {category: {slug: "in-canada"}}
+      where: { category: {slug: "in-canada"} }
       orderBy: createdAt_DESC,
     ) {
     title
