@@ -11,6 +11,8 @@ import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
 import { useRouter } from 'next/router'
 
+import { FacebookShareButton, TwitterShareButton } from 'next-share'
+
 export const PostDetail = ({ post }) => {
   const router = useRouter()
 
@@ -70,28 +72,30 @@ export const PostDetail = ({ post }) => {
             <div className='hidden small-notebooks:flex flex-col gap-4 pt-8'>
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
-                <Link
-                  href='https://facebook.com'
+                <FacebookShareButton
+                  url={ window.location.href }
+                  quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
                     src={ FacebookIcon }
                     width={ 64 }
                     height={ 64 }
                   />
-                </Link>
+                </FacebookShareButton>
               </div>
 
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
-                <Link
-                  href='https://twitter.com'
+                <TwitterShareButton
+                  url={ window.location.href }
+                  quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
                     src={ TwitterIcon }
                     width={ 64 }
                     height={ 64 }
                   />
-                </Link>
+                </TwitterShareButton>
               </div>
 
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
@@ -153,28 +157,30 @@ export const PostDetail = ({ post }) => {
             <div className='flex gap-4 pt-8 w-full max-w-[960px]'>
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
-                <Link
-                  href='https://facebook.com'
+                <FacebookShareButton
+                  url={ window.location.href }
+                  quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
                     src={ FacebookIcon }
                     width={ 64 }
                     height={ 64 }
                   />
-                </Link>
+                </FacebookShareButton>
               </div>
 
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
-                <Link
-                  href='https://twitter.com'
+                <TwitterShareButton
+                  url={ window.location.href }
+                  quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
                     src={ TwitterIcon }
                     width={ 64 }
                     height={ 64 }
                   />
-                </Link>
+                </TwitterShareButton>
               </div>
 
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16

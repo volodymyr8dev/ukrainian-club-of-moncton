@@ -1,4 +1,6 @@
 .home-gallery-swiper {
+  margin-top: -30px !important;
+  padding-top: 30px !important;
   padding-bottom: 2rem !important;
 }
 
@@ -30,6 +32,10 @@
 @media screen and (max-width: 767px) {
   .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
     padding: 20px !important;
+  }
+
+  .info-swiper .swiper-pagination {
+    display: none;
   }
 }
 

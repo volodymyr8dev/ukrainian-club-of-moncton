@@ -52,9 +52,13 @@ export const Header = () => {
                 className='cursor-pointer font-proximaNova300 border-solid
                 border-blue-500 border-[1px] text-base py-[12px] px-[15px]
                 rounded-[50px] uppercase'>
-                <span className='text-blue-500'>
-                  Volunteer with us
-                </span>
+                <Link
+                  href='/how'
+                >
+                  <span className='text-blue-500'>
+                    Volunteer with us
+                  </span>
+                </Link>
               </div>
             </li>
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500

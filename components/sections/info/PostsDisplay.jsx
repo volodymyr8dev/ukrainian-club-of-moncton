@@ -9,6 +9,7 @@ import { Pagination, Navigation } from 'swiper'
 
 import useTranslation from 'next-translate/useTranslation'
 
+import LoadingAnimation from 'react-circle-loading-animation'
 import beforeArrow from './../../../assets/images/before-arrow-pagination.svg'
 import nextArrow from './../../../assets/images/next-arrow-pagination.svg'
 
@@ -19,10 +20,9 @@ import 'swiper/css/autoplay'
 
 const GET_MOST_RECENT_IN_CANADA_POSTS_QUERY = gql`
   query getRecentInCanadaPosts {
-    posts(
-      where: {category: {slug: "in-canada"}}
+    posts (
+      where: { category: {slug: "in-canada"} }
       orderBy: createdAt_DESC,
-      last: 6
     ) {
     title
       tags {
@@ -57,10 +57,9 @@ const GET_MOST_RECENT_IN_CANADA_POSTS_QUERY = gql`
 
 const GET_MOST_RECENT_GOING_TO_CANADA_POSTS_QUERY = gql`
   query getRecentGoingToCanadaPosts {
-    posts(
+    posts (
       where: {category: {slug: "going-to-canada"}}
       orderBy: createdAt_DESC,
-      last: 6
     ) {
     title
       tags {
@@ -114,7 +113,7 @@ export const PostsDisplay = () => {
     data: dataTo
   } = useQuery(GET_MOST_RECENT_GOING_TO_CANADA_POSTS_QUERY)
 
-  if (loadingIn) return <p>Loading...</p>
+  if (loadingIn) return <LoadingAnimation isLoading={ true } />
   if (errorIn) return <p>Error</p>
 
   if (loadingTo) return <p>Loading...</p>
@@ -143,7 +142,7 @@ export const PostsDisplay = () => {
             <button
               className={`${ activeTab ? 'text-gray-100' : 'text-blue-500' }
               font-proximaNova400 md:font-proximaNova500 text-base md:text-2xl
-              max-w-[100px] md:max-w-full`}
+              max-w-[130px] md:max-w-full`}
               onClick={ handleTabSwitch }
               type='button'
             >
@@ -161,7 +160,7 @@ export const PostsDisplay = () => {
             <button
               className={`${ !activeTab ? 'text-gray-100' : 'text-blue-500' }
               font-proximaNova400 md:font-proximaNova500 text-base md:text-2xl
-              max-w-[100px] md:max-w-full`}
+              max-w-[130px] md:max-w-full`}
               onClick={ handleTabSwitch }
               type='button'
             >
@@ -342,7 +341,7 @@ export const PostsDisplay = () => {
             </Swiper>
           </div>
           
-          <div className='flex justify-between w-full -translate-y-[18px] z-50'>
+          <div className='hidden md:flex justify-between w-full -translate-y-[18px] z-50'>
             <div className=''>
               <Image
                 src={ beforeArrow }
