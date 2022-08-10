@@ -156,10 +156,6 @@ export const MobileMenu = ({ setIsActive }) => {
 
           <div className={``}>
             <ul className='flex items-center gap-0 small-phones:gap-8'>
-              <div className='hidden'>
-                <ThankYouModal />
-              </div>
-              
               <LanguageSwitch />
               <DonateButton />
             </ul>

@@ -1,19 +1,14 @@
 import { useState } from 'react'
-import { useRouter } from 'next/router'
 
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Modal from '@mui/material/Modal'
+import {useNextQueryParam} from "../../hooks/useNextQueryParam";
 
 export const ThankYouModal = () => {
-  const router = useRouter()
+  const [open, setOpen] = useState(useNextQueryParam('ty') || false)
 
-  let ty = router.query['ty']
-
-  const [open, setOpen] = useState(false)
-
-  const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
 
   const style = {
@@ -30,8 +25,6 @@ export const ThankYouModal = () => {
 
   return (
     <div>
-      { ty == 0 ? handleOpen : handleClose }
-      { console.log(ty) }
       <Modal
         open={ open }
         onClose={ handleClose }
