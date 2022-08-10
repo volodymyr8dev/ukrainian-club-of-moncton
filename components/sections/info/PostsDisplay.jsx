@@ -9,6 +9,7 @@ import { Pagination, Navigation } from 'swiper'
 
 import useTranslation from 'next-translate/useTranslation'
 
+import LoadingAnimation from 'react-circle-loading-animation'
 import beforeArrow from './../../../assets/images/before-arrow-pagination.svg'
 import nextArrow from './../../../assets/images/next-arrow-pagination.svg'
 
@@ -112,7 +113,7 @@ export const PostsDisplay = () => {
     data: dataTo
   } = useQuery(GET_MOST_RECENT_GOING_TO_CANADA_POSTS_QUERY)
 
-  if (loadingIn) return <p>Loading...</p>
+  if (loadingIn) return <LoadingAnimation isLoading={ true } />
   if (errorIn) return <p>Error</p>
 
   if (loadingTo) return <p>Loading...</p>
