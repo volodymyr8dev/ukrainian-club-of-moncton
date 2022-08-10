@@ -40,7 +40,7 @@ export const Gallery = () => {
         }}
         spaceBetween={ 30 }
         autoplay={{
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true
         }}
@@ -62,7 +62,8 @@ export const Gallery = () => {
             <img
               src={ item.picture.url }
               className='rounded-[16px] w-full max-w-[376px] h-full max-h-[244px]
-              object-cover'
+              object-cover hover:max-w-[413.6px] hover:max-h-[268.4px] hover:scale-110
+              transition-all'
               loading='lazy'
             />
           </SwiperSlide>

@@ -1,4 +1,6 @@
 .home-gallery-swiper {
+  margin-top: -30px !important;
+  padding-top: 30px !important;
   padding-bottom: 2rem !important;
 }
 

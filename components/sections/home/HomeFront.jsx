@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 
 import { useRouter } from 'next/router'
@@ -23,33 +24,22 @@ export const HomeFront = () => {
         flex-col gap-6 md:gap-8 lg:-mt-8 mt-12 tablets:-mt-[1.9rem]'>
           <h2 className='font-proximaNova300 text-[34px] md:text-[50px]
           leading-[40px] md:leading-[65px] first-letter:tracking-wide'>
-            { t('example-text') }
+            ДОБРОГО ВЕЧОРА
             <br />
             <span className='font-proximaNova500 text-blue-500 text-[43px] 
             md:text-[62.81px]'>
-              {
-                router.locale == 'ua'
-                ? 'МИ З'
-                : 'WE ARE FROM'
-              }
+              МИ З
             </span>
             {' '}
             <span className='font-proximaNova500 text-yellow-300 text-[43px] 
             md:text-[62.81px]'>
-              {
-                router.locale == 'ua'
-                ? 'УКРАЇНИ'
-                : 'UKRAINE'
-              }
+              УКРАЇНИ
             </span>
           </h2>
 
           <p className='font-proximaNova300 text-xl md:text-2xl'>
-            {
-              router.locale == 'ua'
-              ? 'Допомога для українців які вже в Канаді, або для тих, хто тільки планує приїхати.'
-              : 'Help for Ukrainians who are already in Canada, or for those who have new plans to come'
-            }
+            Допомога для українців які вже в Канаді, або для тих, хто тільки
+            планує приїхати.
           </p>
           
           <div className='flex justify-end items-center gap-6 md:gap-8'>
@@ -59,8 +49,10 @@ export const HomeFront = () => {
                 w-[92px]'
               />
             </div>
+
             <FilledButton
-              text={ router.locale == 'ua' ? 'Що далі?' : "What's next?" }
+              href='/info'
+              text='Що далі?'
               textColor='gray-100'
               bgColor='bg-blue-500'
             />
@@ -81,6 +73,7 @@ export const HomeFront = () => {
         hidden md:flex flex-col gap-8 mt-0 md:mt-[14.4rem]'>
           <div className='flex justify-start items-center gap-6 md:gap-8'>
             <FilledButton
+              href='/how'
               text={ router.locale == 'ua' ? 'Що далі?' : "What's next?" }
               textColor='gray-100'
               bgColor='bg-yellow-300'
@@ -192,6 +185,7 @@ export const HomeFront = () => {
               />
             </div>
             <FilledButton
+              href='/how'
               text={ router.locale == 'ua' ? 'Що далі?' : "What's next?" }
               textColor='gray-100'
               bgColor='bg-yellow-300'

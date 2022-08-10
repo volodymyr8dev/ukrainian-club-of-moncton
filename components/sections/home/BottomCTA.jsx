@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { DonateButton } from './../../utils/DonateButton'
 
 export const BottomCTA = () => {
@@ -14,9 +16,13 @@ export const BottomCTA = () => {
               className='cursor-pointer font-proximaNova400 border-solid
               border-blue-500 border-2 text-base md:text-xl py-[12px]
               px-2 md:px-[32px] rounded-[50px] uppercase'>
-              <span className='text-blue-500'>
-                Do you want to volunteer with us?
-              </span>
+              <Link
+                href='/how'
+              >
+                <span className='text-blue-500'>
+                  Do you want to volunteer with us?
+                </span>
+              </Link>
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ const GET_MOST_RECENT_POSTS_QUERY = gql`
     posts(
       where: {category: {slug: "event"}}
       orderBy: createdAt_DESC,
-      last: 6
+      last: 10
     ) {
     title
       tags {

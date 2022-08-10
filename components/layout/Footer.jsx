@@ -23,23 +23,23 @@ export const Footer = () => {
               <span className='text-xs md:text-sm'>
                 Contact us:
                 {' '}
-                <Link href='/'>
+                <a href='tel:+22222222222'>
                   +222-2222-2222
-                </Link>
+                </a>
               </span>
               <span className='text-xs md:text-sm'>
                 Email:
                 {' '}
-                <Link href='/'>
+                <a href='mailto:info@ukrclubmoncton.ca'>
                   info@ukrclubmoncton.ca
-                </Link>
+                </a>
               </span>
               <span className='text-xs md:text-sm'>
                 Address:
                 {' '}
-                <Link href='/'>
+                <a href='https://www.google.com.br/maps/place/123+Cameron+St,+Moncton,+NB+E1C+5Y7,+Canadá/@46.0890425,-64.7909006,17z/data=!3m1!4b1!4m5!3m4!1s0x4ca0b92340567205:0x6d9d8c7d02438947!8m2!3d46.0890388!4d-64.7887119'>
                   123 ABC Street, Moncton. NB, E1D2D3
-                </Link>
+                </a>
               </span>
             </li>
           </ul>
