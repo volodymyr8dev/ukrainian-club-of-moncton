@@ -141,7 +141,7 @@ export const PostsDisplay = () => {
             <button
               className={`${ activeTab ? 'text-gray-100' : 'text-blue-500' }
               font-proximaNova400 md:font-proximaNova500 text-base md:text-2xl
-              max-w-[100px] md:max-w-full`}
+              max-w-[130px] md:max-w-full`}
               onClick={ handleTabSwitch }
               type='button'
             >
@@ -159,7 +159,7 @@ export const PostsDisplay = () => {
             <button
               className={`${ !activeTab ? 'text-gray-100' : 'text-blue-500' }
               font-proximaNova400 md:font-proximaNova500 text-base md:text-2xl
-              max-w-[100px] md:max-w-full`}
+              max-w-[130px] md:max-w-full`}
               onClick={ handleTabSwitch }
               type='button'
             >
@@ -340,7 +340,7 @@ export const PostsDisplay = () => {
             </Swiper>
           </div>
           
-          <div className='flex justify-between w-full -translate-y-[18px] z-50'>
+          <div className='hidden md:flex justify-between w-full -translate-y-[18px] z-50'>
             <div className=''>
               <Image
                 src={ beforeArrow }

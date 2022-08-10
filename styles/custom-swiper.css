@@ -31,6 +31,10 @@
   .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
     padding: 20px !important;
   }
+
+  .info-swiper .swiper-pagination {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 767px) {
