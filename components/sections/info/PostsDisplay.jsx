@@ -19,10 +19,9 @@ import 'swiper/css/autoplay'
 
 const GET_MOST_RECENT_IN_CANADA_POSTS_QUERY = gql`
   query getRecentInCanadaPosts {
-    posts(
+    posts (
       where: {category: {slug: "in-canada"}}
       orderBy: createdAt_DESC,
-      last: 6
     ) {
     title
       tags {
@@ -57,10 +56,9 @@ const GET_MOST_RECENT_IN_CANADA_POSTS_QUERY = gql`
 
 const GET_MOST_RECENT_GOING_TO_CANADA_POSTS_QUERY = gql`
   query getRecentGoingToCanadaPosts {
-    posts(
+    posts (
       where: {category: {slug: "going-to-canada"}}
       orderBy: createdAt_DESC,
-      last: 6
     ) {
     title
       tags {
