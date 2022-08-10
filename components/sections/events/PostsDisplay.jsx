@@ -22,7 +22,6 @@ const GET_EVENTS_POSTS_QUERY = gql`
     posts(
       where: {category: {slug: "event"}}
       orderBy: createdAt_DESC,
-      last: 240
     ) {
     title
       tags {

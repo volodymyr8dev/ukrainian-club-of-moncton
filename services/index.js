@@ -1,4 +1,8 @@
-import { request, gql } from 'graphql-request'
+import { GraphQLClient, request, gql } from 'graphql-request'
+
+export const hygraph = new GraphQLClient(
+  process.env.NEXT_PUBLIC_GRAPHCMS_CONTENT_API
+)
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_CONTENT_API
 
