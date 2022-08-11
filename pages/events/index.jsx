@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import moment from 'moment'
 import { useRouter } from 'next/router'
-import { gql, useQuery } from '@apollo/client'
+import { gql } from '@apollo/client'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
 
@@ -21,29 +21,6 @@ import 'swiper/css/autoplay'
 
 import { EventsFront } from '../../components/sections/events/EventsFront'
 import { Informative } from '../../components/sections/events/Informative'
-import { PostsDisplay } from '../../components/sections/events/PostsDisplay'
-
-const GET_EVENTS_POSTS_QUERY = gql`
-  query getEventsPosts {
-    posts(
-      where: {category: {slug: "event"}}
-      orderBy: createdAt_DESC,
-    ) {
-    title
-      tags {
-        name
-        slug
-      }
-      excerpt
-      featuredImage {
-        url
-      }
-      address
-      slug
-      createdAt
-    }
-  }
-`
 
 const limit = 3
 
@@ -51,11 +28,6 @@ export default function Events({ posts }) {
   const { locale, asPath } = useRouter()
   const router = useRouter()
   let { t } = useTranslation()
-
-  const { loading, error, data } = useQuery(GET_EVENTS_POSTS_QUERY)
-
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error</p>
 
   const page = 'Page: '
 
