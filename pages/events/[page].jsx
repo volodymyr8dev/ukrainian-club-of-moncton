@@ -40,12 +40,13 @@ function PostPage({
   return (
     <>
     <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6'>
-      <div className='flex justify-center flex-col max-w-[1215px] w-full'>
-        <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0'>
-            <Swiper className='home-events-swiper info-swiper h-full'
+      <div className='flex justify-center flex-col max-w-[1230px] w-full'>
+        <div className='flex justify-between md:justify-center gap-2 xl:gap-0
+        -ml-[23px] md:ml-0'>
+            <Swiper className='home-events-swiper info-swiper events-swiper
+            h-full'
               breakpoints={{
                 100: {
-                  slidesPerGroup: 1,
                   slidesPerView: 1.1,
                   centeredSlides: true,
                   spaceBetween: 8
@@ -54,10 +55,8 @@ function PostPage({
                   spaceBetween: 8
                 },
                 900: {
-                  slidesPerView: 3,
-                  slidesPerGroup: 3,
                   centeredSlides: false,
-                  spaceBetween: 40
+                  spaceBetween: 30
                 },
               }}
               pagination={pagination}
@@ -70,7 +69,7 @@ function PostPage({
               {
                 posts.map(post => (
                   <SwiperSlide
-                    className='py-6'
+                    className='py-6 max-w-[33.3%]'
                     key={post.title}
                   >
                     <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
@@ -253,6 +252,9 @@ export async function getStaticProps({ params }) {
         skip: $offset,
         where: { category: { slug: "event" }}
         ) {
+        aggregate {
+          count
+        }
         posts: edges {
           node {
             id

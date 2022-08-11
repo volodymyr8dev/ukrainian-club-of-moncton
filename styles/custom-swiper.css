@@ -66,6 +66,15 @@
     font-size: 20px;
     background-color: transparent;
   }
+
+  .events-swiper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .events-swiper .swiper-wrapper .swiper-slide {
+    flex-basis: 32%;
+  }
 }
 
 .info-swiper {
