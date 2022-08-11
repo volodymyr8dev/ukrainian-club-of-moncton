@@ -5,11 +5,9 @@ import useTranslation from 'next-translate/useTranslation'
 import GreenVolunteerIcon from './../../assets/images/donation-sup-green/green-volunteer.svg'
 import GreenFollowIcon from './../../assets/images/donation-sup-green/green-follow.svg'
 import GreenFundraiseIcon from './../../assets/images/donation-sup-green/green-fundraise.svg'
-import GreenJobsIcon from './../../assets/images/donation-sup-green/green-jobs.svg'
-import GreenPeaceIcon from './../../assets/images/donation-sup-green/green-peace.svg'
 
 export const GreenDonationGrid = () => {
-  let { t } = useTranslation()
+  let { t } = useTranslation('how')
 
   return (
     <>
@@ -25,14 +23,14 @@ export const GreenDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Volunteer with Us
+          { t('volunteer-with-us') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-green-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -44,14 +42,14 @@ export const GreenDonationGrid = () => {
           src={ GreenFollowIcon }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Fundraise for Ukrainesupport our page, follow, like and share our posts!
+          { t('fundraise-page') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-green-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -65,17 +63,17 @@ export const GreenDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Fundraise for Ukraine
+          { t('fundraise') }
         </span>
         <span className='text-center -mt-4 font-proximaNova200 text-lg leading-[18px]'>
-          #CAwithUAroots
+          { t('ca-with') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-green-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
     </div>

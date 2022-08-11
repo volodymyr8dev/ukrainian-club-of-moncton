@@ -10,7 +10,7 @@ import YellowBusinessIcon from './../../assets/images/donation-sup-yellow/yellow
 import YellowPlaneIcon from './../../assets/images/donation-sup-yellow/yellow-plane.svg'
 
 export const YellowDonationGrid = () => {
-  let { t } = useTranslation()
+  let { t } = useTranslation('how')
 
   return (
     <>
@@ -26,17 +26,17 @@ export const YellowDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Participate in our photo project
+          { t('photo-project') }
         </span>
         <span className='text-center -mt-4 font-proximaNova200 text-lg leading-[18px]'>
-          #kidsartforukraine
+          { t('kids-art') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -48,14 +48,14 @@ export const YellowDonationGrid = () => {
           src={ YellowSmileIcon }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-        Sell our awesome stickers at your place of work
+          { t('sell-stickers') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -69,17 +69,17 @@ export const YellowDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-        Participate in our video project
+          { t('video-project') }
         </span>
         <span className='text-center -mt-4 font-proximaNova200 text-lg leading-[18px]'>
-          #CAwithUAroots
+          { t('ca-with') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
     </div>
@@ -97,15 +97,14 @@ export const YellowDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          If you&apos;re an artist or artisan donate items for sale (on your conditions)
-          for our fundraisers
+          { t('artist') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -118,16 +117,14 @@ export const YellowDonationGrid = () => {
           src={ YellowBusinessIcon }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Offer your businesses to help with the fundraisers - commercial kitchens,
-          restaurants, grocery stores, banking institutions, we can use your help
-          even to only set up a box for donations and spread our flyers
+          { t('offer-business') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -142,15 +139,14 @@ export const YellowDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Buy plane tickets for our volunteers with your @Air Canada Airplan
-          points
+          { t('buy-tickets') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
     </div>

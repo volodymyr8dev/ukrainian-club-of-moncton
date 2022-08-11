@@ -10,7 +10,7 @@ import BlueEquipmentIcon from './../../assets/images/donation-sup-blue/blue-equi
 import BlueColletteIcon from './../../assets/images/donation-sup-blue/blue-collette.svg'
 
 export const BlueDonationGrid = () => {
-  let { t } = useTranslation()
+  let { t } = useTranslation('how')
 
   return (
     <>
@@ -27,14 +27,14 @@ export const BlueDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Send monetary donations to our bank account E-transfer
+          { t('send-monetary') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -47,14 +47,14 @@ export const BlueDonationGrid = () => {
           src={ BlueHousesIcon }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Offer housing to the people fleeing war in Ukraine, please fill out this form
+        { t('offer-housing') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -69,14 +69,14 @@ export const BlueDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Join our weekly rallies and our events
+        { t('join-rallies') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
     </div>
@@ -94,14 +94,14 @@ export const BlueDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Bring humanitarian aid in Greater Moncton Area
+          { t('bring-humanitarian') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -114,15 +114,14 @@ export const BlueDonationGrid = () => {
           src={ BlueEquipmentIcon }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Buy stuff from our amazon wish list of defence military equipment we
-          can send to the Ukrainian warriors
+          { t('amazon-wishlist') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
 
@@ -137,14 +136,14 @@ export const BlueDonationGrid = () => {
           height={ 128 }
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
-          Help our Randy Collette buy 5000 tactical tourniquets
+          { t('randy-collette') }
         </span>
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
-          font-proximaNova400 text-lg leading-[18px] text-gray-100'
+          font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href='#'
         >
-          Learn More
+          { t('learn-more') }
         </a>
       </div>
     </div> 

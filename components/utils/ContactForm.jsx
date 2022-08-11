@@ -42,14 +42,14 @@ export const ContactForm = () => {
     e.target.reset() 
   }
 
-  let { t } = useTranslation()
+  let { t } = useTranslation('about')
 
   return (
     <>
     <div className='flex tablets:hidden pb-8 justify-center'>
       <h2 className='font-proximaNova400 uppercase text-[32px]
       text-center tracking-wider'>
-        Let&apos;s talk
+        { t('lets-talk') }
       </h2>
     </div>
 
@@ -68,7 +68,7 @@ export const ContactForm = () => {
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='name'
               >
-                Name
+                { t('name') }
               </label>
               <div className='bg-gray-200 px-4 flex items-center gap-8
               rounded-2xl'>
@@ -92,7 +92,7 @@ export const ContactForm = () => {
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='email'
               >
-                Email
+                { t('email') }
               </label>
               <div className='bg-gray-200 px-4 flex items-center gap-8
               rounded-2xl'>
@@ -116,7 +116,7 @@ export const ContactForm = () => {
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='phone'
               >
-                Phone
+                { t('phone') }
               </label>
               <div className='bg-gray-200 px-4 flex items-center gap-10
               rounded-2xl'>
@@ -140,7 +140,7 @@ export const ContactForm = () => {
               className='font-proximaNova400 text-sm'
               htmlFor='message'
             >
-              Message
+              { t('message') }
             </label>
               <textarea
                 className='bg-gray-200 px-6 py-3 tablets:py-6 flex items-center gap-10
@@ -148,7 +148,7 @@ export const ContactForm = () => {
                 tablets:text-lg'
                 name='message'
                 id='message'
-                placeholder='Feed animals and enjoy life.'
+                placeholder={ t('feed') }
                 minLength={ 20 }
                 required       
               >
@@ -161,7 +161,7 @@ export const ContactForm = () => {
             flex items-center gap-[18px] justify-between'
             type='submit'
           >
-            Send message
+            { t('send-message') }
             <Image
               src={ SendIcon }
             />
@@ -173,13 +173,13 @@ export const ContactForm = () => {
           ? 'visible text-blue-500'
           : 'invisible' }`}
         >
-          Thank you for your message!
+          { t('thank-you') }
         </span>
         <span className={`${ showError
           ? 'inline-block visible text-yellow-500'
           : 'invisible hidden' }`}
         >
-          Your message could not be sent, service unavailable.
+          { t('not-sent') }
         </span>
       </div>
     </div>

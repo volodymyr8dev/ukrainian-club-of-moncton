@@ -12,7 +12,7 @@ import WhiteLocationIcon from './../../../assets/images/contacts/white-location.
 import WhiteEmailIcon from './../../../assets/images/contacts/white-email.svg'
 
 export const Contacts = () => {
-  let { t } = useTranslation()
+  let { t } = useTranslation('about')
 
   const [phoneActive, setPhoneActive] = useState(false)
   const [locationActive, setLocationActive] = useState(false)
@@ -35,7 +35,7 @@ export const Contacts = () => {
       <div className='flex justify-between flex-col max-w-[1216px] w-full'>
         <h2 className='font-proximaNova400 text-[40px] leading-[100%]
         tracking-wider uppercase text-center'>
-          Our contacts
+          { t('our-contacts') }
         </h2>
         <div className='flex gap-10 justify-between w-full pt-11 mb-[72px] md:mb-10
         flex-col tablets:flex-row'>
