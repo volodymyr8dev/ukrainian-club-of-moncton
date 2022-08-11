@@ -1,8 +1,11 @@
 import Link from 'next/link'
+import useTranslation from 'next-translate/useTranslation'
 
 import { DonateButton } from './../../utils/DonateButton'
 
 export const BottomCTA = () => {
+  const { t } = useTranslation('home')
+
   return (
     <section className='flex justify-center mt-24 mb-24 px-6 xl:px-0'>
     <div className='flex justify-center flex-col max-w-[1216px] w-full'>
@@ -20,7 +23,7 @@ export const BottomCTA = () => {
                 href='/how'
               >
                 <span className='text-blue-500'>
-                  Do you want to volunteer with us?
+                  { t('want-volunteer') }
                 </span>
               </Link>
             </div>

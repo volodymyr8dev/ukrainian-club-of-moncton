@@ -1,16 +1,11 @@
-import Link from 'next/link'
 import Image from 'next/image'
-
-import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
 import { FilledButton } from '../../utils/FilledButton'
 import birdImage from './../../../assets/images/bird.svg'
 
 export const HomeFront = () => {
-  const router = useRouter()
-
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('home')
 
   return (
     <>
@@ -74,7 +69,7 @@ export const HomeFront = () => {
           <div className='flex justify-start items-center gap-6 md:gap-8'>
             <FilledButton
               href='/how'
-              text={ router.locale == 'ua' ? 'Що далі?' : "What's next?" }
+              text={ t('whats-next') }
               textColor='gray-100'
               bgColor='bg-yellow-300'
             />
@@ -86,47 +81,27 @@ export const HomeFront = () => {
             </div>
           </div>
           <p className='font-proximaNova300 text-2xl'>
-            {
-              router.locale == 'ua'
-              ? 'Ваша підтримка допоможе тисячам українців пережити ці важкі часи.'
-              : 'Your support will help thousands of Ukrainians to survive these difficult times.'
-            }
+            { t('your-support') }
           </p>
 
           <h2 className='font-proximaNova300 uppercase text-[41px] leading-[65px]
           tracking-wide'
           >
-            {
-              router.locale == 'ua'
-              ? 'В Україні війна'
-              : 'There is war in Ukraine'
-            }
+            { t('theres-war') }
             <br />
             <span className='font-proximaNova500 text-blue-500 text-[62.81px]
             uppercase'>
-              {
-                router.locale == 'ua'
-                ? 'Чимк'
-                : 'HOW'
-              }
+              HOW
             </span>
             {' '}
             <span className='font-proximaNova500 text-gray-900 text-[62.81px]
             uppercase'>
-              {
-                router.locale == 'ua'
-                ? 'я можу'
-                : 'CAN I'
-              }
+              CAN I
             </span>
             {' '}
             <span className='font-proximaNova500 text-yellow-300 text-[62.81px]
             uppercase'>
-              {
-                router.locale == 'ua'
-                ? 'допомогти'
-                : 'HELP?'
-              }
+              HELP?
             </span>
           </h2>
         </div>
@@ -135,46 +110,26 @@ export const HomeFront = () => {
         tablets:mt-20'>
           <h2 className='font-proximaNova300 text-[23px] uppercase
           leading-[24px] tracking-wider'>
-            {
-              router.locale == 'ua'
-              ? 'В Україні війна'
-              : 'There is war in Ukraine'
-            }
+            { t('theres-war') }
             <br />
             <span className='font-proximaNova500 text-blue-500 text-[35px]
             md:text-[62.81px] uppercase'>
-              {
-                router.locale == 'ua'
-                ? 'Чимк'
-                : 'HOW'
-              }
+              HOW
             </span>
             {' '}
             <span className='font-proximaNova500 text-blue-900 text-[35px]
             md:text-[62.81px] uppercase'>
-              {
-                router.locale == 'ua'
-                ? 'я можу'
-                : 'CAN I'
-              }
+              CAN I
             </span>
             {' '}
             <span className='font-proximaNova500 text-yellow-300 text-[35px]
             md:text-[62.81px] uppercase'>
-              {
-                router.locale == 'ua'
-                ? 'допомогти'
-                : 'HELP?'
-              }
+              HELP?
             </span>
           </h2>
 
           <p className='font-proximaNova300 text-[19px] leading-[30px] tracking-wider'>
-            {
-              router.locale == 'ua'
-              ? 'Ваша підтримка допоможе тисячам українців пережити ці важкі часи.'
-              : 'Your support will help thousands of Ukrainians to survive these difficult times.'
-            }
+          { t('your-support') }
           </p>
           
           <div className='flex justify-end items-center gap-6 md:gap-8'>
@@ -186,7 +141,7 @@ export const HomeFront = () => {
             </div>
             <FilledButton
               href='/how'
-              text={ router.locale == 'ua' ? 'Що далі?' : "What's next?" }
+              text={ t('whats-next') }
               textColor='gray-100'
               bgColor='bg-yellow-300'
             />

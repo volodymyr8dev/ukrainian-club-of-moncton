@@ -2,11 +2,10 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
+import useTranslation from 'next-translate/useTranslation'
 
 import { DonateButton } from '../utils/DonateButton'
 import { LanguageSwitch } from '../utils/LanguageSwitch'
-import { ThankYouModal } from '../utils/ThankYouModal'
-import { MobileMenu } from '../utils/MobileMenu'
 
 import OpenIcon from './../../assets/images/mobile-menu/open.svg'
 import CloseIcon from './../../assets/images/mobile-menu/close.svg'
@@ -22,7 +21,8 @@ import InfoWhiteIcon from './../../assets/images/mobile-menu/info-white.svg'
 import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.svg'
 
 export const Header = () => {
-  const { locale, pathname } = useRouter();
+  const { t } = useTranslation('home')
+  const { locale, pathname } = useRouter()
 
   const [isActive, setIsActive] = useState(false)
 
@@ -56,7 +56,7 @@ export const Header = () => {
                   href='/how'
                 >
                   <span className='text-blue-500'>
-                    Volunteer with us
+                    { t('volunteer-with') }
                   </span>
                 </Link>
               </div>
@@ -75,7 +75,7 @@ export const Header = () => {
                     />
                   </div>
                   <a className={`${ pathname === '/' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
-                    Home
+                    { t('home') }
                   </a>
                 </div>
               </Link>
@@ -95,7 +95,7 @@ export const Header = () => {
                     />
                   </div>
                   <a className={`${ pathname === '/info' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
-                    Info
+                    { t('info') }
                   </a>
                 </div>
               </Link>
@@ -115,7 +115,7 @@ export const Header = () => {
                     />
                   </div>
                   <a className={`${ pathname == '/events' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
-                    Events
+                    { t('events') }
                   </a>
                 </div>
               </Link>
@@ -135,7 +135,7 @@ export const Header = () => {
                     />
                   </div>
                   <a className={`${ pathname === '/about' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
-                    About
+                    { t('about') }
                   </a>
                 </div>
               </Link>

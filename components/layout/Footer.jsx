@@ -1,8 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import useTranslation from 'next-translate/useTranslation'
+
 import UCMLogo from './../../assets/images/ucm-logo.svg'
 
 export const Footer = () => {
+  const { t } = useTranslation('home')
+
   return (
     <footer                                      
       className='flex justify-center h-full md:h-[120px] px-6 xl:px-0
@@ -21,21 +25,21 @@ export const Footer = () => {
             </li>
             <li className='flex flex-col text-center md:text-left'>
               <span className='text-xs md:text-sm'>
-                Contact us:
+                { t('contact-us') }
                 {' '}
                 <a href='tel:+22222222222'>
                   +222-2222-2222
                 </a>
               </span>
               <span className='text-xs md:text-sm'>
-                Email:
+                { t('email') }
                 {' '}
                 <a href='mailto:info@ukrclubmoncton.ca'>
                   info@ukrclubmoncton.ca
                 </a>
               </span>
               <span className='text-xs md:text-sm'>
-                Address:
+                { t('address') }
                 {' '}
                 <a href='https://www.google.com.br/maps/place/123+Cameron+St,+Moncton,+NB+E1C+5Y7,+Canadá/@46.0890425,-64.7909006,17z/data=!3m1!4b1!4m5!3m4!1s0x4ca0b92340567205:0x6d9d8c7d02438947!8m2!3d46.0890388!4d-64.7887119'>
                   123 ABC Street, Moncton. NB, E1D2D3

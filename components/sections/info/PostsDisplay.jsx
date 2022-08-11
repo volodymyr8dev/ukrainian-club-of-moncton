@@ -95,7 +95,7 @@ const GET_MOST_RECENT_GOING_TO_CANADA_POSTS_QUERY = gql`
 export const PostsDisplay = () => {
   const { locale, asPath } = useRouter()
   const router = useRouter()
-  let { t } = useTranslation()
+  let { t } = useTranslation('info')
 
   const [activeTab, setActiveTab] = useState(true)
 
@@ -146,11 +146,7 @@ export const PostsDisplay = () => {
               onClick={ handleTabSwitch }
               type='button'
             >
-              {
-                router.locale == 'ua'
-                ? 'Для тих, хто вже в Канаді'
-                : 'For those already in Canada'
-              }
+              { t('in-canada') }
             </button>
           </div>
 
@@ -164,11 +160,7 @@ export const PostsDisplay = () => {
               onClick={ handleTabSwitch }
               type='button'
             >
-              {
-                router.locale == 'ua'
-                ? 'Для тих, хто збирається'
-                : 'For those who are going'
-              }
+              { t('are-going') }
             </button>
           </div>
         </div>

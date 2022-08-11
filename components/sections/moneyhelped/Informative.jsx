@@ -15,11 +15,7 @@ export const Informative = () => {
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
         <h2 className='font-proximaNova500 text-4xl md:text-[56px] leading-[100%]
         tracking-wider uppercase text-center'>
-          {
-            router.locale == 'ua'
-            ? 'Для тих, хто вже в Канаді'
-            : 'How your money helped'
-          }
+          How your money helped
         </h2>
         <div className='flex justify-center pt-10'>
           <Image
@@ -29,18 +25,10 @@ export const Informative = () => {
         <div className='pt-8 md:pt-11'>
           <p className='w-full md:w-[98%] text-center font-proximaNova300
           text-xl md:text-2xl leading-[30px] md:leading-9'>
-            {
-              router.locale == 'ua'
-              ? 'Ми хочемо допомогти тим, хто ще у лютому мав зовсім інші плани.'
-              : 'We want to help those who had completely different plans back in February.'
-            }
+            Ми хочемо допомогти тим, хто ще у лютому мав зовсім інші плани.
             <br />
             <br className='block md:hidden' />
-            {
-              router.locale == 'ua'
-              ? 'Ми хочемо допомогти тим, хто ще у лютому мав зовсім інші плани.'
-              : 'To those who are forced to temporarily move to Canada because of the war between Russia and Ukraine'
-            }
+            To those who are forced to temporarily move to Canada because of the war between Russia and Ukraine
           </p>
         </div>
       </div>

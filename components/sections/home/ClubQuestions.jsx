@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import { useRouter } from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
 
 import doubtIdeaImage from './../../../assets/images/doubt-idea.svg'
 import ladderImage from './../../../assets/images/ladder.svg'
 
 export const ClubQuestions = () => {
-  const router = useRouter()
+  const { t } = useTranslation('home')
 
   return (
     <>
@@ -15,11 +15,7 @@ export const ClubQuestions = () => {
         leading-[54px] xl:leading-10 tracking-wider pb-0 md:pb-11 xl:pb-36 text-left
         xl:text-center'
         >
-          {
-            router.locale == 'ua'
-            ? 'Український клуб Монктон'
-            : 'Ukrainian Club of Moncton'
-          }
+          { t('ukrainian-club') }
         </h2>
 
         <div className='flex flex-col-reverse md:flex-row items-center
@@ -27,20 +23,24 @@ export const ClubQuestions = () => {
           <div>
             <strong className='font-proximaNova400 text-[26px] md:text-4xl
             uppercase'>
-              Are you <span className='text-blue-500'>going to</span> Canada?
+              { t('are-you') }
+              <span className='text-blue-500'>
+                { t('going-to') }
+              </span>
+              { t('canada') }
             </strong>
             <ul className='pl-2 md:pl-4 pt-6 md:pt-10'>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                Do you have questions about immigration program CUAET?
+                { t('cuaet') }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                Do you need information how to fill in visa application?
+                { t('fill-visa') }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                Do you need a transfer from Moncton airport?
+                { t('transfer-airport') }
               </li>
             </ul>
           </div>
@@ -65,24 +65,24 @@ export const ClubQuestions = () => {
           <div>
             <strong className='font-proximaNova400 text-[26px] md:text-4xl
             uppercase'>
-              <span className='text-yellow-300'>Already</span> in Canada?
+              <span className='text-yellow-300'>{ t('already') }</span> { t('in-canada') }
             </strong>
             <ul className='pl-2 md:pl-4 pt-6 md:pt-10'>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                Do you have questions about your first step here?
+                { t('first-step') }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                Do you need information about SIN,
+                { t('sin') }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                Medicare, bank account, physical examination?
+                { t('medicare') }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                Do you need ancillary resources?
+                { t('ancillary') }
               </li>
             </ul>
           </div>
