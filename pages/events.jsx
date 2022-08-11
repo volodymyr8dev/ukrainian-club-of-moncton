@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import { InfoFront } from '../components/sections/info/InfoFront'
-import { Informative } from '../components/sections/info/Informative'
-import { PostsDisplay } from '../components/sections/info/PostsDisplay'
+import { EventsFront } from '../components/sections/events/EventsFront'
+import { Informative } from '../components/sections/events/Informative'
+import { PostsDisplay } from '../components/sections/events/PostsDisplay'
 
-export default function Info() {
+export default function Events() {
   return (
     <>
     <Head>
-      <title>Info - Ukrainian Club of Moncton</title>
+      <title>Events - Ukrainian Club of Moncton</title>
       <meta
         name="description"
         content="To be written"
@@ -20,7 +20,7 @@ export default function Info() {
     </Head>
     
     <main id='main'>
-      <InfoFront />
+      <EventsFront />
       <div className='info-section'>
         <div className='info-section-bg'>
           <Informative />

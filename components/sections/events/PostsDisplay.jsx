@@ -22,6 +22,7 @@ const GET_EVENTS_POSTS_QUERY = gql`
     posts(
       where: {category: {slug: "event"}}
       orderBy: createdAt_DESC,
+      last: 18
     ) {
     title
       tags {
@@ -48,15 +49,6 @@ export const PostsDisplay = () => {
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error</p>
-
-  const page = 'Page: '
-
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>"
-    },
-  }
 
   return (
     <>
@@ -89,7 +81,9 @@ export const PostsDisplay = () => {
                   spaceBetween: 40
                 },
               }}
-              pagination={ pagination }
+              pagination={{
+                clickable: true,
+              }}
               navigation={{
                 prevEl: '.info-pagination-before',
                 nextEl:'.info-pagination-next'
