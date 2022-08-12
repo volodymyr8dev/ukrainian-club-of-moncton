@@ -76,8 +76,9 @@ export const ContactForm = () => {
                   src={ ProfileIcon }
                 />
                 <input
-                  className='text-base tablets:text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 py-3 tablets:py-[19px] w-full'
+                  className='text-base tablets:text-lg font-proximaNova300
+                  bg-gray-200 py-3 tablets:py-[19px] w-full text-gray-900
+                  placeholder:text-gray-500'
                   name='name'
                   id='name'
                   type='name'
@@ -100,8 +101,9 @@ export const ContactForm = () => {
                   src={ EmailIcon }
                 />
                 <input
-                  className='text-base tablets:text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 w-full py-3 tablets:py-[19px]'
+                  className='text-base tablets:text-lg font-proximaNova300
+                  bg-gray-200 w-full py-3 tablets:py-[19px] text-gray-900
+                  placeholder:text-gray-500'
                   name='email'
                   id='email'
                   type='email'
@@ -124,8 +126,9 @@ export const ContactForm = () => {
                   src={ PhoneIcon }
                 />
                 <input
-                  className='text-base tablets:text-lg font-proximaNova300 text-gray-500
-                  bg-gray-200 w-full py-3 tablets:py-[19px]'
+                  className='text-base tablets:text-lg font-proximaNova300]
+                  text-gray-900 bg-gray-200 w-full py-3 tablets:py-[19px]
+                  placeholder:text-gray-500'
                   name='phone'
                   id='phone'
                   type='phone'
@@ -145,7 +148,7 @@ export const ContactForm = () => {
               <textarea
                 className='bg-gray-200 px-6 py-3 tablets:py-6 flex items-center gap-10
                 rounded-2xl resize-none w-full h-32 tablets:h-[90%] mt-[15px] text-base
-                tablets:text-lg'
+                tablets:text-lg placeholder:text-gray-500 text-gray-900'
                 name='message'
                 id='message'
                 placeholder={ t('feed') }
