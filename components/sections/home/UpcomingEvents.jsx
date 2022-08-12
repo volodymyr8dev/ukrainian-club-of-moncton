@@ -135,10 +135,17 @@ export const UpcomingEvents = () => {
                         </span>
                       </div>
 
+                      <span className='font-proximaNova200 text-gray-500
+                      text-base md:text-lg leading-[18px] hidden
+                      md:inline-block small-notebooks:hidden'>
+                        { moment(post.createdAt).format('MMM DD, YYYY') }
+                      </span>
+
                       <div className='w-full md:w-auto flex justify-between
                       items-center pt-10 pb-6'>
                         <span className='font-proximaNova200 text-gray-500
-                        text-base md:text-lg leading-[18px]'>
+                        text-base md:text-lg leading-[18px] inline-block
+                        md:hidden small-notebooks:inline-block'>
                           { moment(post.createdAt).format('MMM DD, YYYY') }
                         </span>
 
