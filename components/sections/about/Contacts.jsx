@@ -48,11 +48,13 @@ export const Contacts = () => {
             <Image
               src={ phoneActive ? WhitePhoneIcon : BluePhoneIcon }
             />
-            <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
-            max-w-[205px] inline-block
-            ${ phoneActive ? 'text-gray-100' : 'text-blue-500'}`}>
-              +222-2222-2222
-            </span>
+            <a href='tel:+22222222222'>
+              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
+              max-w-[205px] inline-block
+              ${ phoneActive ? 'text-gray-100' : 'text-blue-500'}`}>
+                +222-2222-2222
+              </span>
+            </a>
           </div>
 
           <div className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
@@ -64,11 +66,13 @@ export const Contacts = () => {
             <Image
               src={ locationActive ? WhiteLocationIcon : BlueLocationIcon }
             />
-            <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
-            max-w-[205px] inline-block
-            ${ locationActive ? 'text-gray-100' : 'text-blue-500'}`}>
-              123 ABC Street, Moncton NB, E1D2D
-            </span>
+            <a href='https://www.google.com.br/maps/place/123+Cameron+St,+Moncton,+NB+E1C+5Y7,+Canadá/@46.0890425,-64.7909006,17z/data=!3m1!4b1!4m5!3m4!1s0x4ca0b92340567205:0x6d9d8c7d02438947!8m2!3d46.0890388!4d-64.7887119'>
+              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
+              max-w-[205px] inline-block
+              ${ locationActive ? 'text-gray-100' : 'text-blue-500'}`}>
+                123 ABC Street, Moncton NB, E1D2D
+              </span>
+            </a>
           </div>
 
           <div className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
@@ -80,11 +84,13 @@ export const Contacts = () => {
             <Image
               src={ emailActive ? WhiteEmailIcon : BlueEmailIcon }
             />
-            <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
-            max-w-[205px] inline-block
-            ${ emailActive ? 'text-gray-100' : 'text-blue-500'}`}>
-              info@ukrclubmoncton.ca
-            </span>
+            <a href='mailto:info@ukrclubmoncton.ca'>
+              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
+              max-w-[205px] inline-block
+              ${ emailActive ? 'text-gray-100' : 'text-blue-500'}`}>
+                info@ukrclubmoncton.ca
+              </span>
+            </a>
           </div>
         </div>
 
