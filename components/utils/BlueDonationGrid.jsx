@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import { gql, useQuery } from '@apollo/client'
 import useTranslation from 'next-translate/useTranslation'
 
 import BlueHeartIcon from './../../assets/images/donation-sup-blue/blue-heart.svg'
@@ -9,7 +9,16 @@ import BlueBearIcon from './../../assets/images/donation-sup-blue/blue-bear.svg'
 import BlueEquipmentIcon from './../../assets/images/donation-sup-blue/blue-equipment.svg'
 import BlueColletteIcon from './../../assets/images/donation-sup-blue/blue-collette.svg'
 
+const GET_URLS_QUERY = gql`
+  query GetURLs {
+    howCanIHelpUrls(orderBy: createdAt_ASC) {
+      url
+    }
+  }
+`
+
 export const BlueDonationGrid = () => {
+  const { data } = useQuery(GET_URLS_QUERY)
   let { t } = useTranslation('how')
 
   return (
@@ -32,7 +41,8 @@ export const BlueDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href='#'
+          href={ data.howCanIHelpUrls[0].url }
+          target='_blank'
         >
           { t('learn-more') }
         </a>
@@ -52,7 +62,8 @@ export const BlueDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href='#'
+          href={ data.howCanIHelpUrls[1].url }
+          target='_blank'
         >
           { t('learn-more') }
         </a>
@@ -74,7 +85,8 @@ export const BlueDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href='#'
+          href={ data.howCanIHelpUrls[2].url }
+          target='_blank'
         >
           { t('learn-more') }
         </a>
@@ -99,7 +111,8 @@ export const BlueDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href='#'
+          href={ data.howCanIHelpUrls[3].url }
+          target='_blank'
         >
           { t('learn-more') }
         </a>
@@ -119,7 +132,8 @@ export const BlueDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href='#'
+          href={ data.howCanIHelpUrls[4].url }
+          target='_blank'
         >
           { t('learn-more') }
         </a>
@@ -141,7 +155,8 @@ export const BlueDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-blue-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href='#'
+          href={ data.howCanIHelpUrls[5].url }
+          target='_blank'
         >
           { t('learn-more') }
         </a>

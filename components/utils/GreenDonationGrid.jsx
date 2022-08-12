@@ -1,13 +1,22 @@
 import Image from 'next/image'
-
+import { gql, useQuery } from '@apollo/client'
 import useTranslation from 'next-translate/useTranslation'
 
 import GreenVolunteerIcon from './../../assets/images/donation-sup-green/green-volunteer.svg'
 import GreenFollowIcon from './../../assets/images/donation-sup-green/green-follow.svg'
 import GreenFundraiseIcon from './../../assets/images/donation-sup-green/green-fundraise.svg'
 
+const GET_URLS_QUERY = gql`
+  query GetURLs {
+    howCanIHelpUrls(orderBy: createdAt_ASC) {
+      url
+    }
+  }
+`
+
 export const GreenDonationGrid = () => {
   let { t } = useTranslation('how')
+  const { data } = useQuery(GET_URLS_QUERY)
 
   return (
     <>
@@ -28,7 +37,8 @@ export const GreenDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-green-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href='#'
+          href={ data.howCanIHelpUrls[12].url }
+          target='_blank'
         >
           { t('learn-more') }
         </a>
@@ -47,7 +57,8 @@ export const GreenDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-green-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href='#'
+          href={ data.howCanIHelpUrls[13].url }
+          target='_blank'
         >
           { t('learn-more') }
         </a>
@@ -71,7 +82,8 @@ export const GreenDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-green-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href='#'
+          href={ data.howCanIHelpUrls[14].url }
+          target='_blank'
         >
           { t('learn-more') }
         </a>
