@@ -11,15 +11,18 @@ import BlueColletteIcon from './../../assets/images/donation-sup-blue/blue-colle
 
 const GET_URLS_QUERY = gql`
   query GetURLs {
-    howCanIHelpUrls(orderBy: createdAt_ASC) {
+    howCanIHelpUrls(orderBy: createdAt_ASC, first: 6) {
       url
     }
   }
 `
 
 export const BlueDonationGrid = () => {
-  const { data } = useQuery(GET_URLS_QUERY)
+  const { data, loading, error } = useQuery(GET_URLS_QUERY)
   let { t } = useTranslation('how')
+
+  if(loading) return <span></span>
+  if(error) return <span></span>
 
   return (
     <>

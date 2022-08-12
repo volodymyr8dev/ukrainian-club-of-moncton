@@ -11,15 +11,18 @@ import YellowPlaneIcon from './../../assets/images/donation-sup-yellow/yellow-pl
 
 const GET_URLS_QUERY = gql`
   query GetURLs {
-    howCanIHelpUrls(orderBy: createdAt_ASC) {
+    howCanIHelpUrls(orderBy: createdAt_ASC, skip: 6, first: 6) {
       url
     }
   }
 `
 
 export const YellowDonationGrid = () => {
+  const { data, loading, error } = useQuery(GET_URLS_QUERY)
   let { t } = useTranslation('how')
-  const { data } = useQuery(GET_URLS_QUERY)
+
+  if(loading) return <span></span>
+  if(error) return <span></span>
 
   return (
     <>
@@ -43,7 +46,7 @@ export const YellowDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href={ data.howCanIHelpUrls[6].url }
+          href={ data.howCanIHelpUrls[0].url }
           target='_blank'
         >
           { t('learn-more') }
@@ -63,7 +66,7 @@ export const YellowDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href={ data.howCanIHelpUrls[7].url }
+          href={ data.howCanIHelpUrls[1].url }
           target='_blank'
         >
           { t('learn-more') }
@@ -88,7 +91,7 @@ export const YellowDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href={ data.howCanIHelpUrls[8].url }
+          href={ data.howCanIHelpUrls[2].url }
           target='_blank'
         >
           { t('learn-more') }
@@ -114,7 +117,7 @@ export const YellowDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href={ data.howCanIHelpUrls[9].url }
+          href={ data.howCanIHelpUrls[3].url }
           target='_blank'
         >
           { t('learn-more') }
@@ -135,7 +138,7 @@ export const YellowDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href={ data.howCanIHelpUrls[10].url }
+          href={ data.howCanIHelpUrls[4].url }
           target='_blank'
         >
           { t('learn-more') }
@@ -158,7 +161,7 @@ export const YellowDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-yellow-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href={ data.howCanIHelpUrls[11].url }
+          href={ data.howCanIHelpUrls[5].url }
           target='_blank'
         >
           { t('learn-more') }

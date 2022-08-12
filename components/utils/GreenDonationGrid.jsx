@@ -8,15 +8,18 @@ import GreenFundraiseIcon from './../../assets/images/donation-sup-green/green-f
 
 const GET_URLS_QUERY = gql`
   query GetURLs {
-    howCanIHelpUrls(orderBy: createdAt_ASC) {
+    howCanIHelpUrls(orderBy: createdAt_ASC, skip: 12, first: 3) {
       url
     }
   }
 `
 
 export const GreenDonationGrid = () => {
+  const { data, loading, error } = useQuery(GET_URLS_QUERY)
   let { t } = useTranslation('how')
-  const { data } = useQuery(GET_URLS_QUERY)
+
+  if(loading) return <span></span>
+  if(error) return <span></span>
 
   return (
     <>
@@ -37,7 +40,7 @@ export const GreenDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-green-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href={ data.howCanIHelpUrls[12].url }
+          href={ data.howCanIHelpUrls[0].url }
           target='_blank'
         >
           { t('learn-more') }
@@ -57,7 +60,7 @@ export const GreenDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-green-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href={ data.howCanIHelpUrls[13].url }
+          href={ data.howCanIHelpUrls[1].url }
           target='_blank'
         >
           { t('learn-more') }
@@ -82,7 +85,7 @@ export const GreenDonationGrid = () => {
         <a
           className='w-full max-w-[224px] py-4 px-16 bg-green-500 rounded-[64px]
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
-          href={ data.howCanIHelpUrls[14].url }
+          href={ data.howCanIHelpUrls[2].url }
           target='_blank'
         >
           { t('learn-more') }
