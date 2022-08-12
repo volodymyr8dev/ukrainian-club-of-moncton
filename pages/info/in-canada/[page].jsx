@@ -17,8 +17,11 @@ import { hygraph } from '../../../services'
 import { InfoFront } from '../../../components/sections/info/InfoFront'
 import { Informative } from '../../../components/sections/info/Informative'
 
-import beforeArrow from './../../../assets/images/before-arrow-pagination.svg'
-import nextArrow from './../../../assets/images/next-arrow-pagination.svg'
+import nextBlue from './../../../assets/images/pagination/next-blue.svg'
+import nextGray from './../../../assets/images/pagination/next-gray.svg'
+import previousBlue from './../../../assets/images/pagination/previous-blue.svg'
+import previousGray from './../../../assets/images/pagination/previous-gray.svg'
+import lineGray from './../../../assets/images/pagination/line-gray.svg'
 
 const limit = 6
 
@@ -106,7 +109,7 @@ function PostPage({
                     {
                       posts.slice(0, 3).map(post => (                          
                         <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
-                        max-w-[385px] w-full max-h-full h-full overflow-hidden
+                        max-w-[33%] w-full max-h-full h-full overflow-hidden
                       bg-gray-100 rounded-3xl mt-6'>
                           <div className='w-full'>
                             <img
@@ -186,7 +189,7 @@ function PostPage({
                     {
                       posts.slice(3, 6).map(post => (                          
                         <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
-                        max-w-[385px] w-full max-h-full h-full overflow-hidden
+                        max-w-[33%] w-full max-h-full h-full overflow-hidden
                       bg-gray-100 rounded-3xl mt-6'>
                           <div className='w-full'>
                             <img
@@ -261,18 +264,53 @@ function PostPage({
                     }
                   </div>
                   
-                  <div className='hidden md:flex justify-between w-full -translate-y-[18px] z-50'>
-                    <div className=''>
+                  <div className='hidden md:flex justify-center w-full mt-16
+                  z-50'>
+                    <div className='flex gap-7 border border-gray-500
+                    py-5 px-6 rounded-full'>
+                      {
+                        hasPreviousPage
+                        ? (
+                          <Link
+                            href={`${currentPageNumber - 1}`}
+                            scroll={ false }
+                          >
+                            <Image
+                              src={ previousBlue }
+                              className='cursor-pointer'
+                            />
+                          </Link>
+                        )
+                        : (
+                          <Image
+                            src={ previousGray }
+                          />
+                        )
+                      }
+
                       <Image
-                        src={ beforeArrow }
-                        className='info-pagination-before cursor-pointer select-none'
+                        src={ lineGray }
                       />
-                    </div>
-                    <div className=''>
-                      <Image
-                        src={ nextArrow }
-                        className='info-pagination-next cursor-pointer select-none'
-                      />
+
+                      {
+                        hasNextPage
+                        ? (
+                          <Link
+                            href={`${currentPageNumber + 1}`}
+                            scroll={ false }
+                          >
+                            <Image
+                              src={ nextBlue }
+                              className='cursor-pointer'
+                            />
+                          </Link>
+                        )
+                        : (
+                          <Image
+                            src={ nextGray }
+                          />
+                        )
+                      }
                     </div>
                   </div>
                 </div>
@@ -281,23 +319,6 @@ function PostPage({
       </div>
     </main>
     
-      <pre>{JSON.stringify(posts, 2, null)}</pre>
-      {hasPreviousPage ? (
-        <Link
-          href={`${currentPageNumber - 1}`}
-          scroll={ false }
-        >
-          <a>Previous page</a>
-        </Link>
-      ) : null}
-      {hasNextPage ? (
-        <Link
-          href={`${currentPageNumber + 1}`}
-          scroll={ false }
-        >
-          <a>Next page</a>
-        </Link>
-      ) : null}
     </>
   )
 }
