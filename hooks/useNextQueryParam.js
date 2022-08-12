@@ -7,5 +7,5 @@ export function useNextQueryParam(key) {
   return React.useMemo(() => {
     const res = router.asPath.match(new RegExp(`[&?]${key}=(.*)(&|$)`)) || [];
     return res[1];
-  }, [router.asPath]);;
+  }, [router.asPath]);
 }
