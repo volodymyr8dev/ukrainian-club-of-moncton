@@ -16,7 +16,7 @@ import { FacebookShareButton, TwitterShareButton } from 'next-share'
 export const PostDetail = ({ post }) => {
   const router = useRouter()
 
-  const baseURL = 'http://localhost:3000'
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 
   return (
     <>
