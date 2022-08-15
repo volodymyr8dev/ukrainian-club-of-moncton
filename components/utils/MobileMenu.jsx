@@ -18,6 +18,7 @@ import HomeWhiteIcon from './../../assets/images/mobile-menu/home-white.svg'
 import EventsWhiteIcon from './../../assets/images/mobile-menu/events-white.svg'
 import InfoWhiteIcon from './../../assets/images/mobile-menu/info-white.svg'
 import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.svg'
+import HelpWhiteIcon from './../../assets/images/mobile-menu/help-white.svg'
 
 export const MobileMenu = ({ setIsActive }) => {
   const { t } = useTranslation('common')
@@ -63,6 +64,7 @@ export const MobileMenu = ({ setIsActive }) => {
                   </Link>
                 </div>
               </li>
+
               <li className={`py-6 font-proximaNova300 md:font-proximaNova500
               text-base md:text-xl text-center md:border-b-2 w-full md:w-auto
               px-7 md:px-0
@@ -87,18 +89,18 @@ export const MobileMenu = ({ setIsActive }) => {
               <li className={`py-6 font-proximaNova300 md:font-proximaNova500
               text-base md:text-xl text-center md:border-b-2 w-full md:w-auto
               px-7 md:px-0
-              ${ router.pathname == '/info' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
-                <Link href='/info'>
+              ${ router.pathname == '/info/in-canada/[page]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+                <Link href='/info/in-canada/1'>
                   <div className='flex md:block items-center justify-start gap-4
                   md-gap-0'>
                     <div className='flex md:hidden items-center'>
                       <Image
-                        src={ router.pathname == '/info' ? InfoWhiteIcon : InfoBlackIcon }
+                        src={ router.pathname == '/info/in-canada/[page]' ? InfoWhiteIcon : InfoBlackIcon }
                         width={ 20 }
                         height={ 20 }
                       />
                     </div>
-                    <a className={`${ router.pathname == '/info' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                    <a className={`${ router.pathname == '/info/in-canada/[page]' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                       { t('info') }
                     </a>
                   </div>
@@ -108,18 +110,18 @@ export const MobileMenu = ({ setIsActive }) => {
               <li className={`py-6 font-proximaNova300 md:font-proximaNova500
               text-base md:text-xl text-center md:border-b-2 w-full md:w-auto
               px-7 md:px-0
-              ${ router.pathname == '/events' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
-                <Link href='/events'>
+              ${ router.pathname == '/events/[page]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+                <Link href='/events/1'>
                   <div className='flex md:block items-center justify-start gap-4
                   md-gap-0'>
                     <div className='flex md:hidden items-center'>
                       <Image
-                        src={ router.pathname == '/events' ? EventsWhiteIcon : EventsBlackIcon }
+                        src={ router.pathname == '/events/[page]' ? EventsWhiteIcon : EventsBlackIcon }
                         width={ 20 }
                         height={ 20 }
                       />
                     </div>
-                    <a className={`${ router.pathname == '/events' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                    <a className={`${ router.pathname == '/events/[page]' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                       { t('events') }
                     </a>
                   </div>
@@ -129,18 +131,18 @@ export const MobileMenu = ({ setIsActive }) => {
               <li className={`py-6 font-proximaNova300 md:font-proximaNova500
               text-base md:text-xl text-center md:border-b-2 w-full md:w-auto
               px-7 md:px-0
-              ${ router.pathname == '/our-help/' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+              ${ router.pathname == '/our-help/[page]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
                 <Link href='/our-help/1'>
                   <div className='flex md:block items-center justify-start gap-4
                   md-gap-0'>
                     <div className='flex md:hidden items-center'>
                       <Image
-                        src={ HelpBlackIcon }
+                        src={ router.pathname === '/our-help/[page]' ? HelpWhiteIcon : HelpBlackIcon }
                         width={ 20 }
                         height={ 20 }
                       />
                     </div>
-                    <a className={`${ router.pathname == '/our-help/' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer capitalize`}>
+                    <a className={`${ router.pathname == '/our-help/[page]' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer capitalize`}>
                       { t('our-help') }
                     </a>
                   </div>

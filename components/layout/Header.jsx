@@ -21,6 +21,7 @@ import HomeWhiteIcon from './../../assets/images/mobile-menu/home-white.svg'
 import EventsWhiteIcon from './../../assets/images/mobile-menu/events-white.svg'
 import InfoWhiteIcon from './../../assets/images/mobile-menu/info-white.svg'
 import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.svg'
+import HelpWhiteIcon from './../../assets/images/mobile-menu/help-white.svg'
 
 export const Header = () => {
   const { t } = useTranslation('common')
@@ -64,6 +65,7 @@ export const Header = () => {
                 </Link>
               </div>
             </li>
+
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500
             text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7
             md:px-0 capitalize
@@ -88,18 +90,20 @@ export const Header = () => {
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500
             text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7
             md:px-0 capitalize
-            ${ pathname === '/info' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+            ${ pathname === ('/info/in-canada/[page]' || '/info/going-to-canada/[page]')
+            ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0'
+            : '' }`}>
               <Link href='/info/in-canada/1' locale={locale}>
                 <div className='flex md:block items-center justify-start gap-4
                 md-gap-0'>
                   <div className='flex md:hidden items-center'>
                     <Image
-                      src={ pathname === '/info' ? InfoWhiteIcon : InfoBlackIcon }
+                      src={ pathname === ('/info/in-canada/[page]' || '/info/going-to-canada/[page]') ? InfoWhiteIcon : InfoBlackIcon }
                       width={ 20 }
                       height={ 20 }
                     />
                   </div>
-                  <a className={`${ pathname === '/info' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                  <a className={`${ pathname === ('/info/in-canada/[page]' || '/info/going-to-canada/[page]') ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                     { t('info') }
                   </a>
                 </div>
@@ -109,18 +113,18 @@ export const Header = () => {
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500
             text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7
             md:px-0 capitalize
-            ${ pathname === '/events' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+            ${ pathname === '/events/[page]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
               <Link href='/events/1' locale={locale}>
                 <div className='flex md:block items-center justify-start gap-4
                 md-gap-0'>
                   <div className='flex md:hidden items-center'>
                     <Image
-                      src={ pathname === '/events' ? EventsWhiteIcon : EventsBlackIcon }
+                      src={ pathname === '/events/[page]' ? EventsWhiteIcon : EventsBlackIcon }
                       width={ 20 }
                       height={ 20 }
                     />
                   </div>
-                  <a className={`${ pathname == '/events' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                  <a className={`${ pathname == '/events/[page]' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                     { t('events') }
                   </a>
                 </div>
@@ -130,18 +134,18 @@ export const Header = () => {
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500
             text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7
             md:px-0 capitalize
-            ${ pathname === '/our-help/' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+            ${ pathname === '/our-help/[page]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
               <Link href='/our-help/1' locale={locale}>
                 <div className='flex md:block items-center justify-start gap-4
                 md-gap-0'>
                   <div className='flex md:hidden items-center'>
                     <Image
-                      src={ HelpBlackIcon }
+                      src={ pathname === '/our-help/[page]' ? HelpWhiteIcon : HelpBlackIcon }
                       width={ 20 }
                       height={ 20 }
                     />
                   </div>
-                  <a className={`${ pathname == '/our-help/' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                  <a className={`${ pathname == '/our-help/[page]' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                     { t('our-help') }
                   </a>
                 </div>
@@ -195,7 +199,7 @@ export const Header = () => {
     </header>
 
     {
-    isActive && 
+    isActive &&
       <MobileMenu
         setIsActive={ setIsActive }
       />
