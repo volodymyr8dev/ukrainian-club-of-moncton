@@ -16,6 +16,8 @@ import { FacebookShareButton, TwitterShareButton } from 'next-share'
 export const PostDetail = ({ post }) => {
   const router = useRouter()
 
+  const baseURL = 'http://localhost:3000'
+
   return (
     <>
     <section className='flex justify-center mb-[72px] md:mb-24 px-6 md:px-6
@@ -73,7 +75,7 @@ export const PostDetail = ({ post }) => {
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
                 <FacebookShareButton
-                  url={ window.location.href }
+                  url={ `${ baseURL }${ router.asPath }` }
                   quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
@@ -87,7 +89,7 @@ export const PostDetail = ({ post }) => {
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
                 <TwitterShareButton
-                  url={ window.location.href }
+                  url={ `${ baseURL }${ router.asPath }` }
                   quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
@@ -158,7 +160,7 @@ export const PostDetail = ({ post }) => {
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
                 <FacebookShareButton
-                  url={ window.location.href }
+                  url={ `${ baseURL }${ router.asPath }` }
                   quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
@@ -172,7 +174,7 @@ export const PostDetail = ({ post }) => {
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
                 <TwitterShareButton
-                  url={ window.location.href }
+                  url={ `${ baseURL }${ router.asPath }` }
                   quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
