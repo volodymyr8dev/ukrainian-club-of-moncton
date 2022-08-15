@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 
+import { MobileMenu } from '../utils/MobileMenu'
 import { DonateButton } from '../utils/DonateButton'
 import { LanguageSwitch } from '../utils/LanguageSwitch'
 
@@ -43,8 +44,9 @@ export const Header = () => {
         className={`flex justify-between items-center max-w-[1216px] w-full px-6
         xl:px-0`}
       >
-        <div className={`mobile-menu-bg bg-gray-100 md:flex
-        ${ isActive ? 'flex fixed max-w-[236px] w-full h-full top-0 -mx-7 justify-center z-10' : 'hidden' }`}>
+        <div className={`mobile-menu-bg bg-gray-100 md:flex ${ isActive
+          ? 'flex fixed max-w-[236px] w-full h-full top-0 -mx-7 justify-center z-10'
+          : 'hidden' }`}>
           <ul className='flex items-center gap-4 md:gap-16 flex-col md:flex-row
           translate-y-[200px] md:translate-y-0 bg-none md:bg-gray-100 h-screen
           md:h-full w-screen md:w-full pt-8 md:pt-0 -mt-[130px] md:mt-0 px-2 md:px-0'>
@@ -191,6 +193,13 @@ export const Header = () => {
         </div>
       </nav>
     </header>
+
+    {
+    isActive && 
+      <MobileMenu
+        setIsActive={ setIsActive }
+      />
+    }
     </>
   )
 }

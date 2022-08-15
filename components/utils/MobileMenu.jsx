@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
+import useTranslation from 'next-translate/useTranslation'
 
 import { DonateButton } from '../utils/DonateButton'
 import { LanguageSwitch } from '../utils/LanguageSwitch'
-import { ThankYouModal } from '../utils/ThankYouModal'
 
 import CloseIcon from './../../assets/images/mobile-menu/close.svg'
 
@@ -12,6 +12,7 @@ import HomeBlackIcon from './../../assets/images/mobile-menu/home-black.svg'
 import EventsBlackIcon from './../../assets/images/mobile-menu/events-black.svg'
 import InfoBlackIcon from './../../assets/images/mobile-menu/info-black.svg'
 import AboutBlackIcon from './../../assets/images/mobile-menu/about-black.svg'
+import HelpBlackIcon from './../../assets/images/mobile-menu/help-black.svg'
 
 import HomeWhiteIcon from './../../assets/images/mobile-menu/home-white.svg'
 import EventsWhiteIcon from './../../assets/images/mobile-menu/events-white.svg'
@@ -19,6 +20,7 @@ import InfoWhiteIcon from './../../assets/images/mobile-menu/info-white.svg'
 import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.svg'
 
 export const MobileMenu = ({ setIsActive }) => {
+  const { t } = useTranslation('common')
   const router = useRouter()
 
   const handleClose = () => {
@@ -53,7 +55,7 @@ export const MobileMenu = ({ setIsActive }) => {
                     href='/how'
                   >
                     <span className='text-blue-500'>
-                      Volunteer with us
+                      { t('volunteer-with') }
                     </span>
                   </Link>
                 </div>
@@ -73,7 +75,7 @@ export const MobileMenu = ({ setIsActive }) => {
                       />
                     </div>
                     <a className={`${ router.pathname == '/' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
-                      Home
+                      { t('home') }
                     </a>
                   </div>
                 </Link>
@@ -94,7 +96,7 @@ export const MobileMenu = ({ setIsActive }) => {
                       />
                     </div>
                     <a className={`${ router.pathname == '/info' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
-                      Info
+                      { t('info') }
                     </a>
                   </div>
                 </Link>
@@ -115,7 +117,28 @@ export const MobileMenu = ({ setIsActive }) => {
                       />
                     </div>
                     <a className={`${ router.pathname == '/events' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
-                      Events
+                      { t('events') }
+                    </a>
+                  </div>
+                </Link>
+              </li>
+
+              <li className={`py-6 font-proximaNova300 md:font-proximaNova500
+              text-base md:text-xl text-center md:border-b-2 w-full md:w-auto
+              px-7 md:px-0
+              ${ router.pathname == '/our-help/' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+                <Link href='/our-help/1'>
+                  <div className='flex md:block items-center justify-start gap-4
+                  md-gap-0'>
+                    <div className='flex md:hidden items-center'>
+                      <Image
+                        src={ HelpBlackIcon }
+                        width={ 20 }
+                        height={ 20 }
+                      />
+                    </div>
+                    <a className={`${ router.pathname == '/our-help/' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer capitalize`}>
+                      { t('our-help') }
                     </a>
                   </div>
                 </Link>
@@ -136,7 +159,7 @@ export const MobileMenu = ({ setIsActive }) => {
                       />
                     </div>
                     <a className={`${ router.pathname == '/about' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
-                      About
+                      { t('about') }
                     </a>
                   </div>
                 </Link>
