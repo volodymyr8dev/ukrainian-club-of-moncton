@@ -235,3 +235,11 @@ fieldset {
     line-height: 35px;
   }
 }
+
+.not-found-bg {
+  background-color: #FFFFFF;
+  background-image: url('/404-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
