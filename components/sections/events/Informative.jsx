@@ -18,7 +18,7 @@ export const Informative = () => {
           {
             router.locale == 'ua'
             ? 'Для тих, хто вже в Канаді'
-            : 'Events page'
+            : 'Events'
           }
         </h2>
         <div className='flex justify-center pt-10'>

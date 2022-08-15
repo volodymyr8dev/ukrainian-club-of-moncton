@@ -1,17 +1,14 @@
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
 
-import Img1Desktop from './../../../assets/images/info/img-d-1.svg'
-import Img2Desktop from './../../../assets/images/info/img-d-2.svg'
-import Img3Desktop from './../../../assets/images/info/img-d-3.svg'
+import Img1Desktop from './../../../assets/images/events/img-d-1.svg'
+import Img2Desktop from './../../../assets/images/events/img-d-2.svg'
+import Img3Desktop from './../../../assets/images/events/img-d-3.svg'
 
-import Img1Mobile from './../../../assets/images/info/img-m-1.svg'
-import Img2Mobile from './../../../assets/images/info/img-m-2.svg'
-import Img3Mobile from './../../../assets/images/info/img-m-3.svg'
+import Img1Mobile from './../../../assets/images/events/img-m-01.svg'
+import Img2Mobile from './../../../assets/images/events/img-m-02.svg'
+import Img3Mobile from './../../../assets/images/events/img-m-03.svg'
 
 export const EventsFront = () => {
-  let { t } = useTranslation()
-
   return (
     <>
     <section

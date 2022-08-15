@@ -13,7 +13,6 @@ import { EventsFront } from '../../components/sections/events/EventsFront'
 import { Informative } from '../../components/sections/events/Informative'
 import { MobileSwiperDisplay } from './../../components/utils/MobileSwiperDisplay'
 
-import LoadingAnimation from 'react-circle-loading-animation'
 import nextBlue from './../../assets/images/pagination/next-blue.svg'
 import nextGray from './../../assets/images/pagination/next-gray.svg'
 import previousBlue from './../../assets/images/pagination/previous-blue.svg'
@@ -39,7 +38,7 @@ function Events({
         name="description"
         content="To be written"
       />
-
+ 
       <link
         rel="icon"
         href="/favicon.ico"
