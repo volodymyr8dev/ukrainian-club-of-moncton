@@ -7,6 +7,9 @@ import { useRouter } from 'next/router'
 import { gql } from '@apollo/client'
 import useTranslation from 'next-translate/useTranslation'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper'
+
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/grid'
@@ -16,8 +19,8 @@ import { hygraph } from '../../../services'
 
 import { InfoFront } from '../../../components/sections/info/InfoFront'
 import { Informative } from '../../../components/sections/info/Informative'
+import { MobileSwiperDisplay } from '../../../components/utils/MobileSwiperDisplay'
 
-import LoadingAnimation from 'react-circle-loading-animation'
 import nextBlue from './../../../assets/images/pagination/next-blue.svg'
 import nextGray from './../../../assets/images/pagination/next-gray.svg'
 import previousBlue from './../../../assets/images/pagination/previous-blue.svg'
@@ -62,9 +65,26 @@ function PostPage({
                 <div className='flex justify-between w-full bg-gray-100 rounded-3xl
                 shadow-[0px_2px_22px_rgba(0,32,73,0.13)] overflow-hidden'>
                   <div className={`border border-blue-500 w-full py-7
-                  flex justify-center rounded-l-3xl overflow-hidden`}>
+                  flex justify-center rounded-l-3xl overflow-hidden
+                  bg-blue-500`}>
+                    <button
+                      className={`text-gray-100 font-proximaNova400
+                      md:font-proximaNova500 text-base md:text-2xl
+                      max-w-[130px] md:max-w-full`}
+                      type='button'
+                    >
+                      {
+                        router.locale === 'ua'
+                        ? 'Для тих, хто вже в Канаді'
+                        : 'Already in Canada?'
+                      }
+                    </button>
+                  </div>
+
+                  <div className={`border border-blue-500 w-full py-7
+                  flex justify-center rounded-r-3xl`}>
                     <Link
-                      href='/info/in-canada/1'
+                      href='/info/going-to-canada/1'
                       replace
                       scroll={false}
                     >
@@ -76,28 +96,11 @@ function PostPage({
                       >
                         {
                           router.locale === 'ua'
-                          ? 'Для тих, хто вже в Канаді'
-                          : 'Already in Canada?'
+                          ? 'Для тих, хто збирається'
+                          : 'Going to Canada?'
                         }
                       </button>
                     </Link>
-                  </div>
-
-                  <div className={`border border-blue-500 w-full py-7
-                  flex justify-center rounded-r-3xl
-                  bg-blue-500`}>
-                    <button
-                      className={`text-gray-100 font-proximaNova400
-                      md:font-proximaNova500 text-base md:text-2xl
-                      max-w-[130px] md:max-w-full`}
-                      type='button'
-                    >
-                      {
-                        router.locale === 'ua'
-                        ? 'Для тих, хто збирається'
-                        : 'Going to Canada?'
-                      }
-                    </button>
                   </div>
                 </div>
               </div>
@@ -105,13 +108,16 @@ function PostPage({
             
             <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6'>
                 <div className='flex justify-center flex-col max-w-[1215px] w-full'>
-                  <div className='flex justify-start gap-2 xl:gap-8 max-w-full
-                  w-full'>
+                  <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0'>
+                    <MobileSwiperDisplay
+                      posts={ posts }
+                    />
+
                     {
                       posts.slice(0, 3).map(post => (                          
                         <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
                         max-w-[33%] w-full max-h-full h-full overflow-hidden
-                      bg-gray-100 rounded-3xl mt-6'>
+                      bg-gray-100 rounded-3xl mt-6 hidden md:block'>
                           <div className='w-full'>
                             <img
                               className='w-full min-h-[200px] md:min-h-[256px]
@@ -191,7 +197,7 @@ function PostPage({
                       posts.slice(3, 6).map(post => (                          
                         <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
                         max-w-[33%] w-full max-h-full h-full overflow-hidden
-                      bg-gray-100 rounded-3xl mt-6'>
+                      bg-gray-100 rounded-3xl mt-6 hidden md:block'>
                           <div className='w-full'>
                             <img
                               className='w-full min-h-[200px] md:min-h-[256px]
@@ -265,7 +271,7 @@ function PostPage({
                     }
                   </div>
                   
-                  <div className='hidden md:flex justify-center w-full mt-16
+                  <div className='flex justify-center w-full mt-1 md:mt-16
                   z-50'>
                     <div className='flex gap-7 border border-gray-500
                     py-5 px-6 rounded-full'>
@@ -319,6 +325,7 @@ function PostPage({
         </div>
       </div>
     </main>
+    
     </>
   )
 }
@@ -326,7 +333,7 @@ function PostPage({
 export async function getStaticPaths() {
   const query = gql`
     {
-      postsConnection (where: {category: {slug: "going-to-canada" }}) {
+      postsConnection (where: {category: {slug: "in-canada" }}) {
         aggregate {
           count
         }
@@ -393,7 +400,7 @@ export async function getStaticProps({ params }) {
       postsConnection (
         first: $limit,
         skip: $offset,
-        where: { category: { slug: "going-to-canada" }}
+        where: { category: { slug: "in-canada" }}
         ) {
         aggregate {
           count

@@ -34,6 +34,10 @@
     padding: 20px !important;
   }
 
+  .info-swiper {
+    width: 108% !important;
+  }
+
   .info-swiper .swiper-pagination {
     display: none;
   }

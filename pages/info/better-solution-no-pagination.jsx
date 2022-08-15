@@ -279,7 +279,11 @@ function PostPage({
                         hasPreviousPage
                         ? (
                           <Link
-                            href={`${currentPageNumber - 1}`}
+                            href={`${
+                              router.pathname === '/info/in-canada/'
+                              ? `going-to-canada/${currentPageNumber - 1}`
+                              : `in-canada/${currentPageNumber - 1}`
+                            }`}
                             scroll={ false }
                           >
                             <Image
@@ -303,7 +307,11 @@ function PostPage({
                         hasNextPage
                         ? (
                           <Link
-                            href={`${currentPageNumber + 1}`}
+                            href={`${
+                              router.pathname === '/info/in-canada/'
+                              ? `going-to-canada/${currentPageNumber + 1}`
+                              : `in-canada/${currentPageNumber + 1}`
+                            }`}
                             scroll={ false }
                           >
                             <Image
