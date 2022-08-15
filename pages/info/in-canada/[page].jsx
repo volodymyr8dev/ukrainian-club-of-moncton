@@ -108,18 +108,20 @@ function PostPage({
             
             <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6'>
                 <div className='flex justify-center flex-col max-w-[1215px] w-full'>
-                  <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0'>
+                  <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px]
+                  md:ml-0'>
                     <MobileSwiperDisplay
                       posts={ posts }
                     />
 
-                  <div className='flex justify-start gap-2 xl:gap-8 max-w-full
-                  w-full pt-10'>
+                  <div className='justify-start gap-2 xl:gap-8 max-w-full
+                  w-full pt-10 hidden md:flex'>
                     {
                       posts.slice(0, 3).map(post => (                          
                         <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
-                        max-w-[33%] w-full max-h-full h-full overflow-hidden
-                      bg-gray-100 rounded-3xl mt-6 hidden md:block'>
+                        max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
+                        overflow-hidden bg-gray-100 rounded-3xl mt-6
+                        hidden md:block'>
                           <div className='w-full'>
                             <img
                               className='w-full min-h-[200px] md:min-h-[256px]
@@ -194,13 +196,14 @@ function PostPage({
                   </div>
                   </div>
 
-                  <div className='flex justify-start gap-2 xl:gap-8 max-w-full
-                  w-full pt-10'>
+                  <div className='justify-start gap-2 xl:gap-8 max-w-full
+                  w-full pt-10 hidden md:flex'>
                     {
                       posts.slice(3, 6).map(post => (                          
                         <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
-                        max-w-[33%] w-full max-h-full h-full overflow-hidden
-                      bg-gray-100 rounded-3xl mt-6 hidden md:block'>
+                        max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
+                        overflow-hidden bg-gray-100 rounded-3xl mt-6
+                        hidden md:block'>
                           <div className='w-full'>
                             <img
                               className='w-full min-h-[200px] md:min-h-[256px]

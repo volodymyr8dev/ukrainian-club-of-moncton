@@ -10,6 +10,7 @@ import { hygraph } from './../../services'
 
 import { EventsFront } from '../../components/sections/events/EventsFront'
 import { Informative } from '../../components/sections/events/Informative'
+import { MobileSwiperDisplay } from './../../components/utils/MobileSwiperDisplay'
 
 import LoadingAnimation from 'react-circle-loading-animation'
 import nextBlue from './../../assets/images/pagination/next-blue.svg'
@@ -51,13 +52,19 @@ function Events({
           <Informative />
             <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6'>
               <div className='flex justify-center flex-col max-w-[1215px] w-full'>
-                <div className='flex justify-start gap-2 xl:gap-8 max-w-full
-                  w-full'>
+              <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px]
+              md:ml-0'>
+                    <MobileSwiperDisplay
+                      posts={ posts }
+                    />
+                  <div className='justify-start gap-2 xl:gap-8 max-w-full
+                  w-full pt-10 hidden md:flex'>
                   {
                     posts.slice(0, 3).map(post => (
                       <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
-                        max-w-[33%] w-full max-h-full h-full overflow-hidden
-                      bg-gray-100 rounded-3xl mt-6'>
+                      max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
+                      overflow-hidden bg-gray-100 rounded-3xl mt-6
+                      hidden md:block'>
                         <div className='w-full'>
                           <img
                             className='w-full min-h-[200px] md:min-h-[256px]
@@ -129,15 +136,17 @@ function Events({
                       </div>
                     ))
                   }
+                  </div>
                 </div>
 
-                <div className='flex justify-start gap-2 xl:gap-8 max-w-full
-                  w-full pt-10'>
+                <div className='justify-start gap-2 xl:gap-8 max-w-full
+                  w-full pt-10 hidden md:flex'>
                   {
                     posts.slice(3, 6).map(post => (
                       <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
-                        max-w-[33%] w-full max-h-full h-full overflow-hidden
-                      bg-gray-100 rounded-3xl mt-6'>
+                      max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
+                      overflow-hidden bg-gray-100 rounded-3xl mt-6
+                      hidden md:block'>
                         <div className='w-full'>
                           <img
                             className='w-full min-h-[200px] md:min-h-[256px]
@@ -211,54 +220,54 @@ function Events({
                   }
                 </div>
 
-                <div className='hidden md:flex justify-center w-full mt-16
+                <div className='flex justify-center w-full mt-1 md:mt-16
                   z-50'>
-                  <div className='flex gap-7 border border-gray-500
+                    <div className='flex gap-7 border border-gray-500
                     py-5 px-6 rounded-full'>
-                    {
-                      hasPreviousPage
+                      {
+                        hasPreviousPage
                         ? (
                           <Link
                             href={`${currentPageNumber - 1}`}
-                            scroll={false}
+                            scroll={ false }
                           >
                             <Image
-                              src={previousBlue}
+                              src={ previousBlue }
                               className='cursor-pointer'
                             />
                           </Link>
                         )
                         : (
                           <Image
-                            src={previousGray}
+                            src={ previousGray }
                           />
                         )
-                    }
+                      }
 
-                    <Image
-                      src={lineGray}
-                    />
+                      <Image
+                        src={ lineGray }
+                      />
 
-                    {
-                      hasNextPage
+                      {
+                        hasNextPage
                         ? (
                           <Link
                             href={`${currentPageNumber + 1}`}
-                            scroll={false}
+                            scroll={ false }
                           >
                             <Image
-                              src={nextBlue}
+                              src={ nextBlue }
                               className='cursor-pointer'
                             />
                           </Link>
                         )
                         : (
                           <Image
-                            src={nextGray}
+                            src={ nextGray }
                           />
                         )
-                    }
-                  </div>
+                      }
+                    </div>
                 </div>
               </div>
             </section>

@@ -109,13 +109,14 @@ function PostPage({
             
             <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6'>
                 <div className='flex justify-center flex-col max-w-[1215px] w-full'>
-                  <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0'>
+                  <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px]
+                  md:ml-0'>
                     <MobileSwiperDisplay
                       posts={ posts }
                     />
 
-                  <div className='flex justify-start gap-2 xl:gap-8 max-w-full
-                  w-full pt-10'>
+                  <div className='justify-start gap-2 xl:gap-8 max-w-full
+                  w-full pt-10 hidden md:flex'>
                     {
                       posts.slice(0, 3).map(post => (                          
                         <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
@@ -196,7 +197,7 @@ function PostPage({
                   </div>
 
                   <div className='flex justify-start gap-2 xl:gap-8 max-w-full
-                  w-full pt-10'>
+                  w-full pt-10 hidden md:flex'>
                     {
                       posts.slice(3, 6).map(post => (                          
                         <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
