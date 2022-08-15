@@ -5,7 +5,7 @@ import useTranslation from 'next-translate/useTranslation'
 import UCMLogo from './../../assets/images/ucm-logo.svg'
 
 export const Footer = () => {
-  const { t } = useTranslation('home')
+  const { t } = useTranslation('common')
 
   return (
     <footer                                      
