@@ -48,7 +48,7 @@ export const Header = () => {
         <div className={`mobile-menu-bg bg-gray-100 md:flex ${ isActive
           ? 'flex fixed max-w-[236px] w-full h-full top-0 -mx-7 justify-center z-10'
           : 'hidden' }`}>
-          <ul className='flex items-center gap-4 md:gap-16 flex-col md:flex-row
+          <ul className='flex items-center gap-4 md:gap-8 lg:gap-16 flex-col md:flex-row
           translate-y-[200px] md:translate-y-0 bg-none md:bg-gray-100 h-screen
           md:h-full w-screen md:w-full pt-8 md:pt-0 -mt-[130px] md:mt-0 px-2 md:px-0'>
             <li className='block md:hidden pb-11 md:pb-0'>
