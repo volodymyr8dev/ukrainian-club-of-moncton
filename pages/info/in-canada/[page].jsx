@@ -17,6 +17,7 @@ import 'swiper/css/autoplay'
 
 import { hygraph } from '../../../services'
 
+import { Header } from './../../../components/layout/Header'
 import { InfoFront } from '../../../components/sections/info/InfoFront'
 import { Informative } from '../../../components/sections/info/Informative'
 import { MobileSwiperDisplay } from '../../../components/utils/MobileSwiperDisplay'
@@ -53,6 +54,7 @@ function PostPage({
       />
     </Head>
     
+    <Header />
     <main id='main'>
       <InfoFront />
       <div className='info-section'>

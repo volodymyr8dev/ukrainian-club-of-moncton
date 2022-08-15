@@ -22,7 +22,7 @@ import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.svg'
 export const MobileMenu = ({ setIsActive }) => {
   const { t } = useTranslation('common')
   const router = useRouter()
-
+  
   const handleClose = () => {
     setIsActive(false)
   }

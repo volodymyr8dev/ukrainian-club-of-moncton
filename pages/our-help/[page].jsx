@@ -8,6 +8,7 @@ import useTranslation from 'next-translate/useTranslation'
 
 import { hygraph } from './../../services'
 
+import { Header } from '../../components/layout/Header'
 import { MoneyHelpedFront } from '../../components/sections/moneyhelped/MoneyHelpedFront'
 import { Informative } from '../../components/sections/moneyhelped/Informative'
 import { MobileSwiperDisplay } from './../../components/utils/MobileSwiperDisplay'
@@ -43,7 +44,8 @@ function OurHelp({
         href="/favicon.ico"
       />
     </Head>
-    
+
+    <Header />
     <main id='main'>
       <MoneyHelpedFront />
       <div className='info-section'>

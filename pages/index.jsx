@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Header } from '../components/layout/Header'
 import { HomeFront } from '../components/sections/home/HomeFront'
 import { BottomCTA } from '../components/sections/home/BottomCTA'
 import { ClubAbout } from '../components/sections/home/ClubAbout'
@@ -23,6 +24,7 @@ export default function Home() {
       />
     </Head>
     
+    <Header />
     <main id='main' className='relativee'>
       <HomeFront />
       <ClubQuestions />

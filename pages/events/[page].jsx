@@ -8,6 +8,7 @@ import useTranslation from 'next-translate/useTranslation'
 
 import { hygraph } from './../../services'
 
+import { Header } from './../../components/layout/Header'
 import { EventsFront } from '../../components/sections/events/EventsFront'
 import { Informative } from '../../components/sections/events/Informative'
 import { MobileSwiperDisplay } from './../../components/utils/MobileSwiperDisplay'
@@ -44,7 +45,7 @@ function Events({
         href="/favicon.ico"
       />
     </Head>
-    
+    <Header />
     <main id='main'>
       <EventsFront />
       <div className='info-section'>

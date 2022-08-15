@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Header } from '../components/layout/Header'
 import { Contacts } from '../components/sections/about/Contacts'
 import { Informative } from '../components/sections/about/Informative'
 import { AboutFront } from './../components/sections/about/AboutFront'
@@ -19,6 +20,7 @@ export default function About() {
       />
     </Head>
     
+    <Header />
     <AboutFront />
     <main id='main'>
       <div className='about-section'>

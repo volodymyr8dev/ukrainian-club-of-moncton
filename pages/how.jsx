@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Header } from '../components/layout/Header'
 import { DonationSupport } from '../components/sections/how/DonationSupport'
 import { HowFront } from '../components/sections/how/HowFront'
 import { Informative } from '../components/sections/how/Informative'
@@ -19,6 +20,7 @@ export default function How() {
       />
     </Head>
     
+    <Header />
     <main id='main'>
       <HowFront />
       <div className='how-section'>
