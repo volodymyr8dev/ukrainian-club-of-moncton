@@ -1,3 +1,12 @@
 {
-  "example-text": "Hello world in UA"
+  "want-volunteer": "Do you want to volunteer with us?",
+  "donate-now": "Donate now",
+  "contact-us": "Contact us: ",
+  "email": "Email: ",
+  "address": "Address: ",
+  "volunteer-with": "Volunteer with us",
+  "home": "Home",
+  "info": "Info",
+  "events": "Events",
+  "about": "About"
 }

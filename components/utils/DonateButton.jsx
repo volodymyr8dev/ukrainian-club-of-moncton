@@ -4,7 +4,7 @@ import useTranslation from 'next-translate/useTranslation'
 import yellowHeart from './../../assets/images/yellow-heart.svg'
 
 export const DonateButton = () => {
-  const { t } = useTranslation('home')
+  const { t } = useTranslation('common')
 
   const hostedButtonId = process.env.NEXT_PUBLIC_HOSTED_BUTTON_ID
 

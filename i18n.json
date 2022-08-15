@@ -7,6 +7,7 @@
     "/info/in-canada/*": ["info"],
     "/info/going-to-canada/*": ["info"],
     "/about": ["about"],
+    "/events": ["events", "common"],
     "/how": ["how"]
   }
 }
