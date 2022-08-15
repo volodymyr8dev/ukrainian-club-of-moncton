@@ -29,8 +29,11 @@ export const MobileMenu = ({ setIsActive }) => {
 
   return (
     <>
-    <div className='opacity-60 bg-white-opacity h-screen w-full fixed top-0
-    bottom-0 m-auto z-10'>
+    <div
+      onClick={ handleClose }
+      className='opacity-60 bg-white-opacity h-screen w-full fixed top-0
+      bottom-0 m-auto z-10'
+    >
       <header
         className='separate-mobile-menu relative flex justify-center h-[72px]
         md:h-full shadow-[0px_4px_4px_rgba(0,0,0,0.06)] -mt-[72px] bg-gray-100
