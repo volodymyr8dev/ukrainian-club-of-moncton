@@ -9,6 +9,7 @@ import UCMLogo from './../../assets/images/ucm-logo.svg'
 import FacebookIcon from './../../assets/images/post/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
+import GreenShareIcon from './../../assets/images/post/green-share.svg'
 import { useRouter } from 'next/router'
 
 import { FacebookShareButton, TwitterShareButton } from 'next-share'
@@ -17,6 +18,8 @@ export const PostDetail = ({ post }) => {
   const router = useRouter()
 
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
+
+  const [copied, setCopied] = React.useState(false)
 
   return (
     <>
@@ -102,15 +105,22 @@ export const PostDetail = ({ post }) => {
 
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
-                <Link
-                  href='https://twitter.com'
+                <div
+                  onClick={
+                    () => {
+                      setCopied(true)
+                      navigator.clipboard.writeText(`${ baseURL }${ router.asPath }`)
+                    }
+                  }
                 >
-                  <Image
-                    src={ ShareIcon }
-                    width={ 64 }
-                    height={ 64 }
-                  />
-                </Link>
+                  <div className=''>
+                    <Image
+                      src={ copied ? ShareIcon : GreenShareIcon }
+                      width={ 64 }
+                      height={ 64 }
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
