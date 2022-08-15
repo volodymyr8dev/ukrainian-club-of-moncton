@@ -114,6 +114,8 @@ function PostPage({
                       posts={ posts }
                     />
 
+                  <div className='flex justify-start gap-2 xl:gap-8 max-w-full
+                  w-full pt-10'>
                     {
                       posts.slice(0, 3).map(post => (                          
                         <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
@@ -190,6 +192,7 @@ function PostPage({
                         </div>
                       ))
                     }
+                  </div>
                   </div>
 
                   <div className='flex justify-start gap-2 xl:gap-8 max-w-full
