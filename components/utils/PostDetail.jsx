@@ -116,9 +116,9 @@ export const PostDetail = ({ post }) => {
                     }
                   }
                 >
-                  <div className=''>
+                  <div>
                     <Image
-                      src={ copied ? ShareIcon : GreenShareIcon }
+                      src={ copied ? GreenShareIcon : ShareIcon }
                       alt='copy to clipboard'
                       title='copy to clipboard'
                       width={ 64 }
@@ -204,17 +204,24 @@ export const PostDetail = ({ post }) => {
 
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
-                <Link
-                  href='https://twitter.com'
+                <div
+                  onClick={
+                    () => {
+                      setCopied(true)
+                      navigator.clipboard.writeText(`${ baseURL }${ router.asPath }`)
+                    }
+                  }
                 >
-                  <Image
-                    src={ ShareIcon }
-                    alt='copy to clipboard'
-                    title='copy to clipboard'
-                    width={ 64 }
-                    height={ 64 }
-                  />
-                </Link>
+                  <div>
+                    <Image
+                      src={ copied ? GreenShareIcon : ShareIcon }
+                      alt='copy to clipboard'
+                      title='copy to clipboard'
+                      width={ 64 }
+                      height={ 64 }
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
