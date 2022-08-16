@@ -4,11 +4,11 @@
   "pages": {
     "*": ["common"],
     "/": ["home"],
-    "/info/in-canada/*": ["info"],
-    "/info/going-to-canada/*": ["info"],
+    "/info/in-canada/[page]": ["info"],
+    "/info/going-to-canada/[page]": ["info"],
+    "/events/[page]": ["events"],
+    "/our-help/[page]": ["our-help"],
     "/about": ["about"],
-    "/events": ["events"],
-    "/our-help": ["our-help"],
     "/how": ["how"]
   }
 }
