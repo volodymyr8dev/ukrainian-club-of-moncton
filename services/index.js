@@ -23,7 +23,6 @@ export const getPosts = async () => {
               slug
             }
             excerpt
-            minutesRead
             address
             featuredImage {
               url
@@ -51,7 +50,6 @@ export const getPostDetails = async (slug) => {
         slug
         title
         excerpt
-        minutesRead
         tags {
           name
           slug
@@ -69,7 +67,6 @@ export const getPostDetails = async (slug) => {
         localizations(locales: uk_UA) {
           title
           excerpt
-          minutesRead
           tags {
             name
           }
@@ -93,7 +90,6 @@ export const getPostDetailsUA = async (slug) => {
         excerpt
         createdAt
         slug
-        minutesRead
         featuredImage {
           url
         }
@@ -104,7 +100,6 @@ export const getPostDetailsUA = async (slug) => {
         localizations(locales: uk_UA) {
           title
           excerpt
-          minutesRead
           tags {
             name
           }

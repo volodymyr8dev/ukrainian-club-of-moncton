@@ -47,10 +47,6 @@ export const PostDetail = ({ post }) => {
                 ? post.localizations[0].tags[0].name
                 : post.tags[0].name
               }
-              {' | '}
-              { `${ post.minutesRead } ${ router.locale == 'ua'
-              ? 'хвилин читання'
-              : 'min read' }` }
             </span>
             <span className='inline-block md:hidden font-proximaNova200 text-gray-500 uppercase
             text-base md:text-lg leading-[18px] text-left md:text-center w-full'>

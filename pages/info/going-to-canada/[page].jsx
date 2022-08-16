@@ -368,7 +368,6 @@ export async function getStaticPaths() {
             localizations(locales: uk_UA) {
               title
               excerpt
-              minutesRead
               tags {
                 name
               }
@@ -436,7 +435,6 @@ export async function getStaticProps({ params }) {
             localizations(locales: uk_UA) {
               title
               excerpt
-              minutesRead
               tags {
                 name
               }
