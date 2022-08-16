@@ -11,6 +11,7 @@ import { hygraph } from './../../services'
 import { Header } from '../../components/layout/Header'
 import { MoneyHelpedFront } from '../../components/sections/moneyhelped/MoneyHelpedFront'
 import { Informative } from '../../components/sections/moneyhelped/Informative'
+import { Data } from '../../components/sections/moneyhelped/data'
 import { MobileSwiperDisplay } from './../../components/utils/MobileSwiperDisplay'
 
 import nextBlue from './../../assets/images/pagination/next-blue.svg'
@@ -51,6 +52,7 @@ function OurHelp({
       <div className='info-section'>
         <div className='info-section-bg'>
           <Informative />
+          <Data />
             <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6'>
               <div className='flex justify-center flex-col max-w-[1215px] w-full'>
               <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px]
