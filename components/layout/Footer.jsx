@@ -18,8 +18,9 @@ export const Footer = () => {
               <Link href='/'>
                 <span>
                   <Image
-                    src='/ucm-logo.svg' width='90' height='85' alt='Ukrainian club of Moncton'
-                  alt='logo'/>
+                    src='/ucm-logo.svg' width='90' height='85'
+                    alt='logo'
+                  />
                 </span>
               </Link>
             </li>
@@ -52,7 +53,13 @@ export const Footer = () => {
           <ul>
             <li className='pt-4 md:pt-0'>
               <span className='text-xs md:text-sm'>
-                By <Link href='https://binaryfuture.io'>BinaryFuture.io</Link>
+                By
+                <a
+                  href='https://binaryfuture.io'
+                  target='_blank'
+                >
+                  BinaryFuture.io
+                </a>
               </span>
             </li>
           </ul>
