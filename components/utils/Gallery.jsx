@@ -55,9 +55,9 @@ export const Gallery = () => {
         className='home-gallery-swiper'
       >
         {
-          data.galleries.map(item => (
+          data.galleries.map((item, i) => (
             <SwiperSlide
-              key={ item.picture.url }
+              key={ i }
             >
             <img
               src={ item.picture.url }

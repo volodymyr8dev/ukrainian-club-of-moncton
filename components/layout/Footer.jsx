@@ -2,8 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 
-import UCMLogo from './../../assets/images/ucm-logo.svg'
-
 export const Footer = () => {
   const { t } = useTranslation('common')
 
@@ -18,10 +16,11 @@ export const Footer = () => {
           <ul className='flex items-center gap-0 md:gap-4 flex-col md:flex-row'>
             <li>
               <Link href='/'>
-                <Image
-                  src={ UCMLogo }
-                  alt='logo'
-                />
+                <span>
+                  <Image
+                    src='/ucm-logo.svg' width='90' height='85' alt='Ukrainian club of Moncton'
+                  alt='logo'/>
+                </span>
               </Link>
             </li>
             <li className='flex flex-col text-center md:text-left'>

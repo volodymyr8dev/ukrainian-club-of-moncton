@@ -60,10 +60,8 @@ function Events({
                   <div className='justify-start gap-2 xl:gap-8 max-w-full
                   w-full pt-10 hidden md:flex'>
                   {
-                    posts.slice(0, 3).map(post => (
-                      <div
-                      key={ post.node.title }
-                      className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
+                    posts.slice(0, 3).map((post, i) => (
+                      <div  key={i} className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
                       max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
                       overflow-hidden bg-gray-100 rounded-3xl mt-6
                       hidden md:block'>
@@ -144,10 +142,8 @@ function Events({
                 <div className='justify-start gap-2 xl:gap-8 max-w-full
                   w-full pt-10 hidden md:flex'>
                   {
-                    posts.slice(3, 6).map(post => (
-                      <div
-                      key={ post.node.title }
-                      className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
+                    posts.slice(3, 6).map((post, i) => (
+                      <div key={i} className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
                       max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
                       overflow-hidden bg-gray-100 rounded-3xl mt-6
                       hidden md:block'>
@@ -235,11 +231,12 @@ function Events({
                             href={`${currentPageNumber - 1}`}
                             scroll={ false }
                           >
-                            <Image
-                              src={ previousBlue }
-                              alt='previous'
-                              className='cursor-pointer'
-                            />
+                            <span>
+                              <Image
+                                src={ previousBlue }
+                                alt='previous'className='cursor-pointer'
+                              />
+                            </span>
                           </Link>
                         )
                         : (
@@ -262,11 +259,12 @@ function Events({
                             href={`${currentPageNumber + 1}`}
                             scroll={ false }
                           >
-                            <Image
-                              src={ nextBlue }
-                              alt='next'
-                              className='cursor-pointer'
-                            />
+                            <span>
+                              <Image
+                                src={ nextBlue }
+                                alt='next'className='cursor-pointer'
+                              />
+                            </span>
                           </Link>
                         )
                         : (

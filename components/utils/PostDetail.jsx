@@ -5,7 +5,7 @@ import moment from 'moment'
 
 import { RelatedPosts } from './RelatedPosts'
 
-import UCMLogo from './../../assets/images/ucm-logo.svg'
+import UCMLogo from '../../public/ucm-logo.svg'
 import FacebookIcon from './../../assets/images/post/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'

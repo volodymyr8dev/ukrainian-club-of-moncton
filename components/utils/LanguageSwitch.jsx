@@ -24,7 +24,7 @@ export const LanguageSwitch = () => {
           >
             {locales.map((l, i) => {
               return (
-                <MenuItem key={i} lassName={l === locale ? 'styles.selected' : ''} value={l}>
+                <MenuItem key={i} className={l === locale ? 'styles.selected' : ''} value={l}>
                   <NextLink href={asPath} locale={l}>
                     <a className='font-proximaNova500 text-base md:text-xl pr-2
                     md:pr-0 flex items-center uppercase'>
