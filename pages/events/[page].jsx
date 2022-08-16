@@ -237,6 +237,7 @@ function Events({
                           >
                             <Image
                               src={ previousBlue }
+                              alt='previous'
                               className='cursor-pointer'
                             />
                           </Link>
@@ -244,12 +245,14 @@ function Events({
                         : (
                           <Image
                             src={ previousGray }
+                            alt=''
                           />
                         )
                       }
 
                       <Image
                         src={ lineGray }
+                        alt=''
                       />
 
                       {
@@ -261,6 +264,7 @@ function Events({
                           >
                             <Image
                               src={ nextBlue }
+                              alt='next'
                               className='cursor-pointer'
                             />
                           </Link>
@@ -268,6 +272,7 @@ function Events({
                         : (
                           <Image
                             src={ nextGray }
+                            alt=''
                           />
                         )
                       }

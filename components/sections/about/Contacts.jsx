@@ -47,6 +47,7 @@ export const Contacts = () => {
           >
             <Image
               src={ phoneActive ? WhitePhoneIcon : BluePhoneIcon }
+              alt='phone'
             />
             <a href='tel:+22222222222'>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
@@ -65,6 +66,7 @@ export const Contacts = () => {
           >
             <Image
               src={ locationActive ? WhiteLocationIcon : BlueLocationIcon }
+              alt='location'
             />
             <a href='https://www.google.com.br/maps/place/123+Cameron+St,+Moncton,+NB+E1C+5Y7,+Canadá/@46.0890425,-64.7909006,17z/data=!3m1!4b1!4m5!3m4!1s0x4ca0b92340567205:0x6d9d8c7d02438947!8m2!3d46.0890388!4d-64.7887119'>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
@@ -83,6 +85,7 @@ export const Contacts = () => {
           >
             <Image
               src={ emailActive ? WhiteEmailIcon : BlueEmailIcon }
+              alt='email'
             />
             <a href='mailto:info@ukrclubmoncton.ca'>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]

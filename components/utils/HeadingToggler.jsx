@@ -16,12 +16,14 @@ export const HeadingToggler = (props) => {
           <Image
             className={`${ props.togglerPrevClass } cursor-pointer`}
             src={ prevArrow }
+            alt='previous'
             width={ 64 }
             height={ 64 }
           />
           <Image
             className={`${ props.togglerNextClass } cursor-pointer`}
             src={ nextArrow }
+            alt='next'
             width={ 64 }
             height={ 64 }
           />

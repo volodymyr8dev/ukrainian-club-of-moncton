@@ -34,6 +34,7 @@ export const YellowDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ YellowCameraIcon }
+          alt='camera'
           width={ 128 }
           height={ 128 }
         />
@@ -60,6 +61,7 @@ export const YellowDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ YellowSmileIcon }
+          alt='smile'
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
           { t('sell-stickers') }
@@ -81,6 +83,7 @@ export const YellowDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ YellowVideoIcon }
+          alt='video'
           width={ 128 }
           height={ 128 }
         />
@@ -111,6 +114,7 @@ export const YellowDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ YellowArtisanIcon }
+          alt='artisan'
           width={ 128 }
           height={ 128 }
         />
@@ -135,6 +139,7 @@ export const YellowDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ YellowBusinessIcon }
+          alt='business'
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
           { t('offer-business') }
@@ -157,6 +162,7 @@ export const YellowDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ YellowPlaneIcon }
+          alt='plane'
           width={ 128 }
           height={ 128 }
         />

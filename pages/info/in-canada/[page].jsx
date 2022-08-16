@@ -296,6 +296,7 @@ function PostPage({
                           >
                             <Image
                               src={ previousBlue }
+                              alt='previous'
                               className='cursor-pointer'
                             />
                           </Link>
@@ -303,12 +304,14 @@ function PostPage({
                         : (
                           <Image
                             src={ previousGray }
+                            alt=''
                           />
                         )
                       }
 
                       <Image
                         src={ lineGray }
+                        alt=''
                       />
 
                       {
@@ -320,6 +323,7 @@ function PostPage({
                           >
                             <Image
                               src={ nextBlue }
+                              alt='next'
                               className='cursor-pointer'
                             />
                           </Link>
@@ -327,6 +331,7 @@ function PostPage({
                         : (
                           <Image
                             src={ nextGray }
+                            alt=''
                           />
                         )
                       }

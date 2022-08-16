@@ -23,6 +23,7 @@ export default function FourOhFour() {
           <div className='w-[83px] md:w-[166px]'>
             <Image
               src={ ZeroIcon }
+              alt='0'
               layout='intrinsic'
             />
           </div>

@@ -24,20 +24,23 @@ export const AboutFront = () => {
           <div className='w-full overflow-hidden'>
             <Image
               src={ Farm1Desktop }
+              alt='farm'
               layout='responsive'
-            />
+              />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Farm2Desktop }
+              alt='farm'
               layout='responsive'
-            />
+              />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Farm3Desktop }
+              alt='farm'
               layout='responsive'
-            />
+              />
           </div>
         </div>
 
@@ -46,18 +49,21 @@ export const AboutFront = () => {
           <div className='w-full overflow-hidden'>
             <Image
               src={ Farm1Mobile }
+              alt='farm'
               layout='responsive'
-            />
+              />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Farm2Mobile }
+              alt='farm'
               layout='responsive'
-            />
+              />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Farm3Mobile }
+              alt='farm'
               layout='responsive'
             />
           </div>

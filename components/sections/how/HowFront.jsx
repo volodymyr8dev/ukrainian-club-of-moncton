@@ -17,6 +17,7 @@ export const HowFront = () => {
           <div className='hidden tablets:block w-full overflow-hidden'>
             <Image
               src={ HowBg }
+              alt='farm'
               layout='responsive'
             />
           </div>
@@ -24,6 +25,7 @@ export const HowFront = () => {
           <div className='block tablets:hidden w-full overflow-hidden'>
             <Image
               src={ HowBgMobile }
+              alt='farm'
               layout='responsive'
             />
           </div>

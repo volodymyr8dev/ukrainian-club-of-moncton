@@ -14,6 +14,7 @@ export const Quote = () => {
         <div className='flex justify-center -translate-y-12 z-5'>
           <Image
             src={ quoteImage }
+            alt='quote'
           />
         </div>
 

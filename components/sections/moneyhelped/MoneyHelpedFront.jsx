@@ -24,18 +24,21 @@ export const MoneyHelpedFront = () => {
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img1Desktop }
+              alt='farm'
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img2Desktop }
+              alt='farm'
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img3Desktop }
+              alt='farm'
               layout='responsive'
             />
           </div>
@@ -46,18 +49,21 @@ export const MoneyHelpedFront = () => {
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img1Mobile }
+              alt='farm'
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img2Mobile }
+              alt='farm'
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img3Mobile }
+              alt='farm'
               layout='responsive'
             />
           </div>

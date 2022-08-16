@@ -46,10 +46,12 @@ export const ThankYouModal = () => {
               ty === '0'
               ? <Image
                   src={ NotSuccessImage }
+                  alt='not successful'
                   layout='intrinsic'
                 />
               : <Image
                   src={ ThankYouImage }
+                  alt='success'
                   layout='intrinsic'
                 />
             }

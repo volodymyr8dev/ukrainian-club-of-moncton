@@ -59,6 +59,7 @@ export const HomeFront = () => {
         '>
           <Image
             src={ birdImage }
+            alt='bird'
             width={ 454 }
             height={ 398.34 }
           />

@@ -106,6 +106,7 @@ export const RelatedPosts = ({ category, tags, slug }) => {
                       <div className='flex gap-[18px] items-center pt-6'>
                         <Image
                           src={ locationImage }
+                          alt='location'
                           width={ 18.8 }
                           height={ 24 }
                         />

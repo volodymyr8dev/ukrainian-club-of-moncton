@@ -29,6 +29,7 @@ export const PostDetail = ({ post }) => {
         <div className='hidden md:flex justify-center w-full'>
           <Image
             src={ UCMLogo }
+            alt=''
             width={ 89 }
             height={ 84 }
           />
@@ -83,6 +84,7 @@ export const PostDetail = ({ post }) => {
                 >
                   <Image
                     src={ FacebookIcon }
+                    alt='facebook'
                     width={ 64 }
                     height={ 64 }
                   />
@@ -97,6 +99,7 @@ export const PostDetail = ({ post }) => {
                 >
                   <Image
                     src={ TwitterIcon }
+                    alt='twitter'
                     width={ 64 }
                     height={ 64 }
                   />
@@ -116,6 +119,8 @@ export const PostDetail = ({ post }) => {
                   <div className=''>
                     <Image
                       src={ copied ? ShareIcon : GreenShareIcon }
+                      alt='copy to clipboard'
+                      title='copy to clipboard'
                       width={ 64 }
                       height={ 64 }
                     />
@@ -175,6 +180,7 @@ export const PostDetail = ({ post }) => {
                 >
                   <Image
                     src={ FacebookIcon }
+                    alt='facebook'
                     width={ 64 }
                     height={ 64 }
                   />
@@ -189,6 +195,7 @@ export const PostDetail = ({ post }) => {
                 >
                   <Image
                     src={ TwitterIcon }
+                    alt='twitter'
                     width={ 64 }
                     height={ 64 }
                   />
@@ -202,6 +209,8 @@ export const PostDetail = ({ post }) => {
                 >
                   <Image
                     src={ ShareIcon }
+                    alt='copy to clipboard'
+                    title='copy to clipboard'
                     width={ 64 }
                     height={ 64 }
                   />

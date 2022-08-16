@@ -74,6 +74,7 @@ export const ContactForm = () => {
               rounded-2xl'>
                 <Image
                   src={ ProfileIcon }
+                  alt='profile'
                 />
                 <input
                   className='text-base tablets:text-lg font-proximaNova300
@@ -99,6 +100,7 @@ export const ContactForm = () => {
               rounded-2xl'>
                 <Image
                   src={ EmailIcon }
+                  alt='email'
                 />
                 <input
                   className='text-base tablets:text-lg font-proximaNova300
@@ -124,6 +126,7 @@ export const ContactForm = () => {
               rounded-2xl'>
                 <Image
                   src={ PhoneIcon }
+                  alt='phone'
                 />
                 <input
                   className='text-base tablets:text-lg font-proximaNova300]
@@ -167,6 +170,7 @@ export const ContactForm = () => {
             { t('send-message') }
             <Image
               src={ SendIcon }
+              alt='send'
             />
           </button>
         </div>

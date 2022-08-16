@@ -47,6 +47,7 @@ export const ClubQuestions = () => {
           <div>
             <Image
               src={ doubtIdeaImage }
+              alt='Woman in doubt'
               width={400}
               height={400}
             />
@@ -58,6 +59,7 @@ export const ClubQuestions = () => {
           <div className='pb-12 md:pb-0'>
             <Image
               src={ ladderImage }
+              alt='ladder climbing'
               width={400}
               height={400}
             />

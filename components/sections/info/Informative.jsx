@@ -22,6 +22,7 @@ export const Informative = () => {
         <div className='flex justify-center pt-10'>
           <Image
             src={ UkrainianSymbol }
+            alt=''
           />
         </div>
         <div className='pt-8 md:pt-11'>

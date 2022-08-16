@@ -24,6 +24,7 @@ export const DonateButton = () => {
         </span>
         <Image
           src={ yellowHeart }
+          alt='heart'
         />
       </div>
     </a>

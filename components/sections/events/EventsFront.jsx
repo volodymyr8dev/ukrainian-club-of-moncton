@@ -21,18 +21,21 @@ export const EventsFront = () => {
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img1Desktop }
+              alt='events'
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img2Desktop }
+              alt='events'
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img3Desktop }
+              alt='events'
               layout='responsive'
             />
           </div>
@@ -43,18 +46,21 @@ export const EventsFront = () => {
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img1Mobile }
+              alt='events'
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img2Mobile }
+              alt='events'
               layout='responsive'
             />
           </div>
           <div className='w-full overflow-hidden'>
             <Image
               src={ Img3Mobile }
+              alt='events'
               layout='responsive'
             />
           </div>

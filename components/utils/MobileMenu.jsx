@@ -75,6 +75,7 @@ export const MobileMenu = ({ setIsActive }) => {
                     <div className='flex md:hidden items-center'>
                       <Image
                         src={ router.pathname == '/' ? HomeWhiteIcon : HomeBlackIcon }
+                        alt='home'
                         width={ 18.2 }
                         height={ 20 }
                       />
@@ -96,6 +97,7 @@ export const MobileMenu = ({ setIsActive }) => {
                     <div className='flex md:hidden items-center'>
                       <Image
                         src={ router.pathname == '/info/in-canada/[page]' ? InfoWhiteIcon : InfoBlackIcon }
+                        alt='info'
                         width={ 20 }
                         height={ 20 }
                       />
@@ -117,6 +119,7 @@ export const MobileMenu = ({ setIsActive }) => {
                     <div className='flex md:hidden items-center'>
                       <Image
                         src={ router.pathname == '/events/[page]' ? EventsWhiteIcon : EventsBlackIcon }
+                        alt='events'
                         width={ 20 }
                         height={ 20 }
                       />
@@ -138,6 +141,7 @@ export const MobileMenu = ({ setIsActive }) => {
                     <div className='flex md:hidden items-center'>
                       <Image
                         src={ router.pathname === '/our-help/[page]' ? HelpWhiteIcon : HelpBlackIcon }
+                        alt='our help'
                         width={ 20 }
                         height={ 20 }
                       />
@@ -159,6 +163,7 @@ export const MobileMenu = ({ setIsActive }) => {
                     <div className='flex md:hidden items-center'>
                       <Image
                         src={ router.pathname == '/about' ? AboutWhiteIcon : AboutBlackIcon }
+                        alt='about'
                         width={ 20 }
                         height={ 20 }
                       />
@@ -180,6 +185,7 @@ export const MobileMenu = ({ setIsActive }) => {
             >
               <Image
                 src={ CloseIcon }
+                alt='close'
                 width={ 16 }
                 height={ 16 }
               />

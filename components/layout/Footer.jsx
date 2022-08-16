@@ -20,6 +20,7 @@ export const Footer = () => {
               <Link href='/'>
                 <Image
                   src={ UCMLogo }
+                  alt='logo'
                 />
               </Link>
             </li>

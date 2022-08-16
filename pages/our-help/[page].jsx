@@ -238,6 +238,7 @@ function OurHelp({
                           >
                             <Image
                               src={ previousBlue }
+                              alt='previous'
                               className='cursor-pointer'
                             />
                           </Link>
@@ -245,12 +246,14 @@ function OurHelp({
                         : (
                           <Image
                             src={ previousGray }
+                            alt=''
                           />
                         )
                       }
 
                       <Image
                         src={ lineGray }
+                        alt=''
                       />
 
                       {
@@ -262,6 +265,7 @@ function OurHelp({
                           >
                             <Image
                               src={ nextBlue }
+                              alt='next'
                               className='cursor-pointer'
                             />
                           </Link>
@@ -269,6 +273,7 @@ function OurHelp({
                         : (
                           <Image
                             src={ nextGray }
+                            alt=''
                           />
                         )
                       }

@@ -35,6 +35,7 @@ export const BlueDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ BlueHeartIcon }
+          alt='heart'
           width={ 128 }
           height={ 128 }
         />
@@ -59,6 +60,7 @@ export const BlueDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ BlueHousesIcon }
+          alt='houses'
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
         { t('offer-housing') }
@@ -81,6 +83,7 @@ export const BlueDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ BlueCalendarIcon }
+          alt='calendar'
           width={ 128 }
           height={ 128 }
         />
@@ -108,6 +111,7 @@ export const BlueDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ BlueBearIcon }
+          alt='bear'
           width={ 128 }
           height={ 128 }
         />
@@ -132,6 +136,7 @@ export const BlueDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ BlueEquipmentIcon }
+          alt='equipment'
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
           { t('amazon-wishlist') }
@@ -154,6 +159,7 @@ export const BlueDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ BlueColletteIcon }
+          alt='collette'
           width={ 128 }
           height={ 128 }
         />

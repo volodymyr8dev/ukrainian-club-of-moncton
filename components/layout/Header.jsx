@@ -76,6 +76,7 @@ export const Header = () => {
                   <div className='flex md:hidden items-center'>
                     <Image
                       src={ pathname === '/' ? HomeWhiteIcon : HomeBlackIcon }
+                      alt='home'
                       width={ 18.2 }
                       height={ 20 }
                     />
@@ -99,6 +100,7 @@ export const Header = () => {
                   <div className='flex md:hidden items-center'>
                     <Image
                       src={ pathname === ('/info/in-canada/[page]' || '/info/going-to-canada/[page]') ? InfoWhiteIcon : InfoBlackIcon }
+                      alt='info'
                       width={ 20 }
                       height={ 20 }
                     />
@@ -120,6 +122,7 @@ export const Header = () => {
                   <div className='flex md:hidden items-center'>
                     <Image
                       src={ pathname === '/events/[page]' ? EventsWhiteIcon : EventsBlackIcon }
+                      alt='events'
                       width={ 20 }
                       height={ 20 }
                     />
@@ -141,6 +144,7 @@ export const Header = () => {
                   <div className='flex md:hidden items-center'>
                     <Image
                       src={ pathname === '/our-help/[page]' ? HelpWhiteIcon : HelpBlackIcon }
+                      alt='our help'
                       width={ 20 }
                       height={ 20 }
                     />
@@ -162,6 +166,7 @@ export const Header = () => {
                   <div className='flex md:hidden items-center'>
                     <Image
                       src={ pathname === '/about' ? AboutWhiteIcon : AboutBlackIcon }
+                      alt='about'
                       width={ 20 }
                       height={ 20 }
                     />
@@ -183,6 +188,7 @@ export const Header = () => {
           >
             <Image
               src={ isActive ? CloseIcon : OpenIcon }
+              alt='close'
               width={ 16 }
               height={ 16 }
             />

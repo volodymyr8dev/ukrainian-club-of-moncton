@@ -31,6 +31,7 @@ export const GreenDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ GreenVolunteerIcon }
+          alt='volunteer'
           width={ 128 }
           height={ 128 }
         />
@@ -54,6 +55,7 @@ export const GreenDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ GreenFollowIcon }
+          alt='follow'
         />
         <span className='text-center font-proximaNova200 text-lg leading-[18px]'>
           { t('fundraise-page') }
@@ -75,6 +77,7 @@ export const GreenDonationGrid = () => {
       flex-1 shrink-0'>
         <Image
           src={ GreenFundraiseIcon }
+          alt='fundraise'
           width={ 128 }
           height={ 128 }
         />
