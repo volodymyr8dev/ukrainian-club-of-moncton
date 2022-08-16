@@ -3,14 +3,9 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
 import Modal from '@mui/material/Modal'
 
 import { useNextQueryParam } from '../../hooks/useNextQueryParam'
-
-import ThankYouImage from './../../assets/images/thank-you-image.svg'
-import NotSuccessImage from './../../assets/images/not-success-image.svg'
 
 export const ThankYouModal = () => {
   const router = useRouter()
@@ -44,15 +39,13 @@ export const ThankYouModal = () => {
           <div className='flex justify-center -mt-3 w-[184px] md:w-64'>
             {
               ty === '0'
-              ? <Image
-                  src={ NotSuccessImage }
+              ? <img
+                  src='/not-success-image.svg'
                   alt='not successful'
-                  layout='intrinsic'
                 />
-              : <Image
-                  src={ ThankYouImage }
+              : <img
+                  src='/thank-you-image.svg'
                   alt='success'
-                  layout='intrinsic'
                 />
             }
           </div>
