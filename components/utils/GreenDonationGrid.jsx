@@ -42,6 +42,7 @@ export const GreenDonationGrid = () => {
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href={ data.howCanIHelpUrls[0].url }
           target='_blank'
+          rel='noreferrer'
         >
           { t('learn-more') }
         </a>
@@ -62,6 +63,7 @@ export const GreenDonationGrid = () => {
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href={ data.howCanIHelpUrls[1].url }
           target='_blank'
+          rel='noreferrer'
         >
           { t('learn-more') }
         </a>
@@ -87,6 +89,7 @@ export const GreenDonationGrid = () => {
           font-proximaNova400 text-lg leading-[18px] text-gray-100 text-center'
           href={ data.howCanIHelpUrls[2].url }
           target='_blank'
+          rel='noreferrer'
         >
           { t('learn-more') }
         </a>

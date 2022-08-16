@@ -1,4 +1,4 @@
-/* file name: [page].jsx */
+/*
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -456,3 +456,4 @@ export async function getStaticProps({ params }) {
 }
 
 export default PostPage
+*/
