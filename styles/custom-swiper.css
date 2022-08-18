@@ -10,7 +10,7 @@
 
 .home-events-swiper.swiper {
   margin: 0 -20px;
-  padding: 0 25px;
+  padding: 0 60px; /*60*/
 }
 
 .home-events-swiper .swiper-pagination {
@@ -40,6 +40,10 @@
 
   .info-swiper .swiper-pagination {
     display: none;
+  }
+
+  .home-events-swiper .swiper-wrapper {
+    margin-left: -14px !important;
   }
 }
 

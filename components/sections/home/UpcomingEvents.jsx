@@ -62,8 +62,7 @@ export const UpcomingEvents = () => {
             <Swiper className='home-events-swiper h-full'
               breakpoints={{
                 100: {
-                  slidesPerView: 1.1,
-                  centeredSlides: true,
+                  slidesPerView: 'auto',
                   spaceBetween: 8
                 },
                 700: {

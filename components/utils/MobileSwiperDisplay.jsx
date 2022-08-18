@@ -18,8 +18,7 @@ export const MobileSwiperDisplay = ({ posts }) => {
     block md:hidden'
       breakpoints={{
         100: {
-          slidesPerView: 1.1,
-          centeredSlides: true,
+          slidesPerView: 'auto',
           spaceBetween: 8
         },
         700: {
