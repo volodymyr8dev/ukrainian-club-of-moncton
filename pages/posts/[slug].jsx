@@ -22,7 +22,7 @@ export default function PostDetails({ post }) {
       />
     </Head>
     
-    <Header />
+      
     <div>
       <PostDetail post={ post } />
     </div>

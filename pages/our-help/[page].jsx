@@ -46,7 +46,7 @@ function OurHelp({
       />
     </Head>
 
-    <Header />
+      
     <main id='main'>
       <MoneyHelpedFront />
       <div className='info-section'>

@@ -20,7 +20,7 @@ export default function About() {
       />
     </Head>
     
-    <Header />
+      
     <AboutFront />
     <main id='main'>
       <div className='about-section'>

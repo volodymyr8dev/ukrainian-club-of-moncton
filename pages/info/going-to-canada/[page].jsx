@@ -55,7 +55,7 @@ function PostPage({
       />
     </Head>
     
-    <Header />
+      
     <main id='main'>
       <InfoFront />
       <div className='info-section'>

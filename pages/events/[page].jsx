@@ -44,7 +44,7 @@ function Events({
         href="/favicon.ico"
       />
     </Head>
-    <Header />
+      
     <main id='main'>
       <EventsFront />
       <div className='info-section'>

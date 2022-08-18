@@ -24,7 +24,7 @@ export default function Home() {
       />
     </Head>
     
-    <Header />
+      
     <main id='main' className='relativee'>
       <HomeFront />
       <ClubQuestions />

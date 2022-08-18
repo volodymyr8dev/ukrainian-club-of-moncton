@@ -20,7 +20,7 @@ export default function How() {
       />
     </Head>
     
-    <Header />
+      
     <main id='main'>
       <HowFront />
       <div className='how-section'>

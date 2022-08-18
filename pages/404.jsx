@@ -12,7 +12,6 @@ export default function FourOhFour() {
 
   return (
     <>
-    <Header />
     <div className='h-screen w-screen -mt-[70px] not-found-bg'>
       <div className='w-full h-full flex justify-center items-center flex-col'>
         <div className='flex justify-center items-center w-full gap-4 -mt-64'>
