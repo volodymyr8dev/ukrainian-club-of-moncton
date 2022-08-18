@@ -243,3 +243,7 @@ fieldset {
   background-position: bottom;
   background-size: contain;
 }
+
+#nprogress .spinner-icon {
+  display: none;
+}
