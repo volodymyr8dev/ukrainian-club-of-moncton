@@ -57,6 +57,7 @@ export const Footer = () => {
                 <a
                   href='https://binaryfuture.io'
                   target='_blank'
+                  rel='noreferrer'
                 >
                   BinaryFuture.io
                 </a>
