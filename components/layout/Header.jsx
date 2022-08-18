@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -25,18 +25,21 @@ import HelpWhiteIcon from './../../assets/images/mobile-menu/help-white.svg'
 
 export const Header = () => {
   const { t } = useTranslation('common')
-  const { locale, pathname } = useRouter()
+  const { locale, pathname, asPath } = useRouter()
   
   const [isActive, setIsActive] = useState(false)
+  
+  //Makes sure class is removed after changing to any pages/
+  useEffect(() => {
+    document.documentElement.classList.remove('lock-scroll')
+  }, [asPath])
 
   const openMenu = () => {
-    document.body.classList.add('lock-scroll')
     document.documentElement.classList.add('lock-scroll')
     setIsActive(true)
   }
 
   const closeMenu = () => {
-    document.body.classList.remove('lock-scroll')
     document.documentElement.classList.remove('lock-scroll')
     setIsActive(false)
   }
@@ -59,7 +62,6 @@ export const Header = () => {
           md:h-full w-screen md:w-full pt-8 md:pt-0 -mt-[130px] md:mt-0 px-2 md:px-0'>
             <li className='block md:hidden pb-11 md:pb-0'>
               <div
-                onClick={ closeMenu }
                 className='cursor-pointer font-proximaNova300 border-solid
                 border-blue-500 border-[1px] text-base py-[12px] px-[15px]
                 rounded-[50px] uppercase'
@@ -80,7 +82,6 @@ export const Header = () => {
             ${ pathname === '/' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
               <Link href='/' locale={locale}>
                 <div
-                  onClick={ closeMenu }
                   className='flex md:block items-center justify-start gap-4
                   md-gap-0'
                 >
@@ -107,7 +108,6 @@ export const Header = () => {
             : '' }`}>
               <Link href='/info/in-canada/1' locale={locale}>
                 <div
-                  onClick={ closeMenu }
                   className='flex md:block items-center justify-start gap-4
                   md-gap-0'
                 >
@@ -132,7 +132,6 @@ export const Header = () => {
             ${ pathname === '/events/[page]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
               <Link href='/events/1' locale={locale}>
                 <div
-                  onClick={ closeMenu }
                   className='flex md:block items-center justify-start gap-4
                   md-gap-0'
                 >
@@ -157,7 +156,6 @@ export const Header = () => {
             ${ pathname === '/our-help/[page]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
               <Link href='/our-help/1' locale={locale}>
                 <div
-                  onClick={ closeMenu }
                   className='flex md:block items-center justify-start gap-4
                   md-gap-0'
                 >
@@ -182,7 +180,6 @@ export const Header = () => {
             ${ pathname === '/about' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
               <Link href='/about' locale={locale}>
                 <div
-                  onClick={ closeMenu }
                   className='flex md:block items-center justify-start gap-4
                   md-gap-0'
                 >
