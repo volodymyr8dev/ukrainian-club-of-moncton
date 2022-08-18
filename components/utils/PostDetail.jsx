@@ -1,7 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import moment from 'moment'
+
+import Popover from '@mui/material/Popover'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import { FacebookShareButton, TwitterShareButton } from 'next-share'
 
 import { RelatedPosts } from './RelatedPosts'
 
@@ -12,15 +16,28 @@ import ShareIcon from './../../assets/images/post/share.svg'
 import GreenShareIcon from './../../assets/images/post/green-share.svg'
 import { useRouter } from 'next/router'
 
-import { FacebookShareButton, TwitterShareButton } from 'next-share'
-
 export const PostDetail = ({ post }) => {
   const router = useRouter()
 
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL
+  const [anchorEl, setAnchorEl] = React.useState(null)
+
+  const open = Boolean(anchorEl)
+  const id = open ? 'simple-popover' : undefined
+  
+  const handleClickPopover = (event) => {
+    setAnchorEl(event.currentTarget)
+    document.body.classList.add('remove-bug-padding')
+  }
+
+  const handleClose = () => {
+    setAnchorEl(null)
+    document.body.classList.remove('remove-bug-padding')
+  }
 
   const [copied, setCopied] = React.useState(false)
 
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL
+  
   return (
     <>
     <section className='flex justify-center mb-[72px] md:mb-24 px-6 md:px-6
@@ -108,6 +125,7 @@ export const PostDetail = ({ post }) => {
                   onClick={
                     () => {
                       setCopied(true)
+                      handleClick
                       navigator.clipboard.writeText(`${ baseURL }${ router.asPath }`)
                     }
                   }
@@ -208,7 +226,7 @@ export const PostDetail = ({ post }) => {
                     }
                   }
                 >
-                  <div>
+                  <div onClick={ handleClickPopover }>
                     <Image
                       src={ copied ? GreenShareIcon : ShareIcon }
                       alt='copy to clipboard'
@@ -231,6 +249,25 @@ export const PostDetail = ({ post }) => {
         </div>
       </div>
     </section>
+
+    <Popover
+      id={ id }
+      open={ open }
+      anchorEl={ anchorEl }
+      onClose={ handleClose }
+      anchorOrigin={{
+        vertical: 'center',
+        horizontal: 'center',
+      }}
+      transformOrigin={{
+        vertical: 'center',
+        horizontal: 'center',
+      }}
+    >
+      <Typography sx={{ p: 2, color: '#FFF', bgcolor: 'rgba(0, 0, 0, 0.7)' }}>
+        Copied to clipboard
+      </Typography>
+    </Popover>
     </>
   )
 }

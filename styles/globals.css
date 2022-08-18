@@ -247,3 +247,7 @@ fieldset {
 #nprogress .spinner-icon {
   display: none;
 }
+
+.remove-bug-padding {
+  padding-right: 0 !important;
+}
