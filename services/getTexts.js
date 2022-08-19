@@ -1,23 +1,33 @@
+import { useRouter } from 'next/router'
 import { gql, useQuery } from '@apollo/client'
 
 const GET_TEXTS_QUERY = gql`
   query MyQuery {
-    texts (first: 1000) {
+    englishTexts: texts(first: 1000, locales: en) {
       name
       textContent
-      localizations (locales: uk_UA) {
-        textContent
-      }
+    }
+    ukrainianTexts: texts(first: 1000, locales: uk_UA) {
+      name
+      textContent
     }
   }
 `
 
 export const getTexts = () => {
   const { data, loading, error } = useQuery(GET_TEXTS_QUERY)
-
+  const { locale } = useRouter()
+  
   if (loading) console.log('Fetching data...')
   if (error) console.log('error: ', error)
 
-  console.log(data)
-  return { data, loading, error }
+  if (locale === 'en') {
+    const result = data.englishTexts
+    return { result, loading, error }
+  }
+
+  if (locale === 'ua') {
+    const result = data.ukrainianTexts
+    return { result, loading, error }
+  }
 }
