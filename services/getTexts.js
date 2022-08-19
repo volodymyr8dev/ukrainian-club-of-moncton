@@ -5,6 +5,9 @@ const GET_TEXTS_QUERY = gql`
     texts (first: 1000) {
       name
       textContent
+      localizations (locales: uk_UA) {
+        textContent
+      }
     }
   }
 `
@@ -16,7 +19,7 @@ export const getTexts = () => {
     if (loading) console.log('Fetching data...')
     if (error) console.log('error: ', error)
     console.log(data)
-    return data
+    return { data, loading, error }
   }
   catch (error) {
     console.log('error: ', error)
