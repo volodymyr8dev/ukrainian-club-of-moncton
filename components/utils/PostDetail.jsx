@@ -125,12 +125,11 @@ export const PostDetail = ({ post }) => {
                   onClick={
                     () => {
                       setCopied(true)
-                      handleClick
                       navigator.clipboard.writeText(`${ baseURL }${ router.asPath }`)
                     }
                   }
                 >
-                  <div>
+                  <div onClick={ handleClickPopover }>
                     <Image
                       src={ copied ? GreenShareIcon : ShareIcon }
                       alt='copy to clipboard'
