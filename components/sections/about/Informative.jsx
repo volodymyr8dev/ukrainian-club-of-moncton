@@ -1,7 +1,11 @@
 import useTranslation from 'next-translate/useTranslation'
 
+import { storeTexts } from './../../../services/storeTexts.js'
+
 export const Informative = () => {
   let { t } = useTranslation('about')
+  const data = storeTexts()
+  console.log(data)
 
   return (
     <section className='flex justify-center mb-[72px] md:mb-24 px-6 md:px-6 xl:px-0'>
