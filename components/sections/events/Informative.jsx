@@ -5,9 +5,13 @@ import useTranslation from 'next-translate/useTranslation'
 
 import UkrainianSymbol from './../../../assets/images/ukrainian-symbol.svg'
 
+import { getTexts } from './../../../services/getTexts.js'
 export const Informative = () => {
   const router = useRouter()
   let { t } = useTranslation()
+
+  const data = getTexts()
+  console.log(data)
 
   return (
     <section className='flex justify-center mb-[72px] md:mb-14 px-6 md:px-6

@@ -1,10 +1,10 @@
 import useTranslation from 'next-translate/useTranslation'
 
-import { storeTexts } from './../../../services/storeTexts.js'
+import { getTexts } from './../../../services/getTexts.js'
 
 export const Informative = () => {
   let { t } = useTranslation('about')
-  const data = storeTexts()
+  const data = getTexts()
   console.log(data)
 
   return (
