@@ -2,7 +2,7 @@ import { gql, useQuery } from '@apollo/client'
 
 const GET_TEXTS_QUERY = gql`
   query MyQuery {
-    texts {
+    texts (first: 1000) {
       name
       textContent
     }
