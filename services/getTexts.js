@@ -13,16 +13,11 @@ const GET_TEXTS_QUERY = gql`
 `
 
 export const getTexts = () => {
-  try {
-    const { data, loading, error } = useQuery(GET_TEXTS_QUERY)
+  const { data, loading, error } = useQuery(GET_TEXTS_QUERY)
 
-    if (loading) console.log('Fetching data...')
-    if (error) console.log('error: ', error)
-    console.log(data)
-    return { data, loading, error }
-  }
-  catch (error) {
-    console.log('error: ', error)
-    return error
-  }
+  if (loading) console.log('Fetching data...')
+  if (error) console.log('error: ', error)
+
+  console.log(data)
+  return { data, loading, error }
 }
