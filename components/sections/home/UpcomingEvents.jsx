@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import moment from 'moment'
-import useTranslation from 'next-translate/useTranslation'
+
+import { useRouter } from 'next/router'
+import { getTexts } from './../../../services/getTexts.js'
 
 import { gql, useQuery } from '@apollo/client'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -41,11 +43,16 @@ const GET_MOST_RECENT_POSTS_QUERY = gql`
 `
 
 export const UpcomingEvents = () => {
-  const { t } = useTranslation('home')
+  const { locale } = useRouter()
   const { loading, error, data } = useQuery(GET_MOST_RECENT_POSTS_QUERY)
+
+  const { data: dataT, loading: loadingT, error: errorT } = getTexts()
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error</p>
+
+  if (loadingT) return <span></span>
+  if (errorT) return <span></span>
 
   return (
     <>
@@ -53,7 +60,11 @@ export const UpcomingEvents = () => {
         <div className='flex justify-center flex-col max-w-[1260px] w-full'>
 
         <HeadingToggler
-          heading={ t('upcoming-events') }
+          heading={
+            locale === 'en'
+            ? dataT.englishTexts[56].textContent
+            : dataT.ukrainianTexts[56].textContent
+          }
           togglerPrevClass='event-prev'
           togglerNextClass='event-next'
         />

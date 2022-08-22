@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import emailjs from '@emailjs/browser'
 import useTranslation from 'next-translate/useTranslation'
 
@@ -8,12 +9,20 @@ import EmailIcon from './../../assets/images/form/email.svg'
 import PhoneIcon from './../../assets/images/form/phone.svg'
 import SendIcon from './../../assets/images/form/send.svg'
 
+import { getTexts } from './../../services/getTexts.js'
+
 export const ContactForm = () => {
+  let { t } = useTranslation('about')
   const form = useRef()
+  const { data, loading, error } = getTexts()
+  const { locale } = useRouter()
 
   const [showThankYou, setShowThankYou] = useState(false)
   const [showError, setShowError] = useState(false)
 
+  if (loading) return <span></span>
+  if (error) return <span></span>
+  
   const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
   const templateID = process.env.NEXT_PUBLIC_EMAILJS_EMAIL_TEMPLATE_ID
   const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
@@ -42,14 +51,16 @@ export const ContactForm = () => {
     e.target.reset() 
   }
 
-  let { t } = useTranslation('about')
-
   return (
     <>
     <div className='flex tablets:hidden pb-8 justify-center'>
       <h2 className='font-proximaNova400 uppercase text-[32px]
       text-center tracking-wider'>
-        { t('lets-talk') }
+        {
+          locale === 'en'
+          ? data.englishTexts[8].textContent
+          : data.ukrainianTexts[8].textContent
+        }
       </h2>
     </div>
 
@@ -68,7 +79,11 @@ export const ContactForm = () => {
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='name'
               >
-                { t('name') }
+                {
+                  locale === 'en'
+                  ? data.englishTexts[9].textContent
+                  : data.ukrainianTexts[9].textContent
+                }
               </label>
               <div className='bg-gray-200 px-4 flex items-center gap-8
               rounded-2xl'>
@@ -94,7 +109,11 @@ export const ContactForm = () => {
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='email'
               >
-                { t('email') }
+                {
+                  locale === 'en'
+                  ? data.englishTexts[10].textContent
+                  : data.ukrainianTexts[10].textContent
+                }
               </label>
               <div className='bg-gray-200 px-4 flex items-center gap-8
               rounded-2xl'>
@@ -120,7 +139,11 @@ export const ContactForm = () => {
                 className='font-proximaNova400 text-sm pb-4'
                 htmlFor='phone'
               >
-                { t('phone') }
+                {
+                  locale === 'en'
+                  ? data.englishTexts[11].textContent
+                  : data.ukrainianTexts[11].textContent
+                }
               </label>
               <div className='bg-gray-200 px-4 flex items-center gap-10
               rounded-2xl'>
@@ -146,7 +169,11 @@ export const ContactForm = () => {
               className='font-proximaNova400 text-sm'
               htmlFor='message'
             >
-              { t('message') }
+              {
+                locale === 'en'
+                ? data.englishTexts[10].textContent
+                : data.ukrainianTexts[10].textContent
+              }
             </label>
               <textarea
                 className='bg-gray-200 px-6 py-3 tablets:py-6 flex items-center gap-10
@@ -167,7 +194,11 @@ export const ContactForm = () => {
             flex items-center gap-[18px] justify-between'
             type='submit'
           >
-            { t('send-message') }
+              {
+                locale === 'en'
+                ? data.englishTexts[12].textContent
+                : data.ukrainianTexts[12].textContent
+              }
             <Image
               src={ SendIcon }
               alt='send'
@@ -180,13 +211,21 @@ export const ContactForm = () => {
           ? 'visible text-blue-500'
           : 'invisible' }`}
         >
-          { t('thank-you') }
+            {
+              locale === 'en'
+              ? data.englishTexts[13].textContent
+              : data.ukrainianTexts[13].textContent
+            }
         </span>
         <span className={`${ showError
           ? 'inline-block visible text-yellow-500'
           : 'invisible hidden' }`}
         >
-          { t('not-sent') }
+          {
+            locale === 'en'
+            ? data.englishTexts[14].textContent
+            : data.ukrainianTexts[14].textContent
+          }
         </span>
       </div>
     </div>

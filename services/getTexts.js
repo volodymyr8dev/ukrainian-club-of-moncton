@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { gql, useQuery } from '@apollo/client'
 
 const GET_TEXTS_QUERY = gql`
@@ -16,18 +15,11 @@ const GET_TEXTS_QUERY = gql`
 
 export const getTexts = () => {
   const { data, loading, error } = useQuery(GET_TEXTS_QUERY)
-  const { locale } = useRouter()
   
   if (loading) console.log('Fetching data...')
   if (error) console.log('error: ', error)
 
-  if (locale === 'en') {
-    const result = data.englishTexts
-    return { result, loading, error }
-  }
-
-  if (locale === 'ua') {
-    const result = data.ukrainianTexts
-    return { result, loading, error }
-  }
+  if (data) console.log(data)
+  
+  return { data, loading, error }
 }

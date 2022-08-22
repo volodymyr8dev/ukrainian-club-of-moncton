@@ -1,10 +1,15 @@
 import Link from 'next/link'
-import useTranslation from 'next-translate/useTranslation'
+import { useRouter } from 'next/router'
 
+import { getTexts } from './../../../services/getTexts.js'
 import { DonateButton } from './../../utils/DonateButton'
 
 export const BottomCTA = () => {
-  const { t } = useTranslation('home')
+  const { data, loading, error } = getTexts()
+  const { locale } = useRouter()
+
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   return (
     <section className='flex justify-center mt-24 mb-24 px-6 xl:px-0'>
@@ -23,7 +28,11 @@ export const BottomCTA = () => {
                 href='/how'
               >
                 <span className='text-blue-500'>
-                  { t('want-volunteer') }
+                  {      
+                    locale === 'en'
+                    ? data.englishTexts[63].textContent
+                    : data.ukrainianTexts[63].textContent
+                  }
                 </span>
               </Link>
             </div>

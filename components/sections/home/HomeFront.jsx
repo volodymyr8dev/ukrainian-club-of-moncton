@@ -1,11 +1,19 @@
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 
+import { useRouter } from 'next/router'
+import { getTexts } from './../../../services/getTexts.js'
+
 import { FilledButton } from '../../utils/FilledButton'
 import birdImage from './../../../assets/images/bird.svg'
 
 export const HomeFront = () => {
   const { t } = useTranslation('home')
+  const { data, loading, error } = getTexts()
+  const { locale } = useRouter()
+  
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   return (
     <>
@@ -19,22 +27,37 @@ export const HomeFront = () => {
         flex-col gap-6 md:gap-8 lg:-mt-8 mt-12 tablets:-mt-[1.9rem]'>
           <h2 className='font-proximaNova300 text-[34px] md:text-[50px]
           leading-[40px] md:leading-[65px] first-letter:tracking-wide'>
-            ДОБРОГО ВЕЧОРА
+            {
+              locale === 'en'
+              ? data.englishTexts[32].textContent
+              : data.ukrainianTexts[32].textContent
+            }
             <br />
             <span className='font-proximaNova500 text-blue-500 text-[43px] 
             md:text-[62.81px]'>
-              МИ З
+              {
+                locale === 'en'
+                ? data.englishTexts[33].textContent
+                : data.ukrainianTexts[33].textContent
+              }
             </span>
             {' '}
             <span className='font-proximaNova500 text-yellow-300 text-[43px] 
             md:text-[62.81px]'>
-              УКРАЇНИ
+              {
+                locale === 'en'
+                ? data.englishTexts[34].textContent
+                : data.ukrainianTexts[34].textContent
+              }
             </span>
           </h2>
 
           <p className='font-proximaNova300 text-xl md:text-2xl'>
-            Допомога для українців які вже в Канаді, або для тих, хто тільки
-            планує приїхати.
+            {
+              locale === 'en'
+              ? data.englishTexts[35].textContent
+              : data.ukrainianTexts[35].textContent
+            }
           </p>
           
           <div className='flex justify-end items-center gap-6 md:gap-8'>
@@ -47,7 +70,11 @@ export const HomeFront = () => {
 
             <FilledButton
               href='/info'
-              text='Що далі?'
+              text={
+                locale === 'en'
+                ? data.englishTexts[36].textContent
+                : data.ukrainianTexts[36].textContent
+              }
               textColor='gray-100'
               bgColor='bg-blue-500'
             />
@@ -70,7 +97,11 @@ export const HomeFront = () => {
           <div className='flex justify-start items-center gap-6 md:gap-8'>
             <FilledButton
               href='/how'
-              text={ t('whats-next') }
+              text={
+                locale === 'en'
+                ? data.englishTexts[37].textContent
+                : data.ukrainianTexts[37].textContent
+              }
               textColor='gray-100'
               bgColor='bg-yellow-300'
             />
@@ -82,7 +113,11 @@ export const HomeFront = () => {
             </div>
           </div>
           <p className='font-proximaNova300 text-2xl'>
-            { t('your-support') }
+            {
+              locale === 'en'
+              ? data.englishTexts[38].textContent
+              : data.ukrainianTexts[38].textContent
+            }
           </p>
 
           <h2 className='font-proximaNova300 uppercase text-[41px] leading-[65px]
@@ -92,17 +127,29 @@ export const HomeFront = () => {
             <br />
             <span className='font-proximaNova500 text-blue-500 text-[62.81px]
             uppercase'>
-              HOW
+              {
+                locale === 'en'
+                ? data.englishTexts[40].textContent
+                : data.ukrainianTexts[40].textContent
+              }
             </span>
             {' '}
             <span className='font-proximaNova500 text-gray-900 text-[62.81px]
             uppercase'>
-              CAN I
+              {
+                locale === 'en'
+                ? data.englishTexts[41].textContent
+                : data.ukrainianTexts[41].textContent
+              }
             </span>
             {' '}
             <span className='font-proximaNova500 text-yellow-300 text-[62.81px]
             uppercase'>
-              HELP?
+              {
+                locale === 'en'
+                ? data.englishTexts[42].textContent
+                : data.ukrainianTexts[42].textContent
+              }
             </span>
           </h2>
         </div>
@@ -111,26 +158,46 @@ export const HomeFront = () => {
         tablets:mt-20'>
           <h2 className='font-proximaNova300 text-[23px] uppercase
           leading-[24px] tracking-wider'>
-            { t('theres-war') }
+            {
+              locale === 'en'
+              ? data.englishTexts[39].textContent
+              : data.ukrainianTexts[39].textContent
+            }
             <br />
             <span className='font-proximaNova500 text-blue-500 text-[35px]
             md:text-[62.81px] uppercase'>
-              HOW
+              {
+                locale === 'en'
+                ? data.englishTexts[40].textContent
+                : data.ukrainianTexts[40].textContent
+              }
             </span>
             {' '}
             <span className='font-proximaNova500 text-blue-900 text-[35px]
             md:text-[62.81px] uppercase'>
-              CAN I
+              {
+                locale === 'en'
+                ? data.englishTexts[41].textContent
+                : data.ukrainianTexts[41].textContent
+              }
             </span>
             {' '}
             <span className='font-proximaNova500 text-yellow-300 text-[35px]
             md:text-[62.81px] uppercase'>
-              HELP?
+              {
+                locale === 'en'
+                ? data.englishTexts[42].textContent
+                : data.ukrainianTexts[42].textContent
+              }
             </span>
           </h2>
 
           <p className='font-proximaNova300 text-[19px] leading-[30px] tracking-wider'>
-          { t('your-support') }
+            {
+              locale === 'en'
+              ? data.englishTexts[38].textContent
+              : data.ukrainianTexts[38].textContent
+            }
           </p>
           
           <div className='flex justify-end items-center gap-6 md:gap-8'>
@@ -142,7 +209,11 @@ export const HomeFront = () => {
             </div>
             <FilledButton
               href='/how'
-              text={ t('whats-next') }
+              text={
+                locale === 'en'
+                ? data.englishTexts[37].textContent
+                : data.ukrainianTexts[37].textContent
+              }
               textColor='gray-100'
               bgColor='bg-yellow-300'
             />

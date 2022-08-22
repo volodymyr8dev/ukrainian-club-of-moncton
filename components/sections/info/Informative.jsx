@@ -1,12 +1,16 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
+
+import { getTexts } from './../../../services/getTexts.js'
 
 import UkrainianSymbol from './../../../assets/images/ukrainian-symbol.svg'
 
 export const Informative = () => {
-  let { t } = useTranslation('info')
-  const router = useRouter()
+  const { data, loading, error } = getTexts()
+  const { locale } = useRouter()
+  
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   return (
     <section className='flex justify-center mb-[72px] md:mb-24 px-6 md:px-6 xl:px-0'>
@@ -14,9 +18,9 @@ export const Informative = () => {
         <h2 className='font-proximaNova500 text-4xl md:text-[56px] leading-[100%]
         tracking-wider uppercase text-center'>
           {
-            router.locale === 'ua'
-            ? 'Ми - Українці в Канаді'
-            : 'Info page title'
+            locale === 'en'
+            ? data.englishTexts[27].textContent
+            : data.ukrainianTexts[27].textContent
           }
         </h2>
         <div className='flex justify-center pt-10'>
@@ -29,16 +33,16 @@ export const Informative = () => {
           <p className='w-full md:w-[98%] text-center font-proximaNova300
           text-xl md:text-2xl leading-[30px] md:leading-9'>
             {
-              router.locale === 'ua'
-              ? 'Ми хочемо допомогти тим, хто ще у лютому мав зовсім інші плани.'
-              : 'Translation for this text...'
+              locale === 'en'
+              ? data.englishTexts[28].textContent
+              : data.ukrainianTexts[28].textContent
             }
             <br />
             <br className='block md:hidden' />
             {
-              router.locale === 'ua'
-              ? 'Тим, хто вимушений тимчасово переїхати до Канади через війну ₚосії проти України'
-              : 'Translation for this text...'
+              locale === 'en'
+              ? data.englishTexts[29].textContent
+              : data.ukrainianTexts[29].textContent
             }
           </p>
         </div>

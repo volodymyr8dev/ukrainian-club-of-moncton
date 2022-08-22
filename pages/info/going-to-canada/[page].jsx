@@ -24,6 +24,8 @@ import previousBlue from './../../../assets/images/pagination/previous-blue.svg'
 import previousGray from './../../../assets/images/pagination/previous-gray.svg'
 import lineGray from './../../../assets/images/pagination/line-gray.svg'
 
+import { getTexts } from './../../../services/getTexts.js'
+
 const limit = 6
 
 function PostPage({
@@ -33,7 +35,10 @@ function PostPage({
   posts,
 }) {
   const router = useRouter()
-  let { t } = useTranslation('info')
+  const { data, loading, error } = getTexts()
+  
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   return (
     <>
@@ -76,9 +81,9 @@ function PostPage({
                         type='button'
                       >
                         {
-                          router.locale === 'ua'
-                          ? 'Для тих, хто вже в Канаді'
-                          : 'Already in Canada?'
+                          router.locale === 'en'
+                          ? data.englishTexts[30].textContent
+                          : data.ukrainianTexts[30].textContent
                         }
                       </button>
                     </Link>
@@ -94,9 +99,9 @@ function PostPage({
                       type='button'
                     >
                       {
-                        router.locale === 'ua'
-                        ? 'Для тих, хто збирається'
-                        : 'Going to Canada?'
+                        router.locale === 'en'
+                        ? data.englishTexts[31].textContent
+                        : data.ukrainianTexts[31].textContent
                       }
                     </button>
                   </div>

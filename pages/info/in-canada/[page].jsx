@@ -5,10 +5,6 @@ import Image from 'next/image'
 import moment from 'moment'
 import { useRouter } from 'next/router'
 import { gql } from '@apollo/client'
-import useTranslation from 'next-translate/useTranslation'
-
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -17,7 +13,6 @@ import 'swiper/css/autoplay'
 
 import { hygraph } from '../../../services'
 
-import { Header } from './../../../components/layout/Header'
 import { InfoFront } from '../../../components/sections/info/InfoFront'
 import { Informative } from '../../../components/sections/info/Informative'
 import { MobileSwiperDisplay } from '../../../components/utils/MobileSwiperDisplay'
@@ -28,6 +23,8 @@ import previousBlue from './../../../assets/images/pagination/previous-blue.svg'
 import previousGray from './../../../assets/images/pagination/previous-gray.svg'
 import lineGray from './../../../assets/images/pagination/line-gray.svg'
 
+import { getTexts } from './../../../services/getTexts.js'
+
 const limit = 6
 
 function PostPage({
@@ -37,7 +34,10 @@ function PostPage({
   posts,
 }) {
   const router = useRouter()
-  let { t } = useTranslation('info')
+  const { data, loading, error } = getTexts()
+  
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   return (
     <>
@@ -54,7 +54,6 @@ function PostPage({
       />
     </Head>
     
-      
     <main id='main'>
       <InfoFront />
       <div className='info-section'>
@@ -76,9 +75,9 @@ function PostPage({
                       type='button'
                     >
                       {
-                        router.locale === 'ua'
-                        ? 'Для тих, хто вже в Канаді'
-                        : 'Already in Canada?'
+                        router.locale === 'en'
+                        ? data.englishTexts[30].textContent
+                        : data.ukrainianTexts[30].textContent
                       }
                     </button>
                   </div>
@@ -97,9 +96,9 @@ function PostPage({
                         type='button'
                       >
                         {
-                          router.locale === 'ua'
-                          ? 'Для тих, хто збирається'
-                          : 'Going to Canada?'
+                          router.locale === 'en'
+                          ? data.englishTexts[31].textContent
+                          : data.ukrainianTexts[31].textContent
                         }
                       </button>
                     </Link>

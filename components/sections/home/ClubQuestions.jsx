@@ -1,11 +1,17 @@
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
 
 import doubtIdeaImage from './../../../assets/images/doubt-idea.svg'
 import ladderImage from './../../../assets/images/ladder.svg'
 
+import { useRouter } from 'next/router'
+import { getTexts } from './../../../services/getTexts.js'
+
 export const ClubQuestions = () => {
-  const { t } = useTranslation('home')
+  const { data, loading, error } = getTexts()
+  const { locale } = useRouter()
+  
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   return (
     <>
@@ -15,7 +21,11 @@ export const ClubQuestions = () => {
         leading-[54px] xl:leading-10 tracking-wider pb-0 md:pb-11 xl:pb-36 text-left
         xl:text-center'
         >
-          { t('ukrainian-club') }
+          {
+            locale === 'en'
+            ? data.englishTexts[43].textContent
+            : data.ukrainianTexts[43].textContent
+          }
         </h2>
 
         <div className='flex flex-col-reverse md:flex-row items-center
@@ -23,24 +33,50 @@ export const ClubQuestions = () => {
           <div>
             <strong className='font-proximaNova400 text-[26px] md:text-4xl
             uppercase'>
-              { t('are-you') }
+              {
+                locale === 'en'
+                ? data.englishTexts[44].textContent
+                : data.ukrainianTexts[44].textContent
+              }
+              {' '}
               <span className='text-blue-500'>
-                { t('going-to') }
+              {
+                locale === 'en'
+                ? data.englishTexts[45].textContent
+                : data.ukrainianTexts[45].textContent
+              }
+              {' '}
               </span>
-              { t('canada') }
+              {
+                locale === 'en'
+                ? data.englishTexts[46].textContent
+                : data.ukrainianTexts[46].textContent
+              }
             </strong>
             <ul className='pl-2 md:pl-4 pt-6 md:pt-10'>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                { t('cuaet') }
+                {
+                  locale === 'en'
+                  ? data.englishTexts[47].textContent
+                  : data.ukrainianTexts[47].textContent
+                }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                { t('fill-visa') }
+                {
+                  locale === 'en'
+                  ? data.englishTexts[48].textContent
+                  : data.ukrainianTexts[48].textContent
+                }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                { t('transfer-airport') }
+                {
+                  locale === 'en'
+                  ? data.englishTexts[49].textContent
+                  : data.ukrainianTexts[49].textContent
+                }
               </li>
             </ul>
           </div>
@@ -67,24 +103,52 @@ export const ClubQuestions = () => {
           <div>
             <strong className='font-proximaNova400 text-[26px] md:text-4xl
             uppercase'>
-              <span className='text-yellow-300'>{ t('already') }</span> { t('in-canada') }
+              <span className='text-yellow-300'>
+                {
+                  locale === 'en'
+                  ? data.englishTexts[50].textContent
+                  : data.ukrainianTexts[50].textContent
+                }
+                {' '}
+              </span>
+                {
+                  locale === 'en'
+                  ? data.englishTexts[51].textContent
+                  : data.ukrainianTexts[51].textContent
+                }
             </strong>
             <ul className='pl-2 md:pl-4 pt-6 md:pt-10'>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                { t('first-step') }
+                {
+                  locale === 'en'
+                  ? data.englishTexts[52].textContent
+                  : data.ukrainianTexts[52].textContent
+                }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                { t('sin') }
+                {
+                  locale === 'en'
+                  ? data.englishTexts[53].textContent
+                  : data.ukrainianTexts[53].textContent
+                }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                { t('medicare') }
+                {                
+                  locale === 'en'
+                  ? data.englishTexts[55].textContent
+                  : data.ukrainianTexts[55].textContent
+                }
               </li>
               <li className='list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9'>
-                { t('ancillary') }
+                {                
+                  locale === 'en'
+                  ? data.englishTexts[54].textContent
+                  : data.ukrainianTexts[54].textContent
+                }
               </li>
             </ul>
           </div>

@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import Image from 'next/image'
 
@@ -11,12 +12,18 @@ import WhitePhoneIcon from './../../../assets/images/contacts/white-phone.svg'
 import WhiteLocationIcon from './../../../assets/images/contacts/white-location.svg'
 import WhiteEmailIcon from './../../../assets/images/contacts/white-email.svg'
 
-export const Contacts = () => {
-  let { t } = useTranslation('about')
+import { getTexts } from './../../../services/getTexts.js'
 
+export const Contacts = () => {
+  const { locale } = useRouter()
+  const { data, loading, error } = getTexts()
+  
   const [phoneActive, setPhoneActive] = useState(false)
   const [locationActive, setLocationActive] = useState(false)
   const [emailActive, setEmailActive] = useState(false)
+
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   const togglePhoneStyle = () => {
     setPhoneActive(!phoneActive)
@@ -35,7 +42,11 @@ export const Contacts = () => {
       <div className='flex justify-between flex-col max-w-[1216px] w-full'>
         <h2 className='font-proximaNova400 text-[40px] leading-[100%]
         tracking-wider uppercase text-center'>
-          { t('our-contacts') }
+          {
+            locale === 'en'
+            ? data.englishTexts[2].textContent
+            : data.ukrainianTexts[2].textContent
+          }
         </h2>
         <div className='flex gap-10 justify-between w-full pt-11 mb-[72px] md:mb-10
         flex-col tablets:flex-row'>
@@ -49,11 +60,15 @@ export const Contacts = () => {
               src={ phoneActive ? WhitePhoneIcon : BluePhoneIcon }
               alt='phone'
             />
-            <a href='tel:+22222222222'>
+            <a href={`tel:${ data.englishTexts[7].textContent }`}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
               max-w-[205px] inline-block
               ${ phoneActive ? 'text-gray-100' : 'text-blue-500'}`}>
-                +222-2222-2222
+                {
+                  locale === 'en'
+                  ? data.englishTexts[3].textContent
+                  : data.ukrainianTexts[3].textContent
+                }
               </span>
             </a>
           </div>
@@ -68,11 +83,15 @@ export const Contacts = () => {
               src={ locationActive ? WhiteLocationIcon : BlueLocationIcon }
               alt='location'
             />
-            <a href='https://www.google.com.br/maps/place/123+Cameron+St,+Moncton,+NB+E1C+5Y7,+Canadá/@46.0890425,-64.7909006,17z/data=!3m1!4b1!4m5!3m4!1s0x4ca0b92340567205:0x6d9d8c7d02438947!8m2!3d46.0890388!4d-64.7887119'>
+            <a href={ data.englishTexts[6].textContent }>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
               max-w-[205px] inline-block
               ${ locationActive ? 'text-gray-100' : 'text-blue-500'}`}>
-                123 ABC Street, Moncton NB, E1D2D
+                {
+                  locale === 'en'
+                  ? data.englishTexts[4].textContent
+                  : data.ukrainianTexts[4].textContent
+                }
               </span>
             </a>
           </div>
@@ -87,11 +106,15 @@ export const Contacts = () => {
               src={ emailActive ? WhiteEmailIcon : BlueEmailIcon }
               alt='email'
             />
-            <a href='mailto:info@ukrclubmoncton.ca'>
+            <a href={`mailto:${ data.englishTexts[5].textContent }`}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
               max-w-[205px] inline-block
               ${ emailActive ? 'text-gray-100' : 'text-blue-500'}`}>
-                info@ukrclubmoncton.ca
+                {
+                  locale === 'en'
+                  ? data.englishTexts[5].textContent
+                  : data.ukrainianTexts[5].textContent
+                }
               </span>
             </a>
           </div>
