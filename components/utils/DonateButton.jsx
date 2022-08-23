@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
 
 import yellowHeart from './../../assets/images/yellow-heart.svg'
 
@@ -7,7 +6,6 @@ import { useRouter } from 'next/router'
 import { getTexts } from './../../services/getTexts.js'
 
 export const DonateButton = () => {
-  const { t } = useTranslation('common')
   const { data, loading, error } = getTexts()
   const { locale } = useRouter()
 

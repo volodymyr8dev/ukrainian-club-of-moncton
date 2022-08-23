@@ -4,11 +4,10 @@ import Image from 'next/image'
 import moment from 'moment'
 import { useRouter } from 'next/router'
 import { gql } from '@apollo/client'
-import useTranslation from 'next-translate/useTranslation'
 
 import { hygraph } from './../../services'
 
-import { Header } from '../../components/layout/Header'
+import { getTexts } from './../../services/getTexts.js'
 import { MoneyHelpedFront } from '../../components/sections/moneyhelped/MoneyHelpedFront'
 import { Informative } from '../../components/sections/moneyhelped/Informative'
 import { Data } from '../../components/sections/moneyhelped/data'
@@ -29,7 +28,10 @@ function OurHelp({
   posts,
 }) {
   const router = useRouter()
-  let { t } = useTranslation('our-help')
+  const { data, loading, error } = getTexts()
+
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   return (
     <>
@@ -37,7 +39,11 @@ function OurHelp({
       <title>Our help - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content="To be written"
+        content={
+          router.locale === 'en'
+          ? data.englishTexts[83].textContent
+          : data.ukrainianTexts[83].textContent
+        }
       />
 
       <link

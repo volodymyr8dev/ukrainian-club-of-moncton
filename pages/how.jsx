@@ -1,17 +1,29 @@
 import Head from 'next/head'
-import { Header } from '../components/layout/Header'
 import { DonationSupport } from '../components/sections/how/DonationSupport'
 import { HowFront } from '../components/sections/how/HowFront'
 import { Informative } from '../components/sections/how/Informative'
 
+import { useRouter } from 'next/router'
+import { getTexts } from './../services/getTexts.js'
+
 export default function How() {
+  const router = useRouter()
+  const { data, loading, error } = getTexts()
+
+  if (loading) return <span></span>
+  if (error) return <span></span>
+
   return (
     <>
     <Head>
       <title>How can I help? - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content="To be written"
+        content={
+          router.locale === 'en'
+          ? data.englishTexts[84].textContent
+          : data.ukrainianTexts[84].textContent
+        }
       />
 
       <link

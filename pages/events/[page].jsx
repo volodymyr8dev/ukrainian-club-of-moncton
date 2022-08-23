@@ -4,11 +4,9 @@ import Image from 'next/image'
 import moment from 'moment'
 import { useRouter } from 'next/router'
 import { gql } from '@apollo/client'
-import useTranslation from 'next-translate/useTranslation'
 
 import { hygraph } from './../../services'
 
-import { Header } from './../../components/layout/Header'
 import { EventsFront } from '../../components/sections/events/EventsFront'
 import { Informative } from '../../components/sections/events/Informative'
 import { MobileSwiperDisplay } from './../../components/utils/MobileSwiperDisplay'
@@ -19,6 +17,8 @@ import previousBlue from './../../assets/images/pagination/previous-blue.svg'
 import previousGray from './../../assets/images/pagination/previous-gray.svg'
 import lineGray from './../../assets/images/pagination/line-gray.svg'
 
+import { getTexts } from './../../services/getTexts.js'
+
 const limit = 6
 
 function Events({
@@ -28,7 +28,10 @@ function Events({
   posts,
 }) {
   const router = useRouter()
-  let { t } = useTranslation('events')
+  const { data, loading, error } = getTexts()
+
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   return (
     <>
@@ -36,7 +39,11 @@ function Events({
       <title>Events - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content="To be written"
+        content={
+          router.locale === 'en'
+          ? data.englishTexts[82].textContent
+          : data.ukrainianTexts[82].textContent
+        }
       />
  
       <link

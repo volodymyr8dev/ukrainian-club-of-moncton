@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
 
 import Farm1Desktop from './../../../assets/images/farm/farm-d-01.svg'
 import Farm2Desktop from './../../../assets/images/farm/farm-d-02.svg'
@@ -10,8 +9,6 @@ import Farm2Mobile from './../../../assets/images/farm/farm-m-02.svg'
 import Farm3Mobile from './../../../assets/images/farm/farm-m-03.svg'
 
 export const AboutFront = () => {
-  let { t } = useTranslation()
-
   return (
     <>
     <section

@@ -45,7 +45,11 @@ function PostPage({
       <title>Info - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content="To be written"
+        content={
+          router.locale === 'en'
+          ? data.englishTexts[81].textContent
+          : data.ukrainianTexts[81].textContent
+        }
       />
 
       <link

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
 
 import { useRouter } from 'next/router'
 import { getTexts } from './../../../services/getTexts.js'
@@ -8,7 +7,6 @@ import { FilledButton } from '../../utils/FilledButton'
 import birdImage from './../../../assets/images/bird.svg'
 
 export const HomeFront = () => {
-  const { t } = useTranslation('home')
   const { data, loading, error } = getTexts()
   const { locale } = useRouter()
   
@@ -123,7 +121,11 @@ export const HomeFront = () => {
           <h2 className='font-proximaNova300 uppercase text-[41px] leading-[65px]
           tracking-wide'
           >
-            { t('theres-war') }
+            {
+              locale === 'en'
+              ? data.englishTexts[39].textContent
+              : data.ukrainianTexts[39].textContent
+            }
             <br />
             <span className='font-proximaNova500 text-blue-500 text-[62.81px]
             uppercase'>

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
 
 import Img1Desktop from './../../../assets/images/our-help/img-d-1.svg'
 import Img2Desktop from './../../../assets/images/our-help/img-d-2.svg'
@@ -10,8 +9,6 @@ import Img2Mobile from './../../../assets/images/our-help/img-m-2.svg'
 import Img3Mobile from './../../../assets/images/our-help/img-m-3.svg'
 
 export const MoneyHelpedFront = () => {
-  let { t } = useTranslation()
-
   return (
     <>
     <section

@@ -2,15 +2,11 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { getTexts } from './../../../services/getTexts.js'
 
-import useTranslation from 'next-translate/useTranslation'
-
 import UkrainianSymbol from './../../../assets/images/ukrainian-symbol.svg'
 
 export const Informative = () => {
   const { data, loading, error } = getTexts()
   const { locale } = useRouter()
-  
-  let { t } = useTranslation()
 
   if (loading) return <span></span>
   if (error) return <span></span>

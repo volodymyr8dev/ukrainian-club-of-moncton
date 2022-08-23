@@ -1,19 +1,23 @@
 import { useState } from 'react'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
 
 import { useNextQueryParam } from '../../hooks/useNextQueryParam'
+import { getTexts } from './../../services/getTexts.js'
 
 export const ThankYouModal = () => {
   const router = useRouter()
+  const { data, loading, error } = getTexts()
   const [open, setOpen] = useState(useNextQueryParam('ty') || false)
 
   const handleClose = () => setOpen(false)
 
   let ty = router.query['ty']
+
+  if (loading) return <span></span>
+  if (error) return <span></span>
 
   const style = {
     position: 'absolute',
@@ -54,20 +58,26 @@ export const ThankYouModal = () => {
           md:pt-10'>
             <h6 className={`font-proximaNova500 text-4xl md:text-5xl leading-[100%]
             uppercase text-center ${ ty === '0' ? 'text-red-500' : 'text-gray-900' }`}>
-              { ty === '0' ? 'Uh-oh...' : 'Thank you' }
+              {
+                ty === '0'
+                ? data.englishTexts[73].textContent
+                : data.englishTexts[72].textContent
+              }
             </h6>
             <span className='font-proximaNova200 text-xl md:text-2xl leading-9
             text-gray-900 text-center pt-4 md:pt-6'>
-              { ty === '0'
-              ? 'Something went wrong'
-              : 'Your donation was successful'
+              {
+                ty === '0'
+                ? data.englishTexts[75].textContent
+                : data.englishTexts[74].textContent
               }
             </span>
             <span className={`font-proximaNova200 text-xl md:text-2xl leading-9
             text-center ${ ty === '0' ? 'text-gray-900' : 'text-blue-500' }`}>
-              { ty === '0'
-              ? 'Please try again...'
-              : 'A receipt was sent to your mail'
+              {
+                ty === '0'
+                ? data.englishTexts[77].textContent
+                : data.englishTexts[76].textContent
               }
             </span>
 
@@ -80,9 +90,10 @@ export const ThankYouModal = () => {
               leading-[18px] text-gray-100 px-8 md:px-28 py-3
               md:py-[15px] rounded-full
               ${ ty === '0' ? 'bg-red-500' : 'bg-blue-500' }`}>
-                { ty === '0'
-                ? 'Try again'
-                : 'Understood'
+                {
+                  ty === '0'
+                  ? data.englishTexts[79].textContent
+                  : data.englishTexts[78].textContent
                 }
               </span>
             </button>

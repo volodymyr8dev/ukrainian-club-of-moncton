@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import moment from 'moment'
 
-import { gql, useQuery } from '@apollo/client'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
 

@@ -3,7 +3,6 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 import { ContactForm } from '../../utils/ContactForm'
-import useTranslation from 'next-translate/useTranslation'
 
 import BluePhoneIcon from './../../../assets/images/contacts/blue-phone.svg'
 import BlueLocationIcon from './../../../assets/images/contacts/blue-location.svg'

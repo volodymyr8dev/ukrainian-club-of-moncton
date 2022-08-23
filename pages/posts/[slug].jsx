@@ -3,7 +3,6 @@ import Head from 'next/head'
 
 import { getPosts, getPostDetails } from '../../services/index'
 
-import { Header } from '../../components/layout/Header'
 import { PostDetail } from '../../components/utils/PostDetail'
 
 export default function PostDetails({ post }) {

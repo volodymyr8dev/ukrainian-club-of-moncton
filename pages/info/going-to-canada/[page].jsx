@@ -5,7 +5,7 @@ import Image from 'next/image'
 import moment from 'moment'
 import {useRouter} from 'next/router'
 import {gql} from '@apollo/client'
-import useTranslation from 'next-translate/useTranslation'
+import { getTexts } from './../../services/getTexts.js'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -46,7 +46,11 @@ function PostPage({
       <title>Info - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content="To be written"
+        content={
+          router.locale === 'en'
+          ? data.englishTexts[81].textContent
+          : data.ukrainianTexts[81].textContent
+        }
       />
 
       <link

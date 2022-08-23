@@ -1,12 +1,9 @@
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
 
 import HowBg from '../../../assets/images/how-bg.svg'
 import HowBgMobile from '../../../assets/images/how-bg-mobile.svg'
 
 export const HowFront = () => {
-  let { t } = useTranslation()
-
   return (
     <>
     <section
