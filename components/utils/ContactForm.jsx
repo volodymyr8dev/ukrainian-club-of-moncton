@@ -12,7 +12,6 @@ import SendIcon from './../../assets/images/form/send.svg'
 import { getTexts } from './../../services/getTexts.js'
 
 export const ContactForm = () => {
-  let { t } = useTranslation('about')
   const form = useRef()
   const { data, loading, error } = getTexts()
   const { locale } = useRouter()
@@ -171,8 +170,8 @@ export const ContactForm = () => {
             >
               {
                 locale === 'en'
-                ? data.englishTexts[10].textContent
-                : data.ukrainianTexts[10].textContent
+                ? data.englishTexts[86].textContent
+                : data.ukrainianTexts[86].textContent
               }
             </label>
               <textarea
@@ -181,7 +180,11 @@ export const ContactForm = () => {
                 tablets:text-lg placeholder:text-gray-500 text-gray-900'
                 name='message'
                 id='message'
-                placeholder={ t('feed') }
+                placeholder={
+                  locale === 'en'
+                  ? data.englishTexts[87].textContent
+                  : data.ukrainianTexts[87].textContent
+                }
                 minLength={ 20 }
                 required       
               >

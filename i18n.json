@@ -3,12 +3,6 @@
   "defaultLocale": "en",
   "pages": {
     "*": ["common"],
-    "/": ["home"],
-    "/info/in-canada/[page]": ["info"],
-    "/info/going-to-canada/[page]": ["info"],
-    "/events/[page]": ["events"],
-    "/our-help/[page]": ["our-help"],
-    "/about": ["about"],
     "/how": ["how"]
   }
 }
