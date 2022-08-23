@@ -32,8 +32,8 @@ function PostPage({
   hasPreviousPage,
   posts,
 }) {
-  const { data, loading, error } = getTexts()
   const router = useRouter()
+  const { data, loading, error } = getTexts()
   
   if (loading) return <span></span>
   if (error) return <span></span>
