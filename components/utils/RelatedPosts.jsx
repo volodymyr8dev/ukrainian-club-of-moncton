@@ -26,6 +26,8 @@ export const RelatedPosts = ({ category, tags, slug }) => {
       .then((result) => setRelatedPosts(result))
   }, [slug])
 
+  const totalSlides = relatedPosts.length < 3 ? 'auto' : 3
+
   return (
     <>
       <section className='hidden md:flex justify-center pl-6 md:px-6 xl:px-0
@@ -42,7 +44,7 @@ export const RelatedPosts = ({ category, tags, slug }) => {
             <Swiper className='home-events-swiper h-full'
               breakpoints={{
                 100: {
-                  slidesPerView: 1.1,
+                  slidesPerView: 'auto',
                   centeredSlides: true,
                   spaceBetween: 8
                 },
@@ -50,7 +52,7 @@ export const RelatedPosts = ({ category, tags, slug }) => {
                   spaceBetween: 8
                 },
                 900: {
-                  slidesPerView: 3,
+                  slidesPerView: totalSlides,
                   centeredSlides: false,
                   spaceBetween: 60
                 },
