@@ -5,7 +5,7 @@ import Image from 'next/image'
 import moment from 'moment'
 import {useRouter} from 'next/router'
 import {gql} from '@apollo/client'
-import { getTexts } from './../../services/getTexts.js'
+import { getTexts } from './../../../services/getTexts.js'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -23,8 +23,6 @@ import nextGray from './../../../assets/images/pagination/next-gray.svg'
 import previousBlue from './../../../assets/images/pagination/previous-blue.svg'
 import previousGray from './../../../assets/images/pagination/previous-gray.svg'
 import lineGray from './../../../assets/images/pagination/line-gray.svg'
-
-import { getTexts } from './../../../services/getTexts.js'
 
 const limit = 6
 
@@ -406,7 +404,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: true,
   }
 }
 
