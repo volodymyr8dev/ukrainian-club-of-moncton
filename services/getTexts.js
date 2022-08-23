@@ -19,5 +19,5 @@ export const getTexts = () => {
   if (loading) console.log('Fetching data...')
   if (error) console.log('error: ', error)
   
-  return { datra, loading, error }
+  return { data, loading, error }
 }
