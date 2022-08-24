@@ -4,9 +4,10 @@ import Head from 'next/head'
 import {getPostDetails, getPosts} from '../../services/index'
 
 import {PostDetail} from '../../components/utils/PostDetail'
-import {LOCALE_UA, REVALIDATION_TIME_POST} from "../../services/constants";
+import {REVALIDATION_TIME_POST} from "../../services/constants";
 import FourOhFour from "../404";
 import {useRouter} from "next/router";
+import {isPostInvalid} from "../../services/helpers";
 
 export default function PostDetails({ post }) {
   if (useIsPostInvalid(post)) {
@@ -38,7 +39,7 @@ export default function PostDetails({ post }) {
 
 function useIsPostInvalid(post) {
   const { locale } = useRouter()
-  return !post || locale === LOCALE_UA && post.localizations.length === 0;
+  return isPostInvalid(locale, post)
 }
 
 export async function getStaticProps({ params }) {

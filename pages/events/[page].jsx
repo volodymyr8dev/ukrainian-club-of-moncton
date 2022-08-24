@@ -19,6 +19,7 @@ import lineGray from './../../assets/images/pagination/line-gray.svg'
 
 import {getTexts} from './../../services/getTexts.js'
 import {REVALIDATION_TIME_PAGINATION} from "../../services/constants";
+import {isPostInvalid} from "../../services/helpers";
 
 const limit = 6
 
@@ -68,11 +69,13 @@ function Events({
                   <div className='justify-start gap-2 xl:gap-8 max-w-full
                   w-full pt-10 hidden md:flex'>
                   {
-                    posts.slice(0, 3).map((post, i) => (
-                      <div  key={i} className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
-                      max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
-                      overflow-hidden bg-gray-100 rounded-3xl mt-6
-                      hidden md:block'>
+                    posts.slice(0, 3).map((post, i) => {
+                      return isPostInvalid(router.locale, post.node)
+                        ? ''
+                        : <div key={i} className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
+                        max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
+                        overflow-hidden bg-gray-100 rounded-3xl mt-6
+                        hidden md:block'>
                         <div className='w-full'>
                           <img
                             className='w-full min-h-[200px] md:min-h-[256px]
@@ -93,11 +96,11 @@ function Events({
                         </div>
                         <div className='px-4 lg:px-6 pt-6'>
                             <span className={`font-proximaNova200 text-yellow-900
-                            px-6 py-2 rounded-[20px] ${ post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none' }`}>
+                            px-6 py-2 rounded-[20px] ${post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'}`}>
                               {
                                 router.locale == 'ua'
-                                  ? post.node.localizations[0].tags[0]?.name  
-                                  : post.node.tags[0]?.name  
+                                  ? post.node.localizations[0].tags[0]?.name
+                                  : post.node.tags[0]?.name
                               }
                             </span>
 
@@ -142,7 +145,7 @@ function Events({
                           </div>
                         </div>
                       </div>
-                    ))
+                    })
                   }
                   </div>
                 </div>
