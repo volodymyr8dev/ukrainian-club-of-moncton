@@ -10,7 +10,7 @@ export default async function handler(request, response) {
   }
 
   try {
-    await response.revalidate(path.join('/', request.body.data.slug))
+    await response.revalidate(path.join('/', request.body.data.page))
     return response.status(200).json({ revalidated: true })
   } catch (err) {
     return response.status(500).send('Error revalidating')
