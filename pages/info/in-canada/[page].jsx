@@ -3,19 +3,19 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import moment from 'moment'
-import { useRouter } from 'next/router'
-import { gql } from '@apollo/client'
+import {useRouter} from 'next/router'
+import {gql} from '@apollo/client'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/grid'
 import 'swiper/css/autoplay'
 
-import { hygraph } from '../../../services'
+import {hygraph} from '../../../services'
 
-import { InfoFront } from '../../../components/sections/info/InfoFront'
-import { Informative } from '../../../components/sections/info/Informative'
-import { MobileSwiperDisplay } from '../../../components/utils/MobileSwiperDisplay'
+import {InfoFront} from '../../../components/sections/info/InfoFront'
+import {Informative} from '../../../components/sections/info/Informative'
+import {MobileSwiperDisplay} from '../../../components/utils/MobileSwiperDisplay'
 
 import nextBlue from './../../../assets/images/pagination/next-blue.svg'
 import nextGray from './../../../assets/images/pagination/next-gray.svg'
@@ -23,7 +23,8 @@ import previousBlue from './../../../assets/images/pagination/previous-blue.svg'
 import previousGray from './../../../assets/images/pagination/previous-gray.svg'
 import lineGray from './../../../assets/images/pagination/line-gray.svg'
 
-import { getTexts } from './../../../services/getTexts.js'
+import {getTexts} from './../../../services/getTexts.js'
+import {REVALIDATION_TIME_PAGINATION} from "../../../services/constants";
 
 const limit = 6
 
@@ -467,6 +468,7 @@ export async function getStaticProps({ params }) {
       posts,
       ...pageInfo,
     },
+    revalidate: REVALIDATION_TIME_PAGINATION
   }
 }
 

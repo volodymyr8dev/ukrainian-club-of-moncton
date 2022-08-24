@@ -1,26 +1,23 @@
 /* file name: [page].jsx */
 
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import moment from 'moment'
-import { useRouter } from 'next/router'
-import { gql } from 'graphql-request'
-import useTranslation from 'next-translate/useTranslation'
+import {useRouter} from 'next/router'
+import {gql} from 'graphql-request'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import {Navigation, Pagination} from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/grid'
 import 'swiper/css/autoplay'
 
-import { hygraph } from './../../services'
-import { EventsFront } from '../../components/sections/events/EventsFront'
-import { Informative } from '../../components/sections/events/Informative'
+import {hygraph} from './../../services'
 
 import beforeArrow from './../../assets/images/before-arrow-pagination.svg'
 import nextArrow from './../../assets/images/next-arrow-pagination.svg'
+import {REVALIDATION_TIME_PAGINATION} from "./constants";
 
 const limit = 3
 
@@ -301,6 +298,7 @@ export async function getStaticProps({ params }) {
       posts,
       ...pageInfo,
     },
+    revalidate: REVALIDATION_TIME_PAGINATION
   }
 }
 

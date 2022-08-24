@@ -1,9 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { getPosts, getPostDetails } from '../../services/index'
+import {getPostDetails, getPosts} from '../../services/index'
 
-import { PostDetail } from '../../components/utils/PostDetail'
+import {PostDetail} from '../../components/utils/PostDetail'
+import {REVALIDATION_TIME_POST} from "../../services/constants";
 
 export default function PostDetails({ post }) {
   return (
@@ -33,7 +34,8 @@ export async function getStaticProps({ params }) {
   const postData = await getPostDetails(params.slug)
 
   return {
-    props: { post: postData }
+    props: { post: postData },
+    revalidate: REVALIDATION_TIME_POST
   }
 }
 
