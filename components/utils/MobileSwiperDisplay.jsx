@@ -70,8 +70,8 @@ export const MobileSwiperDisplay = ({ posts }) => {
             text-yellow-900 px-6 py-2 rounded-[20px]'>
                 {
                   router.locale == 'ua'
-                  ? post.node.localizations[0].tags[0].name
-                  : post.node.tags[0].name
+                  ? post.node.localizations[0].tags[0]?.name
+                  : post.node.tags[0]?.name
                 }
               </span>
 
