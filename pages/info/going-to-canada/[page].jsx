@@ -415,7 +415,8 @@ export async function getStaticProps({ params }) {
       postsConnection (
         first: $limit,
         skip: $offset,
-        where: { category: { slug: "going-to-canada" }}
+        where: { category: { slug: "going-to-canada" }},
+        orderBy: createdAt_DESC
         ) {
         aggregate {
           count
