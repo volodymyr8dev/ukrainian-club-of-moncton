@@ -411,6 +411,7 @@ export async function getStaticProps({ params }) {
       posts,
       ...pageInfo,
     },
+    revalidate: 10,
   }
 }
 
