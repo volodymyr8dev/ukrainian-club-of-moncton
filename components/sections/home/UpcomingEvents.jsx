@@ -116,19 +116,10 @@ export const UpcomingEvents = () => {
                     />
                   </div>
                   <div className='px-4 lg:px-6 pt-6'>
-                    {
-                      post.tags[0]
-                      ?
-                      <span className='font-proximaNova200 bg-yellow-100
-                      text-yellow-900 px-6 py-2 rounded-[20px]'>
-                        { post.tags[0].name }
-                      </span>
-                      :
-                      <span className='font-proximaNova200 bg-yellow-100
-                      text-yellow-900 px-6 py-2 rounded-[20px]'>
-                        Post
-                      </span>
-                    }
+                    <span className={`font-proximaNova200 ${post.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'} 
+                    text-yellow-900 px-6 py-2 rounded-[20px]`}>
+                      { post.tags[0]?.name }
+                    </span>
 
                     <div className='pt-8'>
                       <h6 className='font-proximaNova500 uppercase text-xl
