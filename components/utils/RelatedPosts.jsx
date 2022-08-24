@@ -88,8 +88,8 @@ export const RelatedPosts = ({ category, tags, slug }) => {
                     />
                   </div>
                   <div className='px-4 lg:px-6 pt-6'>
-                    <span className='font-proximaNova200 bg-yellow-100
-                    text-yellow-900 px-6 py-2 rounded-[20px]'>
+                  <span className={`font-proximaNova200 text-yellow-900
+                  px-6 py-2 rounded-[20px] ${ post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none' }`}>
                       { post.tags[0]?.name }
                     </span>
 
