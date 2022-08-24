@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react'
+import {useEffect, useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import moment from 'moment'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import {Navigation, Pagination} from 'swiper'
 
-import { getRelatedPosts } from '../../services'
+import {getRelatedPosts} from '../../services'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -16,7 +16,7 @@ import 'swiper/css/autoplay'
 
 import locationImage from './../../assets/images/card-location.svg'
 
-import { HeadingToggler } from './HeadingToggler'
+import {HeadingToggler} from './HeadingToggler'
 
 export const RelatedPosts = ({ category, tags, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([])
@@ -89,7 +89,7 @@ export const RelatedPosts = ({ category, tags, slug }) => {
                   </div>
                   <div className='px-4 lg:px-6 pt-6'>
                   <span className={`font-proximaNova200 text-yellow-900
-                  px-6 py-2 rounded-[20px] ${ post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none' }`}>
+                  px-6 py-2 rounded-[20px] ${ post.tags[0]?.name ? 'bg-yellow-100' : 'bg-none' }`}>
                       { post.tags[0]?.name }
                     </span>
 
