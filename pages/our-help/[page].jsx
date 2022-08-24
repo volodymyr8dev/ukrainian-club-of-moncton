@@ -98,8 +98,8 @@ function OurHelp({
                           text-yellow-900 px-6 py-2 rounded-[20px]'>
                             {
                               router.locale == 'ua'
-                                ? post.node.localizations[0].tags[0]?.name || 'Post'
-                                : post.node.tags[0]?.name || 'Post'
+                                ? post.node.localizations[0].tags[0]?.name  
+                                : post.node.tags[0]?.name  
                             }
                           </span>
 
@@ -180,8 +180,8 @@ function OurHelp({
                           text-yellow-900 px-6 py-2 rounded-[20px]'>
                             {
                               router.locale == 'ua'
-                                ? post.node.localizations[0].tags[0]?.name || 'Post'
-                                : post.node.tags[0]?.name || 'Post'
+                                ? post.node.localizations[0].tags[0]?.name  
+                                : post.node.tags[0]?.name  
                             }
                           </span>
 

@@ -62,8 +62,8 @@ export const PostDetail = ({ post }) => {
             text-base md:text-lg leading-[18px] text-left md:text-center w-full'>
               {
                 router.locale == 'ua'
-                ? post.localizations[0].tags[0]?.name || 'Post'
-                : post.tags[0]?.name || 'Post'
+                ? post.localizations[0].tags[0]?.name  
+                : post.tags[0]?.name  
               }
             </span>
             <span className='inline-block md:hidden font-proximaNova200 text-gray-500 uppercase
