@@ -1,4 +1,4 @@
-import { GraphQLClient, request, gql } from 'graphql-request'
+import {gql, GraphQLClient, request} from 'graphql-request'
 
 export const hygraph = new GraphQLClient(
   process.env.NEXT_PUBLIC_GRAPHCMS_CONTENT_API
@@ -45,7 +45,10 @@ export const getPosts = async () => {
 export const getPostDetails = async (slug) => {
   const query = gql`
     query getPostDetails($slug: String!) {
-      post(where: { slug: $slug }) {
+      post(
+        where: { slug: $slug },
+        orderBy: createdAt_DESC
+      ) {
         createdAt
         slug
         title

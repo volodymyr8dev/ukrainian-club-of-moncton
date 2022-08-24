@@ -365,6 +365,7 @@ export async function getStaticProps({ params }) {
         first: $limit,
         skip: $offset,
         where: { category: { slug: "event" }}
+        orderBy: createdAt_DESC
         ) {
         aggregate {
           count
