@@ -395,7 +395,7 @@ export async function getStaticPaths() {
 
   const paths = [
     ...numberOfPages({
-      total: postsConnection.aggregate.count,
+      total: postsConnectionr.aggregate.count,
       limit,
     }),
   ].map((page) => ({
