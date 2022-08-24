@@ -46,8 +46,7 @@ export const getPostDetails = async (slug) => {
   const query = gql`
     query getPostDetails($slug: String!) {
       post(
-        where: { slug: $slug },
-        orderBy: createdAt_DESC
+        where: { slug: $slug }
       ) {
         createdAt
         slug
