@@ -69,70 +69,69 @@ function OurHelp({
                     posts={ posts }
                   />
                   <div className='justify-start gap-2 xl:gap-8 max-w-full
-                  w-full pt-10 hidden md:flex'>
+                  w-full pt-10 hidden md:grid grid-cols-3'>
                   {
-                    posts.slice(0, 3).map((post, i) => {
+                    posts.map((post, i) => {
                       return isPostInvalid(router.locale, post.node)
                         ? ''
-                        :
-                        <div key={i} className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
-                      max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
-                      overflow-hidden bg-gray-100 rounded-3xl mt-6
-                      hidden md:block'>
-                          <div className='w-full'>
-                            <img
-                              className='w-full min-h-[200px] md:min-h-[256px]
+                        : <div key={i} className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
+                        w-full max-h-full h-full
+                        overflow-hidden bg-gray-100 rounded-3xl mt-6
+                        hidden md:block'>
+                        <div className='w-full'>
+                          <img
+                            className='w-full min-h-[200px] md:min-h-[256px]
                               object-cover'
-                              src={post.node.featuredImage.url}
-                              alt={
-                                router.locale == 'ua'
-                                  ? post.node.localizations[0].title
-                                  : post.node.title
-                              }
-                              title={
-                                router.locale == 'ua'
-                                  ? post.node.localizations[0].title
-                                  : post.node.title
-                              }
-                              loading='lazy'
-                            />
-                          </div>
-                          <div className='px-4 lg:px-6 pt-6'>
-                          <span className={`font-proximaNova200 text-yellow-900
-                          px-6 py-2 rounded-[20px] ${post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'}`}>
-                            {
+                            src={post.node.featuredImage.url}
+                            alt={
                               router.locale == 'ua'
-                                ? post.node.localizations[0].tags[0]?.name
-                                : post.node.tags[0]?.name
+                                ? post.node.localizations[0].title
+                                : post.node.title
                             }
-                          </span>
+                            title={
+                              router.locale == 'ua'
+                                ? post.node.localizations[0].title
+                                : post.node.title
+                            }
+                            loading='lazy'
+                          />
+                        </div>
+                        <div className='px-4 lg:px-6 pt-6'>
+                            <span className={`font-proximaNova200 text-yellow-900
+                            px-6 py-2 rounded-[20px] ${post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'}`}>
+                              {
+                                router.locale == 'ua'
+                                  ? post.node.localizations[0].tags[0]?.name
+                                  : post.node.tags[0]?.name
+                              }
+                            </span>
 
-                            <div className='pt-8'>
-                              <h6 className='font-proximaNova500 uppercase text-xl
+                          <div className='pt-8'>
+                            <h6 className='font-proximaNova500 uppercase text-xl
                               md:text-2xl'>
-                                {
-                                  router.locale == 'ua'
-                                    ? post.node.localizations[0].title
-                                    : post.node.title
-                                }
-                              </h6>
-                              <p className='pr-4 md:pr-0 font-proximaNova200
+                              {
+                                router.locale == 'ua'
+                                  ? post.node.localizations[0].title
+                                  : post.node.title
+                              }
+                            </h6>
+                            <p className='pr-4 md:pr-0 font-proximaNova200
                               text-base md:text-lg pt-2 leading-[18px]'>
-                                {
-                                  router.locale == 'ua'
-                                    ? post.node.localizations[0].excerpt
-                                    : post.node.excerpt
-                                }
-                              </p>
+                              {
+                                router.locale == 'ua'
+                                  ? post.node.localizations[0].excerpt
+                                  : post.node.excerpt
+                              }
+                            </p>
 
-                              <div className='w-full md:w-auto flex justify-between
+                            <div className='w-full md:w-auto flex justify-between
                               items-center pt-10 pb-6'>
                               <span className='font-proximaNova200 text-base
                                 text-gray-500 md:text-lg leading-[18px]'>
                                 {moment(post.node.createdAt).format('MMM DD, YYYY')}
                               </span>
 
-                                <Link href={`/posts/${post.node.slug}`}>
+                              <Link href={`/posts/${post.node.slug}`}>
                                 <span className='bg-yellow-500 text-gray-100
                                   py-3 px-8 lg:px-10 rounded-[64px]
                                   font-proximaNova400 text-base md:text-lg
@@ -143,98 +142,14 @@ function OurHelp({
                                       : 'Read more'
                                   }
                                 </span>
-                                </Link>
-                              </div>
+                              </Link>
                             </div>
                           </div>
                         </div>
+                      </div>
                     })
                   }
                   </div>
-                </div>
-
-                <div className='justify-start gap-2 xl:gap-8 max-w-full
-                  w-full pt-10 hidden md:flex'>
-                  {
-                    posts.slice(3, 6).map((post, i) => {
-                      return isPostInvalid(router.locale, post.node)
-                        ? ''
-                        :
-                        <div key={i} className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
-                      max-w-[33%] xl:max-w-[31.5%] w-full max-h-full h-full
-                      overflow-hidden bg-gray-100 rounded-3xl mt-6
-                      hidden md:block'>
-                          <div className='w-full'>
-                            <img
-                              className='w-full min-h-[200px] md:min-h-[256px]
-                              object-cover'
-                              src={post.node.featuredImage.url}
-                              alt={
-                                router.locale == 'ua'
-                                  ? post.node.localizations[0].title
-                                  : post.node.title
-                              }
-                              title={
-                                router.locale == 'ua'
-                                  ? post.node.localizations[0].title
-                                  : post.node.title
-                              }
-                              loading='lazy'
-                            />
-                          </div>
-                          <div className='px-4 lg:px-6 pt-6'>
-                        <span className={`font-proximaNova200 text-yellow-900
-                            px-6 py-2 rounded-[20px] ${post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'}`}>
-                            {
-                              router.locale == 'ua'
-                                ? post.node.localizations[0].tags[0]?.name
-                                : post.node.tags[0]?.name
-                            }
-                          </span>
-
-                            <div className='pt-8'>
-                              <h6 className='font-proximaNova500 uppercase text-xl
-                              md:text-2xl'>
-                                {
-                                  router.locale == 'ua'
-                                    ? post.node.localizations[0].title
-                                    : post.node.title
-                                }
-                              </h6>
-                              <p className='pr-4 md:pr-0 font-proximaNova200
-                              text-base md:text-lg pt-2 leading-[18px]'>
-                                {
-                                  router.locale == 'ua'
-                                    ? post.node.localizations[0].excerpt
-                                    : post.node.excerpt
-                                }
-                              </p>
-
-                              <div className='w-full md:w-auto flex justify-between
-                              items-center pt-10 pb-6'>
-                              <span className='font-proximaNova200 text-base
-                                text-gray-500 md:text-lg leading-[18px]'>
-                                {moment(post.node.createdAt).format('MMM DD, YYYY')}
-                              </span>
-
-                                <Link href={`/posts/${post.node.slug}`}>
-                                <span className='bg-yellow-500 text-gray-100
-                                  py-3 px-8 lg:px-10 rounded-[64px]
-                                  font-proximaNova400 text-base md:text-lg
-                                  text-center cursor-pointer'>
-                                  {
-                                    router.locale == 'ua'
-                                      ? 'Читати далі'
-                                      : 'Read more'
-                                  }
-                                </span>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    })
-                  }
                 </div>
 
                 <div className='flex justify-center w-full mt-1 md:mt-16
