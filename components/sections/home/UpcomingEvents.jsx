@@ -77,7 +77,8 @@ export const UpcomingEvents = () => {
           togglerNextClass='event-next'
         />
 
-          <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0'>
+          <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0
+          -mt-14'>
             <Swiper className='home-events-swiper h-full'
               breakpoints={{
                 100: {
@@ -87,7 +88,10 @@ export const UpcomingEvents = () => {
                 700: {
                   spaceBetween: 8
                 },
-                900: {
+                800: {
+                  spaceBetween: 30
+                },
+                1030: {
                   slidesPerView: 3,
                   centeredSlides: false,
                   spaceBetween: 60
@@ -105,101 +109,81 @@ export const UpcomingEvents = () => {
             { data.posts.map(post => ( 
               <SwiperSlide
                 key={ post.title }
-                className='py-6'
+                className='py-10'
               >
-                <div
-                  className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] max-w-full
-                  w-full max-h-full h-full overflow-hidden
-                  rounded-3xl'
-                  key={ post.title }
-                >
-                  <div className='w-full'>
+                <div className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
+                w-full max-h-full h-full
+                overflow-hidden bg-gray-100 rounded-3xl mt-6
+                flex flex-col justify-start'>
+                  <div className='w-full flex flex-col'>
                     <img
                       className='w-full min-h-[200px] md:min-h-[256px]
-                      object-cover'
-                      src={ post.featuredImage.url }
+                      object-cover max-h-[200px] md:max-h-[256px]'
+                      src={post.featuredImage.url}
                       alt={
-                        locale === 'en'
-                        ? post.title
-                        : post.localizations[0]?.title
+                        locale == 'ua'
+                          ? post?.localizations[0]?.title
+                          : post.title
                       }
                       title={
-                        locale === 'en'
-                        ? post.title
-                        : post.localizations[0]?.title
+                        locale == 'ua'
+                          ? post.localizations[0]?.title
+                          : post.title
                       }
                       loading='lazy'
                     />
                   </div>
-                  <div className='px-4 lg:px-6 pt-6'>
-                    <span className={`font-proximaNova200 ${post.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'} 
-                    text-yellow-900 px-6 py-2 rounded-[20px]`}>
-                      {
-                        locale === 'en'
-                        ? post.tags[0].name
-                        : post.localizations[0]?.tags[0]?.name
-                      }
-                    </span>
-
-                    <div className='pt-8'>
-                      <h6 className='font-proximaNova500 uppercase text-xl
-                      md:text-2xl'>
-                        {
-                          locale === 'en'
-                          ? post.title
-                          : post.localizations[0]?.title
-                        }
-                      </h6>
-                      <p className='pr-4 md:pr-0 font-proximaNova200 text-base
-                      md:text-lg
-                      pt-2 leading-[18px]'>
-                        {
-                          locale === 'en'
-                          ? post.excerpt
-                          : post.localizations[0]?.excerpt
-                        }
-                      </p>
-
-                      <div className='flex gap-[18px] items-center pt-6'>
-                        <Image
-                          src={ locationImage }
-                          alt='location'
-                          width={ 18.8 }
-                          height={ 24 }
-                        />
-
-                        <span className='font-proximaNova200 text-gray-500
-                        text-base first-letter:md:text-lg leading-[18px]'>
+                  <div className='px-4 lg:px-6 pt-6 flex flex-col justify-between
+                  h-full'>
+                    <div>
+                      <div>
+                        <span className={`font-proximaNova200 text-yellow-900
+                        px-6 py-2 rounded-[20px] ${post.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'}`}>
                           {
-                            locale === 'en'
-                            ? post.address
-                            : post.localizations[0]?.address
+                            locale == 'ua'
+                              ? post.localizations[0]?.tags[0]?.name
+                              : post.tags[0]?.name
                           }
                         </span>
                       </div>
 
-                      <span className='font-proximaNova200 text-gray-500
-                      text-base md:text-lg leading-[18px] hidden
-                      md:inline-block small-notebooks:hidden'>
-                        { moment(post.createdAt).format('MMM DD, YYYY') }
-                      </span>
+                      <div className='pt-8'>
+                        <h6 className='font-proximaNova500 uppercase text-xl
+                        md:text-2xl'>
+                          {
+                            locale == 'ua'
+                            ? post?.localizations[0]?.title
+                            : post.title
+                          }
+                        </h6>
+                        <p className='pr-4 md:pr-0 font-proximaNova200
+                        text-base md:text-lg pt-2 leading-[18px]'>
+                          {
+                            locale == 'ua'
+                            ? post?.localizations[0]?.excerpt
+                            : post.excerpt
+                          }
+                        </p>
+                      </div>
+                    </div>
 
+                    <div>
                       <div className='w-full md:w-auto flex justify-between
                       items-center pt-10 pb-6'>
-                        <span className='font-proximaNova200 text-gray-500
-                        text-base md:text-lg leading-[18px] inline-block
-                        md:hidden small-notebooks:inline-block'>
-                          { moment(post.createdAt).format('MMM DD, YYYY') }
+                        <span className='font-proximaNova200 text-base
+                       text-gray-500 md:text-lg leading-[18px]'>
+                          {moment(post.createdAt).format('MMM DD, YYYY')}
                         </span>
 
-                        <Link href={`/posts/${ post.slug }`}>
-                          <span className='bg-yellow-500 text-gray-100 py-3
-                          px-8 lg:px-10 rounded-[64px] font-proximaNova400
-                          text-base md:text-lg text-center cursor-pointer'>
+                        <Link href={`/posts/${post.slug}`}>
+                          <span className='bg-yellow-500 text-gray-100
+                          py-3 px-4 lg:px-10 rounded-[64px]
+                          font-proximaNova400 text-base md:text-lg
+                          text-center cursor-pointer'>
                             {
-                              locale === 'en'
-                              ? 'Read more'
-                              : 'Читати далі'
+                              locale == 'ua'
+                                ? 'Читати далі'
+                                : 'Read more'
                             }
                           </span>
                         </Link>
