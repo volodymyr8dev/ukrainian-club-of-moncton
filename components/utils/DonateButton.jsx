@@ -12,12 +12,12 @@ export const DonateButton = () => {
   if (loading) return <span></span>
   if (error) return <span></span>
 
-  const hostedButtonId = process.env.NEXT_PUBLIC_HOSTED_BUTTON_ID
+  const paypalURL = process.env.NEXT_PUBLIC_PAYPAL_URL
 
   return (
     <>
     <a
-      href={`https://www.sandbox.paypal.com/donate/?hosted_button_id=${hostedButtonId}`}
+      href={ paypalURL }
       target='_blank'
       rel='noreferrer'
     >
