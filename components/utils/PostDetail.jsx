@@ -160,7 +160,11 @@ export const PostDetail = ({ post }) => {
           items-center'>
             <span className='font-proximaNova300 text-2xl leading-[36px]
             w-full max-w-[960px] text-left'>
-              TAGS:
+              {
+                router.locale === 'en'
+                ? 'TAGS:'
+                : 'МІТКИ:'
+              }
               {' '}
               {
                 post.tags.length < 1
@@ -265,7 +269,11 @@ export const PostDetail = ({ post }) => {
       }}
     >
       <Typography sx={{ p: 2, color: '#FFF', bgcolor: 'rgba(0, 0, 0, 0.7)' }}>
-        Copied to clipboard
+        {
+          router.locale == 'en'
+          ? 'Copied to clipboard'
+          : 'Скопійовано в буфер обміну'
+        }
       </Typography>
     </Popover>
     </>

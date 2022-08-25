@@ -38,6 +38,14 @@ const GET_MOST_RECENT_POSTS_QUERY = gql`
       address
       slug
       createdAt
+      localizations(locales: uk_UA) {
+        title
+        excerpt
+        address
+        tags {
+          name
+        }
+      }
     }
   }
 `
@@ -110,26 +118,46 @@ export const UpcomingEvents = () => {
                       className='w-full min-h-[200px] md:min-h-[256px]
                       object-cover'
                       src={ post.featuredImage.url }
-                      alt={ post.title }
-                      title={ post.title }
+                      alt={
+                        locale === 'en'
+                        ? post.title
+                        : post.localizations[0]?.title
+                      }
+                      title={
+                        locale === 'en'
+                        ? post.title
+                        : post.localizations[0]?.title
+                      }
                       loading='lazy'
                     />
                   </div>
                   <div className='px-4 lg:px-6 pt-6'>
                     <span className={`font-proximaNova200 ${post.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'} 
                     text-yellow-900 px-6 py-2 rounded-[20px]`}>
-                      { post.tags[0]?.name }
+                      {
+                        locale === 'en'
+                        ? post.tags[0].name
+                        : post.localizations[0]?.tags[0]?.name
+                      }
                     </span>
 
                     <div className='pt-8'>
                       <h6 className='font-proximaNova500 uppercase text-xl
                       md:text-2xl'>
-                        { post.title }
+                        {
+                          locale === 'en'
+                          ? post.title
+                          : post.localizations[0]?.title
+                        }
                       </h6>
                       <p className='pr-4 md:pr-0 font-proximaNova200 text-base
                       md:text-lg
                       pt-2 leading-[18px]'>
-                        { post.excerpt }
+                        {
+                          locale === 'en'
+                          ? post.excerpt
+                          : post.localizations[0]?.excerpt
+                        }
                       </p>
 
                       <div className='flex gap-[18px] items-center pt-6'>
@@ -142,7 +170,11 @@ export const UpcomingEvents = () => {
 
                         <span className='font-proximaNova200 text-gray-500
                         text-base first-letter:md:text-lg leading-[18px]'>
-                          { post.address }
+                          {
+                            locale === 'en'
+                            ? post.address
+                            : post.localizations[0]?.address
+                          }
                         </span>
                       </div>
 
@@ -164,7 +196,11 @@ export const UpcomingEvents = () => {
                           <span className='bg-yellow-500 text-gray-100 py-3
                           px-8 lg:px-10 rounded-[64px] font-proximaNova400
                           text-base md:text-lg text-center cursor-pointer'>
-                            Read more
+                            {
+                              locale === 'en'
+                              ? 'Read more'
+                              : 'Читати далі'
+                            }
                           </span>
                         </Link>
                       </div>

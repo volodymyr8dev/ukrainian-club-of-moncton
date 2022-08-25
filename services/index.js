@@ -139,6 +139,14 @@ export const getRelatedPosts = async (category, tags, slug) => {
         tags {
           name
         }
+        localizations(locales: uk_UA) {
+          title
+          excerpt
+          address
+          tags {
+            name
+          }
+        }
       }
     }
     `
