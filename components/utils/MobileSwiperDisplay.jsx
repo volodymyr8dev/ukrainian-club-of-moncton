@@ -15,6 +15,7 @@ export const MobileSwiperDisplay = ({ posts }) => {
   const router = useRouter()
   
   return (
+    <>
     <Swiper className='home-events-swiper info-swiper h-full
     block md:hidden'
       breakpoints={{
@@ -41,7 +42,7 @@ export const MobileSwiperDisplay = ({ posts }) => {
     >
     {
       posts.map(post => {
-        return isPostInvalid(router.locale, post)
+        return isPostInvalid(router.locale, post.node)
           ? ''
           : <SwiperSlide
             key={post.node.title}
@@ -57,12 +58,12 @@ export const MobileSwiperDisplay = ({ posts }) => {
                   src={post.node.featuredImage.url}
                   alt={
                     router.locale == 'ua'
-                      ? post.node.localizations[0].title
+                      ? post.node?.localizations[0]?.title
                       : post.node.title
                   }
                   title={
                     router.locale == 'ua'
-                      ? post.node.localizations[0].title
+                      ? post.node.localizations[0]?.title
                       : post.node.title
                   }
                   loading='lazy'
@@ -73,7 +74,7 @@ export const MobileSwiperDisplay = ({ posts }) => {
             px-6 py-2 rounded-[20px] ${post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'}`}>
                 {
                   router.locale == 'ua'
-                    ? post.node.localizations[0].tags[0]?.name
+                    ? post.node.localizations[0]?.tags[0]?.name
                     : post.node.tags[0]?.name
                 }
               </span>
@@ -83,7 +84,7 @@ export const MobileSwiperDisplay = ({ posts }) => {
                 md:text-2xl'>
                     {
                       router.locale == 'ua'
-                        ? post.node.localizations[0].title
+                        ? post.node?.localizations[0]?.title
                         : post.node.title
                     }
                   </h6>
@@ -91,7 +92,7 @@ export const MobileSwiperDisplay = ({ posts }) => {
                 text-base md:text-lg pt-2 leading-[18px]'>
                     {
                       router.locale == 'ua'
-                        ? post.node.localizations[0].excerpt
+                        ? post.node?.localizations[0]?.excerpt
                         : post.node.excerpt
                     }
                   </p>
@@ -123,5 +124,6 @@ export const MobileSwiperDisplay = ({ posts }) => {
       })
     }
     </Swiper>
+    </>
   )
 }
