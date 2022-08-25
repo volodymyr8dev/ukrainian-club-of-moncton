@@ -72,6 +72,7 @@ export const Informative = () => {
                   }
                 <img
                   src='/blue-right-arrow.svg'
+                  alt='arrow to the right'
                 />
               </span>
             </Link>

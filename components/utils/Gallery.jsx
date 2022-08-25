@@ -65,6 +65,7 @@ export const Gallery = () => {
               object-cover hover:max-w-[413.6px] hover:max-h-[268.4px] hover:scale-110
               transition-all'
               loading='lazy'
+              alt=''
             />
           </SwiperSlide>
           ))
