@@ -4,7 +4,6 @@ import moment from 'moment'
 
 import Popover from '@mui/material/Popover'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
 import { FacebookShareButton, TwitterShareButton } from 'next-share'
 
 import { RelatedPosts } from './RelatedPosts'
@@ -14,6 +13,9 @@ import FacebookIcon from './../../assets/images/post/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
 import GreenShareIcon from './../../assets/images/post/green-share.svg'
+
+import YellowCheck from './../../assets/images/yellow-check.svg'
+
 import { useRouter } from 'next/router'
 
 export const PostDetail = ({ post }) => {
@@ -269,13 +271,26 @@ export const PostDetail = ({ post }) => {
         horizontal: 'center',
       }}
     >
-      <Typography sx={{ p: 2, color: '#FFF', bgcolor: 'rgba(0, 0, 0, 0.7)' }}>
-        {
-          router.locale == 'en'
-          ? 'Copied to clipboard'
-          : 'Скопійовано в буфер обміну'
-        }
-      </Typography>
+      <div className='flex justify-center items-center gap-3 bg-gray-900 p-4'>
+        <div className='flex justify-center'>
+          <Image
+            src={ YellowCheck }
+            width={ 15.7 }
+            height={ 12 }
+          />
+        </div>
+        <Typography sx={{
+          color: '#FFF',
+          bgcolor: '#002049',
+          fontWeight: 'light'
+        }}>
+          {
+            router.locale == 'en'
+            ? 'Copied to clipboard'
+            : 'Скопійовано в буфер обміну'
+          }
+        </Typography>
+      </div>
     </Popover>
     </>
   )
