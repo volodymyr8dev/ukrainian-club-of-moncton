@@ -87,6 +87,7 @@ export const HomeFront = () => {
             alt='bird'
             width={ 454 }
             height={ 398.34 }
+            priority
           />
         </div>
 

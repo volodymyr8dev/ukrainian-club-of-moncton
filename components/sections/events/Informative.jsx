@@ -27,6 +27,8 @@ export const Informative = () => {
           <Image
             src={ UkrainianSymbol }
             alt=''
+            layout='intrinsic'
+            priority
           />
         </div>
         <div className='pt-8 md:pt-11'>

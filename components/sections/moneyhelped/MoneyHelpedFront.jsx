@@ -23,6 +23,7 @@ export const MoneyHelpedFront = () => {
               src={ Img1Desktop }
               alt='farm'
               layout='responsive'
+              priority
             />
           </div>
           <div className='w-full overflow-hidden'>
@@ -30,6 +31,7 @@ export const MoneyHelpedFront = () => {
               src={ Img2Desktop }
               alt='farm'
               layout='responsive'
+              priority
             />
           </div>
           <div className='w-full overflow-hidden'>
@@ -37,6 +39,7 @@ export const MoneyHelpedFront = () => {
               src={ Img3Desktop }
               alt='farm'
               layout='responsive'
+              priority
             />
           </div>
         </div>
@@ -48,6 +51,7 @@ export const MoneyHelpedFront = () => {
               src={ Img1Mobile }
               alt='farm'
               layout='responsive'
+              priority
             />
           </div>
           <div className='w-full overflow-hidden'>
@@ -55,6 +59,7 @@ export const MoneyHelpedFront = () => {
               src={ Img2Mobile }
               alt='farm'
               layout='responsive'
+              priority
             />
           </div>
           <div className='w-full overflow-hidden'>
@@ -62,6 +67,7 @@ export const MoneyHelpedFront = () => {
               src={ Img3Mobile }
               alt='farm'
               layout='responsive'
+              priority
             />
           </div>
         </div>

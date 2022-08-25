@@ -49,6 +49,7 @@ export const PostDetail = ({ post }) => {
             alt=''
             width={ 89 }
             height={ 84 }
+            priority
           />
         </div>
         <div className='pt-8'>

@@ -16,6 +16,7 @@ export const HowFront = () => {
               src={ HowBg }
               alt='farm'
               layout='responsive'
+              priority
             />
           </div>
 
@@ -24,6 +25,7 @@ export const HowFront = () => {
               src={ HowBgMobile }
               alt='farm'
               layout='responsive'
+              priority
             />
           </div>
         </div>
