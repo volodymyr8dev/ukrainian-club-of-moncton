@@ -14,15 +14,17 @@ export const ClubAbout = () => {
   return (
     <section className='flex justify-center mb-24 md:mb-28 pl-6 xl:px-0'>
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
-        <HeadingToggler
-          heading={
-            locale === 'en'
-            ? data.englishTexts[57].textContent
-            : data.ukrainianTexts[57].textContent
-          }
-          togglerPrevClass='gallery-prev'
-          togglerNextClass='gallery-next'
-        />
+        <div className='md:pr-6'>
+          <HeadingToggler
+            heading={
+              locale === 'en'
+              ? data.englishTexts[57].textContent
+              : data.ukrainianTexts[57].textContent
+            }
+            togglerPrevClass='gallery-prev'
+            togglerNextClass='gallery-next'
+          />
+        </div>
         <div className='flex justify-between'>
           <Gallery />
         </div>
