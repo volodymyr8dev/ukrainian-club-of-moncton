@@ -73,7 +73,7 @@ input:-webkit-autofill:active {
 }
 
 .home-front-section {
-  background-image: url('/home-blur.png');
+  background-image: url('/home-blur.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -84,7 +84,7 @@ input:-webkit-autofill:active {
 }
 
 .about-section:before {
-  background-image: url('/about-blur.png');
+  background-image: url('/about-blur.webp');
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -105,7 +105,7 @@ input:-webkit-autofill:active {
 }
 
 .how-section:before {
-  background-image: url('/how-blur.png');
+  background-image: url('/how-blur.webp');
   background-repeat: no-repeat;
   background-size: contain;
   
@@ -126,7 +126,7 @@ input:-webkit-autofill:active {
 }
 
 .info-section:before {
-  background-image: url('/info-blur.png');
+  background-image: url('/info-blur.webp');
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -161,7 +161,7 @@ input:-webkit-autofill:active {
 }
 
 .mobile-menu-bg {
-  background-image: url('/menu-mobile-bg.png');
+  background-image: url('/menu-mobile-bg.webp');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -238,7 +238,7 @@ fieldset {
 
 .not-found-bg {
   background-color: #FFFFFF;
-  background-image: url('/404-bg.png');
+  background-image: url('/404-bg.webp');
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
