@@ -223,6 +223,7 @@ export const PostDetail = ({ post }) => {
                 </TwitterShareButton>
               </div>
 
+
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
                 <div
