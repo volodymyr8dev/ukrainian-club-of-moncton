@@ -3,7 +3,6 @@ import Image from 'next/image'
 import moment from 'moment'
 
 import { styled } from '@mui/material/styles'
-import Button from '@mui/material/Button'
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip'
 import Typography from '@mui/material/Typography'
 import ClickAwayListener from '@mui/material/ClickAwayListener'
@@ -19,7 +18,6 @@ import ShareIcon from './../../assets/images/post/share.svg'
 import GreenShareIcon from './../../assets/images/post/green-share.svg'
 
 import YellowCheck from './../../assets/images/yellow-check.svg'
-import TooltipBox from './../../assets/images/tooltip.svg'
 
 import { useRouter } from 'next/router'
 
