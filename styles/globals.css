@@ -251,3 +251,19 @@ fieldset {
 .remove-bug-padding {
   padding-right: 0 !important;
 }
+
+span.MuiTooltip-arrow {
+  transform: translate(26px, -4px) !important;
+  color: #002049 !important;
+}
+
+div.MuiTooltip-popper {
+  width: 220px;
+}
+
+@media screen and (max-width: 400px) {
+  span.MuiTooltip-arrow {
+    transform: translate(182px, -4px) !important;
+    color: #002049 !important;
+  }
+}

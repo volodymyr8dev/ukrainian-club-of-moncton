@@ -2,8 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import moment from 'moment'
 
-import Popover from '@mui/material/Popover'
+import { styled } from '@mui/material/styles'
+import Button from '@mui/material/Button'
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip'
 import Typography from '@mui/material/Typography'
+import ClickAwayListener from '@mui/material/ClickAwayListener'
+
 import { FacebookShareButton, TwitterShareButton } from 'next-share'
 
 import { RelatedPosts } from './RelatedPosts'
@@ -15,31 +19,35 @@ import ShareIcon from './../../assets/images/post/share.svg'
 import GreenShareIcon from './../../assets/images/post/green-share.svg'
 
 import YellowCheck from './../../assets/images/yellow-check.svg'
+import TooltipBox from './../../assets/images/tooltip.svg'
 
 import { useRouter } from 'next/router'
 
 export const PostDetail = ({ post }) => {
   const router = useRouter()
-
-  const [anchorEl, setAnchorEl] = React.useState(null)
-
-  const open = Boolean(anchorEl)
-  const id = open ? 'simple-popover' : undefined
   
-  const handleClickPopover = (event) => {
-    setAnchorEl(event.currentTarget)
-    document.body.classList.add('remove-bug-padding')
-  }
-
-  const handleClose = () => {
-    setAnchorEl(null)
-    document.body.classList.remove('remove-bug-padding')
-  }
-
+  const [open, setOpen] = React.useState(false)
   const [copied, setCopied] = React.useState(false)
 
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
   
+  const handleTooltipClose = () => setOpen(false)
+
+  const handleTooltipOpen = () => {
+    setOpen(true)
+    setTimeout(() => {
+      setOpen(false)
+    }, '5000')
+  }
+
+  const HtmlTooltip = styled(({ className, ...props }) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  ))(({ theme }) => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: 'rgba(255, 255, 255, 0)'
+    },
+  }))
+
   return (
     <>
     <section className='flex justify-center mb-[72px] md:mb-24 px-6 md:px-6
@@ -92,7 +100,8 @@ export const PostDetail = ({ post }) => {
               { moment(post.createdAt).format('MMM, YY') }
             </span>
             
-            <div className='hidden small-notebooks:flex flex-col gap-4 pt-8'>
+            <div className='hidden small-notebooks:flex flex-col gap-4 pt-8
+            overflow-visible'>
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
               rounded-full cursor-pointer'>
                 <FacebookShareButton
@@ -133,14 +142,57 @@ export const PostDetail = ({ post }) => {
                     }
                   }
                 >
-                  <div onClick={ handleClickPopover }>
-                    <Image
-                      src={ copied ? GreenShareIcon : ShareIcon }
-                      alt='copy to clipboard'
-                      title='copy to clipboard'
-                      width={ 64 }
-                      height={ 64 }
-                    />
+                  <div className='overflow-visible'>
+                    <ClickAwayListener onClickAway={ handleTooltipClose }>
+                      <HtmlTooltip
+                        PopperProps={{
+                          disablePortal: true,
+                        }}
+                        placement='top-start'
+                        leaveTouchDelay={ 2000 }
+                        onClose={ handleTooltipClose }
+                        open={ open }
+                        disableFocusListener
+                        disableHoverListener
+                        disableTouchListener
+                        arrow
+                        title={
+                          <>
+                            <div className='flex justify-center items-center gap-3
+                            bg-gray-900 p-4 rounded-lg'>
+                              <div className='flex justify-center'>
+                                <Image
+                                  src={ YellowCheck }
+                                  width={ 15.7 }
+                                  height={ 12 }
+                                />
+                              </div>
+                              <Typography sx={{
+                                color: '#FFF',
+                                bgcolor: '#002049',
+                                fontWeight: 'light'
+                              }}>
+                                {
+                                  router.locale == 'en'
+                                  ? 'Copied to clipboard'
+                                  : 'Скопійовано в буфер обміну'
+                                }
+                              </Typography>
+                            </div>
+                          </>
+                        }
+                      >
+                        <div onClick={ handleTooltipOpen }>
+                          <Image
+                            src={ copied ? GreenShareIcon : ShareIcon }
+                            alt='copy to clipboard'
+                            title='copy to clipboard'
+                            width={ 64 }
+                            height={ 64 }
+                          />
+                        </div>
+                      </HtmlTooltip>
+                    </ClickAwayListener>                
                   </div>
                 </div>
               </div>
@@ -233,15 +285,56 @@ export const PostDetail = ({ post }) => {
                     }
                   }
                 >
-                  <div onClick={ handleClickPopover }>
-                    <Image
-                      src={ copied ? GreenShareIcon : ShareIcon }
-                      alt='copy to clipboard'
-                      title='copy to clipboard'
-                      width={ 64 }
-                      height={ 64 }
-                    />
-                  </div>
+                  <ClickAwayListener onClickAway={ handleTooltipClose }>
+                    <HtmlTooltip
+                      PopperProps={{
+                        disablePortal: true,
+                      }}
+                      placement='top-start'
+                      leaveTouchDelay={ 2000 }
+                      onClose={ handleTooltipClose }
+                      open={ open }
+                      disableFocusListener
+                      disableHoverListener
+                      disableTouchListener
+                      arrow
+                      title={
+                        <>
+                          <div className='flex justify-center items-center gap-3
+                          bg-gray-900 p-4 rounded-lg'>
+                            <div className='flex justify-center'>
+                              <Image
+                                src={ YellowCheck }
+                                width={ 15.7 }
+                                height={ 12 }
+                              />
+                            </div>
+                            <Typography sx={{
+                              color: '#FFF',
+                              bgcolor: '#002049',
+                              fontWeight: 'light'
+                            }}>
+                              {
+                                router.locale == 'en'
+                                ? 'Copied to clipboard'
+                                : 'Скопійовано в буфер обміну'
+                              }
+                            </Typography>
+                          </div>
+                        </>
+                      }
+                    >
+                      <div onClick={ handleTooltipOpen }>
+                        <Image
+                          src={ copied ? GreenShareIcon : ShareIcon }
+                          alt='copy to clipboard'
+                          title='copy to clipboard'
+                          width={ 64 }
+                          height={ 64 }
+                        />
+                      </div>
+                    </HtmlTooltip>
+                  </ClickAwayListener>
                 </div>
               </div>
             </div>
@@ -256,42 +349,6 @@ export const PostDetail = ({ post }) => {
         </div>
       </div>
     </section>
-
-    <Popover
-      id={ id }
-      open={ open }
-      anchorEl={ anchorEl }
-      onClose={ handleClose }
-      anchorOrigin={{
-        vertical: 'center',
-        horizontal: 'center',
-      }}
-      transformOrigin={{
-        vertical: 'center',
-        horizontal: 'center',
-      }}
-    >
-      <div className='flex justify-center items-center gap-3 bg-gray-900 p-4'>
-        <div className='flex justify-center'>
-          <Image
-            src={ YellowCheck }
-            width={ 15.7 }
-            height={ 12 }
-          />
-        </div>
-        <Typography sx={{
-          color: '#FFF',
-          bgcolor: '#002049',
-          fontWeight: 'light'
-        }}>
-          {
-            router.locale == 'en'
-            ? 'Copied to clipboard'
-            : 'Скопійовано в буфер обміну'
-          }
-        </Typography>
-      </div>
-    </Popover>
     </>
   )
 }
