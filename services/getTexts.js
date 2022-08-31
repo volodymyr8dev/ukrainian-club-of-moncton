@@ -18,8 +18,6 @@ export const getTexts = () => {
   
   if (loading) console.log('Fetching data...')
   if (error) console.log('error: ', error)
-
-  console.log(data)
   
   return { data, loading, error }
 }
