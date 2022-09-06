@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import Img1Desktop from './../../../assets/images/info/img-d-1.svg'
-import Img2Desktop from './../../../assets/images/info/img-d-2.svg'
-import Img3Desktop from './../../../assets/images/info/img-d-3.svg'
+import Img1Desktop from './../../../assets/images/info/img-d-1.webp'
+import Img2Desktop from './../../../assets/images/info/img-d-2.webp'
+import Img3Desktop from './../../../assets/images/info/img-d-3.webp'
 
-import Img1Mobile from './../../../assets/images/info/img-m-1.svg'
-import Img2Mobile from './../../../assets/images/info/img-m-2.svg'
-import Img3Mobile from './../../../assets/images/info/img-m-3.svg'
+import Img1Mobile from './../../../assets/images/info/img-m-1.webp'
+import Img2Mobile from './../../../assets/images/info/img-m-2.webp'
+import Img3Mobile from './../../../assets/images/info/img-m-3.webp'
 
 export const InfoFront = () => {
   return (

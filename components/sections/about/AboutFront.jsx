@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import Farm1Desktop from './../../../assets/images/farm/farm-d-01.svg'
-import Farm2Desktop from './../../../assets/images/farm/farm-d-02.svg'
-import Farm3Desktop from './../../../assets/images/farm/farm-d-03.svg'
+import Farm1Desktop from './../../../assets/images/about/farm-d-01.webp'
+import Farm2Desktop from './../../../assets/images/about/farm-d-02.webp'
+import Farm3Desktop from './../../../assets/images/about/farm-d-03.webp'
 
-import Farm1Mobile from './../../../assets/images/farm/farm-m-01.svg'
-import Farm2Mobile from './../../../assets/images/farm/farm-m-02.svg'
-import Farm3Mobile from './../../../assets/images/farm/farm-m-03.svg'
+import Farm1Mobile from './../../../assets/images/about/farm-m-01.webp'
+import Farm2Mobile from './../../../assets/images/about/farm-m-02.webp'
+import Farm3Mobile from './../../../assets/images/about/farm-m-03.webp'
 
 export const AboutFront = () => {
   return (

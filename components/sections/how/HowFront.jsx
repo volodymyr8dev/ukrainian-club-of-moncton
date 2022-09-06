@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import HowBg from '../../../assets/images/how-bg.svg'
-import HowBgMobile from '../../../assets/images/how-bg-mobile.svg'
+import HowBg from '../../../assets/images/how-bg.webp'
+import HowBgMobile from '../../../assets/images/how-bg-mobile.webp'
 
 export const HowFront = () => {
   return (
