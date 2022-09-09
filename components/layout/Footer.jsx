@@ -318,7 +318,7 @@ export const Footer = () => {
           pb-[39px]'>
             <div>
               <a
-                href=''
+                href={'https://vercel.com/?utm_source=ukrainian-club-of-moncton&utm_campaign=oss'}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -346,7 +346,7 @@ export const Footer = () => {
                 <Image
                   src={ BinaryFutureLogo }
                   width={ 115 }
-                  alt='Vercel'
+                  alt='Binary Future'
                 />
               </a>
             </div>
