@@ -28,7 +28,7 @@ They enabled us to have such a good final production result.
 - **Query language**: [GraphQL](https://graphql.org/)
 - **Content**: [Hygraph](https://hygraph.com/)
 - **Mailing**: [EmailJS](https://www.emailjs.com/)
-- **Deployment**: [Vercel](https://vercel.com/?utm_source=[ukrainian-club-of-moncton]&utm_campaign=oss)
+- **Deployment**: [Vercel](https://vercel.com/?utm_source=ukrainian-club-of-moncton&utm_campaign=oss)
 
 ---
 
