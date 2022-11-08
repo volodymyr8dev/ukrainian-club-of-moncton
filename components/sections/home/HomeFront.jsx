@@ -23,7 +23,7 @@ export const HomeFront = () => {
       w-full tablets:w-auto'>
         <div className='lg:max-w-[340px] max-w-full 2xl:max-w-[540px] flex
         flex-col gap-6 md:gap-8 lg:-mt-8 mt-12 tablets:-mt-[1.9rem]'>
-          <h2 className='font-proximaNova300 text-[34px] md:text-[50px]
+          <h2 className='font-proximaNova300 text-[34px] md:text-[35px] lg:text-[38px]
           leading-[40px] md:leading-[65px] first-letter:tracking-wide'>
             {
               locale === 'en'
@@ -31,8 +31,8 @@ export const HomeFront = () => {
               : data.ukrainianTexts[32].textContent
             }
             <br />
-            <span className='font-proximaNova500 text-blue-500 text-[43px] 
-            md:text-[62.81px]'>
+            <span className='font-proximaNova500 text-blue-500 text-[43px] md:text-[44px] lg:text-[48px]
+            '>
               {
                 locale === 'en'
                 ? data.englishTexts[33].textContent
@@ -40,8 +40,8 @@ export const HomeFront = () => {
               }
             </span>
             {' '}
-            <span className='font-proximaNova500 text-yellow-300 text-[43px] 
-            md:text-[62.81px]'>
+            <span className='font-proximaNova500 text-yellow-300 text-[43px] md:text-[44px] lg:text-[48px]
+           '>
               {
                 locale === 'en'
                 ? data.englishTexts[34].textContent
