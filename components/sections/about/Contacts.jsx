@@ -18,7 +18,6 @@ export const Contacts = () => {
   const [facebookActive, setFacebookActive] = useState(false)
   const [locationActive, setLocationActive] = useState(false)
   const [emailActive, setEmailActive] = useState(false)
-  console.log(data.englishTexts[90].textContent)
 
   if (loading) return <span></span>
   if (error) return <span></span>
