@@ -18,6 +18,8 @@ import ShareIcon from './../../assets/images/post/share.svg'
 import GreenShareIcon from './../../assets/images/post/green-share.svg'
 
 import YellowCheck from './../../assets/images/yellow-check.svg'
+import CopyIcon from './../../assets/images/slug/Vector.webp'
+import CopyActiveIcon from './../../assets/images/slug/Vector_active.webp'
 
 import { useRouter } from 'next/router'
 
@@ -180,13 +182,13 @@ export const PostDetail = ({ post }) => {
                           </>
                         }
                       >
-                        <div onClick={ handleTooltipOpen }>
+                        <div className="h-16 w-16 flex items-center justify-center" onClick={ handleTooltipOpen }>
                           <Image
-                            src={ copied ? GreenShareIcon : ShareIcon }
+                            src={ copied ? CopyActiveIcon : CopyIcon }
                             alt='copy to clipboard'
                             title='copy to clipboard'
-                            width={ 64 }
-                            height={ 64 }
+                            width={ 18.86 }
+                            height={ 24 }
                           />
                         </div>
                       </HtmlTooltip>
