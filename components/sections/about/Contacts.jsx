@@ -18,6 +18,7 @@ export const Contacts = () => {
   const [facebookActive, setFacebookActive] = useState(false)
   const [locationActive, setLocationActive] = useState(false)
   const [emailActive, setEmailActive] = useState(false)
+  console.log(data.englishTexts[90].textContent)
 
   if (loading) return <span></span>
   if (error) return <span></span>
@@ -53,7 +54,7 @@ export const Contacts = () => {
               src={ facebookActive ? FacebookActiveIcon : FacebookIcon }
               alt='facebook'
             />
-            <a href={"https://www.facebook.com/UkrClubMoncton/"}>
+            <a href={data.englishTexts[90].textContent}>
               <span className={`font-proximaNova500 text-base md:text-lg 
              
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
@@ -62,7 +63,7 @@ export const Contacts = () => {
                   ? data.englishTexts[3].textContent
                   : data.ukrainianTexts[3].textContent
                 } */}
-                {"https://www.facebook.com/UkrClubMoncton/"}
+                {data.englishTexts[90].textContent}
               </span>
             </a>
           </div>
