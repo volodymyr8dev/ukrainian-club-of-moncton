@@ -58,11 +58,6 @@ export const Contacts = () => {
               <span className={`font-proximaNova500 text-base md:text-lg 
              
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
-                {/* {
-                  locale === 'en'
-                  ? data.englishTexts[3].textContent
-                  : data.ukrainianTexts[3].textContent
-                } */}
                 {data.englishTexts[90].textContent}
               </span>
             </a>
