@@ -4,10 +4,10 @@ import { useRouter } from 'next/router'
 import emailjs from '@emailjs/browser'
 import useTranslation from 'next-translate/useTranslation'
 
-import ProfileIcon from './../../assets/images/form/profile.svg'
-import EmailIcon from './../../assets/images/form/email.svg'
-import PhoneIcon from './../../assets/images/form/phone.svg'
-import SendIcon from './../../assets/images/form/send.svg'
+import ProfileIcon from './../../assets/images/form/profile.webp'
+import EmailIcon from './../../assets/images/form/email.webp'
+import PhoneIcon from './../../assets/images/form/phone.webp'
+import SendIcon from './../../assets/images/form/send.webp'
 
 import { getTexts } from './../../services/getTexts.js'
 
@@ -149,6 +149,8 @@ export const ContactForm = () => {
                 <Image
                   src={ PhoneIcon }
                   alt='phone'
+                  width={16}
+                  height={24}
                 />
                 <input
                   className='text-base tablets:text-lg font-proximaNova300]

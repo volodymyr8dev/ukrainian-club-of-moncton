@@ -4,12 +4,12 @@ import Image from 'next/image'
 
 import { ContactForm } from '../../utils/ContactForm'
 
-import BluePhoneIcon from './../../../assets/images/contacts/blue-phone.svg'
-import BlueLocationIcon from './../../../assets/images/contacts/blue-location.svg'
-import BlueEmailIcon from './../../../assets/images/contacts/blue-email.svg'
-import WhitePhoneIcon from './../../../assets/images/contacts/white-phone.svg'
-import WhiteLocationIcon from './../../../assets/images/contacts/white-location.svg'
-import WhiteEmailIcon from './../../../assets/images/contacts/white-email.svg'
+import BluePhoneIcon from './../../../assets/images/contacts/blue-phone.webp'
+import BlueLocationIcon from './../../../assets/images/contacts/blue-location.webp' //
+import BlueEmailIcon from './../../../assets/images/contacts/blue-email.webp'      //
+import WhitePhoneIcon from './../../../assets/images/contacts/white-phone.webp'
+import WhiteLocationIcon from './../../../assets/images/contacts/white-location.webp'
+import WhiteEmailIcon from './../../../assets/images/contacts/white-email.webp'
 
 import { getTexts } from './../../../services/getTexts.js'
 
@@ -58,6 +58,8 @@ export const Contacts = () => {
             <Image
               src={ phoneActive ? WhitePhoneIcon : BluePhoneIcon }
               alt='phone'
+              width={21.33}
+              height={32}
             />
             <a href={`tel:${ data.englishTexts[7].textContent }`}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
@@ -81,6 +83,8 @@ export const Contacts = () => {
             <Image
               src={ locationActive ? WhiteLocationIcon : BlueLocationIcon }
               alt='location'
+              width={25.14}
+              height={32}
             />
             <a href={ data.englishTexts[6].textContent }>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
@@ -104,6 +108,8 @@ export const Contacts = () => {
             <Image
               src={ emailActive ? WhiteEmailIcon : BlueEmailIcon }
               alt='email'
+              width={32}
+              height={25.6}
             />
             <a href={`mailto:${ data.englishTexts[5].textContent }`}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
