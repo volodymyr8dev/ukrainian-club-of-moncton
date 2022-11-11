@@ -5,8 +5,8 @@ import { useRouter } from 'next/router'
 import { getTexts } from './../../../services/getTexts.js'
 
 export const ClubAbout = () => {
-  const { data, loading, error } = getTexts()
   const { locale } = useRouter()
+  const { data, loading, error } = getTexts(locale)
   
   if (loading) return <span></span>
   if (error) return <span></span>
@@ -16,11 +16,7 @@ export const ClubAbout = () => {
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
         <div className='md:pr-6'>
           <HeadingToggler
-            heading={
-              locale === 'en'
-              ? data.englishTexts[57].textContent
-              : data.ukrainianTexts[57].textContent
-            }
+            heading={data[57].textContent}
             togglerPrevClass='gallery-prev'
             togglerNextClass='gallery-next'
           />

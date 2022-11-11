@@ -6,8 +6,8 @@ import { getTexts } from './../../../services/getTexts.js'
 import { DonateButton } from '../../utils/DonateButton'
 
 export const Informative = () => {
-  const { data, loading, error } = getTexts()
   const { locale } = useRouter()
+  const { data, loading, error } = getTexts(locale)
 
   if (loading) return <span></span>
   if (error) return <span></span>
@@ -19,38 +19,22 @@ export const Informative = () => {
         <h2 className='text-4xl md:text-[56px] leading-[100%]
         tracking-wider uppercase text-center'>
           <span className='font-proximaNova300'>
-            {
-              locale === 'en'
-              ? data.englishTexts[19].textContent
-              : data.ukrainianTexts[19].textContent
-            }
+            { data[19].textContent}
           </span>
           {' '}
           <span className='font-proximaNova500'>
-            {
-              locale === 'en'
-              ? data.englishTexts[20].textContent
-              : data.ukrainianTexts[20].textContent
-            }
+            {data[20].textContent}
           </span>
           {' '}
           <span className='font-proximaNova500 text-blue-500'>
-            {
-              locale === 'en'
-              ? data.englishTexts[21].textContent
-              : data.ukrainianTexts[21].textContent
-            }
+            { data[21].textContent}
           </span>
         </h2>
 
         <div className='pt-12 md:pt-10'>
           <p className='w-full max-w-[1066px] text-center font-proximaNova300
           text-xl md:text-2xl leading-[30px] md:leading-9'>
-            {
-              locale === 'en'
-              ? data.englishTexts[15].textContent
-              : data.ukrainianTexts[15].textContent
-            }
+            {data[15].textContent}
           </p>
         </div>
 
@@ -65,11 +49,7 @@ export const Informative = () => {
             >
               <span className='font-proximaNova400 text-base md:text-lg leading-[18px]
               text-blue-500 uppercase flex gap-3 cursor-pointer'>
-                  {
-                    locale === 'en'
-                    ? data.englishTexts[22].textContent
-                    : data.ukrainianTexts[22].textContent
-                  }
+                  { data[22].textContent}
                 <img
                   src='/blue-right-arrow.svg'
                   alt='arrow to the right'

@@ -7,8 +7,8 @@ import DividerLine from './../../../assets/images/divider-line.svg'
 import DividerLineMobile from './../../../assets/images/divider-line-mobile.svg'
 
 export const Data = () => {
-  const { data, loading, error } = getTexts()
   const { locale } = useRouter()
+  const { data, loading, error } = getTexts(locale)
 
   if (loading) return <span></span>
   if (error) return <span></span>
@@ -29,11 +29,7 @@ export const Data = () => {
             </span>
             <span className='font-proximaNova200 text-xl lg:text-2xl leading-[36px]
             max-w-[152px] text-center md:text-left'>
-              {
-                locale === 'en'
-                ? data.englishTexts[16].textContent
-                : data.ukrainianTexts[16].textContent
-              }
+              {data[16].textContent}
             </span>
           </div>
         </div>
@@ -59,11 +55,7 @@ export const Data = () => {
             </span>
             <span className='font-proximaNova200 text-xl lg:text-2xl leading-[36px]
             max-w-[152px] text-center md:text-left'>
-              {
-                locale === 'en'
-                ? data.englishTexts[23].textContent
-                : data.ukrainianTexts[23].textContent
-              }
+              {data[23].textContent}
             </span>
           </div>
         </div>
@@ -89,11 +81,7 @@ export const Data = () => {
             </span>
             <span className='font-proximaNova200 text-xl lg:text-2xl leading-[36px]
             max-w-[152px] text-center md:text-left'>
-              {
-                locale === 'en'
-                ? data.englishTexts[17].textContent
-                : data.ukrainianTexts[17].textContent
-              }
+              {data[17].textContent}
             </span>
           </div>
         </div>
@@ -106,11 +94,7 @@ export const Data = () => {
       w-full py-6 items-center gap-10 md:gap-0'>
         <h6 className='font-proximaNova400 text-[32px] md:text-5xl text-left
         leading-[48px] tracking-wider uppercase'>
-          {
-            locale === 'en'
-            ? data.englishTexts[18].textContent
-            : data.ukrainianTexts[18].textContent
-          }
+          {data[18].textContent}
         </h6>
       </div>
     </section>

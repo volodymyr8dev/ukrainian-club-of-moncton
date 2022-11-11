@@ -16,13 +16,12 @@ import FacebookIcon from './../../assets/images/footer/facebook.svg'
 import InstagramIcon from './../../assets/images/footer/instagram.svg'
 
 export const Footer = () => {
-  const { t } = useTranslation('common')
-  const { data, loading, error } = getTexts()
-  const { locale } = useRouter()
+  const { t } = useTranslation("common");
+  const { data, loading, error } = getTexts();
+  const { locale } = useRouter();
 
-  if (loading) return <span></span>
-  if (error) return <span></span>
-
+  if (loading) return <span></span>;
+  if (error) return <span></span>;
   return (
     <>
     <footer                                      
