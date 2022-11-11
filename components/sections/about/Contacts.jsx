@@ -4,10 +4,12 @@ import Image from 'next/image'
 
 import { ContactForm } from '../../utils/ContactForm'
 
-import BlueEmailIcon from './../../../assets/images/contacts/blue-email.svg'
-import WhiteEmailIcon from './../../../assets/images/contacts/white-email.svg'
-import FacebookIcon from './../../../assets/images/post/facebook.svg'
-import FacebookActiveIcon from './../../../assets/images/post/facebook-active.svg'
+import BluePhoneIcon from './../../../assets/images/contacts/blue-phone.webp'
+import BlueLocationIcon from './../../../assets/images/contacts/blue-location.webp' //
+import BlueEmailIcon from './../../../assets/images/contacts/blue-email.webp'      //
+import WhitePhoneIcon from './../../../assets/images/contacts/white-phone.webp'
+import WhiteLocationIcon from './../../../assets/images/contacts/white-location.webp'
+import WhiteEmailIcon from './../../../assets/images/contacts/white-email.webp'
 
 import { getTexts } from './../../../services/getTexts.js'
 
@@ -50,14 +52,45 @@ export const Contacts = () => {
           onClick={ toggleFacebookStyle }
           >
             <Image
-              src={ facebookActive ? FacebookActiveIcon : FacebookIcon }
-              alt='facebook'
+              src={ phoneActive ? WhitePhoneIcon : BluePhoneIcon }
+              alt='phone'
+              width={21.33}
+              height={32}
             />
-            <a href={data.englishTexts[90].textContent}>
-              <span className={`font-proximaNova500 text-base md:text-lg 
-             
-              ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
-                {data.englishTexts[90].textContent}
+            <a href={`tel:${ data.englishTexts[7].textContent }`}>
+              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
+              max-w-[205px] inline-block
+              ${ phoneActive ? 'text-gray-100' : 'text-blue-500'}`}>
+                {
+                  locale === 'en'
+                  ? data.englishTexts[3].textContent
+                  : data.ukrainianTexts[3].textContent
+                }
+              </span>
+            </a>
+          </div>
+
+          <div className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
+          flex items-center justify-center w-full gap-9 py-[25px] cursor-pointer
+          transition-all
+          ${ locationActive ? 'bg-blue-500' : 'bg-gray-100' }`}
+          onClick={ toggleLocationStyle }
+          >
+            <Image
+              src={ locationActive ? WhiteLocationIcon : BlueLocationIcon }
+              alt='location'
+              width={25.14}
+              height={32}
+            />
+            <a href={ data.englishTexts[6].textContent }>
+              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
+              max-w-[205px] inline-block
+              ${ locationActive ? 'text-gray-100' : 'text-blue-500'}`}>
+                {
+                  locale === 'en'
+                  ? data.englishTexts[4].textContent
+                  : data.ukrainianTexts[4].textContent
+                }
               </span>
             </a>
           </div>
@@ -71,6 +104,8 @@ export const Contacts = () => {
             <Image
               src={ emailActive ? WhiteEmailIcon : BlueEmailIcon }
               alt='email'
+              width={32}
+              height={25.6}
             />
             <a href={`mailto:${ data.englishTexts[5].textContent }`}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
