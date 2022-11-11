@@ -34,8 +34,8 @@ function PostPage({
   hasPreviousPage,
   posts,
 }) {
-  const { data, loading, error } = getTexts()
   const router = useRouter()
+  const { data, loading, error } = getTexts(router.locale)
   
   if (loading) return <span></span>
   if (error) return <span></span>
@@ -46,11 +46,7 @@ function PostPage({
       <title>Info - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content={
-          router.locale === 'en'
-          ? data.englishTexts[81].textContent
-          : data.ukrainianTexts[81].textContent
-        }
+        content={data[81].textContent}
       />
 
       <link
@@ -84,11 +80,7 @@ function PostPage({
                         max-w-[130px] md:max-w-full`}
                         type='button'
                       >
-                        {
-                          router.locale === 'en'
-                          ? data.englishTexts[30].textContent
-                          : data.ukrainianTexts[30].textContent
-                        }
+                        { data[30].textContent}
                       </button>
                     </Link>
                   </div>
@@ -102,11 +94,7 @@ function PostPage({
                       max-w-[130px] md:max-w-full`}
                       type='button'
                     >
-                      {
-                        router.locale === 'en'
-                        ? data.englishTexts[31].textContent
-                        : data.ukrainianTexts[31].textContent
-                      }
+                      {data[31].textContent}
                     </button>
                   </div>
                 </div>

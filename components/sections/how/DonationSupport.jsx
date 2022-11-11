@@ -5,8 +5,8 @@ import { GreenDonationGrid } from '../../utils/GreenDonationGrid'
 import { YellowDonationGrid } from '../../utils/YellowDonationGrid'
 
 export const DonationSupport = () => {
-  const { data, loading, error } = getTexts()
   const { locale } = useRouter()
+  const { data, loading, error } = getTexts(locale)
 
   if (loading) return <span></span>
   if (error) return <span></span>
@@ -16,31 +16,19 @@ export const DonationSupport = () => {
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
         <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
         tracking-wider uppercase text-center'>
-          {       
-            locale === 'en'
-            ? data.englishTexts[69].textContent
-            : data.ukrainianTexts[69].textContent
-          }
+          {data[69].textContent}
         </h2>
         <BlueDonationGrid />
 
         <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
         tracking-wider uppercase text-center pt-24'>
-          {       
-            locale === 'en'
-            ? data.englishTexts[70].textContent
-            : data.ukrainianTexts[70].textContent
-          }
+          {data[70].textContent}
         </h2>
         <YellowDonationGrid />
 
         <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
         tracking-wider uppercase text-center pt-24'>
-          {       
-            locale === 'en'
-            ? data.englishTexts[71].textContent
-            : data.ukrainianTexts[71].textContent
-          }
+          {data[71].textContent}
         </h2>
         <GreenDonationGrid />
       </div>

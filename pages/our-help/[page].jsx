@@ -30,7 +30,7 @@ function OurHelp({
   posts,
 }) {
   const router = useRouter()
-  const { data, loading, error } = getTexts()
+  const { data, loading, error } = getTexts(router.locale)
 
   if (loading) return <span></span>
   if (error) return <span></span>
@@ -41,11 +41,7 @@ function OurHelp({
       <title>Our help - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content={
-          router.locale === 'en'
-          ? data.englishTexts[83].textContent
-          : data.ukrainianTexts[83].textContent
-        }
+        content={ data[83].textContent }
       />
 
       <link

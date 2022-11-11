@@ -3075,10 +3075,17 @@
   dependencies:
     "jsonp" "^0.2.1"
 
+<<<<<<< HEAD
 "next-translate@^1.5.0":
   "integrity" "sha512-6amnuJWw22XbaM2DVhsYaOXelFLjTbMqTgqvB+h9VfE/H2aQ/edfT06ONQLQbsVV/I7Hn+93LTaV1/qOo6Kf9A=="
   "resolved" "https://registry.npmjs.org/next-translate/-/next-translate-1.5.0.tgz"
   "version" "1.5.0"
+=======
+"next-translate@^1.6.0":
+  "integrity" "sha512-rmRBYOwPHvokN+5uH3O/SZqfRUVORLkgt/097mSaq3+CWcEtXEjkVrfBZpYwZ8W3og4QVd+uphYX//qegnIbRg=="
+  "resolved" "https://registry.npmjs.org/next-translate/-/next-translate-1.6.0.tgz"
+  "version" "1.6.0"
+>>>>>>> 7f7d439 (change functionality in custom hook andremove all conditions)
 
 "next@^10.0.8 || ^11.0 || ^12.0", "next@>= 10.0.0", "next@>= 6.0.0", "next@12.2.2":
   "integrity" "sha512-zAYFY45aBry/PlKONqtlloRFqU/We3zWYdn2NoGvDZkoYUYQSJC8WMcalS5C19MxbCZLUVCX7D7a6gTGgl2yLg=="

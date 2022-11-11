@@ -5,8 +5,8 @@ import { getTexts } from './../../../services/getTexts.js'
 import { DonateButton } from './../../utils/DonateButton'
 
 export const BottomCTA = () => {
-  const { data, loading, error } = getTexts()
   const { locale } = useRouter()
+  const { data, loading, error } = getTexts(locale)
 
   if (loading) return <span></span>
   if (error) return <span></span>
@@ -28,11 +28,7 @@ export const BottomCTA = () => {
                 href='/how'
               >
                 <span className='text-blue-500'>
-                  {      
-                    locale === 'en'
-                    ? data.englishTexts[63].textContent
-                    : data.ukrainianTexts[63].textContent
-                  }
+                  {data[63].textContent}
                 </span>
               </Link>
             </div>
