@@ -5,11 +5,13 @@ import Image from 'next/image'
 import moment from 'moment'
 import {useRouter} from 'next/router'
 import {gql} from '@apollo/client'
-
+import {useState} from 'react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/grid'
 import 'swiper/css/autoplay'
+
+import FsLightbox from 'fslightbox-react';
 
 import {hygraph} from '../../../services'
 
@@ -38,6 +40,9 @@ function PostPage({
   const router = useRouter()
   const { data, loading, error } = getTexts()
   
+  const [toggler, setToggler] = useState(false);
+  
+
   if (loading) return <span></span>
   if (error) return <span></span>
 
@@ -120,8 +125,11 @@ function PostPage({
                     <MobileSwiperDisplay
                       posts={ posts }
                     />
-
-                  <div className='justify-start gap-2 xl:gap-8 max-w-full
+              <FsLightbox
+                toggler={ toggler }
+                sources={ posts.map((post)=>post.node.featuredImage.url)}
+              />
+                  <div   className='justify-start gap-2 xl:gap-8 max-w-full
                   w-full pt-10 hidden md:grid grid-cols-3'>
                   {
                     posts.map((post, i) => {
@@ -131,7 +139,7 @@ function PostPage({
                         w-full max-h-full h-full
                         overflow-hidden bg-gray-100 rounded-3xl mt-6
                         hidden md:flex flex-col justify-start'>
-                        <div className='w-full flex flex-col'>
+                        <div onClick={() => setToggler(!toggler)} className='w-full flex flex-col'>
                           <img
                             className='w-full min-h-[200px] max-h-[200px]
                             md:min-h-[256px] md:max-h-[256px] object-cover'
