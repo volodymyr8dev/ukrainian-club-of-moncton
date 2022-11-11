@@ -41,6 +41,7 @@ function PostPage({
   if (loading) return <span></span>
   if (error) return <span></span>
 
+  console.log('posts',posts.length)
   return (
     <>
     <Head>
@@ -212,7 +213,8 @@ function PostPage({
                   }
                   </div>
                   </div>
-                  
+                  {
+                    posts.length > 6 &&
                   <div className='flex justify-center w-full mt-1 md:mt-16
                   z-50'>
                     <div className='flex gap-7 border border-gray-500
@@ -269,7 +271,9 @@ function PostPage({
                       }
                     </div>
                   </div>
+              }
                 </div>
+
             </section>
         </div>
       </div>
