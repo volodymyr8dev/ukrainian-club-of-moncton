@@ -17,19 +17,15 @@ export const Contacts = () => {
   const { locale } = useRouter()
   const { data, loading, error } = getTexts()
   
-  const [phoneActive, setPhoneActive] = useState(false)
+  const [facebookActive, setFacebookActive] = useState(false)
   const [locationActive, setLocationActive] = useState(false)
   const [emailActive, setEmailActive] = useState(false)
 
   if (loading) return <span></span>
   if (error) return <span></span>
 
-  const togglePhoneStyle = () => {
-    setPhoneActive(!phoneActive)
-  }
-
-  const toggleLocationStyle = () => {
-    setLocationActive(!locationActive)
+  const toggleFacebookStyle = () => {
+    setFacebookActive(!facebookActive)
   }
 
   const toggleEmailStyle = () => {
@@ -48,12 +44,12 @@ export const Contacts = () => {
           }
         </h2>
         <div className='flex gap-10 justify-between w-full pt-11 mb-[72px] md:mb-10
-        flex-col tablets:flex-row'>
+        flex-col lg:flex-row'>
           <div className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
-          flex items-center justify-center w-full gap-9 py-[25px] cursor-pointer
+          flex items-center justify-center w-full gap-2 py-[9px] cursor-pointer
           transition-all
-          ${ phoneActive ? 'bg-blue-500' : 'bg-gray-100' }`}
-          onClick={ togglePhoneStyle }
+          ${ facebookActive ? 'bg-blue-500' : 'bg-gray-100' }`}
+          onClick={ toggleFacebookStyle }
           >
             <Image
               src={ phoneActive ? WhitePhoneIcon : BluePhoneIcon }
