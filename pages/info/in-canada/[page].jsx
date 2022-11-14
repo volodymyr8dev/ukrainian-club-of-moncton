@@ -216,6 +216,7 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
               
                   </div> 
                 </div>
+                </section>
                 { posts.length > 6 &&
                 <div
                   className="flex justify-center w-full mt-1 md:mt-16
@@ -258,7 +259,6 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                 </div>
                 }
               </div>
-            </section>
           </div>
         </div>
       </main>
