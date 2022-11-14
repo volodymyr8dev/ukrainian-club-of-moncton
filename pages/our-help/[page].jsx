@@ -34,7 +34,7 @@ function OurHelp({
 
   if (loading) return <span></span>
   if (error) return <span></span>
-
+console.log('texts',data)
   return (
     <>
     <Head>

@@ -25,7 +25,7 @@ export const Data = () => {
             <span className='font-proximaNova500 text-3xl md:text-5xl
             lg:text-[56px] leading-[56px] tracking-wider text-blue-500
             md:text-gray-900'>
-             {data[90].textContent}
+             {data[92].textContent}
             </span>
             <span className='font-proximaNova200 text-xl lg:text-2xl leading-[36px]
             max-w-[152px] text-center md:text-left'>
@@ -51,7 +51,7 @@ export const Data = () => {
             <span className='font-proximaNova500 text-3xl md:text-5xl
             lg:text-[56px] leading-[56px] tracking-wider text-blue-500
             md:text-gray-900'>
-              {data[91].textContent}
+              {data[93].textContent}
             </span>
             <span className='font-proximaNova200 text-xl lg:text-2xl leading-[36px]
             max-w-[152px] text-center md:text-left'>
@@ -77,7 +77,7 @@ export const Data = () => {
             <span className='font-proximaNova500 text-3xl md:text-5xl
             lg:text-[56px] leading-[56px] tracking-wider text-blue-500
             md:text-gray-900'>
-              {data[89].textContent}
+              {data[91].textContent}
             </span>
             <span className='font-proximaNova200 text-xl lg:text-2xl leading-[36px]
             max-w-[152px] text-center md:text-left'>
