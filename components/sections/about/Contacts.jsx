@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 import { ContactForm } from '../../utils/ContactForm'
 
-import BlueEmailIcon from './../../../assets/images/contacts/blue-email.svg'
-import WhiteEmailIcon from './../../../assets/images/contacts/white-email.svg'
+import BlueEmailIcon from './../../../assets/images/contacts/blue-email.webp'
+import WhiteEmailIcon from './../../../assets/images/contacts/white-email.webp'
 import FacebookIcon from './../../../assets/images/post/facebook.svg'
 import FacebookActiveIcon from './../../../assets/images/post/facebook-active.svg'
 
@@ -52,6 +52,8 @@ export const Contacts = () => {
             <Image
               src={ facebookActive ? FacebookActiveIcon : FacebookIcon }
               alt='facebook'
+              width={21.33}
+              height={32}
             />
             <a href={data.englishTexts[90].textContent}>
               <span className={`font-proximaNova500 text-base md:text-lg 
@@ -71,6 +73,8 @@ export const Contacts = () => {
             <Image
               src={ emailActive ? WhiteEmailIcon : BlueEmailIcon }
               alt='email'
+              width={32}
+              height={25.6}
             />
             <a href={`mailto:${ data.englishTexts[5].textContent }`}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
