@@ -51,11 +51,11 @@ export const Contacts = () => {
               src={ facebookActive ? FacebookActiveIcon : FacebookIcon }
               alt='facebook'
             />
-            <a href={data[92].textContent}>
+            <a href={data[90].textContent}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
               max-w-[205px] 
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
-                {data[92].textContent}
+                {data[90].textContent}
               </span>
             </a>
           </div>
