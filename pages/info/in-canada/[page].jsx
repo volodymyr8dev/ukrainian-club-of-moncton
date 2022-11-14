@@ -34,7 +34,6 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
   const { locale } = useRouter();
 
   const { data, loading, error } = getTexts(locale);
-  console.log(data);
   if (loading) return <span></span>;
   if (error) return <span></span>;
 
@@ -213,7 +212,8 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                     })}
                   </div>
                 </div>
-
+                {
+                    posts.length > 6 &&
                 <div
                   className="flex justify-center w-full mt-1 md:mt-16
                   z-50"
@@ -253,6 +253,7 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                     )}
                   </div>
                 </div>
+                }
               </div>
             </section>
           </div>
