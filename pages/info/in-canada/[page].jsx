@@ -212,6 +212,8 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                         </div>
                       );
                     })}
+                  </div>
+              
                   </div> 
                 </div>
                 { posts.length > 6 &&
