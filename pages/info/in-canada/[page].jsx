@@ -12,6 +12,9 @@ import "swiper/css/grid";
 import "swiper/css/autoplay";
 
 import { hygraph } from "../../../services";
+import FsLightbox from 'fslightbox-react';
+
+import {hygraph} from '../../../services'
 
 import { InfoFront } from "../../../components/sections/info/InfoFront";
 import { Informative } from "../../../components/sections/info/Informative";
@@ -212,8 +215,7 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                     })}
                   </div>
                 </div>
-                {
-                    posts.length > 6 &&
+                { posts.length > 6 &&
                 <div
                   className="flex justify-center w-full mt-1 md:mt-16
                   z-50"
