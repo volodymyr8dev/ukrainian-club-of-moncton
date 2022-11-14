@@ -59,28 +59,6 @@ export const Contacts = () => {
               </span>
             </a>
           </div>
-
-          {/* <div className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
-          flex items-center justify-center w-full gap-9 py-[25px] cursor-pointer
-          transition-all
-          ${ locationActive ? 'bg-blue-500' : 'bg-gray-100' }`}
-          onClick={ toggleLocationStyle }
-          >
-            <Image
-              src={ locationActive ? WhiteLocationIcon : BlueLocationIcon }
-              alt='location'
-              width={25.14}
-              height={32}
-            />
-            <a href={ data[6].textContent }>
-              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
-              max-w-[205px] inline-block
-              ${ locationActive ? 'text-gray-100' : 'text-blue-500'}`}>
-                {data[4].textContent}
-              </span>
-            </a>
-          </div> */}
-
           <div className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
           flex items-center justify-center w-full gap-9 py-[25px] cursor-pointer
           transition-all
