@@ -39,7 +39,6 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
   if (loading) return <span></span>;
   if (error) return <span></span>;
 
-  console.log('posts',posts.length)
   return (
     <>
       <Head>
