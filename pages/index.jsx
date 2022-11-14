@@ -23,18 +23,21 @@ export default function Home() {
         <title>Home - Ukrainian Club of Moncton</title>
         <meta name="description" content={data[80].textContent} />
 
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main id="main" className="relativee">
-        <HomeFront />
-        <ClubQuestions />
-        <UpcomingEvents />
-        <ClubAbout />
-        <Quote />
-        <BottomCTA />
-      </main>
-      <ThankYouModal />
+      <link
+        rel="icon"
+        href="/favicon.ico"
+      />
+    </Head>
+    
+      
+    <main id='main' className='relativee'>
+      <HomeFront />
+      <UpcomingEvents />
+      <ClubAbout />
+      <Quote />
+      <BottomCTA />
+    </main>
+    <ThankYouModal />
     </>
   );
 }
