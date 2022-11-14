@@ -14,7 +14,6 @@ import "swiper/css/autoplay";
 import { hygraph } from "../../../services";
 import FsLightbox from 'fslightbox-react';
 
-import {hygraph} from '../../../services'
 
 import { InfoFront } from "../../../components/sections/info/InfoFront";
 import { Informative } from "../../../components/sections/info/Informative";
@@ -213,7 +212,7 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                         </div>
                       );
                     })}
-                  </div>
+                  </div> 
                 </div>
                 { posts.length > 6 &&
                 <div
