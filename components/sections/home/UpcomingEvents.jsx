@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import moment from 'moment'
-
+import {useState} from 'react'
 import { useRouter } from 'next/router'
 import { getTexts } from './../../../services/getTexts.js'
 
@@ -14,6 +14,9 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/grid'
 import 'swiper/css/autoplay'
+
+import FsLightbox from 'fslightbox-react';
+
 
 import locationImage from './../../../assets/images/card-location.svg'
 
@@ -53,6 +56,9 @@ const GET_MOST_RECENT_POSTS_QUERY = gql`
 export const UpcomingEvents = () => {
   const { locale } = useRouter()
   const { loading, error, data } = useQuery(GET_MOST_RECENT_POSTS_QUERY)
+
+  const [toggler, setToggler] = useState(false);
+
 
   const { data: dataT, loading: loadingT, error: errorT } = getTexts()
 
@@ -106,6 +112,10 @@ export const UpcomingEvents = () => {
               }}
               modules={[ Navigation, Pagination ]}
             >
+                <FsLightbox
+                toggler={ toggler }
+                sources={ data.posts.map((post)=>post.featuredImage.url)}
+              />
             { data.posts.map(post => ( 
               <SwiperSlide
                 key={ post.title }
@@ -115,7 +125,7 @@ export const UpcomingEvents = () => {
                 w-full max-h-full h-full
                 overflow-hidden bg-gray-100 rounded-3xl mt-6
                 flex flex-col justify-start'>
-                  <div className='w-full flex flex-col'>
+                  <div onClick={()=>{setToggler(true)}} className='w-full flex flex-col'>
                     <img
                       className='w-full min-h-[200px] md:min-h-[256px]
                       object-cover max-h-[200px] md:max-h-[256px]'
