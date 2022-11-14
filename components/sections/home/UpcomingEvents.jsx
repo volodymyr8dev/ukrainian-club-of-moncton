@@ -4,12 +4,7 @@ import moment from 'moment'
 import {useState} from 'react'
 import { useRouter } from 'next/router'
 import { getTexts } from './../../../services/getTexts.js'
-import Image from "next/image";
-import Link from "next/link";
-import moment from "moment";
 
-import { useRouter } from "next/router";
-import { getTexts } from "./../../../services/getTexts.js";
 
 import { gql, useQuery } from "@apollo/client";
 import { Swiper, SwiperSlide } from "swiper/react";
