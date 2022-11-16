@@ -16,7 +16,7 @@ export const ClubAbout = () => {
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
         <div className='md:pr-6'>
           <HeadingToggler
-            heading={data[57].textContent}
+            heading={data["home-about-club"]}
             togglerPrevClass='gallery-prev'
             togglerNextClass='gallery-next'
           />

@@ -5,10 +5,12 @@ const GET_TEXTS_QUERY = gql`
     englishTexts: texts(first: 1000, locales: en) {
       name
       textContent
+      slug
     }
     ukrainianTexts: texts(first: 1000, locales: uk_UA) {
       name
       textContent
+      slug
     }
   }
 `;
@@ -17,6 +19,7 @@ const GET_TEXTS_EN = gql`
     englishTexts: texts(first: 1000, locales: en) {
       name
       textContent
+      slug
     }
   }
 `;
@@ -26,6 +29,7 @@ const GET_TEXTS_UA = gql`
     ukrainianTexts: texts(first: 1000, locales: uk_UA) {
       name
       textContent
+      slug
     }
   }
 `;
@@ -48,5 +52,8 @@ export const getTexts = (lang) => {
     lang == "en" ? data = data?.englishTexts : data = data?.ukrainianTexts;
   } 
 
+if(data){
+  data = (Array.isArray(data) ? data : (lang == "en"? data.englishTexts:data.ukrainianTexts)).reduce((a,c) => (a[c.slug] = c.textContent, a), {});
+}
   return {data, loading, error}
 };

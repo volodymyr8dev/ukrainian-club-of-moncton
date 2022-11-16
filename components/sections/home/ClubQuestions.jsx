@@ -22,7 +22,7 @@ export const ClubQuestions = () => {
         leading-[54px] xl:leading-10 tracking-wider pb-0 md:pb-11 xl:pb-36 text-left
         xl:text-center"
           >
-            {data[43].textContent}
+            {data["home-assosiation"]}
           </h2>
           <div
             className="flex flex-col-reverse md:flex-row items-center
@@ -33,30 +33,30 @@ export const ClubQuestions = () => {
                 className="font-proximaNova400 text-[26px] md:text-4xl
             uppercase"
               >
-                {data[44].textContent}{" "}
+                {data["home-are-you"]}{" "}
                 <span className="text-blue-500">
-                  {data[45].textContent}
+                  {data["home-going-to"]}
                 </span>
-                {data[46].textContent}
+                {data["home-canada-question"]}
               </strong>
               <ul className="pl-2 md:pl-4 pt-6 md:pt-10">
                 <li
                   className="list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9"
                 >
-                  {data[47].textContent}
+                  {data["home-immigration"]}
                 </li>
                 <li
                   className="list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9"
                 >
-                  {data[48].textContent}
+                  {data["home-visa"]}
                 </li>
                 <li
                   className="list-disc list-inside font-proximaNova300 text-xl
               md:text-2xl leading-9"
                 >
-                  {data[49].textContent}
+                  {data["home-transfer-airport"]}
                 </li>
               </ul>
             </div>
@@ -88,34 +88,34 @@ export const ClubQuestions = () => {
             uppercase"
               >
                 <span className="text-yellow-300">
-                  {data[50].textContent}
+                  {data["home-already"]}
                 </span>
-                {data[51].textContent}
+                {data["home-in-canada"]}
               </strong>
               <ul className="pl-2 md:pl-4 pt-6 md:pt-10">
                 <li
                   className="list-disc list-inside font-proximaNova300 text-xl
                   md:text-2xl leading-9"
                 >
-                  {data[52].textContent}
+                  {data["home-first-step"]}
                 </li>
                 <li
                   className="list-disc list-inside font-proximaNova300 text-xl
                   md:text-2xl leading-9"
                 >
-                  {data[53].textContent}
+                  {data["home-sin"]}
                 </li>
                 <li
                   className="list-disc list-inside font-proximaNova300 text-xl
                   md:text-2xl leading-9"
                   >
-                  {data[55].textContent}
+                  {data["home-medicare"]}
                 </li>
                 <li
                   className="list-disc list-inside font-proximaNova300 text-xl
                   md:text-2xl leading-9"
                   >
-                  {data[54].textContent}
+                  {data["home-ancillary"]}
                 </li>
               </ul>
             </div>

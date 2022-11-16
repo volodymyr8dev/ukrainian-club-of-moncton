@@ -43,7 +43,8 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
     <>
       <Head>
         <title>Info - Ukrainian Club of Moncton</title>
-        <meta name="description" content={data[81].textContent} />
+                      {/* equal data */}
+        <meta name="description" content={data["how-tag-seo"]} />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -76,7 +77,7 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                       max-w-[130px] md:max-w-full`}
                       type="button"
                     >
-                      {data[30].textContent}
+                      {data["info-already"]}
                     </button>
                   </div>
 
@@ -91,7 +92,7 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                         max-w-[130px] md:max-w-full`}
                         type="button"
                       >
-                        {data[31].textContent}
+                        {data["info-going-to"]}
                       </button>
                     </Link>
                   </div>

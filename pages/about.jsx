@@ -8,7 +8,8 @@ import { getTexts } from './../services/getTexts.js'
 
 export default function About() {
   const router = useRouter()
-  const { data, loading, error } = getTexts()
+  
+  const { data, loading, error } = getTexts(router.locale)
 
   if (loading) return <span></span>
   if (error) return <span></span>
@@ -19,11 +20,7 @@ export default function About() {
       <title>About - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content={
-          router.locale === 'en'
-          ? data.englishTexts[85].textContent
-          : data.ukrainianTexts[85].textContent
-        }
+        content={data["about-description-seo"]}
       />
 
       <link

@@ -16,19 +16,19 @@ export const DonationSupport = () => {
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
         <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
         tracking-wider uppercase text-center'>
-          {data[69].textContent}
+          {data["donation-support-blue"]}
         </h2>
         <BlueDonationGrid />
 
         <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
         tracking-wider uppercase text-center pt-24'>
-          {data[70].textContent}
+          {data["donation-support-yellow"]}
         </h2>
         <YellowDonationGrid />
 
         <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
         tracking-wider uppercase text-center pt-24'>
-          {data[71].textContent}
+          {data["donation-support"]}
         </h2>
         <GreenDonationGrid />
       </div>

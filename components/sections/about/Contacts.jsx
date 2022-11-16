@@ -15,10 +15,9 @@ import { getTexts } from './../../../services/getTexts.js'
 export const Contacts = () => {
   const { locale } = useRouter()
   const { data, loading, error } = getTexts(locale)
-  console.log("data", data);
+  console.log("datsa", data);
   
   const [facebookActive, setFacebookActive] = useState(false)
-  const [locationActive, setLocationActive] = useState(false)
   const [emailActive, setEmailActive] = useState(false)
 
   if (loading) return <span></span>
@@ -37,7 +36,7 @@ export const Contacts = () => {
       <div className='flex justify-between flex-col max-w-[1216px] w-full'>
         <h2 className='font-proximaNova400 text-[40px] leading-[100%]
         tracking-wider uppercase text-center'>
-          {data[2].textContent}
+          {data['about-our-contacts']}
         </h2>
         <div className='flex gap-10 justify-between w-full pt-11 mb-[72px] md:mb-10
         flex-col lg:flex-row'>
@@ -51,11 +50,11 @@ export const Contacts = () => {
               src={ facebookActive ? FacebookActiveIcon : FacebookIcon }
               alt='facebook'
             />
-            <a href={data[90].textContent}>
+            <a href={data["facebook-navigation"]}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
               max-w-[205px] 
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
-                {data[90].textContent}
+                  {data['facebook-navigation']}
               </span>
             </a>
           </div>
@@ -71,12 +70,12 @@ export const Contacts = () => {
               width={32}
               height={25.6}
             />
-            <a href={`mailto:${ data[5].textContent }`}>
+            <a href={`mailto:${ data["about-email-box"] }`}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
               max-w-[205px] inline-block
               ${ emailActive ? 'text-gray-100' : 'text-blue-500'}`}>
             
-                {data[5].textContent}
+                {data["about-email-box"]}
               </span>
             </a>
           </div>

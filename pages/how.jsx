@@ -19,7 +19,7 @@ export default function How() {
       <title>How can I help? - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content={data[84].textContent}
+        content={data["how-tag-seo"]}
       />
 
       <link

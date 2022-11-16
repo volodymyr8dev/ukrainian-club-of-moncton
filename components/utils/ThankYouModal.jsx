@@ -9,9 +9,8 @@ import { getTexts } from './../../services/getTexts.js'
 
 export const ThankYouModal = () => {
   const router = useRouter()
-  const { data, loading, error } = getTexts()
+  const { data, loading, error } = getTexts(router.locale)
   const [open, setOpen] = useState(useNextQueryParam('ty') || false)
-
   const handleClose = () => setOpen(false)
 
   let ty = router.query['ty']
@@ -60,24 +59,24 @@ export const ThankYouModal = () => {
             uppercase text-center ${ ty === '0' ? 'text-red-500' : 'text-gray-900' }`}>
               {
                 ty === '0'
-                ? data.englishTexts[73].textContent
-                : data.englishTexts[72].textContent
+                ? data["paypal-oh"]
+                : data["paypal-thank"]
               }
             </h6>
             <span className='font-proximaNova200 text-xl md:text-2xl leading-9
             text-gray-900 text-center pt-4 md:pt-6'>
               {
                 ty === '0'
-                ? data.englishTexts[75].textContent
-                : data.englishTexts[74].textContent
+                ? data["paypal-wrong"]
+                : data["paypal-donat-success"]
               }
             </span>
             <span className={`font-proximaNova200 text-xl md:text-2xl leading-9
             text-center ${ ty === '0' ? 'text-gray-900' : 'text-blue-500' }`}>
               {
                 ty === '0'
-                ? data.englishTexts[77].textContent
-                : data.englishTexts[76].textContent
+                ? data["paypal-again"]
+                : data["paypal-sent"]
               }
             </span>
 
@@ -92,8 +91,8 @@ export const ThankYouModal = () => {
               ${ ty === '0' ? 'bg-red-500' : 'bg-blue-500' }`}>
                 {
                   ty === '0'
-                  ? data.englishTexts[79].textContent
-                  : data.englishTexts[78].textContent
+                  ? data["paypal-failed"]
+                  : data["paypal-success"]
                 }
               </span>
             </button>

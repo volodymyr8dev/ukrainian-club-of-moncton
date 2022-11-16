@@ -25,11 +25,11 @@ export const Data = () => {
             <span className='font-proximaNova500 text-3xl md:text-5xl
             lg:text-[56px] leading-[56px] tracking-wider text-blue-500
             md:text-gray-900'>
-             {data[92].textContent}
+             {data["our-help-families"]}
             </span>
             <span className='font-proximaNova200 text-xl lg:text-2xl leading-[36px]
             max-w-[152px] text-center md:text-left'>
-              {data[16].textContent}
+              {data["our-help-displaced"]}
             </span>
           </div>
         </div>
@@ -51,11 +51,11 @@ export const Data = () => {
             <span className='font-proximaNova500 text-3xl md:text-5xl
             lg:text-[56px] leading-[56px] tracking-wider text-blue-500
             md:text-gray-900'>
-              {data[93].textContent}
+              {data["our-help-donation"]}
             </span>
             <span className='font-proximaNova200 text-xl lg:text-2xl leading-[36px]
             max-w-[152px] text-center md:text-left'>
-              {data[23].textContent}
+              {data["our-help-total-money"]}
             </span>
           </div>
         </div>
@@ -77,11 +77,11 @@ export const Data = () => {
             <span className='font-proximaNova500 text-3xl md:text-5xl
             lg:text-[56px] leading-[56px] tracking-wider text-blue-500
             md:text-gray-900'>
-              {data[91].textContent}
+              {data["our-help-fundraiser"]}
             </span>
             <span className='font-proximaNova200 text-xl lg:text-2xl leading-[36px]
             max-w-[152px] text-center md:text-left'>
-              {data[17].textContent}
+              {data["our-help-hospitals"]}
             </span>
           </div>
         </div>
@@ -94,7 +94,7 @@ export const Data = () => {
       w-full py-6 items-center gap-10 md:gap-0'>
         <h6 className='font-proximaNova400 text-[32px] md:text-5xl text-left
         leading-[48px] tracking-wider uppercase'>
-          {data[18].textContent}
+          {data["our-help-help"]}
         </h6>
       </div>
     </section>
