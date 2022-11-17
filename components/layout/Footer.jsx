@@ -17,8 +17,8 @@ import InstagramIcon from './../../assets/images/footer/instagram.svg'
 
 export const Footer = () => {
   const { t } = useTranslation("common");
-  const { data, loading, error } = getTexts();
   const { locale } = useRouter();
+  const { data, loading, error } = getTexts(locale);
 
   if (loading) return <span></span>;
   if (error) return <span></span>;
@@ -253,7 +253,7 @@ export const Footer = () => {
 
               <div className='flex gap-[30px]'>
                 <a
-                  href={ data.englishTexts[88].textContent }
+                  href={ data["footer-facebook"] }
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -265,7 +265,7 @@ export const Footer = () => {
                 </a>
 
                 <a
-                  href={ data.englishTexts[89].textContent }
+                  href={ data["footer-instagram"] }
                   target='_blank'
                   rel='noreferrer'
                 >

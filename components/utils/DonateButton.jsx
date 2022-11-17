@@ -26,7 +26,7 @@ export const DonateButton = () => {
         bg-blue-500 py-3 md:py-[14px] px-3 smaller-phones:px-6 flex items-center
         small-phones:px-[32px] rounded-[50px] uppercase flex gap-2'>
         <span className='text-gray-100'>
-          {data['donate-now']}
+          {data["donate-now"]}
         </span>
         <Image
           src={ yellowHeart }

@@ -15,7 +15,7 @@ const GET_TEXTS_QUERY = gql`
   }
 `;
 const GET_TEXTS_EN = gql`
-  query MyQuery {
+  query MyQuery  {
     englishTexts: texts(first: 1000, locales: en) {
       name
       textContent

@@ -15,7 +15,6 @@ import { getTexts } from './../../../services/getTexts.js'
 export const Contacts = () => {
   const { locale } = useRouter()
   const { data, loading, error } = getTexts(locale)
-  console.log("datsa", data);
   
   const [facebookActive, setFacebookActive] = useState(false)
   const [emailActive, setEmailActive] = useState(false)
