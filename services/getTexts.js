@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-
+import {checkTypeOfData} from './helpers'
 const GET_TEXTS_QUERY = gql`
   query MyQuery {
     englishTexts: texts(first: 1000, locales: en) {
@@ -39,7 +39,7 @@ export const getTexts = (lang) => {
   let GET_TEXTS = GET_TEXTS_QUERY;
 
   if (lang) {
-    lang == "en" ? GET_TEXTS = GET_TEXTS_EN : GET_TEXTS = GET_TEXTS_UA;
+    lang === "en" ? GET_TEXTS = GET_TEXTS_EN : GET_TEXTS = GET_TEXTS_UA;
   } 
 
   let { data, loading, error } = useQuery(GET_TEXTS);
@@ -49,11 +49,11 @@ export const getTexts = (lang) => {
 
 
   if (lang) {
-    lang == "en" ? data = data?.englishTexts : data = data?.ukrainianTexts;
+    data = lang === "en" ?  data?.englishTexts : data?.ukrainianTexts;
   } 
 
 if(data){
-  data = (Array.isArray(data) ? data : (lang == "en"? data.englishTexts:data.ukrainianTexts)).reduce((a,c) => (a[c.slug] = c.textContent, a), {});
+  data = (checkTypeOfData(data)).reduce((a,c) => (a[c.slug] = c.textContent, a), {});
 }
   return {data, loading, error}
 };
