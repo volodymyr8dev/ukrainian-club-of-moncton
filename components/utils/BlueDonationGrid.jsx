@@ -27,8 +27,7 @@ export const BlueDonationGrid = () => {
 
   return (
     <>
-    <div className='flex w-full gap-8 md:gap-5 tablets:gap-10 justify-start
-    flex-col tablets:flex-row pt-16'>
+    <>
       {
         data.howCanIHelpCards.slice(0, 3).map((card, i) => (
           <div
@@ -37,7 +36,7 @@ export const BlueDonationGrid = () => {
             pt-8 rounded-3xl flex justify-between items-center flex-col px-8
             xl:min-w-[376px] pb-8 tablets:pb-0a max-w-full
             min-h-[376px] max-h-full tablets:max-h-[376px] h-full w-full
-            flex-1 shrink-0 tablets:max-w-[32%]'
+            flex-1 shrink-0 '
           >
             <div className='bg-blue-500 z-10 rounded-full'>
               <img
@@ -62,11 +61,11 @@ export const BlueDonationGrid = () => {
           </div>
         ))
       }
-    </div>
+    </>
 
     {
       data.howCanIHelpCards.length <= 3
-      ? <div></div>
+      ? <></>
       : <div className='flex w-full gap-8 md:gap-5 tablets:gap-10 justify-start
         flex-col tablets:flex-row pt-8 tablets:pt-10'>
           {
@@ -107,7 +106,7 @@ export const BlueDonationGrid = () => {
 
     {
       data.howCanIHelpCards.length <= 6
-      ? <div></div>
+      ? <></>
       : <div className='flex w-full gap-8 md:gap-5 tablets:gap-10 justify-start
       flex-col tablets:flex-row pt-8 tablets:pt-10'>
         {
