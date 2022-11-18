@@ -57,46 +57,7 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
               className="flex flex-col items-center justify-center px-6 md:px-6
             xl:px-0"
             >
-              <div
-                className="flex justify-center flex-col max-w-[1216px] w-full pb-3
-              md:pb-0"
-              >
-                <div
-                  className="flex justify-between w-full bg-gray-100 rounded-3xl
-                shadow-[0px_2px_22px_rgba(0,32,73,0.13)] overflow-hidden"
-                >
-                  <div
-                    className={`border border-blue-500 w-full py-7
-                  flex justify-center rounded-l-3xl overflow-hidden
-                  bg-blue-500`}
-                  >
-                    <button
-                      className={`text-gray-100 font-proximaNova400
-                      md:font-proximaNova500 text-base md:text-2xl
-                      max-w-[130px] md:max-w-full`}
-                      type="button"
-                    >
-                      {data[30].textContent}
-                    </button>
-                  </div>
-
-                  <div
-                    className={`border border-blue-500 w-full py-7
-                  flex justify-center rounded-r-3xl`}
-                  >
-                    <Link href="/info/going-to-canada/1" replace scroll={false}>
-                      <button
-                        className={`text-blue-500 font-proximaNova400
-                        md:font-proximaNova500 text-base md:text-2xl
-                        max-w-[130px] md:max-w-full`}
-                        type="button"
-                      >
-                        {data[31].textContent}
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+      
             </section>
 
             <section className="flex justify-center mb-16 md:mb-28 pl-6 md:px-6">
