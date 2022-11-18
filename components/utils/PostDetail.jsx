@@ -324,13 +324,13 @@ export const PostDetail = ({ post }) => {
                         </>
                       }
                     >
-                      <div onClick={ handleTooltipOpen }>
+                      <div className="h-16 w-16 flex items-center justify-center" onClick={ handleTooltipOpen }>
                         <Image
-                          src={ copied ? GreenShareIcon : ShareIcon }
+                          src={ copied ? CopyActiveIcon : CopyIcon }
                           alt='copy to clipboard'
                           title='copy to clipboard'
-                          width={ 64 }
-                          height={ 64 }
+                          width={ 18.86 }
+                          height={ 24 }
                         />
                       </div>
                     </HtmlTooltip>
