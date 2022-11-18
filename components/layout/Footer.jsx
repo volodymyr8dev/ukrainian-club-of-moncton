@@ -17,8 +17,8 @@ import InstagramIcon from './../../assets/images/footer/instagram.svg'
 
 export const Footer = () => {
   const { t } = useTranslation("common");
-  const { data, loading, error } = getTexts();
   const { locale } = useRouter();
+  const { data, loading, error } = getTexts(locale);
 
   if (loading) return <span></span>;
   if (error) return <span></span>;
@@ -51,14 +51,10 @@ export const Footer = () => {
                 width={ 24 }
                 alt='address'
               />
-              <a href={ data.englishTexts[6].textContent }>
+              <a href={ data["about-google-url"] }>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                 text-gray-100'>
-                  {          
-                    locale === 'en'
-                    ? data.englishTexts[4].textContent
-                    : data.ukrainianTexts[4].textContent
-                  }
+                  {data["about-location-box"]}
                 </span>
               </a>
             </div>
@@ -70,14 +66,10 @@ export const Footer = () => {
                   width={ 24 }
                   alt='phone'
                 />
-                <a href={`tel:${ data.englishTexts[7].textContent }`}>
+                <a href={`tel:${ data["about-phone-url"] }`}>
                   <span className='font-proximaNova300 text-sm leading-[14px]
                   text-gray-100'>
-                    {          
-                      locale === 'en'
-                      ? data.englishTexts[3].textContent
-                      : data.ukrainianTexts[3].textContent
-                    }
+                    {data["about-phone-box"]}
                   </span>
                 </a>
               </div>
@@ -88,14 +80,10 @@ export const Footer = () => {
                   width={ 24 }
                   alt='email'
                 />
-                <a href={`mailto:${ data.englishTexts[5].textContent }`}>
+                <a href={`mailto:${ data["about-email-box"] }`}>
                   <span className='font-proximaNova300 text-sm leading-[14px]
                   text-gray-100'>
-                    {          
-                      locale === 'en'
-                      ? data.englishTexts[5].textContent
-                      : data.ukrainianTexts[5].textContent
-                    }
+                    { data["about-email-box"] }
                   </span>
                 </a>
               </div>
@@ -111,7 +99,7 @@ export const Footer = () => {
 
               <div className='flex gap-[30px]'>
                 <a
-                  href={ data.englishTexts[88].textContent }
+                  href={ data["footer-facebook"] }
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -123,7 +111,7 @@ export const Footer = () => {
                 </a>
 
                 <a
-                  href={ data.englishTexts[89].textContent }
+                  href={ data["footer-instagram"] }
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -219,14 +207,10 @@ export const Footer = () => {
                 width={ 24 }
                 alt='address'
               />
-              <a href={ data.englishTexts[6].textContent }>
+              <a href={ data["about-google-url"] }>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                 text-gray-100'>
-                  {          
-                    locale === 'en'
-                    ? data.englishTexts[4].textContent
-                    : data.ukrainianTexts[4].textContent
-                  }
+                  {data["about-location-box"]}
                 </span>
               </a>
             </div>
@@ -237,14 +221,10 @@ export const Footer = () => {
                 width={ 24 }
                 alt='phone'
               />
-              <a href={`tel:${ data.englishTexts[7].textContent }`}>
+              <a href={`tel:${ data["about-phone-url"] }`}>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                 text-gray-100'>
-                  {          
-                    locale === 'en'
-                    ? data.englishTexts[3].textContent
-                    : data.ukrainianTexts[3].textContent
-                  }
+                  { data["about-phone-box"]}
                 </span>
               </a>
             </div>
@@ -255,14 +235,10 @@ export const Footer = () => {
                 width={ 24 }
                 alt='email'
               />
-              <a href={`mailto:${ data.englishTexts[5].textContent }`}>
+              <a href={`mailto:${ data["about-email-box"] }`}>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                 text-gray-100'>
-                  {          
-                    locale === 'en'
-                    ? data.englishTexts[5].textContent
-                    : data.ukrainianTexts[5].textContent
-                  }
+                  {data["about-email-box"]}
                 </span>
               </a>
             </div>
@@ -277,7 +253,7 @@ export const Footer = () => {
 
               <div className='flex gap-[30px]'>
                 <a
-                  href={ data.englishTexts[88].textContent }
+                  href={ data["footer-facebook"] }
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -289,7 +265,7 @@ export const Footer = () => {
                 </a>
 
                 <a
-                  href={ data.englishTexts[89].textContent }
+                  href={ data["footer-instagram"] }
                   target='_blank'
                   rel='noreferrer'
                 >

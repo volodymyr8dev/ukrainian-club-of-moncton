@@ -14,12 +14,12 @@ export const Informative = () => {
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
         <h2 className='font-proximaNova500 text-4xl md:text-[56px] leading-[100%]
         tracking-wider uppercase text-left md:text-center'>
-          {data[0].textContent}
+          {data["about-title-we-are"]}
         </h2>
         <div className='pt-8 md:pt-11'>
           <p className='w-full md:w-[98%] text-left md:text-center font-proximaNova300
           text-xl md:text-2xl leading-9'>
-            {data[1].textContent}
+            {data["about-paragraph"]}
           </p>
         </div>
       </div>

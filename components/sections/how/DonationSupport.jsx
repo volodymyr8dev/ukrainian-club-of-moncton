@@ -14,15 +14,23 @@ export const DonationSupport = () => {
   return (
     <section className=' mb-[72px] md:mb-24 px-6 md:px-6 xl:px-0'>
         <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
-        tracking-wider uppercase text-center mb-16 '>
-          {data[69].textContent}
+        tracking-wider uppercase text-center'>
+          {data["donation-support-blue"]}
         </h2>
       <div className=" flex flex-wrap justify-center gap-x-9 gap-y-10 w-[70%] mx-auto ">
       
       <BlueDonationGrid />
 
+        <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
+        tracking-wider uppercase text-center pt-24'>
+          {data["donation-support-yellow"]}
+        </h2>
         <YellowDonationGrid />
 
+        <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
+        tracking-wider uppercase text-center pt-24'>
+          {data["donation-support"]}
+        </h2>
         <GreenDonationGrid />
       </div>
      </section>

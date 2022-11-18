@@ -31,20 +31,20 @@ export const HomeFront = () => {
               className="font-proximaNova300 text-[34px] md:text-[35px]  lg:text-[38px]
           leading-[40px] md:leading-[65px] first-letter:tracking-wide"
             >
-              {data[32].textContent}
+              {data["home-evening"]}
               <br />
               <span className='font-proximaNova500 text-blue-500 text-[43px] md:text-[44px] lg:text-[48px]
             '>
-                {data[33].textContent}
+                {data["home-upper-title-blue"]}
               </span>{" "}
               <span className='font-proximaNova500 text-yellow-300 text-[43px] md:text-[44px] lg:text-[48px]
            '>
-                {data[34].textContent}
+                {data["home-upper-title-yellow"]}
               </span>
             </h2>
 
             <p className="font-proximaNova300 text-xl md:text-2xl">
-              {data[35].textContent}
+              {data["home-upper-introduction"]}
             </p>
 
             <div className="flex justify-end items-center gap-6 md:gap-8">
@@ -57,7 +57,7 @@ export const HomeFront = () => {
 
               <FilledButton
                 href="/info"
-                text={data[36].textContent}
+                text={data["home-upper-next"]}
                 textColor="gray-100"
                 bgColor="bg-blue-500"
               />
@@ -85,7 +85,7 @@ export const HomeFront = () => {
             <div className="flex justify-start items-center gap-6 md:gap-8">
               <FilledButton
                 href="/how"
-                text={data[37].textContent}
+                text={data["home-bottom-next"]}
                 textColor="gray-100"
                 bgColor="bg-yellow-300"
               />
@@ -97,32 +97,32 @@ export const HomeFront = () => {
               </div>
             </div>
             <p className="font-proximaNova300 text-2xl">
-              {data[38].textContent}
+              {data["home-bottom-introduction"]}
             </p>
 
             <h2
               className="font-proximaNova300 uppercase text-[41px] leading-[65px]
               tracking-wide"
             >
-              {data[39].textContent}
+              {data["home-bottom-subtitle"]}
               <br />
               <span
                 className="font-proximaNova500 text-blue-500 text-[62.81px]
                 uppercase"
               >
-                {data[40].textContent}
+                {data["home-bottom-title-bold"]}
               </span>{" "}
               <span
                 className="font-proximaNova500 text-gray-900 text-[62.81px]
             uppercase"
               >
-                {data[41].textContent}
+                {data["home-bottom-title"]}
               </span>{" "}
               <span
                 className="font-proximaNova500 text-yellow-300 text-[62.81px]
                 uppercase"
               >
-                {data[42].textContent}
+                {data["home-help"]}
               </span>
             </h2>
           </div>
@@ -135,30 +135,30 @@ export const HomeFront = () => {
               className="font-proximaNova300 text-[23px] uppercase
           leading-[24px] tracking-wider"
             >
-              {data[39].textContent}
+              {data["home-bottom-subtitle"]}
               <br />
               <span
                 className="font-proximaNova500 text-blue-500 text-[35px]
                 md:text-[62.81px] uppercase"
               >
-                {data[40].textContent}
+                {data["home-bottom-title-bold"]}
               </span>{" "}
               <span
                 className="font-proximaNova500 text-blue-900 text-[35px]
                 md:text-[62.81px] uppercase"
               >
-                {data[41].textContent}
+                {data["home-bottom-title"]}
               </span>{" "}
               <span
                 className="font-proximaNova500 text-yellow-300 text-[35px]
                 md:text-[62.81px] uppercase"
               >
-                {data[42].textContent}
+                {data["home-help"]}
               </span>
             </h2>
 
             <p className="font-proximaNova300 text-[19px] leading-[30px] tracking-wider">
-              {data[38].textContent}
+              {data["home-bottom-introduction"]}
             </p>
 
             <div className="flex justify-end items-center gap-6 md:gap-8">
@@ -170,7 +170,7 @@ export const HomeFront = () => {
               </div>
               <FilledButton
                 href="/how"
-                text={data[37].textContent}
+                text={data["home-bottom-next"]}
                 textColor="gray-100"
                 bgColor="bg-yellow-300"
               />

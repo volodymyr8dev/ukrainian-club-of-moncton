@@ -21,8 +21,8 @@ export default function Home() {
     <>
       <Head>
         <title>Home - Ukrainian Club of Moncton</title>
-        <meta name="description" content={data[80].textContent} />
-
+                          {/* equal data */}
+        <meta name="description" content={data["how-tag-seo"]} /> 
       <link
         rel="icon"
         href="/favicon.ico"

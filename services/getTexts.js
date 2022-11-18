@@ -1,22 +1,25 @@
 import { gql, useQuery } from "@apollo/client";
-
+import {checkTypeOfData} from './helpers'
 const GET_TEXTS_QUERY = gql`
   query MyQuery {
     englishTexts: texts(first: 1000, locales: en) {
       name
       textContent
+      slug
     }
     ukrainianTexts: texts(first: 1000, locales: uk_UA) {
       name
       textContent
+      slug
     }
   }
 `;
 const GET_TEXTS_EN = gql`
-  query MyQuery {
+  query MyQuery  {
     englishTexts: texts(first: 1000, locales: en) {
       name
       textContent
+      slug
     }
   }
 `;
@@ -26,6 +29,7 @@ const GET_TEXTS_UA = gql`
     ukrainianTexts: texts(first: 1000, locales: uk_UA) {
       name
       textContent
+      slug
     }
   }
 `;
@@ -35,7 +39,7 @@ export const getTexts = (lang) => {
   let GET_TEXTS = GET_TEXTS_QUERY;
 
   if (lang) {
-    lang == "en" ? GET_TEXTS = GET_TEXTS_EN : GET_TEXTS = GET_TEXTS_UA;
+    lang === "en" ? GET_TEXTS = GET_TEXTS_EN : GET_TEXTS = GET_TEXTS_UA;
   } 
 
   let { data, loading, error } = useQuery(GET_TEXTS);
@@ -45,8 +49,11 @@ export const getTexts = (lang) => {
 
 
   if (lang) {
-    lang == "en" ? data = data?.englishTexts : data = data?.ukrainianTexts;
+    data = lang === "en" ?  data?.englishTexts : data?.ukrainianTexts;
   } 
 
+if(data){
+  data = (checkTypeOfData(data)).reduce((a,c) => (a[c.slug] = c.textContent, a), {});
+}
   return {data, loading, error}
 };

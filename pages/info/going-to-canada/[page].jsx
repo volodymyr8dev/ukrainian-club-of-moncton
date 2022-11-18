@@ -46,7 +46,8 @@ function PostPage({
       <title>Info - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content={data[81].textContent}
+        // equal data
+        content={data["how-tag-seo"]}
       />
 
       <link
@@ -80,7 +81,7 @@ function PostPage({
                         max-w-[130px] md:max-w-full`}
                         type='button'
                       >
-                        { data[30].textContent}
+                        { data["info-already"]}
                       </button>
                     </Link>
                   </div>
@@ -94,7 +95,7 @@ function PostPage({
                       max-w-[130px] md:max-w-full`}
                       type='button'
                     >
-                      {data[31].textContent}
+                      {data["info-going-to"]}
                     </button>
                   </div>
                 </div>

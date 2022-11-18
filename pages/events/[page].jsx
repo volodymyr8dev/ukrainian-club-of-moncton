@@ -36,7 +36,8 @@ function Events({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
     <>
       <Head>
         <title>Events - Ukrainian Club of Moncton</title>
-        <meta name="description" content={data[82].textContent} />
+        {/* equal data */}
+        <meta name="description" content={data["how-tag-seo"]} />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>

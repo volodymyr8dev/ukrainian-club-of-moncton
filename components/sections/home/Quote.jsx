@@ -28,17 +28,17 @@ export const Quote = () => {
           leading-4"
             >
               <span className="max-w-2xl w-full inline-block">
-                {data[58].textContent}
+                {data["home-we-are"]}
                 <br />
-                {data[59].textContent}
+                {data["home-membership"]}
               </span>
               <br />
               <br />
-              {data[60].textContent}
+              {data["home-focus"]}
               <br />
               <br />
               <span className="max-w-2xl w-full inline-block">
-                {data[61].textContent}
+                {data["home-finally"]}
               </span>
             </p>
           </div>

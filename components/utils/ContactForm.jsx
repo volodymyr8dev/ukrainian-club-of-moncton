@@ -50,7 +50,7 @@ export const ContactForm = () => {
           className="font-proximaNova400 uppercase text-[32px]
       text-center tracking-wider"
         >
-          {data[8].textContent}
+          {data["about-contact"]}
         </h2>
       </div>
 
@@ -69,7 +69,7 @@ export const ContactForm = () => {
                   className="font-proximaNova400 text-sm pb-4"
                   htmlFor="name"
                 >
-                  {data[9].textContent}
+                  {data["about-name"]}
                 </label>
                 <div
                   className="bg-gray-200 px-4 flex items-center gap-8
@@ -141,7 +141,7 @@ export const ContactForm = () => {
 
             <div className="w-full tablets:w-[58.55%] pt-6 tablets:pt-0">
               <label className="font-proximaNova400 text-sm" htmlFor="message">
-                {data[86].textContent}
+                {data["about-message"]}
               </label>
               <textarea
                 className="bg-gray-200 px-6 py-3 tablets:py-6 flex items-center gap-10
@@ -149,7 +149,7 @@ export const ContactForm = () => {
                 tablets:text-lg placeholder:text-gray-500 text-gray-900"
                 name="message"
                 id="message"
-                placeholder={data[87].textContent}
+                placeholder={data["about-feed-animals"]}
                 minLength={20}
                 required
               ></textarea>
@@ -161,7 +161,7 @@ export const ContactForm = () => {
             flex items-center gap-[18px] justify-between"
               type="submit"
             >
-              {data[12].textContent}
+              {data["about-field"]}
               <Image src={SendIcon} alt="send" />
             </button>
           </div>
@@ -172,7 +172,7 @@ export const ContactForm = () => {
               showThankYou ? "visible text-blue-500" : "invisible"
             }`}
           >
-            {data[13].textContent}
+            {data["about-thank-message"]}
           </span>
           <span
             className={`${
@@ -181,7 +181,7 @@ export const ContactForm = () => {
                 : "invisible hidden"
             }`}
           >
-            {data[14].textContent}
+            {data["about-errror"]}
           </span>
         </div>
       </div>

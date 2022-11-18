@@ -68,13 +68,13 @@ export const UpcomingEvents = () => {
 
   if (loadingT) return <span></span>;
   if (errorT) return <span></span>;
-
+console.log('11111',dataT)
   return (
     <>
       <section className="flex justify-center mb-16 md:mb-28 pl-6 md:px-6 xl:px-0">
         <div className="flex justify-center flex-col max-w-[1260px] w-full">
           <HeadingToggler
-            heading={dataT[56].textContent}
+            heading={dataT["home-upcoming-events"]}
             togglerPrevClass="event-prev"
             togglerNextClass="event-next"
           />

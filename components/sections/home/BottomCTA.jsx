@@ -28,7 +28,7 @@ export const BottomCTA = () => {
                 href='/how'
               >
                 <span className='text-blue-500'>
-                  {data[63].textContent}
+                  {data["volunteer-with-us"]}
                 </span>
               </Link>
             </div>

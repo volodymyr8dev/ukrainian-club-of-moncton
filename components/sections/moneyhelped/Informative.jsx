@@ -19,22 +19,22 @@ export const Informative = () => {
         <h2 className='text-4xl md:text-[56px] leading-[100%]
         tracking-wider uppercase text-center'>
           <span className='font-proximaNova300'>
-            { data[19].textContent}
+            { data["aboiut-title-light"]}
           </span>
           {' '}
           <span className='font-proximaNova500'>
-            {data[20].textContent}
+            {data["about-title"]}
           </span>
           {' '}
           <span className='font-proximaNova500 text-blue-500'>
-            { data[21].textContent}
+            { data["about-help"]}
           </span>
         </h2>
 
         <div className='pt-12 md:pt-10'>
           <p className='w-full max-w-[1066px] text-center font-proximaNova300
           text-xl md:text-2xl leading-[30px] md:leading-9'>
-            {data[15].textContent}
+            {data["our-help-introduction"]}
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export const Informative = () => {
             >
               <span className='font-proximaNova400 text-base md:text-lg leading-[18px]
               text-blue-500 uppercase flex gap-3 cursor-pointer'>
-                  { data[22].textContent}
+                  { data["about-volunteer"]}
                 <img
                   src='/blue-right-arrow.svg'
                   alt='arrow to the right'

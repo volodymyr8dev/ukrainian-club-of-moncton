@@ -41,7 +41,8 @@ console.log('texts',data)
       <title>Our help - Ukrainian Club of Moncton</title>
       <meta
         name="description"
-        content={ data[83].textContent }
+        // equal data
+        content={ data["how-tag-seo"] }
       />
 
       <link
