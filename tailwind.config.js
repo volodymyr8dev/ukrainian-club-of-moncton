@@ -51,7 +51,6 @@ module.exports = {
         'small-notebooks': '1200px',
         'small-phones': '400px',
         'smaller-phones': '350px',
-        '2xl':"1400px"
       }
     }
   },
