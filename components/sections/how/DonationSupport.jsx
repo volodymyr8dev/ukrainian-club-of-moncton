@@ -12,13 +12,14 @@ export const DonationSupport = () => {
   if (error) return <span></span>
 
   return (
-    <section className='flex justify-center mb-[72px] md:mb-24 px-6 md:px-6 xl:px-0'>
-      <div className='flex justify-center flex-col max-w-[1216px] w-full'>
+    <section className=' mb-[72px] md:mb-24 px-6 md:px-6 xl:px-0'>
         <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
         tracking-wider uppercase text-center'>
           {data["donation-support-blue"]}
         </h2>
-        <BlueDonationGrid />
+      <div className=" flex flex-wrap justify-center gap-x-9 gap-y-10 w-[70%] mx-auto ">
+      
+      <BlueDonationGrid />
 
         <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
         tracking-wider uppercase text-center pt-24'>
@@ -32,6 +33,6 @@ export const DonationSupport = () => {
         </h2>
         <GreenDonationGrid />
       </div>
-    </section>
+     </section>
   )
 }
