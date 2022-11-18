@@ -73,7 +73,9 @@ input:-webkit-autofill:active {
 }
 
 .home-front-section {
-  background-image: url('/home-blur.webp');
+  /* background-image: url('/home-blur.webp'); */
+  /* background-image: url('/Wheat.webp'); */
+  background-image: url('/BG.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
