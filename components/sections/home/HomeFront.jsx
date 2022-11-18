@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import { getTexts } from "./../../../services/getTexts.js";
 
 import { FilledButton } from "../../utils/FilledButton";
-import birdImage from "./../../../assets/images/bird.svg";
+
+import flag from "./../../../assets/images/Ukraine.webp";
 
 export const HomeFront = () => {
   const { locale } = useRouter();
@@ -65,12 +66,10 @@ export const HomeFront = () => {
           </div>
 
           <div
-            className="2xl:translate-y-0 md:translate-y-[90px] translate-y-0
-        flex justify-center
-        "
+            className=" md:translate-y-[90px]"
           >
             <Image
-              src={birdImage}
+              src={flag}
               alt="bird"
               width={454}
               height={398.34}
@@ -79,7 +78,7 @@ export const HomeFront = () => {
           </div>
 
           <div
-            className="lg:max-w-[340px] max-w-full 2xl:max-w-[540px] w-full
+            className="lg:max-w-[760px] md:max-w-[120%] max-w-full 2xl:max-w-[540px] w-full
         hidden md:flex flex-col gap-8 mt-0 md:mt-[14.4rem]"
           >
             <div className="flex justify-start items-center gap-6 md:gap-8">
@@ -101,25 +100,25 @@ export const HomeFront = () => {
             </p>
 
             <h2
-              className="font-proximaNova300 uppercase text-[41px] leading-[65px]
-              tracking-wide"
+              className="font-proximaNova300 uppercase text-[41px] leading-[65px] xl:leading-[64px] md:leading-[46px]
+              tracking-wide  md:text-[25px] lg:text-[32px] xl:text-[34px]"
             >
               {data[39].textContent}
               <br />
               <span
-                className="font-proximaNova500 text-blue-500 text-[62.81px]
+                className="font-proximaNova500 text-blue-500 text-[62.81px] 2xl:text-[62.81px] xl:text-[59px] lg:text-[55px] md:text-[40px]
                 uppercase"
               >
                 {data[40].textContent}
               </span>{" "}
               <span
-                className="font-proximaNova500 text-gray-900 text-[62.81px]
+                className="font-proximaNova500 text-gray-900 text-[62.81px]  2xl:text-[62.81px] xl:text-[59px] lg:text-[55px] md:text-[40px]
             uppercase"
               >
                 {data[41].textContent}
               </span>{" "}
               <span
-                className="font-proximaNova500 text-yellow-300 text-[62.81px]
+                className="font-proximaNova500 text-yellow-300 text-[62.81px]  2xl:text-[62.81px] xl:text-[59px] lg:text-[55px] md:text-[40px]
                 uppercase"
               >
                 {data[42].textContent}
