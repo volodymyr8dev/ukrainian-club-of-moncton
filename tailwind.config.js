@@ -45,6 +45,7 @@ module.exports = {
         40: '.4',
       },
       screens: {
+        "2xl":"1632px",
         'lg': '1100px',
         'tablets': '900px',
         'small-notebooks': '1200px',

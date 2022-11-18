@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import { getTexts } from "./../../../services/getTexts.js";
 
 import { FilledButton } from "../../utils/FilledButton";
-import birdImage from "./../../../assets/images/bird.svg";
+
+import flag from "./../../../assets/images/Ukraine.webp";
 
 export const HomeFront = () => {
   const { locale } = useRouter();
@@ -16,12 +17,12 @@ export const HomeFront = () => {
   return (
     <>
       <section
-        className="home-front-section min-h-[calc(110vh-5rem)] flex justify-center items-center mb-[153px]
+        className="home-front-section min-h-[calc(110vh-5rem)] flex justify-center items-center mb-[123px]  bg-cover bg-center bg-no-repeat
       2xl:px-8 px-8 pb-8 tablets:pb-0"
       >
         <div
-          className="flex justify-between gap-6 flex-col tablets:flex-row
-      w-full tablets:w-auto"
+          className="flex justify-between gap-6 flex-col tablets:flex-row  
+      w-full tablets:w-auto md:mt-[20px] lg:mt-[-110px]"
         >
           <div
             className="lg:max-w-[340px] max-w-full 2xl:max-w-[540px] flex
@@ -65,22 +66,34 @@ export const HomeFront = () => {
           </div>
 
           <div
-            className="2xl:translate-y-0 md:translate-y-[90px] translate-y-0
-        flex justify-center
-        "
+            className=" flex flex-col justify-center items-center md:translate-y-[90px] sm:mt-[-301px] xl:mt-[-140px]"
           >
+            <div className=" object-cover sm:w-[190px] md:w-auto sm:mt-[201px] lg:mt-[-70px] "> 
             <Image
-              src={birdImage}
+              src={flag}
               alt="bird"
               width={454}
               height={398.34}
               priority
+              
             />
+             </div> 
+            <div >
+            <span className='font-proximaNova500 text-blue-500 text-[39px] 2xl:text-[36px] xl:text-[22px] md:text-[18px] sm:text[16px] lg:text-[21px]
+            '>
+            UKRAINIAN CLUB
+            </span>    
+            <br/>  
+            <span className='font-proximaNova500 text-blue-500 text-[43px] 2xl:text-[47px] xl:text-[29px] md:text-[25px] sm:text[24px]  lg:text-[27px]
+            '>
+            OF MOCTION
+            </span>   
+            </div>  
           </div>
 
           <div
-            className="lg:max-w-[340px] max-w-full 2xl:max-w-[540px] w-full
-        hidden md:flex flex-col gap-8 mt-0 md:mt-[14.4rem]"
+            className=" md:max-w-[120%] max-w-full 2xl:max-w-[540px] w-full
+        hidden md:flex flex-col gap-8 mt-0 md:mt-[6.4rem]"
           >
             <div className="flex justify-start items-center gap-6 md:gap-8">
               <FilledButton
@@ -101,25 +114,25 @@ export const HomeFront = () => {
             </p>
 
             <h2
-              className="font-proximaNova300 uppercase text-[41px] leading-[65px]
-              tracking-wide"
+              className="font-proximaNova300 uppercase text-[41px] leading-[65px] xl:leading-[64px] md:leading-[46px]
+              tracking-wide  md:text-[25px] lg:text-[32px] xl:text-[34px]"
             >
               {data["home-bottom-subtitle"]}
               <br />
               <span
-                className="font-proximaNova500 text-blue-500 text-[62.81px]
+                className="font-proximaNova500 text-blue-500 text-[62.81px] 2xl:text-[62.81px] xl:text-[59px] lg:text-[55px] md:text-[40px]
                 uppercase"
               >
                 {data["home-bottom-title-bold"]}
               </span>{" "}
               <span
-                className="font-proximaNova500 text-gray-900 text-[62.81px]
+                className="font-proximaNova500 text-gray-900 text-[62.81px]  2xl:text-[62.81px] xl:text-[59px] lg:text-[55px] md:text-[40px]
             uppercase"
               >
                 {data["home-bottom-title"]}
               </span>{" "}
               <span
-                className="font-proximaNova500 text-yellow-300 text-[62.81px]
+                className="font-proximaNova500 text-yellow-300 text-[62.81px]  2xl:text-[62.81px] xl:text-[59px] lg:text-[55px] md:text-[40px]
                 uppercase"
               >
                 {data["home-help"]}
