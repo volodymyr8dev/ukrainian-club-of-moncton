@@ -17,7 +17,7 @@ export const Informative = () => {
       <div className='flex justify-center flex-col max-w-[1216px] w-full'>
         <h2 className='font-proximaNova500 text-4xl md:text-[56px] leading-[100%]
         tracking-wider uppercase text-center'>
-          {data[27].textContent}
+          {data["info-info-center"]}
         </h2>
         <div className='flex justify-center pt-10'>
           <Image
@@ -30,10 +30,10 @@ export const Informative = () => {
         <div className='pt-8 md:pt-11'>
           <p className='w-full md:w-[98%] text-center font-proximaNova300
           text-xl md:text-2xl leading-[30px] md:leading-9'>
-            {data[28].textContent}
+            {data["info-introduction-1"]}
             <br />
             <br className='block md:hidden' />
-            {data[29].textContent}
+            {data["info-introduction"]}
           </p>
         </div>
       </div>

@@ -36,7 +36,7 @@ export const GreenDonationGrid = () => {
             pt-8 rounded-3xl flex justify-between items-center flex-col px-8
             xl:min-w-[376px] pb-8 tablets:pb-0a max-w-full
             min-h-[376px] max-h-full tablets:max-h-[376px] h-full w-full
-            flex-1 shrink-0 '
+            flex-1 shrink-0 w-auto'
           >
             <div className='bg-blue-500 z-10 rounded-full'>
               <img
