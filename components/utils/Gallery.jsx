@@ -62,7 +62,7 @@ export const Gallery = () => {
             <img
               src={ item.picture.url }
               className='rounded-[16px] w-full max-w-[376px] h-full max-h-[244px]
-              object-cover hover:max-w-[413.6px] hover:max-h-[268.4px] hover:scale-110
+              object-cover hover:max-w-[413.6px]  hover:scale-110 origin-center
               transition-all'
               loading='lazy'
               alt=''
