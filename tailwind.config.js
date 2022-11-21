@@ -49,6 +49,7 @@ module.exports = {
         'lg': '1100px',
         'tablets': '900px',
         'small-notebooks': '1200px',
+        'mobile-l':'475px',
         'small-phones': '400px',
         'smaller-phones': '350px',
       }
