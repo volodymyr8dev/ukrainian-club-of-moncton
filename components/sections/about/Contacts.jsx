@@ -55,7 +55,7 @@ export const Contacts = () => {
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
                   {data['facebook-navigation']}
               </span>
-              <span className={`mobile-l:hidden font-proximaNova500 text-base md:text-lg leading-[150%]  ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>www.facebook.com</span>
+              <span className={`mobile-l:hidden font-proximaNova500 text-base md:text-lg leading-[150%]  ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>{data['facebook-url-phone']}</span>
               
             </a>
           </div>
