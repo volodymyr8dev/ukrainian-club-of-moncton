@@ -13,7 +13,7 @@ export const DonationSupport = () => {
 
   return (
     <section className=' mb-[72px] md:mb-24 px-6 md:px-6 xl:px-0'>
-        <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%]
+        <h2 className='font-proximaNova400 text-[32px] md:text-[40px] leading-[100%] mb-[64px]
         tracking-wider uppercase text-center'>
           {data["donation-support-blue"]}
         </h2>
