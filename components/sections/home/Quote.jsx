@@ -16,7 +16,7 @@ export const Quote = () => {
       <div className="flex justify-center flex-col max-w-[1216px] w-full">
         <div
           className="flex flex-col justify-center rounded-3xl overflow-visible
-      shadow-[0px_2px_32px_rgba(0,32,73,0.13)] px-4 md:px-9"
+      shadow-[0px_2px_32px_rgba(0,32,73,0.13)] px-4 md:px-9  bg-[#fff]"
         >
           <div className="flex justify-center -translate-y-12 z-5">
             <Image src={quoteImage} alt="quote" />
