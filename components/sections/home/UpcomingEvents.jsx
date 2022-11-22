@@ -17,7 +17,6 @@ import "swiper/css/grid";
 import "swiper/css/autoplay";
 
 
-
 import locationImage from "./../../../assets/images/card-location.svg";
 
 import { HeadingToggler } from "../../utils/HeadingToggler";

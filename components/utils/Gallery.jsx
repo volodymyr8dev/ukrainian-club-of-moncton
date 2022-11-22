@@ -10,7 +10,6 @@ import 'swiper/css/autoplay'
 
 import FsLightbox from 'fslightbox-react';
 
-
 const GET_GALLERY_IMAGES_QUERY = gql`
   query getGalleryImages {
     galleries (
