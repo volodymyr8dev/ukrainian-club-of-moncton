@@ -32,6 +32,7 @@ export default function Home() {
       
     <main id='main' className='relativee'>
       <HomeFront />
+      <ClubQuestions/>
       <UpcomingEvents />
       <ClubAbout />
       <Quote />

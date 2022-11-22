@@ -5,7 +5,7 @@ import yellowHeart from './../../assets/images/yellow-heart.webp'
 import { useRouter } from 'next/router'
 import { getTexts } from './../../services/getTexts.js'
 
-export const DonateButton = () => {
+export const DonateButton = ({link,img,text}) => {
   const { locale } = useRouter()
   const { data, loading, error } = getTexts(locale)
 
@@ -17,19 +17,19 @@ export const DonateButton = () => {
   return (
     <>
     <a
-      href={ paypalURL }
+      href={ link? link: paypalURL }
       target='_blank'
       rel='noreferrer'
     >
       <div
         className='cursor-pointer font-proximaNova400 text-base md:text-xl
         bg-blue-500 py-3 md:py-[14px] px-3 smaller-phones:px-6 flex items-center
-        small-phones:px-[32px] rounded-[50px] uppercase flex gap-2'>
+        small-phones:px-[32px] rounded-[50px] uppercase flex gap-2 justify-between'>
         <span className='text-gray-100'>
-          {data["donate-now"]}
+          {text ? text: data["donate-now"]}
         </span>
         <Image
-          src={ yellowHeart }
+          src={ img? img: yellowHeart }
           alt='heart'
           width={20}
           height={21}
