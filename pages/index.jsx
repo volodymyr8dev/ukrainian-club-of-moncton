@@ -28,7 +28,6 @@ export default function Home() {
         href="/favicon.ico"
       />
     </Head>
-    
       
     <main id='main' className='relativee'>
       <HomeFront />
