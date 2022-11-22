@@ -80,6 +80,13 @@ input:-webkit-autofill:active {
   background-size: cover;
 }
 
+.upcoming_section{
+  background-image: url('/bg-ukraine.webp');  
+  background-size: cover;
+  padding-bottom: 5px;
+
+}
+
 .about-section {
   position: relative;
   z-index: 1;

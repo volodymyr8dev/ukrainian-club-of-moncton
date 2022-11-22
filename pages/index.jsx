@@ -33,10 +33,12 @@ export default function Home() {
     <main id='main' className='relativee'>
       <HomeFront />
       <ClubQuestions/>
+      <div className="upcoming_section"> 
       <UpcomingEvents />
       <ClubAbout />
       <Quote />
       <BottomCTA />
+      </div>
     </main>
     <ThankYouModal />
     </>
