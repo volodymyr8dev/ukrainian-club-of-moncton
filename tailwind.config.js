@@ -55,7 +55,7 @@ module.exports = {
         'smaller-phones': '350px',
       },
       backgroundImage: {
-        // 'bg-ukraine': "url('/bg-ukraine.webp')",
+        'bg-ukraine': "url('/bg-ukraine.webp')",
       }
     }
   },

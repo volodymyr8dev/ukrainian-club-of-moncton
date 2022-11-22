@@ -32,7 +32,7 @@ export default function Home() {
       
     <main id='main' className='relativee'>
       <HomeFront />
-      <div className=" pb-[5px] "> 
+      <div className="bg-bg-ukraine bg-cover pb-[5px] "> 
       <UpcomingEvents />
       <ClubAbout />
       <Quote />
