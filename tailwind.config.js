@@ -56,7 +56,6 @@ module.exports = {
       },
       backgroundImage: {
         'bg-ukraine': "url('/bg-ukraine.webp')",
-        'footer-texture': "url('/img/footer-texture.png')",
       }
     }
   },
