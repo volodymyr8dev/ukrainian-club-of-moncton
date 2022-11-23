@@ -21,12 +21,12 @@ export const HomeFront = () => {
       2xl:px-8 px-8 pb-8 tablets:pb-0"
       >
         <div
-          className="flex justify-between gap-6 flex-col tablets:flex-row  
+          className="flex justify-between gap-3 lg:gap-6 flex-col tablets:flex-row  
       w-full tablets:w-auto md:mt-[20px] lg:mt-[-110px]"
         >
           <div
             className="lg:max-w-[340px] max-w-full 2xl:max-w-[540px] flex
-        flex-col gap-6 md:gap-8 lg:-mt-8 mt-12 tablets:-mt-[1.9rem]"
+        flex-col gap-6 md:gap-8 lg:-mt-8 mt-12 tablets:-mt-[1.7rem]"
           >
             <h2
               className="font-proximaNova300 text-[34px] md:text-[35px]  lg:text-[38px]
@@ -68,23 +68,23 @@ export const HomeFront = () => {
           <div
             className=" flex flex-col justify-center items-center md:translate-y-[90px] sm:mt-[-301px] xl:mt-[-140px]"
           >
-            <div className=" object-cover sm:w-[190px] md:w-auto sm:mt-[201px] lg:mt-[-70px] "> 
+            <div className=" object-cover sm:w-[190px] md:w-auto md:mt-[190px] lg:mt-[-70px] "> 
             <Image
               src={flag}
-              alt="bird"
+              alt="flag"
               width={454}
               height={398.34}
               priority
               
             />
              </div> 
-            <div >
-            <span className='font-proximaNova500 text-blue-500 text-[39px] 2xl:text-[36px] xl:text-[22px] md:text-[18px] sm:text[16px] lg:text-[21px]
+            <div className=" tablets-m:mx-[10px]">
+            <span className='font-proximaNova500 text-blue-500 text-[39px] 2xl:text-[36px] xl:text-[22px] md:text-[18px] smallest-phones:text-[16px] lg:text-[21px] tablets-m:text-[11px]
             '>
             UKRAINIAN CLUB
             </span>    
             <br/>  
-            <span className='font-proximaNova500 text-blue-500 text-[43px] 2xl:text-[47px] xl:text-[29px] md:text-[25px] sm:text[24px]  lg:text-[27px]
+            <span className='font-proximaNova500 text-blue-500 text-[43px] 2xl:text-[47px] xl:text-[29px] md:text-[24px] smallest-phones:text-[21px]  lg:text-[27px] tablets-m:text-[15px]
             '>
             OF MOCTION
             </span>   
