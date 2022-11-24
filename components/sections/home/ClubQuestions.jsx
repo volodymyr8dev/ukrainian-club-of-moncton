@@ -12,6 +12,7 @@ export const ClubQuestions = () => {
   const { locale } = useRouter();
   const { data, loading, error } = getTexts(locale);
 
+  console.log('facebook nav',data["facebook-navigation"])
   if (loading) return <span></span>;
   if (error) return <span></span>;
 
@@ -20,8 +21,8 @@ export const ClubQuestions = () => {
       <section className="flex justify-center mb-[72px] md:mb-28 px-6 xl:px-0">
         <div className="flex justify-center flex-col max-w-[1216px] w-full">
           <h2
-            className=" font-proximaNova500 text-4xl md:text-[48px] lg:text-[56px] uppercase w-full 
-        leading-[54px] xl:leading-10 tracking-wider pb-0 md:pb-11 xl:pb-36 text-left 
+            className=" font-proximaNova500 text-4xl md:text-[37px] lg:text-[52px] sm:text-[28px] uppercase w-full 
+        leading-[54px] xl:leading-10 tracking-wider pb-0 md:pb-11 xl:pb-36 flex justify-center mb-[9px]
         xl:text-center"
           >
             {data["home-assosiation"]}{"  "}
@@ -90,7 +91,7 @@ export const ClubQuestions = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
             </div>
               <div className='md:w-[289px] mobile-l:w-[280px] mt-[32px]'>  
-              <DonateButton link="/" img={arrow} text={data['go-to-our-group']} />
+              <DonateButton link={data["facebook-navigation"]} img={arrow} text={data['go-to-our-group']}  />
             </div>
 
             </div>
