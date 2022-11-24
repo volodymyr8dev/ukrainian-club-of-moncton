@@ -50,10 +50,12 @@ module.exports = {
         "2xl":"1632px",
         'lg': '1100px',
         'tablets': '900px',
+        "tablets-m": {'min': '900px', 'max': '974px'},
         'small-notebooks': '1200px',
         'mobile-l':'475px',
         'small-phones': '400px',
         'smaller-phones': '350px',
+        'smallest-phones': '280px',
       },
       backgroundImage: {
         'bg-ukraine': "url('/bg-ukraine.webp')",
