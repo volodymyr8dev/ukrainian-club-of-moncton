@@ -40,6 +40,8 @@ module.exports = {
     extend: {
       colors: {
         'white-opacity': 'rgba(20, 20, 20, 0.6)',
+        'white': 'rgb(255 255 255)'
+
       },
       brightness: {
         40: '.4',
@@ -48,10 +50,15 @@ module.exports = {
         "2xl":"1632px",
         'lg': '1100px',
         'tablets': '900px',
+        "tablets-m": {'min': '900px', 'max': '974px'},
         'small-notebooks': '1200px',
         'mobile-l':'475px',
         'small-phones': '400px',
         'smaller-phones': '350px',
+        'smallest-phones': '280px',
+      },
+      backgroundImage: {
+        'bg-ukraine': "url('/bg-ukraine.webp')",
       }
     }
   },
