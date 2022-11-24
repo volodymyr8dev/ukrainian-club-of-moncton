@@ -28,10 +28,10 @@ export default function Home() {
         href="/favicon.ico"
       />
     </Head>
-    
       
     <main id='main' className='relativee'>
       <HomeFront />
+      <ClubQuestions/>
       <div className="bg-bg-ukraine bg-cover pb-[5px] "> 
       <UpcomingEvents />
       <ClubAbout />

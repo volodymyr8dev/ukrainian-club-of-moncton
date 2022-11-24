@@ -17,7 +17,7 @@ export const HomeFront = () => {
   return (
     <>
       <section
-        className="home-front-section min-h-[calc(110vh-5rem)] flex justify-center items-center mb-[123px]  bg-cover bg-center bg-no-repeat
+        className="home-front-section min-h-[calc(110vh-5rem)] flex justify-center items-center mb-[47px]  bg-cover bg-center bg-no-repeat
       2xl:px-8 px-8 pb-8 tablets:pb-0"
       >
         <div
