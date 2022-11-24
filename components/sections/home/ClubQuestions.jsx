@@ -44,8 +44,8 @@ export const ClubQuestions = () => {
               <div className="flex text-xl  font-proximaNova300 mt-[32px]">
               {data["home-immigration"]}
               </div>
-              <div className='w-[216px] mt-[32px]'>  
-              <DonateButton/>
+              <div className='tablets:w-[355px] sm:w-[349px] mt-[32px]'>  
+              <DonateButton  text={data['go-to-shop']} img={arrow}  />
             </div>
             </div>
             <div className="md:w-[400px] lg:w-[562px] w-1/2">
@@ -89,8 +89,8 @@ export const ClubQuestions = () => {
                   md:text-[24px] leading-9">  
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
             </div>
-              <div className='w-[216px] mt-[32px]'>  
-              <DonateButton link="/" img={arrow} text="something"/>
+              <div className='md:w-[289px] mobile-l:w-[280px] mt-[32px]'>  
+              <DonateButton link="/" img={arrow} text={data['go-to-our-group']} />
             </div>
 
             </div>
