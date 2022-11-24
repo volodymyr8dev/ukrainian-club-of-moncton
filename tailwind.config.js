@@ -40,6 +40,8 @@ module.exports = {
     extend: {
       colors: {
         'white-opacity': 'rgba(20, 20, 20, 0.6)',
+        'white': 'rgb(255 255 255)'
+
       },
       brightness: {
         40: '.4',
@@ -54,6 +56,9 @@ module.exports = {
         'small-phones': '400px',
         'smaller-phones': '350px',
         'smallest-phones': '280px',
+      },
+      backgroundImage: {
+        'bg-ukraine': "url('/bg-ukraine.webp')",
       }
     }
   },

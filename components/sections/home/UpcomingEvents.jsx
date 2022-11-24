@@ -16,8 +16,6 @@ import "swiper/css/navigation";
 import "swiper/css/grid";
 import "swiper/css/autoplay";
 
-import FsLightbox from 'fslightbox-react';
-
 
 import locationImage from "./../../../assets/images/card-location.svg";
 
@@ -58,7 +56,6 @@ export const UpcomingEvents = () => {
   const { locale } = useRouter();
   const { loading, error, data } = useQuery(GET_MOST_RECENT_POSTS_QUERY);
 
-  const [toggler, setToggler] = useState(false);
 
 
   const { data: dataT, loading: loadingT, error: errorT } = getTexts(locale);
@@ -68,7 +65,6 @@ export const UpcomingEvents = () => {
 
   if (loadingT) return <span></span>;
   if (errorT) return <span></span>;
-console.log('11111',dataT)
   return (
     <>
       <section className="flex justify-center mb-16 md:mb-28 pl-6 md:px-6 xl:px-0">
@@ -111,10 +107,7 @@ console.log('11111',dataT)
               }}
               modules={[Navigation, Pagination]}
             >
-                  <FsLightbox
-                toggler={ toggler }
-                sources={ data.posts.map((post)=>post.featuredImage.url)}
-              />
+             
             {data.posts.map((post) => (
                 <SwiperSlide key={post.title} className="py-10">
                   <div
@@ -123,7 +116,7 @@ console.log('11111',dataT)
                 overflow-hidden bg-gray-100 rounded-3xl mt-6
                 flex flex-col justify-start"
                   >
-                    <div onClick={()=>{setToggler(true)}} className="w-full flex flex-col">
+                    <div  className="w-full flex flex-col">
                       <img
                         className="w-full min-h-[200px] md:min-h-[256px]
                       object-cover max-h-[200px] md:max-h-[256px]"
