@@ -44,50 +44,49 @@ export const Footer = () => {
             </Link>
           </div>
 
-          <div className='flex flex-col justify-end items-center gap-9'>
-            <div className='flex gap-[18px] justify-end w-full'>
+          <div className='flex flex-col justify-start items-center'>
+            <div className='flex gap-[18px] w-full mb-[12px]'>
               <Image
-                src={ LocationIcon }
+                src={ FacebookIcon }
                 width={ 24 }
-                alt='address'
+                alt='facebook'
               />
-              <a href={ data["about-google-url"] }>
+              <a  href={data["facebook-navigation"]}>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                 text-gray-100'>
-                  {data["about-location-box"]}
+                  {data["facebook-description"]}
                 </span>
               </a>
             </div>
 
-            <div className='flex justify-between gap-6'>
-              <div className='flex gap-[18px]'>
+              <div className='flex gap-[18px] mb-[12px]'>
                 <Image
-                  src={ PhoneIcon }
+                  src={ InstagramIcon }
                   width={ 24 }
-                  alt='phone'
+                  alt='instagram'
                 />
-                <a href={`tel:${ data["about-phone-url"] }`}>
+                <a href={`${ data["about-phone-url"] }`}>
                   <span className='font-proximaNova300 text-sm leading-[14px]
                   text-gray-100'>
-                    {data["about-phone-box"]}
+                 {data["instagram-description"]}
                   </span>
                 </a>
               </div>
 
-              <div className='flex gap-[18px]'>
+              <div className='flex w-full gap-[18px] ml-[6px]  mb-[15px] '>
                 <Image
                   src={ EmailIcon }
-                  width={ 24 }
+                  width={ 19 }
+                  height={20}
                   alt='email'
                 />
-                <a href={`mailto:${ data["about-email-box"] }`}>
+                <a href={`mailto:${ data["about-email-box"] }`} className="ml-[1px]">
                   <span className='font-proximaNova300 text-sm leading-[14px]
                   text-gray-100'>
                     { data["about-email-box"] }
                   </span>
                 </a>
               </div>
-            </div>
 
             <div className='flex gap-[26px] justify-end w-full'>
               <div>

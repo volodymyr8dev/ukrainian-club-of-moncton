@@ -46,7 +46,7 @@ export const ClubQuestions = () => {
               {data["home-immigration"]}
               </div>
               <div className='tablets:w-[355px] sm:w-[349px] mt-[32px]'>  
-              <DonateButton  text={data['go-to-shop']} img={arrow}  />
+              <DonateButton  text={data['go-to-shop']} img={arrow} link={`/${data["link-to-shop"]}`} />
             </div>
             </div>
             <div className="md:w-[400px] lg:w-[562px] w-1/2">
