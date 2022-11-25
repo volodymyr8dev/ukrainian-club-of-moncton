@@ -22,7 +22,7 @@ They enabled us to have such a good final production result.
 <br/>
 
 ## The stack
-- **Production**: [URL](uamoncton.org)
+- **Production**: [URL](https://uamoncton.org/)
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Query language**: [GraphQL](https://graphql.org/)
