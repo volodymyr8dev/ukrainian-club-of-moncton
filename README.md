@@ -1,6 +1,6 @@
 # Ukrainian Club of Moncton
 
-![Tool 1](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+[![Tool 1](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/?utm_source=binary-future-moncton&utm_campaign=oss)
 ![Tool 2](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Tool 3](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 ![Tool 4](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -28,7 +28,7 @@ They enabled us to have such a good final production result.
 - **Query language**: [GraphQL](https://graphql.org/)
 - **Content**: [Hygraph](https://hygraph.com/)
 - **Mailing**: [EmailJS](https://www.emailjs.com/)
-- **Deployment**: [Vercel](https://vercel.com/?utm_source=ukrainian-club-of-moncton&utm_campaign=oss)
+- **Deployment**: [Vercel](https://vercel.com/?utm_source=binary-future-moncton&utm_campaign=oss)
 
 ---
 
@@ -55,7 +55,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new??utm_source=binary-future-moncton&utm_campaign=oss&filter=next.js&utm_source=create-next-app) from the creators of Next.js.
 
 Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
@@ -84,6 +84,6 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <br />
 <div style="text-align: center;">
 
-![Tool 1](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)
+[![Tool 1](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)](https://vercel.com/?utm_source=binary-future-moncton&utm_campaign=oss)
 
 </div>

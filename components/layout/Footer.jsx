@@ -138,9 +138,10 @@ export const Footer = () => {
           <div className='flex justify-center items-center gap-3 w-[33%]'>
             <div>
               <a
-                href=''
+                href='https://vercel.com/?utm_source=binary-future-moncton&utm_campaign=oss'
                 target='_blank'
                 rel='noreferrer'
+                
               >
                 <Image
                   src={ VercelLogo }
