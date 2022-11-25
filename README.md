@@ -1,6 +1,6 @@
 # Ukrainian Club of Moncton
 
-![Tool 1](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white?utm_source=Binary Future-moncton&utm_campaign=oss)
+![Tool 1](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white?utm_source=binary-future-moncton&utm_campaign=oss)
 ![Tool 2](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Tool 3](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 ![Tool 4](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)

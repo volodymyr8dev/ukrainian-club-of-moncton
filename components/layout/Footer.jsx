@@ -138,7 +138,7 @@ export const Footer = () => {
           <div className='flex justify-center items-center gap-3 w-[33%]'>
             <div>
               <a
-                href='https://vercel.com/?utm_source=Binary Future-moncton&utm_campaign=oss'
+                href='https://vercel.com/?utm_source=binary-future-moncton&utm_campaign=oss'
                 target='_blank'
                 rel='noreferrer'
                 
