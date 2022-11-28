@@ -12,7 +12,7 @@ import { FacebookShareButton, TwitterShareButton } from 'next-share'
 import { RelatedPosts } from './RelatedPosts'
 
 import UCMLogo from '../../public/ucm-logo.svg'
-import FacebookIcon from './../../assets/images/post/facebook.svg'
+import FacebookIcon from './../../assets/images/contacts/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
 import GreenShareIcon from './../../assets/images/post/green-share.svg'

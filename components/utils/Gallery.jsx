@@ -65,10 +65,12 @@ export const Gallery = () => {
         modules={[ Pagination, Navigation, Autoplay ]}
         className='home-gallery-swiper'
       >
+        { img &&
          <FsLightbox
                 toggler={ toggler }
                 sources={ img? [img] : data.galleries.map((item)=>item.picture.url)}
               />
+        }
         {
           data.galleries.map((item, i) => (
             <SwiperSlide
