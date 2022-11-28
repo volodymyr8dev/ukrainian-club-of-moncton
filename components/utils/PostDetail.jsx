@@ -10,7 +10,6 @@ import ClickAwayListener from '@mui/material/ClickAwayListener'
 import { FacebookShareButton, TwitterShareButton } from 'next-share'
 
 import { RelatedPosts } from './RelatedPosts'
-import {useTexts} from '../services/getTexts'
 
 import UCMLogo from '../../public/ucm-logo.svg'
 import FacebookIcon from './../../assets/images/slug/facebook.svg'
@@ -23,6 +22,7 @@ import CopyIcon from './../../assets/images/slug/Vector.webp'
 import CopyActiveIcon from './../../assets/images/slug/Vector_active.webp'
 
 import { useRouter } from 'next/router'
+import { getTexts } from '../../services/getTexts'
 
 export const PostDetail = ({ post }) => {
   const router = useRouter()
@@ -30,7 +30,8 @@ export const PostDetail = ({ post }) => {
   const [open, setOpen] = React.useState(false)
   const [copied, setCopied] = React.useState(false)
 
-  const {data,loading }  = useTexts(router.locale)
+  const {data, loading, error }  = getTexts(router.locale)
+  
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
   
   console.log('data',data)
@@ -108,7 +109,7 @@ export const PostDetail = ({ post }) => {
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16 flex justify-center items-center pt-1
               rounded-full cursor-pointer'>
                 <FacebookShareButton
-                  url={ `${ baseURL }${ router.asPath }` }
+                  url={data['facebook-navigation']}
                   quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
