@@ -10,9 +10,10 @@ import ClickAwayListener from '@mui/material/ClickAwayListener'
 import { FacebookShareButton, TwitterShareButton } from 'next-share'
 
 import { RelatedPosts } from './RelatedPosts'
+import {useTexts} from '../services/getTexts'
 
 import UCMLogo from '../../public/ucm-logo.svg'
-import FacebookIcon from './../../assets/images/contacts/facebook.svg'
+import FacebookIcon from './../../assets/images/slug/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
 import GreenShareIcon from './../../assets/images/post/green-share.svg'
@@ -29,8 +30,10 @@ export const PostDetail = ({ post }) => {
   const [open, setOpen] = React.useState(false)
   const [copied, setCopied] = React.useState(false)
 
+  const {data,loading }  = useTexts(router.locale)
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
   
+  console.log('data',data)
   const handleTooltipClose = () => setOpen(false)
 
   const handleTooltipOpen = () => {
@@ -102,7 +105,7 @@ export const PostDetail = ({ post }) => {
             
             <div className='hidden small-notebooks:flex flex-col gap-4 pt-8
             overflow-visible'>
-              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
+              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16 flex justify-center items-center pt-1
               rounded-full cursor-pointer'>
                 <FacebookShareButton
                   url={ `${ baseURL }${ router.asPath }` }
@@ -111,8 +114,8 @@ export const PostDetail = ({ post }) => {
                   <Image
                     src={ FacebookIcon }
                     alt='facebook'
-                    width={ 64 }
-                    height={ 64 }
+                    width={ 26 }
+                    height={ 26 }
                   />
                 </FacebookShareButton>
               </div>
