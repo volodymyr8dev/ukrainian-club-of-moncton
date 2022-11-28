@@ -66,7 +66,7 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                   className="flex justify-between w-full bg-gray-100 rounded-3xl
                 shadow-[0px_2px_22px_rgba(0,32,73,0.13)] overflow-hidden"
                 >
-                  <div
+                  {/* <div
                     className={`border border-blue-500 w-full py-7
                   flex justify-center rounded-l-3xl overflow-hidden
                   bg-blue-500`}
@@ -79,9 +79,9 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                     >
                       {data["info-already"]}
                     </button>
-                  </div>
+                  </div> */}
 
-                  <div
+                  {/* <div
                     className={`border border-blue-500 w-full py-7
                   flex justify-center rounded-r-3xl`}
                   >
@@ -95,7 +95,7 @@ function PostPage({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                         {data["info-going-to"]}
                       </button>
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </section>
