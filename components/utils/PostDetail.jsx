@@ -250,7 +250,7 @@ export const PostDetail = ({ post }) => {
 
             <div className='flex gap-4 pt-8 w-full max-w-[960px]'>
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
-              rounded-full cursor-pointer'>
+              rounded-full cursor-pointer flex items-center justify-center pt-[2px]'>
                 <FacebookShareButton
                   url={ `${ baseURL }${ router.asPath }` }
                   quote={'Check out this post from Ukrainian Club of Moncton!'}
@@ -258,8 +258,7 @@ export const PostDetail = ({ post }) => {
                   <Image
                     src={ FacebookIcon }
                     alt='facebook'
-                    width={ 64 }
-                    height={ 64 }
+               
                   />
                 </FacebookShareButton>
               </div>
