@@ -5,11 +5,12 @@ import Image from 'next/image'
 import { ContactForm } from '../../utils/ContactForm'
 
 
-import BlueEmailIcon from './../../../assets/images/contacts/Email.svg'
-import WhiteEmailIcon from './../../../assets/images/contacts/white-email.webp'
-import FacebookIcon from './../../../assets/images/contacts/facebook.svg'
+import BlueEmailIcon from './../../../assets/images/contacts/email.svg'
+import WhiteEmailIcon from './../../../assets/images/contacts/email-active.svg'
+import FacebookIcon from './../../../assets/images/contacts/facebook-active.svg'
+import FacebookActiveIcon from './../../../assets/images/contacts/facebook.svg'
 import InstagramIcon from './../../../assets/images/contacts/instagram.svg'
-import FacebookActiveIcon from './../../../assets/images/contacts/facebook-active.svg'
+import InstagramActiveIcon from './../../../assets/images/contacts/instagram-active.svg'
 
 import { getTexts } from './../../../services/getTexts.js'
 
@@ -50,10 +51,8 @@ export const Contacts = () => {
           onClick={ toggleInstagramStyle }
           >
             <Image
-              src={ instagramActive ? InstagramIcon : InstagramIcon }
+              src={ instagramActive ? InstagramActiveIcon : InstagramIcon }
               alt='isntagram'
-              width={32}
-              height={25.6}
             />
             <a href={``} className={`mt-[4px]`}>
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
@@ -73,12 +72,10 @@ export const Contacts = () => {
           onClick={ toggleFacebookStyle }
           >
             <Image
-              src={ facebookActive ? FacebookIcon : FacebookActiveIcon }
+              src={ facebookActive ? FacebookActiveIcon : FacebookIcon  }
               alt='facebook'
-              width={32}
-              height={25.6}
             />
-            <a href={`${ data["facebook-navigation"] }`} className={`pt-[2px]  mt-[-5px]`}>
+            <a href={`${ data["facebook-navigation"] }`} className={`mt-[4px]`} >
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
               max-w-[205px] inline-block
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
