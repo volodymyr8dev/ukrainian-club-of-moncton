@@ -20,8 +20,8 @@ export const ClubQuestions = () => {
       <section className="flex justify-center mb-[72px] md:mb-28 px-6 xl:px-0">
         <div className="flex justify-center flex-col max-w-[1216px] w-full">
           <h2
-            className=" font-proximaNova500 text-4xl md:text-[48px] lg:text-[56px] uppercase w-full 
-        leading-[54px] xl:leading-10 tracking-wider pb-0 md:pb-11 xl:pb-36 text-left 
+            className=" font-proximaNova500 text-4xl md:text-[37px] lg:text-[52px] sm:text-[28px] uppercase w-full 
+        leading-[54px] xl:leading-10 tracking-wider pb-0 md:pb-11 xl:pb-36 flex justify-center mb-[9px]
         xl:text-center"
           >
             {data["home-assosiation"]}{"  "}
@@ -44,8 +44,8 @@ export const ClubQuestions = () => {
               <div className="flex text-xl  font-proximaNova300 mt-[32px]">
               {data["home-immigration"]}
               </div>
-              <div className='w-[216px] mt-[32px]'>  
-              <DonateButton/>
+              <div className='tablets:w-[355px] sm:w-[349px] mt-[32px]'>  
+              <DonateButton  text={data['go-to-shop']} img={arrow} link={data["link-to-shop"]} />
             </div>
             </div>
             <div className="md:w-[400px] lg:w-[562px] w-1/2">
@@ -89,8 +89,8 @@ export const ClubQuestions = () => {
                   md:text-[24px] leading-9">  
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
             </div>
-              <div className='w-[216px] mt-[32px]'>  
-              <DonateButton link="/" img={arrow} text="something"/>
+              <div className='md:w-[289px] mobile-l:w-[280px] mt-[32px]'>  
+              <DonateButton link={data["facebook-navigation"]} img={arrow} text={data['go-to-our-group']}  />
             </div>
 
             </div>

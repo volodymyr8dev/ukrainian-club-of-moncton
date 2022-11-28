@@ -27,12 +27,12 @@ export const Gallery = () => {
   const { loading, error, data } = useQuery(GET_GALLERY_IMAGES_QUERY)
 
   const [toggler, setToggler] = useState(false);
-  const [img, setImage] = useState();
+  const [img, setImg] = useState();
 
   const handleOpenImg = (img)=>{
-    setImage(img)
-    setToggler(!toggler)}
-
+    setToggler(!toggler)
+    setImg(img)
+  }
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error</p>
@@ -68,7 +68,7 @@ export const Gallery = () => {
         { img &&
          <FsLightbox
                 toggler={ toggler }
-                sources={ [img] }
+                sources={ img? [img] : data.galleries.map((item)=>item.picture.url)}
               />
         }
         {
