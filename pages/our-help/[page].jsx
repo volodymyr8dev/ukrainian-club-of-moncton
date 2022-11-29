@@ -67,7 +67,7 @@ console.log('texts',data)
                   />
                   <div className='justify-start gap-2 xl:gap-8 max-w-full
                   w-full pt-10 hidden md:grid grid-cols-3'>
-                  {
+                  { 
                     posts.map((post, i) => {
                       return isPostInvalid(router.locale, post.node)
                         ? ''
@@ -157,7 +157,7 @@ console.log('texts',data)
                   </div>
                 </div>
 
-                <div className='flex justify-center w-full mt-1 md:mt-16
+                { posts.length> 6 && <div className='flex justify-center w-full mt-1 md:mt-16
                   z-50'>
                     <div className='flex gap-7 border border-gray-500
                     py-5 px-6 rounded-full'>
@@ -212,7 +212,7 @@ console.log('texts',data)
                         )
                       }
                     </div>
-                </div>
+                </div>}
               </div>
             </section>
         </div>
