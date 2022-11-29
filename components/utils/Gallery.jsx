@@ -69,6 +69,8 @@ export const Gallery = () => {
          <FsLightbox
                 toggler={ toggler }
                 sources={ [img] }
+                key={img}
+                onClose={()=>{setToggler(false)}}
               />
         }
         {

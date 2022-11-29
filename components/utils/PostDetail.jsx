@@ -34,7 +34,6 @@ export const PostDetail = ({ post }) => {
   
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
   
-  console.log('data',data)
   const handleTooltipClose = () => setOpen(false)
 
   const handleTooltipOpen = () => {
