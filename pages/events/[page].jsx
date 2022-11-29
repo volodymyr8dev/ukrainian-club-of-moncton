@@ -165,6 +165,8 @@ function Events({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                   className="flex justify-center w-full mt-1 md:mt-16
                   z-50"
                 >
+                  {
+                    posts.length > 6 &&
                   <div
                     className="flex gap-7 border border-gray-500
                     py-5 px-6 rounded-full"
@@ -199,6 +201,7 @@ function Events({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
                       <Image src={nextGray} alt="" />
                     )}
                   </div>
+}
                 </div>
               </div>
             </section>

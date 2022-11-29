@@ -72,7 +72,7 @@ export const Footer = () => {
                 <a href={`${data["footer-instagram-navigation"] }`}>
                   <span className='font-proximaNova300 text-sm leading-[14px]
                   text-gray-100'>
-                    {data["footer-instagram-box"]}
+                  {data["footer-instagram-box"]}
                   </span>
                 </a>
               </div>

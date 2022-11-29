@@ -28,12 +28,15 @@ export const DonateButton = ({link,img,text}) => {
         <span className='text-gray-100'>
           {text ? text: data["donate-now"]}
         </span>
+        <div className="flex items-center pr-[4px]">
         <Image
           src={ img? img: yellowHeart }
           alt='heart'
           width={20}
           height={21}
         />
+        </div>
+
       </div>
     </a>
     </>
