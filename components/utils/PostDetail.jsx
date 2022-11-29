@@ -12,7 +12,7 @@ import { FacebookShareButton, TwitterShareButton } from 'next-share'
 import { RelatedPosts } from './RelatedPosts'
 
 import UCMLogo from '../../public/ucm-logo.svg'
-import FacebookIcon from './../../assets/images/contacts/facebook.svg'
+import FacebookIcon from './../../assets/images/slug/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import ShareIcon from './../../assets/images/post/share.svg'
 import GreenShareIcon from './../../assets/images/post/green-share.svg'
@@ -22,6 +22,7 @@ import CopyIcon from './../../assets/images/slug/Vector.webp'
 import CopyActiveIcon from './../../assets/images/slug/Vector_active.webp'
 
 import { useRouter } from 'next/router'
+import { getTexts } from '../../services/getTexts'
 
 export const PostDetail = ({ post }) => {
   const router = useRouter()
@@ -29,6 +30,8 @@ export const PostDetail = ({ post }) => {
   const [open, setOpen] = React.useState(false)
   const [copied, setCopied] = React.useState(false)
 
+  const {data, loading, error }  = getTexts(router.locale)
+  
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
   
   const handleTooltipClose = () => setOpen(false)
@@ -102,17 +105,17 @@ export const PostDetail = ({ post }) => {
             
             <div className='hidden small-notebooks:flex flex-col gap-4 pt-8
             overflow-visible'>
-              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
+              <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16 flex justify-center items-center pt-1
               rounded-full cursor-pointer'>
                 <FacebookShareButton
-                  url={ `${ baseURL }${ router.asPath }` }
+                  url={data['facebook-navigation']}
                   quote={'Check out this post from Ukrainian Club of Moncton!'}
                 >
                   <Image
                     src={ FacebookIcon }
                     alt='facebook'
-                    width={ 64 }
-                    height={ 64 }
+                    width={ 26 }
+                    height={ 26 }
                   />
                 </FacebookShareButton>
               </div>
@@ -246,7 +249,7 @@ export const PostDetail = ({ post }) => {
 
             <div className='flex gap-4 pt-8 w-full max-w-[960px]'>
               <div className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] h-16 w-16
-              rounded-full cursor-pointer'>
+              rounded-full cursor-pointer flex items-center justify-center pt-[2px]'>
                 <FacebookShareButton
                   url={ `${ baseURL }${ router.asPath }` }
                   quote={'Check out this post from Ukrainian Club of Moncton!'}
@@ -254,8 +257,7 @@ export const PostDetail = ({ post }) => {
                   <Image
                     src={ FacebookIcon }
                     alt='facebook'
-                    width={ 64 }
-                    height={ 64 }
+               
                   />
                 </FacebookShareButton>
               </div>
