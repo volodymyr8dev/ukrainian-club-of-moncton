@@ -19,10 +19,10 @@ export const Footer = () => {
   const { t } = useTranslation("common");
   const { locale } = useRouter();
   const { data, loading, error } = getTexts(locale);
+
   if (loading) return <span></span>;
   if (error) return <span></span>;
 
-  console.log('data',data)
 
   return (
     <>
@@ -56,7 +56,6 @@ export const Footer = () => {
               <a  href={`mailto:${ data["about-email-box"] }`}>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                 text-gray-100'>
-                  {/* {data["about-location-box"]} */}
                   {data["footer-email"]}
 
                 </span>
