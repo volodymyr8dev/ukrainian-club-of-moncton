@@ -90,19 +90,19 @@ export const MobileMenu = ({ setIsActive }) => {
               <li className={`py-6 font-proximaNova300 md:font-proximaNova500
               text-base md:text-xl text-center md:border-b-2 w-full md:w-auto
               px-7 md:px-0
-              ${ router.pathname == '/info/in-canada/[page]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
-                <Link href='/info/in-canada/1'>
+              ${ router.pathname == '/info/[slug]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
+                <Link href='/info/'>
                   <div className='flex md:block items-center justify-start gap-4
                   md-gap-0'>
                     <div className='flex md:hidden items-center'>
                       <Image
-                        src={ router.pathname == '/info/in-canada/[page]' ? InfoWhiteIcon : InfoBlackIcon }
+                        src={ router.pathname == '/info/[slug]' ? InfoWhiteIcon : InfoBlackIcon }
                         alt='info'
                         width={ 20 }
                         height={ 20 }
                       />
                     </div>
-                    <a className={`${ router.pathname == '/info/in-canada/[page]' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
+                    <a className={`${ router.pathname == '/info/[slug]' ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
                       { t('info') }
                     </a>
                   </div>
