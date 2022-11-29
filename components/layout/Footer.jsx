@@ -19,9 +19,11 @@ export const Footer = () => {
   const { t } = useTranslation("common");
   const { locale } = useRouter();
   const { data, loading, error } = getTexts(locale);
-
   if (loading) return <span></span>;
   if (error) return <span></span>;
+
+  console.log('data',data)
+
   return (
     <>
     <footer                                      
@@ -44,52 +46,55 @@ export const Footer = () => {
             </Link>
           </div>
 
-          <div className='flex flex-col justify-end items-center gap-9'>
-            <div className='flex gap-[18px] justify-end w-full'>
+          <div className='flex flex-col justify-start items-center gap-4'>
+            <div className='flex gap-[18px] justify-start w-full'>
               <Image
-                src={ LocationIcon }
+                src={ EmailIcon }
                 width={ 24 }
-                alt='address'
+                alt='email'
               />
-              <a href={ data["about-google-url"] }>
+              <a  href={`mailto:${ data["about-email-box"] }`}>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                 text-gray-100'>
-                  {data["about-location-box"]}
+                  {/* {data["about-location-box"]} */}
+                  {data["footer-email"]}
+
                 </span>
               </a>
             </div>
 
-            <div className='flex justify-between gap-6'>
+            <div className='flex justify-start gap-6 pr-4'>
               <div className='flex gap-[18px]'>
                 <Image
-                  src={ PhoneIcon }
+                  src={ InstagramIcon }
                   width={ 24 }
-                  alt='phone'
+                  alt='instagram'
                 />
-                <a href={`tel:${ data["about-phone-url"] }`}>
+                <a href={`${data["footer-instagram-navigation"] }`}>
                   <span className='font-proximaNova300 text-sm leading-[14px]
                   text-gray-100'>
-                    {data["about-phone-box"]}
+                    {data["footer-instagram-box"]}
                   </span>
                 </a>
               </div>
 
-              <div className='flex gap-[18px]'>
-                <Image
-                  src={ EmailIcon }
-                  width={ 24 }
-                  alt='email'
-                />
-                <a href={`mailto:${ data["about-email-box"] }`}>
-                  <span className='font-proximaNova300 text-sm leading-[14px]
-                  text-gray-100'>
-                    { data["about-email-box"] }
-                  </span>
-                </a>
-              </div>
+             
             </div>
+            <div className='flex justify-start gap-[18px]  w-full'>
+                <Image
+                  src={ FacebookIcon }
+                  width={ 24 }
+                  alt='facebook'
+                />
+                <a href={`${ data["facebook-navigation"] }`}>
+                  <span className='font-proximaNova300 text-sm leading-[14px]
+                  text-gray-100'>
+                    { data["footer-facebook-description"]}
+                  </span>
+                </a>
+              </div>
 
-            <div className='flex gap-[26px] justify-end w-full'>
+            {/* <div className='flex gap-[26px] justify-end w-full'>
               <div>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                   text-gray-500'>
@@ -122,7 +127,7 @@ export const Footer = () => {
                   />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -204,80 +209,46 @@ export const Footer = () => {
           <div className='flex flex-col justify-start items-start gap-[26px]'>
             <div className='flex gap-[18px] justify-start w-full'>
               <Image
-                src={ LocationIcon }
-                width={ 24 }
-                alt='address'
-              />
-              <a href={ data["about-google-url"] }>
-                <span className='font-proximaNova300 text-sm leading-[14px]
-                text-gray-100'>
-                  {data["about-location-box"]}
-                </span>
-              </a>
-            </div>
-
-            <div className='flex gap-[18px]'>
-              <Image
-                src={ PhoneIcon }
-                width={ 24 }
-                alt='phone'
-              />
-              <a href={`tel:${ data["about-phone-url"] }`}>
-                <span className='font-proximaNova300 text-sm leading-[14px]
-                text-gray-100'>
-                  { data["about-phone-box"]}
-                </span>
-              </a>
-            </div>
-
-            <div className='flex gap-[18px]'>
-              <Image
                 src={ EmailIcon }
                 width={ 24 }
-                alt='email'
+                alt='address'
               />
               <a href={`mailto:${ data["about-email-box"] }`}>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                 text-gray-100'>
-                  {data["about-email-box"]}
+          {data["footer-email"]}
                 </span>
               </a>
             </div>
 
-            <div className='flex gap-[26px] justify-start w-full'>
-              <div>
+            <div className='flex gap-[18px]'>
+              <Image
+                src={ InstagramIcon }
+                width={ 24 }
+                alt='instagram'
+              />
+              <a href={`${data["footer-instagram-navigation"] }`}>
                 <span className='font-proximaNova300 text-sm leading-[14px]
-                  text-gray-500'>
-                  Social media:
+                text-gray-100'>
+                 {data["footer-instagram-box"]}
                 </span>
-              </div>
-
-              <div className='flex gap-[30px]'>
-                <a
-                  href={ data["footer-facebook"] }
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <Image
-                    src={ FacebookIcon }
-                    width={ 24 }
-                    alt='facebook'
-                  />
-                </a>
-
-                <a
-                  href={ data["footer-instagram"] }
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <Image
-                    src={ InstagramIcon }
-                    width={ 24 }
-                    alt='instagram'
-                  />
-                </a>
-              </div>
+              </a>
             </div>
+
+            <div className='flex gap-[18px]'>
+              <Image
+                src={ FacebookIcon }
+                width={ 24 }
+                alt='facebook'
+              />
+              <a href={`${ data["facebook-navigation"] }`}>
+                <span className='font-proximaNova300 text-sm leading-[14px]
+                text-gray-100'>
+                      { data["footer-facebook-description"]}
+                </span>
+              </a>
+            </div>
+
           </div>
         </div>
 

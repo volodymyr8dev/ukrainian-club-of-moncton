@@ -2,12 +2,12 @@ import { gql, useQuery } from "@apollo/client";
 import {checkTypeOfData} from './helpers'
 const GET_TEXTS_QUERY = gql`
   query MyQuery {
-    englishTexts: texts(first: 1000, locales: en) {
+    englishTexts: texts(first: 2000, locales: en) {
       name
       textContent
       slug
     }
-    ukrainianTexts: texts(first: 1000, locales: uk_UA) {
+    ukrainianTexts: texts(first: 2000, locales: uk_UA) {
       name
       textContent
       slug
@@ -16,7 +16,7 @@ const GET_TEXTS_QUERY = gql`
 `;
 const GET_TEXTS_EN = gql`
   query MyQuery  {
-    englishTexts: texts(first: 1000, locales: en) {
+    englishTexts: texts(first: 2000, locales: en) {
       name
       textContent
       slug
@@ -26,7 +26,7 @@ const GET_TEXTS_EN = gql`
 
 const GET_TEXTS_UA = gql`
   query MyQuery {
-    ukrainianTexts: texts(first: 1000, locales: uk_UA) {
+    ukrainianTexts: texts(first: 2000, locales: uk_UA) {
       name
       textContent
       slug
