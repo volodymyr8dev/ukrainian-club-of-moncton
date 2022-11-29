@@ -5,26 +5,26 @@ import Image from 'next/image'
 import moment from 'moment'
 import {useRouter} from 'next/router'
 import {gql} from '@apollo/client'
-import {getTexts} from './../../../services/getTexts.js'
+import {getTexts} from '../../services/getTexts.js'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/grid'
 import 'swiper/css/autoplay'
 
-import {hygraph} from '../../../services'
+import {hygraph} from '../../services'
 
-import {InfoFront} from '../../../components/sections/info/InfoFront'
-import {Informative} from '../../../components/sections/info/Informative'
-import {MobileSwiperDisplay} from '../../../components/utils/MobileSwiperDisplay'
+import {InfoFront} from '../../components/sections/info/InfoFront'
+import {Informative} from '../../components/sections/info/Informative'
+import {MobileSwiperDisplay} from '../../components/utils/MobileSwiperDisplay'
 
-import nextBlue from './../../../assets/images/pagination/next-blue.svg'
-import nextGray from './../../../assets/images/pagination/next-gray.svg'
-import previousBlue from './../../../assets/images/pagination/previous-blue.svg'
-import previousGray from './../../../assets/images/pagination/previous-gray.svg'
-import lineGray from './../../../assets/images/pagination/line-gray.svg'
-import {REVALIDATION_TIME_PAGINATION} from "../../../services/constants";
-import {isPostInvalid} from "../../../services/helpers";
+import nextBlue from './../../assets/images/pagination/next-blue.svg'
+import nextGray from './../../assets/images/pagination/next-gray.svg'
+import previousBlue from './../../assets/images/pagination/previous-blue.svg'
+import previousGray from './../../assets/images/pagination/previous-gray.svg'
+import lineGray from './../../assets/images/pagination/line-gray.svg'
+import {REVALIDATION_TIME_PAGINATION} from "../../services/constants";
+import {isPostInvalid} from "../../services/helpers";
 
 const limit = 6
 
@@ -62,45 +62,6 @@ function PostPage({
       <div className='info-section'>
         <div className='info-section-bg'>
           <Informative />
-            <section className='flex flex-col items-center justify-center px-6 md:px-6
-            xl:px-0'>
-              <div className='flex justify-center flex-col max-w-[1216px] w-full pb-3
-              md:pb-0'>
-                <div className='flex justify-between w-full bg-gray-100 rounded-3xl
-                shadow-[0px_2px_22px_rgba(0,32,73,0.13)] overflow-hidden'>
-                  <div className={`border border-blue-500 w-full py-7
-                  flex justify-center rounded-l-3xl overflow-hidden`}>
-                    <Link
-                      href='/info/in-canada/1'
-                      replace
-                      scroll={false}
-                    >
-                      <button
-                        className={`text-blue-500 font-proximaNova400
-                        md:font-proximaNova500 text-base md:text-2xl
-                        max-w-[130px] md:max-w-full`}
-                        type='button'
-                      >
-                        { data["info-already"]}
-                      </button>
-                    </Link>
-                  </div>
-
-                  <div className={`border border-blue-500 w-full py-7
-                  flex justify-center rounded-r-3xl
-                  bg-blue-500`}>
-                    <button
-                      className={`text-gray-100 font-proximaNova400
-                      md:font-proximaNova500 text-base md:text-2xl
-                      max-w-[130px] md:max-w-full`}
-                      type='button'
-                    >
-                      {data["info-going-to"]}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
             
             <section className='flex justify-center mb-16 md:mb-28 pl-6 md:px-6'>
                 <div className='flex justify-center flex-col max-w-[1215px] w-full'>
