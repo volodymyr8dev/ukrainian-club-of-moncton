@@ -103,33 +103,6 @@ export const Header = () => {
             <li className={`py-6 font-proximaNova300 md:font-proximaNova500
             text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7
             md:px-0 capitalize
-            ${ pathname === '/info/[page]'
-            ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0'
-            : '' }`}>
-              <Link href='/info/1' locale={locale}>
-                <div
-                  className='flex md:block items-center justify-start gap-4
-                  md-gap-0'
-                >
-                  <div className='flex md:hidden items-center'>
-                    <Image
-                      src={ pathname === ('/info/[page]') ? InfoWhiteIcon : InfoBlackIcon }
-                      alt='info'
-                      width={ 20 }
-                      height={ 20 }
-                    />
-                  </div>
-                  <a className={`${ pathname === ('/info/[page]') ? 'text-gray-100 md:text-blue-500' : '' } cursor-pointer`}>
-                    { t('info') }
-                  </a>
-                </div>
-              </Link>
-            </li>
-
-
-            <li className={`py-6 font-proximaNova300 md:font-proximaNova500
-            text-base md:text-xl text-center md:border-b-2 w-full md:w-auto px-7
-            md:px-0 capitalize
             ${ pathname === '/events/[page]' ? 'md:text-blue-500 md:border-blue-500 bg-blue-500 md:bg-gray-100 rounded-lg md:rounded-none px-4 md:px-0' : '' }`}>
               <Link href='/events/1' locale={locale}>
                 <div

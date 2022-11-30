@@ -66,9 +66,9 @@ export const HomeFront = () => {
           </div>
 
           <div
-            className=" flex flex-col justify-center items-center md:translate-y-[90px] sm:mt-[-301px] xl:mt-[-140px]"
+            className=" flex flex-col justify-center items-center"
           >
-            <div className=" object-cover sm:w-[190px] md:w-auto md:mt-[190px] lg:mt-[-70px] "> 
+            <div className=" object-cover"> 
             <Image
               src={flag}
               alt="flag"
