@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { ContactForm } from '../../utils/ContactForm'
 
 
-import BlueEmailIcon from './../../../assets/images/contacts/email.svg'
+import BlueEmailIcon from './../../../assets/images/contacts/email-icon.svg'
 import WhiteEmailIcon from './../../../assets/images/contacts/email-active.svg'
 import FacebookIcon from './../../../assets/images/contacts/facebook-active.svg'
 import FacebookActiveIcon from './../../../assets/images/contacts/facebook.svg'
