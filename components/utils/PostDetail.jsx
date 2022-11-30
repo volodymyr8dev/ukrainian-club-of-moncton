@@ -31,6 +31,10 @@ export const PostDetail = ({ post }) => {
   const [copied, setCopied] = React.useState(false)
 
   const {data, loading, error }  = getTexts(router.locale)
+
+  if (loading) return <span></span>
+
+  if (error) return <span></span>
   
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
   

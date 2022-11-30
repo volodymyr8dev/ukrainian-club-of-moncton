@@ -57,7 +57,7 @@ export const HomeFront = () => {
               </div>
 
               <FilledButton
-                href="/info"
+                href="/info/1"
                 text={data["home-upper-next"]}
                 textColor="gray-100"
                 bgColor="bg-blue-500"
