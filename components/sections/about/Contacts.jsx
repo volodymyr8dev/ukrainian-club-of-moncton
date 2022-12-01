@@ -16,8 +16,9 @@ import { getTexts } from './../../../services/getTexts.js'
 
 export const Contacts = () => {
   const { locale } = useRouter()
-  const { data, loading, error } = getTexts(locale)
-
+  const {data:dataFrom100 } = getTexts(locale,100)
+  const { data, loading, error } = getTexts(locale,)
+console.log("dataFrom100",dataFrom100)
   const [instagramActive, setInstagramActive] = useState(false)
   const [facebookActive, setFacebookActive] = useState(false)
   const [emailActive, setEmailActive] = useState(false)
@@ -27,14 +28,23 @@ export const Contacts = () => {
 
   const toggleFacebookStyle = () => {
     setFacebookActive(!facebookActive)
-  }
-  const toggleEmailStyle = () => {
-    setEmailActive(!emailActive)
-  }
-  const toggleInstagramStyle = () => {
-    setInstagramActive(!instagramActive)
+    setInstagramActive(false)
+    setEmailActive(false)
   }
 
+  const toggleEmailStyle = () => {
+    setEmailActive(!emailActive)
+    setInstagramActive(false)
+    setFacebookActive(false)
+  }
+  
+  const toggleInstagramStyle = () => {
+    setInstagramActive(!instagramActive)
+    setFacebookActive(false)
+    setEmailActive(false)
+  }
+
+  console.log('data["instagram-navigation"]}',data['instagram-navigation-link'])
   return (
     <section className='flex justify-center w-full mb-[72px] md:mb-24 px-6'>
       <div className='flex justify-between flex-col max-w-[1216px] w-full'>
@@ -44,7 +54,7 @@ export const Contacts = () => {
         </h2>
         <div className='flex gap-5 justify-between w-full pt-11 mb-[72px] md:mb-10
         flex-col lg:flex-row'>
-             <div className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
+             <a href={instagramActive && dataFrom100["instagram-navigation"]} rel="noreferrer" target="_blank" className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
           flex flex-col  items-center justify-center w-full py-[25px] cursor-pointer
           transition-all
           ${ instagramActive ? 'bg-blue-500' : 'bg-gray-100' }`}
@@ -54,18 +64,14 @@ export const Contacts = () => {
               src={ instagramActive ? InstagramActiveIcon : InstagramIcon }
               alt='isntagram'
             />
-            <a href={``} className={`mt-[4px]`}>
-              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
-              max-w-[205px] 
+              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]  mt-[4px]
               ${ instagramActive ? 'text-gray-100' : 'text-blue-500'}`}>
-            
                 {data["instagram-description"]}
               </span>
-            </a>
-          </div>
+          </a>
 
 
-          <div className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
+          <a href={facebookActive && data["facebook-navigation"]} rel="noreferrer" target="_blank" className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
           flex flex-col  items-center justify-center w-full py-[25px] cursor-pointer
           transition-all 
           ${ facebookActive ? 'bg-blue-500' : 'bg-gray-100' }`}
@@ -75,16 +81,14 @@ export const Contacts = () => {
               src={ facebookActive ? FacebookActiveIcon : FacebookIcon  }
               alt='facebook'
             />
-            <a href={`${ data["facebook-navigation"] }`} className={`mt-[4px]`} >
-              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
+              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]  mt-[4px]
               max-w-[205px] inline-block
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
             
                 {data["facebook-description"]}
               </span>
-            </a>
-          </div>
-          <div className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
+          </a>
+          <a rel="noreferrer" target="_blank" href={emailActive && `mailto:${ data["about-email-box"] }`} className={`shadow-[0px_2px_32px_rgba(0,32,73,0.13)] rounded-3xl 
           flex flex-col  items-center justify-center w-full py-[25px] cursor-pointer
           transition-all
           ${ emailActive ? 'bg-blue-500' : 'bg-gray-100' }`}
@@ -96,15 +100,13 @@ export const Contacts = () => {
               width={32}
               height={25.6}
             />
-            <a href={`mailto:${ data["about-email-box"] }`} className={`mt-[4px]`}>
-              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
+              <span className={`font-proximaNova500 text-base md:text-lg leading-[150%] mt-[4px]
               max-w-[205px] inline-block
               ${ emailActive ? 'text-gray-100' : 'text-blue-500'}`}>
             
                 {data["about-email-box"]}
               </span>
-            </a>
-          </div>
+          </a>
         </div>
 
         <ContactForm />
