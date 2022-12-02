@@ -77,7 +77,7 @@ export const Contacts = () => {
             />
             <a href={`${ data["facebook-navigation"] }`} className={`mt-[4px]`} >
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]
-              max-w-[205px] inline-block
+               inline-block
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
             
                 {data["facebook-description"]}
