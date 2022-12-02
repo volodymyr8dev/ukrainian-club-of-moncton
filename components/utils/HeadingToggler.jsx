@@ -12,6 +12,7 @@ export const HeadingToggler = (props) => {
             { props.heading }
           </h2>
         </div>
+        {props.relatedPosts > 6 && 
         <div className='hidden md:flex gap-8'>
           <Image
             className={`${ props.togglerPrevClass } cursor-pointer`}
@@ -28,6 +29,7 @@ export const HeadingToggler = (props) => {
             height={ 64 }
           />
         </div>
+        }
       </div>
     </>
   )

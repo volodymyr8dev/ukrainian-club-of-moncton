@@ -40,6 +40,7 @@ export const RelatedPosts = ({ category, tags, slug }) => {
           heading='Related articles'
           togglerPrevClass='event-prev'
           togglerNextClass='event-next'
+          relatedPosts={relatedPosts}
         />
 
           <div className='flex justify-between gap-2 xl:gap-0 -ml-[23px] md:ml-0'>
