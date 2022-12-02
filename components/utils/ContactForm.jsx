@@ -33,6 +33,11 @@ export const ContactForm = () => {
       (result) => {
         console.log(result.text);
         setShowThankYou(true);
+
+        setTimeout(()=>{
+          setShowThankYou(false);
+        },5000)
+        
       },
       (error) => {
         console.log(error.text);
