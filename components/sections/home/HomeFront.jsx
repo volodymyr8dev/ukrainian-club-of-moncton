@@ -92,7 +92,7 @@ export const HomeFront = () => {
           </div>
 
           <div
-            className=" md:max-w-[120%] max-w-full 2xl:max-w-[540px] w-full
+            className=" md:max-w-[120%] xl:max-w-[500px] max-w-full 2xl:max-w-[540px] w-full
         hidden md:flex flex-col gap-8 mt-0 md:mt-[6.4rem]"
           >
             <div className="flex justify-start items-center gap-6 md:gap-8">
