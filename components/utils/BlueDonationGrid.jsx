@@ -6,7 +6,7 @@ const GET_BLUE_CARDS_QUERY = gql`
     howCanIHelpCards (
       orderBy: createdAt_ASC,
       first: 9,
-      where: { color: "blue" }
+      # where: { color: "blue" }
     ) {
       cardText
       url
@@ -29,13 +29,13 @@ export const BlueDonationGrid = () => {
     <>
     <>
       {
-        data.howCanIHelpCards.slice(0, 3).map((card, i) => (
+        data.howCanIHelpCards.slice(0, 15).map((card, i) => (
           <div
             key={ i }
             className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
             pt-8 rounded-3xl flex justify-between items-center flex-col px-8
-            xl:min-w-[376px] pb-8 tablets:pb-0a max-w-full
-            min-h-[376px] max-h-full tablets:max-h-[376px] h-full w-full
+            pb-8 tablets:pb-0a lg:min-w-[250px] xl:min-w-[270px] 2xl:min-w-[350px]
+            min-h-[376px] max-h-full tablets:max-h-[376px] h-full 
             flex-1 shrink-0 '
           >
             <div className='bg-blue-500 z-10 rounded-full'>
@@ -63,7 +63,7 @@ export const BlueDonationGrid = () => {
       }
     </>
 
-    {
+    {/* {
       data.howCanIHelpCards.length <= 3
       ? <></>
       : <div className='flex w-full gap-8 md:gap-5 tablets:gap-10 justify-start
@@ -74,8 +74,8 @@ export const BlueDonationGrid = () => {
                 key={ i }
                 className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
                 pt-8 rounded-3xl flex justify-between items-center flex-col px-8
-                xl:min-w-[376px] pb-8 tablets:pb-0a max-w-full
-                min-h-[376px] max-h-full tablets:max-h-[376px] h-full w-full
+               pb-8 tablets:pb-0a   lg:min-w-[290px] xl:min-w-[350px]
+                min-h-[376px] max-h-full tablets:max-h-[376px] h-full 
                 flex-1 shrink-0 tablets:max-w-[32%]'
               >
                 <div className='bg-blue-500 z-10 rounded-full'>
@@ -115,8 +115,8 @@ export const BlueDonationGrid = () => {
               key={ i }
               className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
               pt-8 rounded-3xl flex justify-between items-center flex-col px-8
-              xl:min-w-[376px] pb-8 tablets:pb-0a max-w-full
-              min-h-[376px] max-h-full tablets:max-h-[376px] h-full w-full
+              pb-8 tablets:pb-0a lg:min-w-[290px] xl:min-w-[350px]
+              min-h-[376px] max-h-full tablets:max-h-[376px] h-full
               flex-1 shrink-0 tablets:max-w-[32%]'
             >
               <div className='bg-blue-500 z-10 rounded-full'>
@@ -143,7 +143,7 @@ export const BlueDonationGrid = () => {
           ))
         }
       </div> 
-    }
+    } */}
     </>
   )
 }

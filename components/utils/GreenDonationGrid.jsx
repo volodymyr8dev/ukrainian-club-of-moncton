@@ -34,8 +34,8 @@ export const GreenDonationGrid = () => {
             key={ i }
             className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
             pt-8 rounded-3xl flex justify-between items-center flex-col px-8
-            xl:min-w-[376px] pb-8 tablets:pb-0a max-w-full
-            min-h-[376px] max-h-full tablets:max-h-[376px] h-full w-full
+            pb-8 tablets:pb-0a lg:min-w-[290px] xl:min-w-[350px]
+            min-h-[376px] max-h-full tablets:max-h-[376px] h-full 
             flex-1 shrink-0 w-auto'
           >
             <div className='bg-blue-500 z-10 rounded-full'>
@@ -74,8 +74,8 @@ export const GreenDonationGrid = () => {
                 key={ i }
                 className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
                 pt-8 rounded-3xl flex justify-between items-center flex-col px-8
-                xl:min-w-[376px] pb-8 tablets:pb-0a max-w-full
-                min-h-[376px] max-h-full tablets:max-h-[376px] h-full w-full
+                pb-8 tablets:pb-0a  lg:min-w-[290px] xl:min-w-[350px]
+                min-h-[376px] max-h-full tablets:max-h-[376px] h-full
                 flex-1 shrink-0 tablets:max-w-[32%]'
               >
                 <div className='bg-green-500 z-10 rounded-full'>
@@ -115,7 +115,7 @@ export const GreenDonationGrid = () => {
                 key={ i }
                 className='shadow-[0px_2px_32px_rgba(0,32,73,0.13)] bg-gray-100
                 pt-8 rounded-3xl flex justify-between items-center flex-col px-8
-                xl:min-w-[376px] pb-8 tablets:pb-0a max-w-full
+                 pb-8 tablets:pb-0a  lg:min-w-[290px] xl:min-w-[350px]
                 min-h-[376px] max-h-full tablets:max-h-[376px] h-full w-full
                 flex-1 shrink-0 '
               >
