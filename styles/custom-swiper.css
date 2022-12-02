@@ -19,6 +19,9 @@
 .swiper-backface-hidden .swiper-slide {
   max-width: 376px;
 }
+.swiper-slide:hover{
+  z-index: 2;
+}
 
 .event-prev.swiper-button-disabled,
 .event-next.swiper-button-disabled,
