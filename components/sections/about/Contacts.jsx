@@ -18,7 +18,7 @@ export const Contacts = () => {
   const { locale } = useRouter()
   const {data:dataFrom100 } = getTexts(locale,100)
   const { data, loading, error } = getTexts(locale,)
-console.log("dataFrom100",dataFrom100)
+
   const [instagramActive, setInstagramActive] = useState(false)
   const [facebookActive, setFacebookActive] = useState(false)
   const [emailActive, setEmailActive] = useState(false)
@@ -44,7 +44,6 @@ console.log("dataFrom100",dataFrom100)
     setEmailActive(false)
   }
 
-  console.log('data["instagram-navigation"]}',data['instagram-navigation-link'])
   return (
     <section className='flex justify-center w-full mb-[72px] md:mb-24 px-6'>
       <div className='flex justify-between flex-col max-w-[1216px] w-full'>
