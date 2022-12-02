@@ -9,6 +9,7 @@ import flag from "./../../../assets/images/Ukraine.webp";
 
 export const HomeFront = () => {
   const { locale } = useRouter();
+  const { data:dataFrom100 } = getTexts(locale,100);
   const { data, loading, error } = getTexts(locale);
 
   if (loading) return <span></span>;
@@ -78,15 +79,15 @@ export const HomeFront = () => {
               
             />
              </div> 
-            <div className=" tablets-m:mx-[10px]">
+            <div className=" tablets-m:mx-[10px] text-center">
             <span className='font-proximaNova500 text-blue-500 text-[39px] 2xl:text-[36px] xl:text-[22px] md:text-[18px] smallest-phones:text-[16px] lg:text-[21px] tablets-m:text-[11px]
             '>
-            UKRAINIAN CLUB
+           {dataFrom100["logo-ukrainian-first"]}
             </span>    
             <br/>  
-            <span className='font-proximaNova500 text-blue-500 text-[43px] 2xl:text-[47px] xl:text-[29px] md:text-[24px] smallest-phones:text-[21px]  lg:text-[27px] tablets-m:text-[15px]
+            <span className='font-proximaNova500 text-blue-500 text-[43px] text-center 2xl:text-[47px] xl:text-[29px] md:text-[24px] smallest-phones:text-[21px]  lg:text-[27px] tablets-m:text-[15px]
             '>
-            OF MOCTION
+           {dataFrom100["logo-ukrainian-second"]}
             </span>   
             </div>  
           </div>
