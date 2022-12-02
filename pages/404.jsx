@@ -13,7 +13,7 @@ export default function FourOhFour() {
     <>
     <div className='h-screen w-screen -mt-[70px] not-found-bg'>
       <div className='w-full h-full flex justify-center items-center flex-col'>
-        <div className='flex justify-center items-center w-full gap-4 -mt-64'>
+        <div className='flex justify-center items-center w-full gap-4 -mt-100'>
           <span className='font-proximaNova300 text-[114px] md:text-[227px]
           text-center text-blue-500'>
             4
