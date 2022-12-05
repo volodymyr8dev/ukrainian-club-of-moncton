@@ -21,9 +21,9 @@ export const DonationSupport = () => {
       
       <BlueDonationGrid />
 
-        <YellowDonationGrid />
+        {/* <YellowDonationGrid /> */}
 
-        <GreenDonationGrid />
+        {/* <GreenDonationGrid /> */}
       </div>
      </section>
   )
