@@ -18,6 +18,7 @@ import InstagramIcon from './../../assets/images/footer/instagram.svg'
 export const Footer = () => {
   const { t } = useTranslation("common");
   const { locale } = useRouter();
+  const { data:dataFrom100 } = getTexts(locale,100);
   const { data, loading, error } = getTexts(locale);
 
   if (loading) return <span></span>;
@@ -69,7 +70,7 @@ export const Footer = () => {
                   width={ 24 }
                   alt='instagram'
                 />
-                <a href={`${data["footer-instagram-navigation"] }`}>
+                <a href={`${dataFrom100["instagram-navigation"] }`} target='_blank' rel='noreferrer'>
                   <span className='font-proximaNova300 text-sm leading-[14px]
                   text-gray-100'>
                   {data["footer-instagram-box"]}
@@ -226,7 +227,7 @@ export const Footer = () => {
                 width={ 24 }
                 alt='instagram'
               />
-              <a href={`${data["footer-instagram-navigation"] }`}>
+              <a href={`${dataFrom100["instagram-navigation"] }`} target='_blank' rel='noreferrer'>
                 <span className='font-proximaNova300 text-sm leading-[14px]
                 text-gray-100'>
                  {data["footer-instagram-box"]}
