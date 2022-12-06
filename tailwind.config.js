@@ -16,11 +16,11 @@ module.exports = {
     },
     colors: {
       blue: {
-        500: '#5271F2',
+        500: '#006DB6',
       },
       yellow: {
         100: '#FCECDC',
-        300: '#FFCE26',
+        300: '#F9EA35',
         500: '#FEBB37',
         900: '#D4A780',
       },
