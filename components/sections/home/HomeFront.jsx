@@ -9,6 +9,7 @@ import flag from "./../../../assets/images/Ukraine.webp";
 
 export const HomeFront = () => {
   const { locale } = useRouter();
+  
   const { data:dataFrom100 } = getTexts(locale,100);
   const { data, loading, error } = getTexts(locale);
 
