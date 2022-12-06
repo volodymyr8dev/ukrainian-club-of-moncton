@@ -143,7 +143,7 @@ function Events({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
 
                                 <Link href={`/posts/${post.node.slug}`}>
                                   <span
-                                    className="bg-yellow-500 text-gray-100
+                                    className="bg-[#006DB6] text-gray-100
                                     py-3 px-8 lg:px-10 rounded-[64px]
                                     font-proximaNova400 text-base md:text-lg
                                     text-center cursor-pointer"

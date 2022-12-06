@@ -8,7 +8,8 @@ import { useRouter } from "next/router";
 import { getTexts } from "./../../../services/getTexts.js";
 import { DonateButton } from "../../utils/DonateButton";
 
-export const ClubQuestions = () => {
+export const 
+ClubQuestions = () => {
   const { locale } = useRouter();
   const { data, loading, error } = getTexts(locale);
 
