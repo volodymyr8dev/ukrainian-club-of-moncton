@@ -16,15 +16,15 @@ import { getTexts } from './../../../services/getTexts.js'
 
 export const Contacts = () => {
   const { locale } = useRouter()
-  const {data:dataFrom100 } = getTexts(locale,100)
+  const { data:dataFrom100,loading:loadingFrom100,error:errorFrom100 } = getTexts(locale,100);
   const { data, loading, error } = getTexts(locale,)
 
   const [instagramActive, setInstagramActive] = useState(false)
   const [facebookActive, setFacebookActive] = useState(false)
   const [emailActive, setEmailActive] = useState(false)
 
-  if (loading) return <span></span>
-  if (error) return <span></span>
+  if (loading || loadingFrom100) return <span></span>
+  if (error || errorFrom100) return <span></span>
 
   const toggleFacebookStyle = () => {
     setFacebookActive(!facebookActive)
@@ -81,9 +81,7 @@ export const Contacts = () => {
               alt='facebook'
             />
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]  mt-[4px]
-              max-w-[205px] inline-block
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
-            
                 {data["facebook-description"]}
               </span>
           </a>

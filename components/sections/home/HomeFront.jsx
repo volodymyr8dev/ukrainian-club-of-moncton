@@ -27,8 +27,8 @@ export const HomeFront = () => {
       w-full tablets:w-auto md:mt-[20px] lg:mt-[-110px]"
         >
           <div
-            className="lg:max-w-[340px] max-w-full 2xl:max-w-[540px] flex
-        flex-col gap-6 md:gap-8 lg:-mt-8 mt-12 tablets:-mt-[1.7rem]"
+            className="lg:max-w-[390px] max-w-full 2xl:max-w-[520px] flex
+        flex-col gap-6 md:gap-8 mt-[.5rem]"
           >
             <h2
               className="font-proximaNova300 text-[34px] md:text-[35px]  lg:text-[38px]
@@ -94,8 +94,8 @@ export const HomeFront = () => {
           </div>
 
           <div
-            className=" md:max-w-[120%] xl:max-w-[500px] max-w-full 2xl:max-w-[540px] w-full
-        hidden md:flex flex-col gap-8 mt-0 md:mt-[6.4rem]"
+            className=" xl:max-w-[460px] max-w-full 2xl:max-w-[500px] w-full lg:pt-[5rem] lg:max-w-[440px]
+        hidden md:flex flex-col gap-8 mt-0 md:mt-[8.4rem] lg:mb-[-170px]"
           >
             <div className="flex justify-start items-center gap-6 md:gap-8">
               <FilledButton
@@ -116,25 +116,25 @@ export const HomeFront = () => {
             </p>
 
             <h2
-              className="font-proximaNova300 uppercase text-[41px] leading-[65px] xl:leading-[64px] md:leading-[46px]
+              className="font-proximaNova300 uppercase text-[39px] leading-[65px] xl:leading-[64px] md:leading-[46px]
               tracking-wide  md:text-[25px] lg:text-[32px] xl:text-[34px]"
             >
               {data["home-bottom-subtitle"]}
               <br />
               <span
-                className="font-proximaNova500 text-blue-500 text-[62.81px] 2xl:text-[62.81px] xl:text-[59px] lg:text-[55px] md:text-[40px]
+                className="font-proximaNova500 text-blue-500 text-[55px] 2xl:text-[55px] xl:text-[52px] lg:text-[51px] md:text-[40px]
                 uppercase"
               >
                 {data["home-bottom-title-bold"]}
               </span>{" "}
               <span
-                className="font-proximaNova500 text-gray-900 text-[62.81px]  2xl:text-[62.81px] xl:text-[59px] lg:text-[55px] md:text-[40px]
+                className="font-proximaNova500 text-gray-900 text-[55px]  2xl:text-[55px] xl:text-[52px] lg:text-[51px] md:text-[40px]
             uppercase"
               >
                 {data["home-bottom-title"]}
               </span>{" "}
               <span
-                className="font-proximaNova500 text-[#F9EA35] text-[62.81px]  2xl:text-[62.81px] xl:text-[59px] lg:text-[55px] md:text-[40px]
+                className="font-proximaNova500 text-yellow-300 text-[55px]  2xl:text-[55px] xl:text-[52px] lg:text-[51px] md:text-[40px]
                 uppercase"
               >
                 {data["home-help"]}
