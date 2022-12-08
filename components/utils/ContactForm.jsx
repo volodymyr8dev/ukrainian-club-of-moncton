@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import emailjs from "@emailjs/browser";
-import useTranslation from "next-translate/useTranslation";
 
 import ProfileIcon from './../../assets/images/form/profile.webp'
 import EmailIcon from './../../assets/images/form/email.webp'
@@ -14,13 +13,14 @@ import { getTexts } from "./../../services/getTexts.js";
 export const ContactForm = () => {
   const form = useRef();
   const { locale } = useRouter();
+  const { data:dataFrom100, loadingFrom100, errorFrom100 } = getTexts(locale,100);
   const { data, loading, error } = getTexts(locale);
 
   const [showThankYou, setShowThankYou] = useState(false);
   const [showError, setShowError] = useState(false);
 
-  if (loading) return <span></span>;
-  if (error) return <span></span>;
+  if (loading || loadingFrom100) return <span></span>;
+  if (error || errorFrom100) return <span></span>;
 
   const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
   const templateID = process.env.NEXT_PUBLIC_EMAILJS_EMAIL_TEMPLATE_ID;
@@ -99,7 +99,7 @@ export const ContactForm = () => {
                   className="font-proximaNova400 text-sm pb-4"
                   htmlFor="email"
                 >
-                  {data.textContent}
+                  {dataFrom100['form-email']}
                 </label>
                 <div
                   className="bg-gray-200 px-4 flex items-center gap-8
@@ -124,7 +124,8 @@ export const ContactForm = () => {
                   className="font-proximaNova400 text-sm pb-4"
                   htmlFor="phone"
                 >
-                  {data.textContent}
+                {dataFrom100['form-phone']}
+
                 </label>
                 <div
                   className="bg-gray-200 px-4 flex items-center gap-10
