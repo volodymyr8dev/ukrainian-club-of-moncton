@@ -43,7 +43,7 @@ export const Gallery = () => {
         breakpoints={{
           100: {
             slidesPerView: 1.2,
-            spaceBetween: 8
+            spaceBetween: 18
           },
           768: {
             slidesPerView: 3,
@@ -53,14 +53,12 @@ export const Gallery = () => {
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true
         }}
-        pagination={{
-          clickable: true,
-        }}
+       
         navigation={{
           prevEl: '.gallery-prev',
           nextEl:'.gallery-next'
+
         }}
         modules={[ Pagination, Navigation, Autoplay ]}
         className='home-gallery-swiper'
