@@ -88,7 +88,7 @@ export const ContactForm = () => {
                     name="name"
                     id="name"
                     type="name"
-                    placeholder="John Doe"
+                    placeholder={dataFrom100["placeholder-name"]}
                     required
                   />
                 </div>
@@ -113,7 +113,8 @@ export const ContactForm = () => {
                     name="email"
                     id="email"
                     type="email"
-                    placeholder="JohnDoe@gmail.com"
+                    placeholder={dataFrom100["placeholder-email"]}
+
                     required
                   />
                 </div>
@@ -139,7 +140,8 @@ export const ContactForm = () => {
                     name="phone"
                     id="phone"
                     type="phone"
-                    placeholder="+1 772 1"
+                    placeholder={dataFrom100["placeholder-phone"]}
+
                   />
                 </div>
               </div>
