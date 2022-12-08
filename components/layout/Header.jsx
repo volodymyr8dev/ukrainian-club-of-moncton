@@ -29,6 +29,7 @@ export const Header = () => {
   
   const [isActive, setIsActive] = useState(false)
   
+  
   //Makes sure class is removed after changing to any pages/
   useEffect(() => {
     document.documentElement.classList.remove('lock-scroll')
