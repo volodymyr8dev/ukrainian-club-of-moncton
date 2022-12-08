@@ -81,9 +81,7 @@ export const Contacts = () => {
               alt='facebook'
             />
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]  mt-[4px]
-           
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
-            
                 {data["facebook-description"]}
               </span>
           </a>

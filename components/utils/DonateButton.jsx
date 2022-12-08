@@ -23,7 +23,7 @@ export const DonateButton = ({link,img,text}) => {
     >
       <div
         className='cursor-pointer font-proximaNova400 text-base md:text-xl
-        bg-blue-500 py-3 md:py-[14px] px-3 smaller-phones:px-6 flex items-center
+        bg-[#006DB6] py-3 md:py-[14px] px-3 smaller-phones:px-6 flex items-center
         small-phones:px-[32px] rounded-[50px] uppercase flex gap-2 justify-between'>
         <span className='text-gray-100'>
           {text ? text: data["donate-now"]}
