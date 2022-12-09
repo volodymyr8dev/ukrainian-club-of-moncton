@@ -9,8 +9,6 @@ import UkrClubLogo from './../../assets/images/footer/ukr-monc-logo.svg'
 import VercelLogo from './../../assets/images/footer/vercel-logo.svg'
 import BinaryFutureLogo from './../../assets/images/footer/bf-logo.svg'
 
-import LocationIcon from './../../assets/images/footer/location.svg'
-import PhoneIcon from './../../assets/images/footer/phone.svg'
 import EmailIcon from './../../assets/images/footer/email.svg'
 import FacebookIcon from './../../assets/images/footer/facebook.svg'
 import InstagramIcon from './../../assets/images/footer/instagram.svg'
