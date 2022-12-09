@@ -13,13 +13,11 @@ import CloseIcon from './../../assets/images/mobile-menu/close.svg'
 
 import HomeBlackIcon from './../../assets/images/mobile-menu/home-black.svg'
 import EventsBlackIcon from './../../assets/images/mobile-menu/events-black.svg'
-import InfoBlackIcon from './../../assets/images/mobile-menu/info-black.svg'
 import AboutBlackIcon from './../../assets/images/mobile-menu/about-black.svg'
 import HelpBlackIcon from './../../assets/images/mobile-menu/help-black.svg'
 
 import HomeWhiteIcon from './../../assets/images/mobile-menu/home-white.svg'
 import EventsWhiteIcon from './../../assets/images/mobile-menu/events-white.svg'
-import InfoWhiteIcon from './../../assets/images/mobile-menu/info-white.svg'
 import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.svg'
 import HelpWhiteIcon from './../../assets/images/mobile-menu/help-white.svg'
 

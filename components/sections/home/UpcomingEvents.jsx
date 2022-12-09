@@ -1,7 +1,5 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import moment from 'moment'
-import {useState} from 'react'
 import { useRouter } from 'next/router'
 import { getTexts } from './../../../services/getTexts.js'
 
@@ -16,8 +14,6 @@ import "swiper/css/navigation";
 import "swiper/css/grid";
 import "swiper/css/autoplay";
 
-
-import locationImage from "./../../../assets/images/card-location.svg";
 
 import { HeadingToggler } from "../../utils/HeadingToggler";
 
