@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import yellowHeart from './../../assets/images/yellow-heart.webp'
+import yellowHeart from './../../assets/images/yellow-heart.svg'
 
 import { useRouter } from 'next/router'
 import { getTexts } from './../../services/getTexts.js'

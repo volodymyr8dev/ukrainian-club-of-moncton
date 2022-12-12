@@ -39,7 +39,7 @@ export const Footer = () => {
                 <Image
                   src={ UkrClubLogo }
                   width={ 194 }
-                  alt='Ukrainian Club of Moncton'
+                  alt={dataFrom100['assosiation-of-moncton']}
                 />
               </span>
             </Link>
@@ -91,41 +91,6 @@ export const Footer = () => {
                   </span>
                 </a>
               </div>
-
-            {/* <div className='flex gap-[26px] justify-end w-full'>
-              <div>
-                <span className='font-proximaNova300 text-sm leading-[14px]
-                  text-gray-500'>
-                  Social media:
-                </span>
-              </div>
-
-              <div className='flex gap-[30px]'>
-                <a
-                  href={ data["footer-facebook"] }
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <Image
-                    src={ FacebookIcon }
-                    width={ 24 }
-                    alt='facebook'
-                  />
-                </a>
-
-                <a
-                  href={ data["footer-instagram"] }
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <Image
-                    src={ InstagramIcon }
-                    width={ 24 }
-                    alt='instagram'
-                  />
-                </a>
-              </div>
-            </div> */}
           </div>
         </div>
 
@@ -179,7 +144,7 @@ export const Footer = () => {
           <div className='flex justify-end w-[33%]'>
             <span className='font-proximaNova300 text-sm leading-[14px]
             text-gray-500 w-full text-right'>
-              Copyright © 2022 • Ukrainian Club of Moncton
+              {dataFrom100['footer-assosiation-of-moncton']}
             </span>
           </div>
         </div>
@@ -198,7 +163,7 @@ export const Footer = () => {
                 <Image
                   src={ UkrClubLogo }
                   width={ 194 }
-                  alt='Ukrainian Club of Moncton'
+                  alt={dataFrom100['assosiation-of-moncton']}
                 />
               </span>
             </Link>
@@ -300,7 +265,7 @@ export const Footer = () => {
           <div className='flex justify-end'>
             <span className='font-proximaNova300 text-sm leading-[14px]
             text-gray-500 w-full text-center'>
-              Copyright © 2022 • Ukrainian Club of Moncton
+               {dataFrom100['footer-assosiation-of-moncton']}
             </span>
           </div>
         </div>

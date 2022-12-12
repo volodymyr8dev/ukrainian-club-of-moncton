@@ -38,7 +38,7 @@ function OurHelp({
   return (
     <>
     <Head>
-      <title>Our help - Ukrainian Club of Moncton</title>
+      <title>Our help - Ukrainian Assosiation of Moncton</title>
       <meta
         name="description"
         // equal data
