@@ -95,7 +95,7 @@ export const Contacts = () => {
               src={ emailActive ? WhiteEmailIcon : BlueEmailIcon }
               alt='email'
               width={32}
-              height={25.6}
+              height={24.9}
             />
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%] mt-[4px]
               max-w-[205px] inline-block
