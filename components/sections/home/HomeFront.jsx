@@ -186,7 +186,7 @@ export const HomeFront = () => {
               <FilledButton
                 href="/how"
                 text={data["home-bottom-next"]}
-                textColor="gray-100"
+                textColor="black-100"
                 bgColor="bg-yellow-300"
               />
             </div>

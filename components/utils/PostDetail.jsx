@@ -110,7 +110,7 @@ export const PostDetail = ({ post }) => {
               rounded-full cursor-pointer'>
                 <FacebookShareButton
                   url={data['facebook-navigation']}
-                  quote={'Check out this post from Ukrainian Club of Moncton!'}
+                  quote={'Check out this post from Ukrainian Assosiation of Moncton!'}
                 >
                   <Image
                     src={ FacebookIcon }
@@ -125,7 +125,7 @@ export const PostDetail = ({ post }) => {
               rounded-full cursor-pointer'>
                 <TwitterShareButton
                   url={ `${ baseURL }${ router.asPath }` }
-                  quote={'Check out this post from Ukrainian Club of Moncton!'}
+                  quote={'Check out this post from Ukrainian Assosiation of Moncton!'}
                 >
                   <Image
                     src={ TwitterIcon }
@@ -253,7 +253,7 @@ export const PostDetail = ({ post }) => {
               rounded-full cursor-pointer flex items-center justify-center pt-[2px]'>
                 <FacebookShareButton
                   url={ `${ baseURL }${ router.asPath }` }
-                  quote={'Check out this post from Ukrainian Club of Moncton!'}
+                  quote={'Check out this post from Ukrainian Assosiation of Moncton!'}
                 >
                   <Image
                     src={ FacebookIcon }
@@ -267,7 +267,7 @@ export const PostDetail = ({ post }) => {
               rounded-full cursor-pointer'>
                 <TwitterShareButton
                   url={ `${ baseURL }${ router.asPath }` }
-                  quote={'Check out this post from Ukrainian Club of Moncton!'}
+                  quote={'Check out this post from Ukrainian Assosiation of Moncton!'}
                 >
                   <Image
                     src={ TwitterIcon }

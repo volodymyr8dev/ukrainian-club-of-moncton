@@ -17,7 +17,7 @@ export default function About() {
   return (
     <>
     <Head>
-      <title>About - Ukrainian Club of Moncton</title>
+      <title>About - Ukrainian Assosiation of Moncton</title>
       <meta
         name="description"
         content={data["about-description-seo"]}

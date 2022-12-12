@@ -17,7 +17,7 @@ export default function PostDetails({ post }) {
   return (
     <>
     <Head>
-      <title>{ post.title } - Ukrainian Club of Moncton</title>
+      <title>{ post.title } - Ukrainian Assosiation of Moncton</title>
       <meta
         name="description"
         content={ post.excerpt }

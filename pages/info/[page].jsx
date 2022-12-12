@@ -43,7 +43,7 @@ function PostPage({
   return (
     <>
     <Head>
-      <title>Info - Ukrainian Club of Moncton</title>
+      <title>Info - Ukrainian Assosiation of Moncton</title>
       <meta
         name="description"
         // equal data
