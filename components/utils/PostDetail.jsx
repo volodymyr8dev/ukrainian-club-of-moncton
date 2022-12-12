@@ -11,7 +11,7 @@ import { FacebookShareButton, TwitterShareButton } from 'next-share'
 
 import { RelatedPosts } from './RelatedPosts'
 
-import UCMLogo from '../../public/ucm-logo.svg'
+import UCMLogo from './../../assets/images/post/UKR_Logo.png'
 import FacebookIcon from './../../assets/images/slug/facebook.svg'
 import TwitterIcon from './../../assets/images/post/twitter.svg'
 import YellowCheck from './../../assets/images/yellow-check.svg'

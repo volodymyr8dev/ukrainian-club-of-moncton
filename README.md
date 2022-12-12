@@ -1,4 +1,4 @@
-# Ukrainian Assosiation of Moncton
+# Ukrainian Association of Moncton
 
 [![Tool 1](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/?utm_source=binary-future-moncton&utm_campaign=oss)
 ![Tool 2](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
