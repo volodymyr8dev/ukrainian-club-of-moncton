@@ -182,7 +182,7 @@ export const UpcomingEvents = () => {
 
                           <Link href={`/posts/${post.slug}`}>
                             <span
-                              className="bg-yellow-500 text-gray-100
+                              className="bg-yellow-500 text-black-100
                           py-3 px-4 lg:px-10 rounded-[64px]
                           font-proximaNova400 text-base md:text-lg
                           text-center cursor-pointer"

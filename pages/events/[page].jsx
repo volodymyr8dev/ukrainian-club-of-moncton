@@ -35,7 +35,7 @@ function Events({ currentPageNumber, hasNextPage, hasPreviousPage, posts }) {
   return (
     <>
       <Head>
-        <title>Events - Ukrainian Club of Moncton</title>
+        <title>Events - Ukrainian Assosiation of Moncton</title>
         {/* equal data */}
         <meta name="description" content={data["how-tag-seo"]} />
 
