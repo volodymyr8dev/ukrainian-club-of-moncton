@@ -27,11 +27,12 @@ export const PostDetail = ({ post }) => {
   const [open, setOpen] = React.useState(false)
   const [copied, setCopied] = React.useState(false)
 
+  const {data:dataFrom100, loading:loadingFrom100, error:errorFrom100 }  = getTexts(router.locale,100)
   const {data, loading, error }  = getTexts(router.locale)
 
-  if (loading) return <span></span>
+  if (loading || loadingFrom100) return <span></span>
 
-  if (error) return <span></span>
+  if (error || errorFrom100) return <span></span>
   
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
   
@@ -110,7 +111,7 @@ export const PostDetail = ({ post }) => {
               rounded-full cursor-pointer'>
                 <FacebookShareButton
                   url={data['facebook-navigation']}
-                  quote={'Check out this post from Ukrainian Assosiation of Moncton!'}
+                  quote={dataFrom100['post-assosiation-of-moncton']}
                 >
                   <Image
                     src={ FacebookIcon }
@@ -125,7 +126,7 @@ export const PostDetail = ({ post }) => {
               rounded-full cursor-pointer'>
                 <TwitterShareButton
                   url={ `${ baseURL }${ router.asPath }` }
-                  quote={'Check out this post from Ukrainian Assosiation of Moncton!'}
+                  quote={dataFrom100['post-assosiation-of-moncton']}
                 >
                   <Image
                     src={ TwitterIcon }
@@ -253,7 +254,7 @@ export const PostDetail = ({ post }) => {
               rounded-full cursor-pointer flex items-center justify-center pt-[2px]'>
                 <FacebookShareButton
                   url={ `${ baseURL }${ router.asPath }` }
-                  quote={'Check out this post from Ukrainian Assosiation of Moncton!'}
+                  quote={dataFrom100['post-assosiation-of-moncton']}
                 >
                   <Image
                     src={ FacebookIcon }
@@ -267,7 +268,7 @@ export const PostDetail = ({ post }) => {
               rounded-full cursor-pointer'>
                 <TwitterShareButton
                   url={ `${ baseURL }${ router.asPath }` }
-                  quote={'Check out this post from Ukrainian Assosiation of Moncton!'}
+                  quote={dataFrom100['post-assosiation-of-moncton']}
                 >
                   <Image
                     src={ TwitterIcon }

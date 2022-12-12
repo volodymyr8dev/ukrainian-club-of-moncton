@@ -10,14 +10,15 @@ export default function About() {
   const router = useRouter()
   
   const { data, loading, error } = getTexts(router.locale)
+  const { data:dataFrom100, loading:loadingFrom100, error:errorFrom100 } = getTexts(router.locale,100)
 
-  if (loading) return <span></span>
-  if (error) return <span></span>
+  if (loading || loadingFrom100) return <span></span>
+  if (error || errorFrom100) return <span></span>
 
   return (
     <>
     <Head>
-      <title>About - Ukrainian Assosiation of Moncton</title>
+      <title>About - {dataFrom100['assosiation-of-moncton']}</title>
       <meta
         name="description"
         content={data["about-description-seo"]}
