@@ -1,5 +1,5 @@
 import { gql, useQuery } from '@apollo/client'
-import {useCallback, useState} from 'react'
+import {useState} from 'react'
 import { Pagination, Navigation, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -62,7 +62,6 @@ export const Gallery = () => {
         }}
         modules={[ Pagination, Navigation, Autoplay ]}
         className='home-gallery-swiper '
-        onIndexChanged={index =>console.log('index', index)}
       >
         { img &&
          <FsLightbox
@@ -79,10 +78,10 @@ export const Gallery = () => {
             onClick={()=>handleOpenImg(item.picture.url)}
               src={ item.picture.url }
               className='rounded-[16px] w-full max-w-[376px] h-full max-h-[244px]
-              object-cover hover:max-w-[413.6px]  origin-center
+              object-cover hover:max-w-[413.6px] origin-center
               transition-all'
               loading='lazy'
-              alt=''
+              alt='Ukraine'
             />
           </SwiperSlide>
           ))
