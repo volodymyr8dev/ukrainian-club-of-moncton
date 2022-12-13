@@ -27,7 +27,7 @@ export const HomeFront = () => {
       w-full tablets:w-auto md:mt-[20px] lg:mt-[-110px]"
         >
           <div
-            className="xl:max-w-[410px] lg:max-w-[410px] max-w-full 2xl:max-w-[510px] flex
+            className="xl:max-w-[453px] lg:max-w-[440px] max-w-full 2xl:max-w-[510px] flex
         flex-col gap-6 md:gap-8 mt-[.5rem]"
           >
             <h2
@@ -94,7 +94,7 @@ export const HomeFront = () => {
           </div>
 
           <div
-            className=" xl:max-w-[410px] max-w-full 2xl:max-w-[510px] w-full lg:pt-[5rem] lg:max-w-[410px]
+            className=" xl:max-w-[453px] max-w-full 2xl:max-w-[510px] w-full lg:pt-[5rem] lg:max-w-[440px]
         hidden md:flex flex-col gap-8 mt-0 md:mt-[8.4rem] lg:mb-[-170px]"
           >
             <div className="flex justify-start items-center gap-6 md:gap-8">
