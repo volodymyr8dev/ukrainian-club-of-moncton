@@ -4,8 +4,7 @@ import { useRouter } from "next/router";
 import { getTexts } from "./../../../services/getTexts.js";
 
 import { FilledButton } from "../../utils/FilledButton";
-
-import flag from "./../../../assets/images/Ukraine.webp";
+import  Flag from "../../../assets/images/home/Ukraine.webp";
 
 export const HomeFront = () => {
   const { locale } = useRouter();
@@ -72,8 +71,8 @@ export const HomeFront = () => {
           >
             <div className=" object-cover"> 
             <Image
-              src={flag}
-              alt="flag"
+              src={Flag}
+              alt="Flag"
               width={454}
               height={398.34}
               priority
