@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import Farm1Desktop from './../../../assets/images/about/farm-d-01.webp'
-import Farm2Desktop from './../../../assets/images/about/farm-d-02.webp'
-import Farm3Desktop from './../../../assets/images/about/farm-d-03.webp'
+import FarmDesktop from '../../../assets/images/about/farm-d-first.webp'
+import Farm2Desktop from './../../../assets/images/about/farm-d-second.webp'
+import Farm3Desktop from './../../../assets/images/about/farm-d-third.webp'
 
-import Farm1Mobile from './../../../assets/images/about/farm-m-01.webp'
-import Farm2Mobile from './../../../assets/images/about/farm-m-02.webp'
-import Farm3Mobile from './../../../assets/images/about/farm-m-03.webp'
+import Farm1Mobile from './../../../assets/images/about/farm-m-first.webp'
+import Farm2Mobile from './../../../assets/images/about/farm-m-second.webp'
+import Farm3Mobile from './../../../assets/images/about/farm-m-third.webp'
 
 export const AboutFront = () => {
   return (
@@ -20,7 +20,7 @@ export const AboutFront = () => {
         w-screen about-front-farm'>
           <div className='w-full overflow-hidden'>
             <Image
-              src={ Farm1Desktop }
+              src={ FarmDesktop }
               alt='farm'
               layout='responsive'
               priority
