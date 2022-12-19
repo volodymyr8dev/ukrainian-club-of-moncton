@@ -16,7 +16,7 @@ export default function How() {
   return (
     <>
     <Head>
-      <title>How can I help? - Ukrainian Assosiation of Moncton</title>
+      <title>How can I help? - Ukrainian Association of Moncton</title>
       <meta
         name="description"
         content={data["how-tag-seo"]}

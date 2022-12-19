@@ -43,7 +43,7 @@ function PostPage({
   return (
     <>
     <Head>
-      <title>Info - Ukrainian Assosiation of Moncton</title>
+      <title>Info - Ukrainian Association of Moncton</title>
       <meta
         name="description"
         // equal data
@@ -233,7 +233,7 @@ function PostPage({
 export async function getStaticPaths() {
   const query = gql`
     {
-      postsConnection (where: {category: {slug: "going-to-canada" }}) {
+      postsConnection (where: {category: {slug: "in-canada" }}) {
         aggregate {
           count
         }
@@ -299,7 +299,7 @@ export async function getStaticProps({ params }) {
       postsConnection (
         first: $limit,
         skip: $offset,
-        where: { category: { slug: "going-to-canada" }},
+        where: { category: { slug: "in-canada" }},
         orderBy: createdAt_DESC
         ) {
         aggregate {

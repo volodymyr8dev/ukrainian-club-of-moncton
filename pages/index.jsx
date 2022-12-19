@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home - Ukrainian Assosiation of Moncton</title>
+        <title>Home - Ukrainian Association of Moncton</title>
                           {/* equal data */}
         <meta name="description" content={data["how-tag-seo"]} /> 
       <link
