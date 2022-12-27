@@ -10,6 +10,7 @@ const { withSentryConfig } = require('@sentry/nextjs');
 const moduleExports = {
   // Your existing module.exports
   reactStrictMode: true,
+  trailingSlashes: false,
   images: {
     domains: ['media.graphassets.com'],
   },
@@ -26,7 +27,7 @@ const moduleExports = {
         permanent: true,
       },
       {
-        source: '/our-help',
+        source: '/our-help/:path*',
         destination: '/our-help/1',
         permanent: true,
       },

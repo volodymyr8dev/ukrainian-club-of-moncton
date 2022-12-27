@@ -21,7 +21,7 @@
     "html-entities": "^2.3.3",
     "html-react-parser": "^3.0.1",
     "moment": "^2.29.4",
-    "next": "12.2.2",
+    "next": "9.0.0",
     "next-share": "^0.18.0",
     "next-translate": "^1.6.0",
     "nextjs-progressbar": "^0.0.14",

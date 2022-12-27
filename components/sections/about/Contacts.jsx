@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { ContactForm } from '../../utils/ContactForm'
 
 
-import BlueEmailIcon from './../../../assets/images/contacts/email.svg'
-import WhiteEmailIcon from './../../../assets/images/contacts/email-active.svg'
-import FacebookIcon from './../../../assets/images/contacts/facebook-active.svg'
-import FacebookActiveIcon from './../../../assets/images/contacts/facebook.svg'
-import InstagramIcon from './../../../assets/images/contacts/instagram.svg'
-import InstagramActiveIcon from './../../../assets/images/contacts/instagram-active.svg'
+import BlueEmailIcon from './../../../assets/images/contacts/email.webp'
+import WhiteEmailIcon from './../../../assets/images/contacts/email-active.webp'
+import FacebookIcon from './../../../assets/images/contacts/facebook-active.webp'
+import FacebookActiveIcon from './../../../assets/images/contacts/facebook.webp'
+import InstagramIcon from './../../../assets/images/contacts/instagram.webp'
+import InstagramActiveIcon from './../../../assets/images/contacts/instagram-active.webp'
 
 import { getTexts } from './../../../services/getTexts.js'
 
@@ -62,6 +62,8 @@ export const Contacts = () => {
             <Image
               src={ instagramActive ? InstagramActiveIcon : InstagramIcon }
               alt='isntagram'
+              width={27}
+              height={25.9}
             />
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]  mt-[4px]
               ${ instagramActive ? 'text-gray-100' : 'text-blue-500'}`}>
@@ -79,6 +81,8 @@ export const Contacts = () => {
             <Image
               src={ facebookActive ? FacebookActiveIcon : FacebookIcon  }
               alt='facebook'
+              width={30}
+              height={26.9}
             />
               <span className={`font-proximaNova500 text-base md:text-lg leading-[150%]  mt-[4px]
               ${ facebookActive ? 'text-gray-100' : 'text-blue-500'}`}>
