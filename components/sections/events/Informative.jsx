@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { getTexts } from './../../../services/getTexts.js'
 
-import UkrainianSymbol from './../../../assets/images/ukrainian-symbol.svg'
+import UkrainianSymbol from './../../../assets/images/ukrainian-symbol.webp'
 
 export const Informative = () => {
   const { locale } = useRouter()

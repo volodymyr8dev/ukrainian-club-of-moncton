@@ -5,13 +5,13 @@ import { useRouter } from 'next/router'
 
 import { getTexts } from './../../services/getTexts.js'
 
-import UkrClubLogo from './../../assets/images/footer/ukr-monc-logo.png'
-import VercelLogo from './../../assets/images/footer/vercel-logo.svg'
-import BinaryFutureLogo from './../../assets/images/footer/bf-logo.svg'
+import UkrClubLogo from './../../assets/images/footer/ukr-monc-logo.webp'
+import VercelLogo from './../../assets/images/footer/vercel-logo.webp'
+import BinaryFutureLogo from './../../assets/images/footer/bf-logo.webp'
 
-import EmailIcon from './../../assets/images/footer/email.svg'
-import FacebookIcon from './../../assets/images/footer/facebook.svg'
-import InstagramIcon from './../../assets/images/footer/instagram.svg'
+import EmailIcon from './../../assets/images/footer/email.webp'
+import FacebookIcon from './../../assets/images/footer/facebook.webp'
+import InstagramIcon from './../../assets/images/footer/instagram.webp'
 
 export const Footer = () => {
   const { t } = useTranslation("common");

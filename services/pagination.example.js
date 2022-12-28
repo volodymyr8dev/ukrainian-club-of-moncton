@@ -15,8 +15,8 @@ import 'swiper/css/autoplay'
 
 import {hygraph} from './../../services'
 
-import beforeArrow from './../../assets/images/before-arrow-pagination.svg'
-import nextArrow from './../../assets/images/next-arrow-pagination.svg'
+import beforeArrow from './../../assets/images/before-arrow-pagination.webp'
+import nextArrow from './../../assets/images/next-arrow-pagination.webp'
 import {REVALIDATION_TIME_PAGINATION} from "./constants";
 import {isPostInvalid} from "./helpers";
 

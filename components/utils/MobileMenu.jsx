@@ -6,19 +6,19 @@ import useTranslation from 'next-translate/useTranslation'
 import { DonateButton } from '../utils/DonateButton'
 import { LanguageSwitch } from '../utils/LanguageSwitch'
 
-import CloseIcon from './../../assets/images/mobile-menu/close.svg'
+import CloseIcon from './../../assets/images/mobile-menu/close.webp'
 
-import HomeBlackIcon from './../../assets/images/mobile-menu/home-black.svg'
-import EventsBlackIcon from './../../assets/images/mobile-menu/events-black.svg'
-import InfoBlackIcon from './../../assets/images/mobile-menu/info-black.svg'
-import AboutBlackIcon from './../../assets/images/mobile-menu/about-black.svg'
-import HelpBlackIcon from './../../assets/images/mobile-menu/help-black.svg'
+import HomeBlackIcon from './../../assets/images/mobile-menu/home-black.webp'
+import EventsBlackIcon from './../../assets/images/mobile-menu/events-black.webp'
+import InfoBlackIcon from './../../assets/images/mobile-menu/info-black.webp'
+import AboutBlackIcon from './../../assets/images/mobile-menu/about-black.webp'
+import HelpBlackIcon from './../../assets/images/mobile-menu/help-black.webp'
 
-import HomeWhiteIcon from './../../assets/images/mobile-menu/home-white.svg'
-import EventsWhiteIcon from './../../assets/images/mobile-menu/events-white.svg'
-import InfoWhiteIcon from './../../assets/images/mobile-menu/info-white.svg'
-import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.svg'
-import HelpWhiteIcon from './../../assets/images/mobile-menu/help-white.svg'
+import HomeWhiteIcon from './../../assets/images/mobile-menu/home-white.webp'
+import EventsWhiteIcon from './../../assets/images/mobile-menu/events-white.webp'
+import InfoWhiteIcon from './../../assets/images/mobile-menu/info-white.webp'
+import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.webp'
+import HelpWhiteIcon from './../../assets/images/mobile-menu/help-white.webp'
 
 export const MobileMenu = ({ setIsActive }) => {
   const { t } = useTranslation('common')

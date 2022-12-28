@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
-import ZeroIcon from './../assets/images/404-icon.svg'
+import ZeroIcon from './../assets/images/404-icon.webp'
 
 export default function FourOhFour() {
   const { t } = useTranslation('common')

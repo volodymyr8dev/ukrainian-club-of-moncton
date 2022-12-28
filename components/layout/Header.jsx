@@ -8,18 +8,18 @@ import { MobileMenu } from '../utils/MobileMenu'
 import { DonateButton } from '../utils/DonateButton'
 import { LanguageSwitch } from '../utils/LanguageSwitch'
 
-import OpenIcon from './../../assets/images/mobile-menu/open.svg'
-import CloseIcon from './../../assets/images/mobile-menu/close.svg'
+import OpenIcon from './../../assets/images/mobile-menu/open.webp'
+import CloseIcon from './../../assets/images/mobile-menu/close.webp'
 
-import HomeBlackIcon from './../../assets/images/mobile-menu/home-black.svg'
-import EventsBlackIcon from './../../assets/images/mobile-menu/events-black.svg'
-import AboutBlackIcon from './../../assets/images/mobile-menu/about-black.svg'
-import HelpBlackIcon from './../../assets/images/mobile-menu/help-black.svg'
+import HomeBlackIcon from './../../assets/images/mobile-menu/home-black.webp'
+import EventsBlackIcon from './../../assets/images/mobile-menu/events-black.webp'
+import AboutBlackIcon from './../../assets/images/mobile-menu/about-black.webp'
+import HelpBlackIcon from './../../assets/images/mobile-menu/help-black.webp'
 
-import HomeWhiteIcon from './../../assets/images/mobile-menu/home-white.svg'
-import EventsWhiteIcon from './../../assets/images/mobile-menu/events-white.svg'
-import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.svg'
-import HelpWhiteIcon from './../../assets/images/mobile-menu/help-white.svg'
+import HomeWhiteIcon from './../../assets/images/mobile-menu/home-white.webp'
+import EventsWhiteIcon from './../../assets/images/mobile-menu/events-white.webp'
+import AboutWhiteIcon from './../../assets/images/mobile-menu/about-white.webp'
+import HelpWhiteIcon from './../../assets/images/mobile-menu/help-white.webp'
 
 export const Header = () => {
   const { t } = useTranslation('common')

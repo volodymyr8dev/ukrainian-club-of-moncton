@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import doubtIdeaImage from "./../../../assets/images/volonter_products.webp";
 import ladderImage from "./../../../assets/images/facebook_sharing.webp";
-import arrow from '../../../assets/images/Vector.svg'
+import arrow from '../../../assets/images/Vector.svg';
 
 import { useRouter } from "next/router";
 import { getTexts } from "./../../../services/getTexts.js";

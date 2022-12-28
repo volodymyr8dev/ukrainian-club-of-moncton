@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import quoteImage from "./../../../assets/images/quote.svg";
+import quoteImage from "./../../../assets/images/quote.webp";
 import { useRouter } from "next/router";
 import { getTexts } from "./../../../services/getTexts.js";
 

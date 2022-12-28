@@ -1,5 +1,5 @@
-import prevArrow from './../../assets/images/prev-arrow.svg'
-import nextArrow from './../../assets/images/next-arrow.svg'
+import prevArrow from './../../assets/images/prev-arrow.webp'
+import nextArrow from './../../assets/images/next-arrow.webp'
 import Image from 'next/image'
 
 export const HeadingToggler = (props) => {
