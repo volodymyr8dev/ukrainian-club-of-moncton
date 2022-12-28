@@ -22,7 +22,7 @@ import nextBlue from './../../assets/images/pagination/next-blue.webp'
 import nextGray from './../../assets/images/pagination/next-gray.webp'
 import previousBlue from './../../assets/images/pagination/previous-blue.webp'
 import previousGray from './../../assets/images/pagination/previous-gray.webp'
-import lineGray from './../../assets/images/pagination/line-gray.webp'
+import lineGray from './../../assets/images/pagination/line-gray.svg'
 import {REVALIDATION_TIME_PAGINATION} from "../../services/constants";
 import {isPostInvalid} from "../../services/helpers";
 
@@ -193,7 +193,7 @@ function PostPage({
 
                       <Image
                         src={ lineGray }
-                        alt=''
+                        // alt=''
                       />
 
                       {

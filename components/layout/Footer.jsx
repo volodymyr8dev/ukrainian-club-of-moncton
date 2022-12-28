@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { getTexts } from './../../services/getTexts.js'
 
-import UkrClubLogo from './../../assets/images/footer/ukr-monc-logo.webp'
+import UkrClubLogo from './../../assets/images/footer/ukr-monc-logo.png'
 import VercelLogo from './../../assets/images/footer/vercel-logo.webp'
 import BinaryFutureLogo from './../../assets/images/footer/bf-logo.webp'
 
