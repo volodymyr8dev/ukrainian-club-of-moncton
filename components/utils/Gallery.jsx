@@ -49,10 +49,21 @@ export const Gallery = () => {
             slidesPerView: 3,
           },
         }}
+        pagination={true}
         spaceBetween={ 30 }
+        // autoplay
+        controlsProps={{
+          dotsTouchable: true,
+          prevPos: 'left',
+          nextPos: 'right',
+          nextTitle: '',
+          prevTitle: '',
+          dotsWrapperStyle: { marginBottom: 20 },
+          nextTitleStyle: { color: 'red', fontSize: 24, fontWeight: '500' },
+          }}
         autoplay={{
           delay: 2000,
-          disableOnInteraction: false,
+          // disableOnInteraction: false,
         }}
        
         navigation={{

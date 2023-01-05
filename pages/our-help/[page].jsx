@@ -287,10 +287,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const query = gql`
-    query postsPageQuery($limit: Int!, $offset: Int!) {
+    query postsPageQuery($limit: Int!) {
       postsConnection (
         first: $limit,
-        skip: $offset,
         where: { category: { slug: "how-your-money-helped" }},
         orderBy: createdAt_DESC
         ) {

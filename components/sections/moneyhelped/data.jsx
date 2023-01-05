@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { getTexts } from './../../../services/getTexts.js'
 
-// import DividerLine from './../../../assets/images/divider-line.webp'
-// import DividerLineMobile from './../../../assets/images/divider-line-mobile.webp'
+import DividerLine from './../../../assets/images/divider-line.svg'
+import DividerLineMobile from './../../../assets/images/divider-line-mobile.svg'
 
 export const Data = () => {
   const { locale } = useRouter()
