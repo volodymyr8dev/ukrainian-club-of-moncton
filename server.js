@@ -9,8 +9,12 @@ const port = process.env.PORT || 3000
 const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
 
+const httpsOptions = {
+  key: fs.readFileSync("./ssl.key"),
+  cert: fs.readFileSync("./ssl.crt"),
+};
 app.prepare().then(() => {
-  createServer(async (req, res) => {
+  createServer(httpsOptions,async (req, res) => {
     try {
       // Be sure to pass `true` as the second argument to `url.parse`.
       // This tells it to parse the query portion of the URL.
