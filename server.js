@@ -1,6 +1,7 @@
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
+const { readFileSync } = require('fs')
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
@@ -10,8 +11,8 @@ const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
 
 const httpsOptions = {
-  key: fs.readFileSync("./ssl.key"),
-  cert: fs.readFileSync("./ssl.crt"),
+  key: readFileSync("./ssl.key"),
+  cert: readFileSync("./ssl.crt"),
 };
 app.prepare().then(() => {
   createServer(httpsOptions,async (req, res) => {
