@@ -11,9 +11,11 @@ const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
 
 const httpsOptions = {
-  key: readFileSync("./ssl.key"),
-  cert: readFileSync("./ssl.crt"),
+  key: readFileSync("ssl.key"),
+  cert: readFileSync("ssl.crt"),
+  ca: [readFileSync('ssl2.crt')]
 };
+console.log('ghere',httpsOptions)
 app.prepare().then(() => {
   createServer(httpsOptions,async (req, res) => {
     try {
