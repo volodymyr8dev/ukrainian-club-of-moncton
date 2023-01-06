@@ -1,4 +1,4 @@
-const { createServer } = require('http')
+const { createServer} = require('https')
 const { parse } = require('url')
 const next = require('next')
 const { readFileSync } = require('fs')
@@ -11,11 +11,11 @@ const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
 
 const httpsOptions = {
-  key: readFileSync("ssl.key"),
-  cert: readFileSync("ssl.crt"),
-  ca: [readFileSync('ssl2.crt')]
+  key: readFileSync("./ssl-key.pem"),
+  cert: readFileSync("./ssl.pem"),
+  // ca: [readFileSync('ca1.crt'),readFileSync('ca2.crt')]
 };
-console.log('ghere',httpsOptions)
+// console.log('ghere',httpsOptions)
 app.prepare().then(() => {
   createServer(httpsOptions,async (req, res) => {
     try {

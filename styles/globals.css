@@ -34,57 +34,56 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 @font-face {
-  font-family: 'ProximaNova100';
-  src: url('./../assets/fonts/Proxima Nova Thin.ttf');
+  font-family: "ProximaNova100";
+  src: url("./../assets/fonts/Proxima Nova Thin.ttf");
 }
 
 @font-face {
-  font-family: 'ProximaNova200';
-  src: url('./../assets/fonts/Proxima Nova Light.ttf');
+  font-family: "ProximaNova200";
+  src: url("./../assets/fonts/Proxima Nova Light.ttf");
 }
 
 @font-face {
-  font-family: 'ProximaNova300';
-  src: url('./../assets/fonts/Proxima Nova Regular.ttf');
+  font-family: "ProximaNova300";
+  src: url("./../assets/fonts/Proxima Nova Regular.ttf");
 }
 
 @font-face {
-  font-family: 'ProximaNova400';
-  src: url('./../assets/fonts/Proxima Nova Semibold.ttf');
+  font-family: "ProximaNova400";
+  src: url("./../assets/fonts/Proxima Nova Semibold.ttf");
 }
 
 @font-face {
-  font-family: 'ProximaNova500';
-  src: url('./../assets/fonts/Proxima Nova Bold.ttf');
+  font-family: "ProximaNova500";
+  src: url("./../assets/fonts/Proxima Nova Bold.ttf");
 }
 
 @font-face {
-  font-family: 'ProximaNova600';
-  src: url('./../assets/fonts/Proxima Nova Extrabold.ttf');
+  font-family: "ProximaNova600";
+  src: url("./../assets/fonts/Proxima Nova Extrabold.ttf");
 }
 
 @font-face {
-  font-family: 'ProximaNova700';
-  src: url('./../assets/fonts/Proxima Nova Black.ttf');
+  font-family: "ProximaNova700";
+  src: url("./../assets/fonts/Proxima Nova Black.ttf");
 }
 
 .home-front-section {
   /* background-image: url('/home-blur.webp'); */
   /* background-image: url('/Wheat.webp'); */
-  background-image: url('/BG.png');
+  background-image: url("/BG.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.upcoming_section{
-  background-image: url('/bg-ukraine.webp');  
+.upcoming_section {
+  background-image: url("/bg-ukraine.webp");
   background-size: cover;
   padding-bottom: 5px;
-
 }
 
 .about-section {
@@ -93,17 +92,17 @@ input:-webkit-autofill:active {
 }
 
 .about-section:before {
-  background-image: url('/about-blur.webp');
+  background-image: url("/about-blur.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  
-  content: '';
+
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  
+
   z-index: -1;
   opacity: 1;
 }
@@ -114,17 +113,17 @@ input:-webkit-autofill:active {
 }
 
 .how-section:before {
-  background-image: url('/how-blur.webp');
+  background-image: url("/how-blur.webp");
   background-repeat: no-repeat;
   background-size: contain;
-  
-  content: '';
+
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  
+
   z-index: -1;
   opacity: 1;
 }
@@ -135,17 +134,17 @@ input:-webkit-autofill:active {
 }
 
 .info-section:before {
-  background-image: url('/info-blur.webp');
+  background-image: url("/info-blur.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  
-  content: '';
+
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  
+
   z-index: -1;
   opacity: 1;
 }
@@ -170,7 +169,7 @@ input:-webkit-autofill:active {
 }
 
 .mobile-menu-bg {
-  background-image: url('/menu-mobile-bg.webp');
+  background-image: url("/menu-mobile-bg.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -210,7 +209,7 @@ fieldset {
   font-size: 1.9rem;
   line-height: 40px;
   letter-spacing: 0.05em;
-  border-left: 4px solid #5271F2;
+  border-left: 4px solid #5271f2;
   padding-left: 2.5rem;
 }
 
@@ -246,8 +245,8 @@ fieldset {
 }
 
 .not-found-bg {
-  background-color: #FFFFFF;
-  background-image: url('/404-bg.webp');
+  background-color: #ffffff;
+  background-image: url("/404-bg.webp");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
