@@ -5,7 +5,7 @@ const { readFileSync } = require('fs')
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 80
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
@@ -13,7 +13,7 @@ const handle = app.getRequestHandler()
 const httpsOptions = {
   key: readFileSync("./ssl-key.pem"),
   cert: readFileSync("./ssl.pem"),
-  // ca: [readFileSync('ca1.crt'),readFileSync('ca2.crt')]
+  ca: [readFileSync('ca1.crt'),readFileSync('ca2.crt')]
 };
 // console.log('ghere',httpsOptions)
 app.prepare().then(() => {
