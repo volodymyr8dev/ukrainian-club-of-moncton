@@ -5,7 +5,7 @@ const { readFileSync } = require('fs')
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'uamoncton.org'
-const port = process.env.PORT || 80
+const port = process.env.PORT || 443
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
