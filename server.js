@@ -1,15 +1,17 @@
 const { createServer} = require('https')
+// const {createServer} = require('http') //dev
 const { parse } = require('url')
 const next = require('next')
 const { readFileSync } = require('fs')
 
 const dev = process.env.NODE_ENV !== 'production'
+// const hostname = 'localhost' //dev
 const hostname = 'uamoncton.org'
 const port = process.env.PORT || 443
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
-
+console.log(process.env.NODE_ENV);
 const httpsOptions = {
   key: readFileSync("./ssl-key.pem"),
   cert: readFileSync("./ssl.pem"),
