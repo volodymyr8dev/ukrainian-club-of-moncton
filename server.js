@@ -4,7 +4,7 @@ const next = require('next')
 const { readFileSync } = require('fs')
 
 const dev = process.env.NODE_ENV !== 'production'
-const hostname = 'localhost'
+const hostname = 'uamoncton.org'
 const port = process.env.PORT || 80
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port })
