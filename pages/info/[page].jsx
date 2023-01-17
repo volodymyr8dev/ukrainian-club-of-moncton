@@ -1,3 +1,4 @@
+import React from 'react'
 /* file name: [page].jsx */
 import Head from 'next/head'
 import Link from 'next/link'
@@ -39,7 +40,6 @@ function PostPage({
   
   if (loading) return <span></span>
   if (error) return <span></span>
-
   return (
     <>
     <Head>
@@ -163,7 +163,7 @@ function PostPage({
                   </div>
                   </div>
                   
-                  { posts.length > 5 &&
+                  { (hasNextPage || hasPreviousPage) &&
                   <div className='flex justify-center w-full mt-1 md:mt-16
                   z-50'>
                     <div className='flex gap-7 border border-gray-500
