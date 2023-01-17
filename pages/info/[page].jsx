@@ -1,3 +1,4 @@
+import React from 'react'
 /* file name: [page].jsx */
 import Head from 'next/head'
 import Link from 'next/link'
@@ -39,7 +40,6 @@ function PostPage({
   
   if (loading) return <span></span>
   if (error) return <span></span>
-
   return (
     <>
     <Head>
@@ -103,14 +103,14 @@ function PostPage({
                         justify-between h-full'>
                           <div>
                             <div>
-                              <span className={`font-proximaNova200 text-yellow-900
-                              px-6 py-2 rounded-[20px] ${post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'}`}>
+                              <div className={`font-proximaNova200 text-yellow-900
+                              px-6 w-full py-2 rounded-[20px] ${post.node.tags[0]?.name ? 'bg-yellow-100' : 'bg-none'}`}>
                                 {
                                   router.locale == 'ua'
                                     ? post.node.localizations[0].tags[0]?.name
                                     : post.node.tags[0]?.name
                                 }
-                              </span>
+                              </div>
                             </div>
 
                             <div className='pt-8'>
@@ -163,7 +163,7 @@ function PostPage({
                   </div>
                   </div>
                   
-                  { posts.length > 6 &&
+                  { (hasNextPage || hasPreviousPage) &&
                   <div className='flex justify-center w-full mt-1 md:mt-16
                   z-50'>
                     <div className='flex gap-7 border border-gray-500
