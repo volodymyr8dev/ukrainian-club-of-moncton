@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 
 import doubtIdeaImage from "./../../../assets/images/volonter_products.webp";
@@ -86,8 +87,8 @@ export const ClubQuestions = () => {
                 </span>
               </strong>
               <div className="pl-2 md:pl-4 pt-6 md:pt-10  font-proximaNova300 text-xl
-                  md:text-[24px] leading-9">  
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                  md:text-[24px] leading-9"> 
+                  {data["facebook-description-home"]}             
             </div>
               <div className='md:w-[289px] mobile-l:w-[280px] mt-[32px]'>  
               <DonateButton link={data["facebook-navigation"]} img={arrow} text={data['go-to-our-group']}  />
