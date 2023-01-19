@@ -1,12 +1,12 @@
-// const { createServer} = require('https')
-const {createServer} = require('http') //dev
+const { createServer} = require('https')
+// const {createServer} = require('http') //dev
 const { parse } = require('url')
 const next = require('next')
 const { readFileSync } = require('fs')
 
 const dev = process.env.NODE_ENV !== 'production'
-const hostname = 'localhost' //dev
-// const hostname = 'ua moncton.org'
+// const hostname = 'localhost' //dev
+const hostname = 'ua moncton.org'
 const port = process.env.PORT || 443
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port })
