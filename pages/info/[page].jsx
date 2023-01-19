@@ -74,7 +74,7 @@ function PostPage({
                   <div className='justify-start gap-2 xl:gap-8 max-w-full
                   w-full pt-10 hidden md:grid grid-cols-3'>
                   {
-                    posts.map((post, i) => {
+                    posts.sort((a,b)=>Number(a.node.order)-Number(b.node.order)).reverse().map((post, i) => {
                       return isPostInvalid(router.locale, post.node)
                         ? ''
                         : <div key={i} className='shadow-[0px_2px_22px_rgba(0,32,73,0.13)]
@@ -313,6 +313,7 @@ export async function getStaticProps({ params }) {
             address
             slug
             createdAt
+            order
             tags {
               name
               slug
